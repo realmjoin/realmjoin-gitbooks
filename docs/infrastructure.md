@@ -1,49 +1,42 @@
-
 # Infrastructure
 
 ## Network
 
-### (No) Proxy
+### \(No\) Proxy
 
-Initial deployment needs direct Internet access. No proxy would be ideal, a transparent proxy should be ok (if really transparent). If there is a proxy unavoidable as a minimum requirement the following services/addresses need to be directly accessible (not recommended, list might not be exhaustive):  
-  
+Initial deployment needs direct Internet access. No proxy would be ideal, a transparent proxy should be ok \(if really transparent\). If there is a proxy unavoidable as a minimum requirement the following services/addresses need to be directly accessible \(not recommended, list might not be exhaustive\):
+
 For a list of the corresponding IP ranges click the following link:
 
-[Microsoft Azure Datacenter IP Ranges](https://www.microsoft.com/en-us/download/details.aspx?id=41653)  
-  
-This file contains the compute IP address ranges (including SQL ranges) used by the Microsoft Azure Datacenters. A new xml file will be uploaded every Wednesday (Pacific Time) with the new planned IP address ranges. New IP address ranges will be effective on the following Monday (Pacific Time).  
+[Microsoft Azure Datacenter IP Ranges](https://www.microsoft.com/en-us/download/details.aspx?id=41653)
+
+This file contains the compute IP address ranges \(including SQL ranges\) used by the Microsoft Azure Datacenters. A new xml file will be uploaded every Wednesday \(Pacific Time\) with the new planned IP address ranges. New IP address ranges will be effective on the following Monday \(Pacific Time\).  
 Download the new xml file and perform the necessary changes on your site before Monday.
-  
+
 [Office 365 URLs and IP address ranges](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
 
 This article links a file that contains the compute IP address ranges that you should include in your outbound allow lists to ensure your computers can successfully use Office 365.
 
-> [!IMPORTANT]
-> IP addresses filtering alone is not a complete solution due to dependencies on internet based services such as Domain Name Services (DNS), Content Delivery Networks (CDNs), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services are dynamically assigned and can change at any time.  
+> \[!IMPORTANT\] IP addresses filtering alone is not a complete solution due to dependencies on internet based services such as Domain Name Services \(DNS\), Content Delivery Networks \(CDNs\), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services are dynamically assigned and can change at any time.
 
-### No (VLans/WLAN-/Port)-Isolation
+### No \(VLans/WLAN-/Port\)-Isolation
 
-For **BranchCache** to be effective the clients need to be able to communicate directly with each other. So they should not be separated by different VLans,WLAN-Isolation or Port-Isolation. For mass roll-outs **BranchCache Servers** with pre-populated caches are recommended. BranchCache is limited to a single subnet, if a site has multiple subnets the BranchCache Servers must be placed in the same subnet as the clients to be effective.  
+For **BranchCache** to be effective the clients need to be able to communicate directly with each other. So they should not be separated by different VLans,WLAN-Isolation or Port-Isolation. For mass roll-outs **BranchCache Servers** with pre-populated caches are recommended. BranchCache is limited to a single subnet, if a site has multiple subnets the BranchCache Servers must be placed in the same subnet as the clients to be effective.
 
 ### RealmJoin connection endpoints
 
 RealmJoin connects to the following URLs, that might be considered in your firewall settings:
 
-* https://cdn.realmjoin.com/  
-* https://realmjoin-backend.azurewebsites.net/  
-* https://realmjoin-backend-staging.azurewebsites.net/  
-* https://packages.gkdatacenter.net/  
-* https://enterpriseregistration.windows.net/  
-* https://gkrealmjoin.s3.amazonaws.com/  
-* https://login.microsoftonline.com/  
-* https://graph.microsoft.com/  
-  
+* [https://cdn.realmjoin.com/](https://cdn.realmjoin.com/)  
+* [https://realmjoin-backend.azurewebsites.net/](https://realmjoin-backend.azurewebsites.net/)  
+* [https://realmjoin-backend-staging.azurewebsites.net/](https://realmjoin-backend-staging.azurewebsites.net/)  
+* [https://packages.gkdatacenter.net/](https://packages.gkdatacenter.net/)  
+* [https://enterpriseregistration.windows.net/](https://enterpriseregistration.windows.net/)  
+* [https://gkrealmjoin.s3.amazonaws.com/](https://gkrealmjoin.s3.amazonaws.com/)  
+* [https://login.microsoftonline.com/](https://login.microsoftonline.com/)  
+* [https://graph.microsoft.com/](https://graph.microsoft.com/)  
+
 ## Components
-
-<!--
-### Update Cylces
-
-### Ports/Traffic/ASTP exceptions-->
 
 ### BranchCache
 
@@ -64,7 +57,7 @@ The back-end is hosted on an Azure tenant exclusively used for RealmJoin. All cu
 
 #### RealmJoin App Publishing Endpoint
 
-To provide the **BranchCache** mechanism <!-- (see section BranchCache above)-->, the endpoint has to provide the chunk identifiers, a feature only provided by **Microsoft Internet Information Services** (IIS) servers. To deliver the maximum scalability the Publishing Endpoint is distributed on multiple Azure nodes hosting Windows 2016 IIS sharing a redundant Azure blob storage.
+To provide the **BranchCache** mechanism , the endpoint has to provide the chunk identifiers, a feature only provided by **Microsoft Internet Information Services** \(IIS\) servers. To deliver the maximum scalability the Publishing Endpoint is distributed on multiple Azure nodes hosting Windows 2016 IIS sharing a redundant Azure blob storage.
 
 #### Web interface
 
@@ -79,10 +72,11 @@ After identifying the client, the back-ends response to the client is RSA signed
 
 ### Signed MSI
 
-The RealmJoin.MSI is SHA2 (256 bit) signed by GK and therefore recognized by Windows as safe to install.
+The RealmJoin.MSI is SHA2 \(256 bit\) signed by GK and therefore recognized by Windows as safe to install.
 
-[![RJ Signed MSI](./media/rj-msi-sig.png)](./media/rj-msi-sig.png)  
+[![RJ Signed MSI](.gitbook/assets/rj-msi-sig.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-msi-sig.png)
 
 ### Package Hashes
 
-During the package creation process, packages are signed with SHA2 (256 bit) hashes (see chapter [Creating packages](create-package.md)). Older SHA1 signed packages will still be accepted by RealmJoin. For more information on SHA2 encryption, check [the Wikipedia article on SHA2](https://en.wikipedia.org/wiki/SHA-2).
+During the package creation process, packages are signed with SHA2 \(256 bit\) hashes \(see chapter [Creating packages](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/create-package.md)\). Older SHA1 signed packages will still be accepted by RealmJoin. For more information on SHA2 encryption, check [the Wikipedia article on SHA2](https://en.wikipedia.org/wiki/SHA-2).
+

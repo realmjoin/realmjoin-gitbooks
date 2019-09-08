@@ -1,16 +1,22 @@
-
 # FAQ
 
 ## Which links should I bookmark?
 
 * RealmJoin Admin Portal:  
-    <https://realmjoin-web.azurewebsites.net/>
+
+    [https://realmjoin-web.azurewebsites.net/](https://realmjoin-web.azurewebsites.net/)
+
 * Gitlab Packages:  
-    <https://gitlab.glueckkanja.net/>
+
+    [https://gitlab.glueckkanja.net/](https://gitlab.glueckkanja.net/)
+
 * General RealmJoin website:  
-    <https://realmjoin.com/>
+
+    [https://realmjoin.com/](https://realmjoin.com/)
+
 * Documentation:  
-    <https://docs.realmjoin.com/>
+
+    [https://docs.realmjoin.com/](https://docs.realmjoin.com/)
 
 ## Am I able to maintain my own packages and updates?
 
@@ -39,11 +45,7 @@ Force reinstall by using the **debug mode**.
 
 ## Can I get rid of Bloatware using RealmJoin?
 
-TBD
-<!--Bloatware: 
-Installer von Bloatware uninstaller, nicht einfach, da auch von MS Seite über den Store Software vorinstalliert wird
-StandardBloatware, und Hersteller eigene Software, kann schwierig bereinigt werden, ggf neu aufzusetzen
-"Win 10 Push Button Reset" soll zu Clean Windows f�hren, dann ist man im OOBE (f�r AAD Join), aber ist noch nicht fix-->
+TBD 
 
 ## Is RealmJoin providing an uninstall of software?
 
@@ -53,12 +55,12 @@ But because of the volatile history of unattended and the sometimes unpredictabl
 There are typically three reasons to uninstall software:
 
 * The license should be re-used for a different user. In this case it's easy to just create a package to enable/disable a license for a user.
-* The software needs to be removed because of [choose your reason]. In this case a dedicated remove-software-package can be created.
+* The software needs to be removed because of \[choose your reason\]. In this case a dedicated remove-software-package can be created.
 * There is a newer version of the software. This is not a reason to use an uninstall command but instead it is a common practice for every software package used by RealmJoin to 'clean' any precursory binaries or settings.
 
 ## Should I use the applications internal auto updater or not?
 
-This highly depends on the application itself as well as your internal processes. For some applications, that might be prone to attacking and are very well maintained by the vendor - like Google Chrome - we recommend to use the applications internal update. For other software, it might be more useful to include a regular update via RealmJoin into your processes.  
+This highly depends on the application itself as well as your internal processes. For some applications, that might be prone to attacking and are very well maintained by the vendor - like Google Chrome - we recommend to use the applications internal update. For other software, it might be more useful to include a regular update via RealmJoin into your processes.
 
 ## Re-Install failed software installations
 
@@ -71,19 +73,19 @@ It is in principle possible to host the RealmJoin
 
 ## What firewall/proxy settings do I have to configure?
 
-Please check the [infrastructure requirements](http://docs.realmjoin.com/infrastructure.html#network) for detailed information on the RealmJoin connections.  
+Please check the [infrastructure requirements](http://docs.realmjoin.com/infrastructure.html#network) for detailed information on the RealmJoin connections.
 
 ## Does G&K have any recommendations on workflows?
 
-Yes. Our suggestions can be found in the **workflow** section of this documentation.  
+Yes. Our suggestions can be found in the **workflow** section of this documentation.
 
 ## What is the recommendation for reporting?
 
-See section **States** in the chapter Managing RealmJoin [Managing RealmJoin - States](http://docs.realmjoin.com/managing-realmjoin.html#states). It is possible to get virtually any information from each client in JSON-form. There are several applications available to evaluate the data, for example PowerBI, which allows to sort and process the data in logical and visually pleasing ways.  
+See section **States** in the chapter Managing RealmJoin [Managing RealmJoin - States](http://docs.realmjoin.com/managing-realmjoin.html#states). It is possible to get virtually any information from each client in JSON-form. There are several applications available to evaluate the data, for example PowerBI, which allows to sort and process the data in logical and visually pleasing ways.
 
 ## In the future, may RealmJoin packages be used in Intune?
 
-If in the future, Microsoft Intune becomes more capable and the installation of software is as versatile and organized as with RealmJoin, you may use the existing packages in Intune. Since RealmJoin does only need Chocolatey and PowerShell to run the installers, there might be possibilities to use Intune to install software.  
+If in the future, Microsoft Intune becomes more capable and the installation of software is as versatile and organized as with RealmJoin, you may use the existing packages in Intune. Since RealmJoin does only need Chocolatey and PowerShell to run the installers, there might be possibilities to use Intune to install software.
 
 ## Is RealmJoin GDPR compliant?
 
@@ -92,19 +94,19 @@ Glück & Kanja takes data protection very seriously. All contracts with customer
 ## Does the RealmJoin BitLocker enforcement work on virtual machines?
 
 For virtual machines the encryption is only enforced, if the virtual machine variable $env:RjDisableVmDetection=1 is set.  
-This setting can be bypassed in the OOBE screen with the command ``setx /m RjDisableVmDetection 1 `` in a cmd shell.  
+This setting can be bypassed in the OOBE screen with the command `setx /m RjDisableVmDetection 1` in a cmd shell.
 
 ## Is it possible to see the code of store applications?
 
-It is possible to request reading rights for a specific application package from Glück & Kanja. The installation script of already installed packages can be found under ``$env:ProgramData\chocolatey\lib\<packageId>\Tools``
+It is possible to request reading rights for a specific application package from Glück & Kanja. The installation script of already installed packages can be found under `$env:ProgramData\chocolatey\lib\<packageId>\Tools`
 
 ## Can I force the weblinks in the RealmJoin tray to use a specific process?
 
 Yes. To do so, the target has to be set to the process and optional args can be provided. Additionally, for edge, the protocol handler can be used:
 
-- Key: "WebLinks" (directing to process):
+* Key: "WebLinks" \(directing to process\):
 
-```JSON
+```javascript
    {
 "Name": "Citrix-Applikationen",
 "Target": "iexplore",
@@ -116,7 +118,7 @@ Yes. To do so, the target has to be set to the process and optional args can be 
 "Target": "microsoft-edge:https://url.net",
 "Platform": "any"
 }
-
 ```
 
 See chapter [Settings and Policies](policies.md) for further information.
+

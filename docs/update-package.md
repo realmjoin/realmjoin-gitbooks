@@ -1,4 +1,3 @@
-
 # Updating Packages
 
 The process of updating an existing package is fairly simple. Assumed you only update to a newer setup file.
@@ -21,3 +20,4 @@ Make sure to update:
 ## Push and Deploy
 
 After all updates and bug fixes are implemented, the changes have to be committed and pushed into the master repository. The build job will automatically start and the new version of the package may then be deployed and tested as usual.
+

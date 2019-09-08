@@ -11,24 +11,26 @@ The deployment of RealmJoin using Intune requires only the .MSI installer to be 
 3. Click **Apps**
 4. Then click **Add**
 
-[![RJ Intune Deploy](../.gitbook/assets/rj-intune-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-intune-deploy.png)
+![](../.gitbook/assets/rj-intune-deploy.png)
 
 In the configuration tab basic and advanced information can be provided.
 
-[![RJ Intune Deploy2](../.gitbook/assets/rj-intune-deploy2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-intune-deploy2.png)
+![](../.gitbook/assets/rj-intune-deploy2.png)
 
 {% hint style="info" %}
-Like any other application in Intune, ReamJoin then can be assigned to the desired user groups as \(required\) software. It is not necessary to install additional software on the client devices to run RealmJoin. RealmJoin will be deployed on the client devices on next Azure sync.
+Like any other application in Intune, ReamJoin can be assigned to the desired user groups as \(required\) software. It is not necessary to install additional software on the client devices to run RealmJoin. RealmJoin will be deployed on the client devices on next Azure sync.
 {% endhint %}
 
 ### Windows Defender Exceptions
 
-RealmJoin might be recognized by **Windows Defender** as a possible threat. While this behaviour is not certain, it is recommended to implement some Windows Defender exceptions. Create a new device configuration profile, type **Device restriction**, or edit your existing profile and add the following **Windows Defender Antivirus Exceptions**:
+RealmJoin has worked with the Microsoft Defender Team to be whitelisted from malware detection. But because Defender is using more and more machine learning mechanisms to identify potential threats and RealmJoin has several features like cloud downloaded application installations it may happen that RealmJoin might be recognized by **Windows Defender** as a possible threat. While this behaviour is not certain, it is recommended to implement additional Windows Defender exceptions. Create a new device configuration profile, type **Device restriction**, or edit your existing profile and add the following **Windows Defender Antivirus Exceptions**:
 
-* Files and folders  
-  * `%ProgramFiles%\RealmJoin`  
-* Processes
-  * `%ProgramFiles%\RealmJoin\RealmJoin.exe`
-  * `%ProgramFiles%\RealmJoin\RealmJoinService.exe`
-  * `%ProgramFiles%\RealmJoin\RealmJoinUpdate.exe`
+| Defender Exceptions |
+| :--- |
+| **Files and Folders** |
+| `%ProgramFiles%\RealmJoin` |
+| **Processes** |
+| `%ProgramFiles%\RealmJoin\RealmJoin.exe`  |
+| `%ProgramFiles%\RealmJoin\RealmJoinService.exe`  |
+| `%ProgramFiles%\RealmJoin\RealmJoinUpdate.exe` |
 

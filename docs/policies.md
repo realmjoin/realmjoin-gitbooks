@@ -16,10 +16,11 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\DOGroupId
 HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\GroupId
 ```
 
-Remember to set the Download Mode to Group via Windows Update settings in Intune:
+Remember to set the Download Mode to **Group** via Windows Update settings in Intune:
 
 ```text
-Delivery optimization download mode: HTTP blended with peering across private group
+Delivery optimization download mode: 
+HTTP blended with peering across private group
 ```
 
 This is effectively **DownloadMode=2**. Opting-out of setting the groupID via RealmJoin can be done by setting the [Policies.SetNetworkOptimizationID](http://docs.realmjoin.com/policies.html#policies) to **false**.
@@ -31,6 +32,8 @@ For more on WUDO see the [Microsoft WUDO documentation \(DE\)](https://docs.micr
 ### BitLocker enforcement
 
 It is possible to force BitLocker encryption for OS volumes. The configuration file \(see chapter [Policies](http://docs.realmjoin.com/policies.html#policies)\) allows to set the switch **BitlockerEnabled** to **true**. If the device is equipped with a **ready state** TPM chip the encryption is activated. To allow the BitLocker enforcement, the registry key 
+
+### BitLocker recovery key
 
 ```text
 HKLM\SYSTEM\CurrentControlSet\Control\BitLocker:PreventDeviceEncryption
@@ -44,15 +47,17 @@ For virtual machines the encryption is only enforced, if the virtual machine var
 $env:RjDisableVmDetection=1
 ```
 
-is set.
-
-### BitLocker recovery key
-
 If the client device is Azure AD joined, RealmJoin uploads the BitLocker recovery key to Azure AD. If the upload is not successful on first try, it will be retried. If the upload cannot be performed successfully, the RealmJoin rollout fails. In case of a **non-AAD-joined** device, the BitLocker recovery key is not saved anywhere.
 
-## Domain password expiry
+`HKLM\SYSTEM\CurrentControlSet\Control\BitLocker:PreventDeviceEncryption`
 
-RealmJoin uses the Azure AD attribute to check if the user password is expired.
+is set to **false**.
+
+For virtual machines the encryption is only enforced, if the virtual machine variable
+
+`$env:RjDisableVmDetection=1`
+
+is set.
 
 ## Intranet Zone
 
@@ -64,11 +69,29 @@ One might specify the following JSON array:
 ["file://example.com", "https://foo.example.com"]
 ```
 
-Which will result in the following rules:
+## Domain password expiry
+
+RealmJoin uses the Azure AD attribute to check if the user password is expired.
+
+which will result in the following rules:
 
 ![Policies.TrustedSites](.gitbook/assets/rj-policies-trustedsites.png)
 
 ### Caveats
+
+`msDS-UserPasswordExpiryTimeComputed`
+
+to check if the user password is expired.
+
+## Intranet Zone
+
+Site may be added to the **Intranet Zone** \(in Internet Options\) by specifying a setting with the key `Policies.TrustedSites` and an array of URLs. These URLs are parsed by RealmJoin and written to a registry key called **ZoneMap**.
+
+One might specify the following JSON array:
+
+```text
+["file://example.com", "https://foo.example.com"]
+```
 
 * Windows will interpret a naked domain like `file://example.com` as `file://*.example.com`.
 * RealmJoin does not allow for wildcard protocols. You must specify all protocols explicitly.

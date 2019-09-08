@@ -1,38 +1,100 @@
 # Local Admin Password Solution
 
-Local Administrator Password Solution \(short LAPS\) is a Microsoft tool which will solve the issue of using an identical password on every Windows computer.
+Local Administrator Password Solution \(short **LAPS**\) is a Microsoft tool which will solve the issue of using an identical account on every Windows computer in a domain environment. Currently there is no such solution available for Azure AD environments.
 
-With RealmJoin it is possible that you can manage administrators, either for local support or remote support. Of course you can create accounts as well. RealmJoin saves encrypted passwords at customers site and RealmJoin records accesses to these passwords.
+With RealmJoin it is possible to manage secure and individualized administrative accounts, either for local support or remote support, on a large scale.RealmJoin saves encrypted passwords in **Azure Key Vault** within the customers tenant and the Azure Audit records all accesses to these passwords.
 
 ## Prerequirements
 
 ### Application Insights
 
-Application Insights are an important part of LAPS. Click [here](appinsights.md) to see details about Application Insights:
+Application Insights is an important part of LAPS. Click [here](keyvault.md) to see details about Application Insights:
 
 ### Group Configuration
 
-| Key | Default Value | Sample Value | Description |  |
-| :--- | :--- | :--- | :--- | :--- |
-| **LocalAdminManagement.EmergencyAccount** |  |  |  |  |
-| .NamePattern | "ADM-{HEX:8}" | "Admin-{HEX:4}" |  |  |
-| .DisplayName | "RealmJoin Local Administrator" | "Local Emergency Admin" | Display name of administrator account \(appears on Windows\) |  |
-| .PasswordCharSet | See notes | "0123456789ABCDEFabcdef" | Charset of the password |  |
-| .PasswordLength | 20 | 30 |  |  |
-| .MaxStaleness |  | "00:45" | Delete and recreate profile 45 min. after last use. |  |
-| **LocalAdminManagement.SupportAccount** |  |  |  |  |
-| .NamePattern | "ADM-{HEX:8}" | "Admin-{HEX:4}" |  |  |
-| .DisplayName | "RealmJoin Local Administrator" | "Local Support Admin" | Display name of administrator account \(appears on Windows\) |  |
-| .PasswordCharSet | See notes | "0123456789ABCDEFabcdef" | Charset of the password |  |
-| .PasswordLength | 20 | 30 |  |  |
-| .MaxStaleness |  | "08:00" | Delete and recreate profile 8 hours after last use. |  |
-| .OnDemand |  | true | Create support account only when requested through RealmJoin Portal. Account will expire after 12 hours. |  |
-| LocalAdminManagement.Inactive |  | true | Kill switch. Remove all accounts from all clients |  |
-|  |  | false | CFG - RealmJoin-EnableSupportAdmin |  |
-
- Excludes similar looking characters:
-
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p><b>LocalAdminManagement.EmergencyAccount</b>
+        </p>
+        <p>Default Value / Sample Value / Description</p>
+      </th>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>.NamePattern</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">&quot;ADM-{HEX:8}&quot;</td>
+      <td style="text-align:left">&quot;Admin-{HEX:4}&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Pattern to create randomized accounts.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>.DisplayName</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">&quot;RealmJoin Local Administrator&quot;</td>
+      <td style="text-align:left">&quot;Local Emergency Admin&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Display name of administrator account.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>.PasswordCharSet</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">(See note below)</td>
+      <td style="text-align:left">&quot;0123456789ABCDEFabcdef&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Charset of the random generated password.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>.PasswordLength</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">20</td>
+      <td style="text-align:left">30</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Length of password in characters.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>.MaxStaleness</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">&quot;00:45&quot;</td>
+      <td style="text-align:left">&quot;00:45&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Delete and recreate profile after last use.</td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>{% hint style="info" %}
+Default Password Char Set excludes similar looking characters:  
+  
 `!#%+23456789:=?@ABCDEFGHJKLMNPRSTUVWXYZabcdefghijkmnopqrstuvwxyz`
+{% endhint %}
 
 ## Access
 

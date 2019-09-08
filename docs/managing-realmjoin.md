@@ -20,7 +20,7 @@ To see information about the Initial Start before version 4.15, navigate to the 
 
 ### User Interface
 
-[![RJScreen4.15](.gitbook/assets/rj-ui1%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui1.png)
+![](.gitbook/assets/rj-ui1.png)
 
 RealmJoin uses the **user identity** and checks with it at a Cloud-Service for an **Extended Policy** and optionally for a **Secondary Identity**, then the RealmJoin Security Assessment **checks if the system qualifies** \(Encryption, Patch Level, Firewall, Anti-Virus, etc. - optionally, an Intune-Health-Check may be sufficient\). If the user's device is eligible **software- and configuration-Policy** will be applied \(Mandatory Applications, etc.\).
 
@@ -51,18 +51,4 @@ A further useful feature is **Sync this device**.
 [![Sync this device](.gitbook/assets/rj-ui3.2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui3.2.png)
 
 When you click **Sync this device** RealmJoin will install or update mandatory packages. Furthermore **Sync this device** helps to speed up background processes \(e. g. waiting for new weblinks or waiting for an admin account\).
-
-### Tray Debug
-
-To open the tray debug, click **STRG + SHIFT + Click on the RealmJoin Icon**. The Client menu will open but with a further entry at the end of the menu: **Show Debug Window**.
-
-Client menu:
-
-[![RJclientmenu2](.gitbook/assets/rj-ui4.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui4.png)
-
-Tray debug:
-
-[![RJtraydebug](.gitbook/assets/rj-ui5.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui5.png)
-
-Show Debug Window contains seven different diagnostic tools. If a device is not able to be addressed by the server or can not connect to the back-end, this tool will provide the user with the tools for the first steps of diagnosis.
 

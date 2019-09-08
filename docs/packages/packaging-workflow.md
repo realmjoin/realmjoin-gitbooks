@@ -36,7 +36,7 @@ Before building your package, there are different checks to be performed:
 
 ### Creating packages
 
-[![RJ ecosystem](.gitbook/assets/rj-ecosystem.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ecosystem.png)
+[![RJ ecosystem](../.gitbook/assets/rj-ecosystem.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ecosystem.png)
 
 The picture above provides a schematic overview over the RealmJoin package distribution ecosystem. The step of creating packages will be illuminated in this chapter.  
 It documents the basic steps in creating craft, Chocolatey, Chocolatey App-V and organic packages. While all types follow the same rough outline, there are some differences when handling the packages.
@@ -67,7 +67,7 @@ You confronted by the following prompt and asked to specify details:
 Cloning into....[installation messages]
 ```
 
-[![RJ package-jump](.gitbook/assets/rj-package-jump.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-jump.png)
+[![RJ package-jump](../.gitbook/assets/rj-package-jump.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-jump.png)
 
 After a short while, a new repository is created and the template files are copied into the local package folder. Before working on the files, please check the **readme.md**. Depending on the type of package that is to be created, the next steps will vary.
 
@@ -79,7 +79,7 @@ After a short while, a new repository is created and the template files are copi
 
   There are 8 different sample files, while those starting with `Sample1*` are considered outdated. Therefore, select and edit the most fitting `Sample0*.gitlab-ci.yml` file and delete the other ones. You might need to adjust the content. Remove the prefix of the filename and save it as `.gitlab-ci.yml`.
 
-  ![RJ package-sample](.gitbook/assets/rj-package-sample%20%281%29.png)  
+  ![RJ package-sample](../.gitbook/assets/rj-package-sample%20%281%29.png)  
 
   The `.gitlab-ci.yml`file contain the build and deploy information. In the **build** stage, the `build-deploy.ps1` helper script is called, while the argument `-build` indicates the **build** stage and `-ChocoMachine` the chocolatey type package.
 
@@ -96,9 +96,9 @@ After a short while, a new repository is created and the template files are copi
 * Check `build-deploy-flavor-definitions.ps1` Check the file `.realmjoin-gitlab-ci-helpers/build-deploy-flavor-definitions.ps1` for your desired flavour.  
   If it is not included in the `$genericFlavors`, `$specialFlavors` or `$customerFlavors` range, a helper script has to be adjusted. Please contact the responsible person.
 
-  [![RJ build-flavours](.gitbook/assets/rj-package-choco-buildflavour.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-buildflavour.png)
+  [![RJ build-flavours](../.gitbook/assets/rj-package-choco-buildflavour.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-buildflavour.png)
 
-* Customize `choco-package.nuspec` Add the metadata according to the desired software. ![RJ package-nuspec](.gitbook/assets/rj-package-nuspec1.png)
+* Customize `choco-package.nuspec` Add the metadata according to the desired software. ![RJ package-nuspec](../.gitbook/assets/rj-package-nuspec1.png)
   * id: **flavour-vendor-program**. It is necessary to add **generic** for non-customized packages.
   * version: Package version **W.X.Y.Z**. See section **Conventions and helpers** for more detailed information on the numbering convention.
   * title: Displayed name of the package.
@@ -122,7 +122,7 @@ After a short while, a new repository is created and the template files are copi
 
   Based on the samples in the file, choose the most fitting one and adapt accordingly.
 
-[![RJ package-install](.gitbook/assets/rj-package-install.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-install.png)
+[![RJ package-install](../.gitbook/assets/rj-package-install.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-install.png)
 
 * Customize `rj_install.cmd` and `rj_install.ps1`
   * With User Settings  
@@ -147,9 +147,9 @@ After a short while, a new repository is created and the template files are copi
   * 20 customers: Deploys a new version of all customer flavour packages. Do not do this, if you do not want to deploy a new version for all flavours listed here.
   * 90 special: Deploys a new version of the special flavour package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
 
-[![RJ package-deploy](.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
+[![RJ package-deploy](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
-After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](managing-realmjoin.md) for information on assigning packages.
+After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
 
 #### Craft Package
 
@@ -165,13 +165,13 @@ After the successful deployment, the package can be found in the Chocolatey libr
 
 > \[!NOTE\] Make sure to provide the **-build / -deployCraft** parameters for craft packages. Remove the prefix of the filename and save it as `.gitlab-ci.yml`.
 
-[![RJ sample-craft](.gitbook/assets/rj-package-sample-craft.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-sample-craft.png)
+[![RJ sample-craft](../.gitbook/assets/rj-package-sample-craft.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-sample-craft.png)
 
 * Customize `rj_install.cmd` and `rj_install.ps1`  
 
   Customize one of `rj_install.cmd` and `rj_install.ps1` in root folder if necessary, delete the other one. This file may contain various modifications and adjustments, e.g. registry keys or \(un-\)pinning of start icons.
 
-[![RJ craft-installer](.gitbook/assets/rj-package-rjinstaller-craft.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-rjinstaller-craft.png)
+[![RJ craft-installer](../.gitbook/assets/rj-package-rjinstaller-craft.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-rjinstaller-craft.png)
 
 * Any additional files can also go into the root folder.
 * Rewrite `Readme.md`
@@ -190,9 +190,9 @@ After the successful deployment, the package can be found in the Chocolatey libr
   * 20 customers: Deploys a new version of all customer flavour packages. Do not do this, if you do not want to deploy a new version for all flavours listed here.
   * 90 special: Deploys a new version of the special flavour package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
 
-[![RJ choco-deploy](.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
+[![RJ choco-deploy](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
-After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](managing-realmjoin.md) for information on assigning packages.
+After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
 
 #### Organic Package
 
@@ -204,13 +204,13 @@ Organic packages are created similar to Chocolatey packages, but instead of a so
 
 > \[!NOTE\] Make sure to provide the **-build / -deployChocoMachine** parameters for organic packages. Remove the prefix of the filename and save it as `.gitlab-ci.yml`.
 
-[![RJ package-sample](.gitbook/assets/rj-package-sample.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-sample.png)
+[![RJ package-sample](../.gitbook/assets/rj-package-sample.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-sample.png)
 
 * Customize `choco-package.nuspec`  
 
   Add the metadata according to the desired software.
 
-[![RJ package-nuspec](.gitbook/assets/rj-package-nuspec1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-nuspec1.png)
+[![RJ package-nuspec](../.gitbook/assets/rj-package-nuspec1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-nuspec1.png)
 
 * Move `*.zip`  
 
@@ -224,7 +224,7 @@ Organic packages are created similar to Chocolatey packages, but instead of a so
 
   Specify the desired `$targetDir` location on the device and the correct `$filename` of the zip container.  
 
-[![RJ organic-install](.gitbook/assets/rj-package-chocoinstall-organic.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-chocoinstall-organic.png)
+[![RJ organic-install](../.gitbook/assets/rj-package-chocoinstall-organic.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-chocoinstall-organic.png)
 
 * Delete `rj_install.cmd` and `rj_install.ps1`  
   * Delete subfolder `usersettings` completely.
@@ -245,9 +245,9 @@ Organic packages are created similar to Chocolatey packages, but instead of a so
   * 20 customers: Deploys a new version of all customer flavour packages. Do not do this, if you do not want to deploy a new version for all flavours listed here.
   * 90 special: Deploys a new version of the special flavour package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
 
-[![RJ organic-install](.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
+[![RJ organic-install](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
-After the successful deployment, the package can be found in the chocolatey library and added. See chapter [Managing RealmJoin](managing-realmjoin.md) for information on assigning packages.
+After the successful deployment, the package can be found in the chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
 
 #### App-V Package
 

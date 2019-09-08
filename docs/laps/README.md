@@ -61,7 +61,7 @@ A support staff needs local administrative rights in field support \(e. g. for t
 
 1. The staff visits the RealmJoin WebUI. On the device details he/she will see the name of the administrator account and can request the password when clicking on the dotted text.
 
-[![Request password for emergency admin](.gitbook/assets/rj-laps1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps1.png)
+[![Request password for emergency admin](../.gitbook/assets/rj-laps1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps1.png)
 
 1. RealmJoin pulls the password from Azure Key Vault and displays it.
 2. The staff is now able to get elevated rights with entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
@@ -92,13 +92,13 @@ The support staff visits the RealmJoin WebUI again \(depends on the **Configurat
 
 1. On the device details he/she will see the name of the temporal administrator account. The account creation will be started when clicking on **Request**.
 
-[![Request password for support admin](.gitbook/assets/rj-laps2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps2.png)
+[![Request password for support admin](../.gitbook/assets/rj-laps2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps2.png)
 
 > \[!NOTE\] After a certain time, the credentials will appear. Click the dotted password field to request the password.
 
 1. RealmJoin pulls the password from Azure Key Vault and displays it.
 
-[![Request password for emergency admin](.gitbook/assets/rj-laps3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps3.png)
+[![Request password for emergency admin](../.gitbook/assets/rj-laps3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps3.png)
 
 1. The staff is now able to get elevated rights with entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
 2. When the staff has finished his tasks, he/she logs out of the account.

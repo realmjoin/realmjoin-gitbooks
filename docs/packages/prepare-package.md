@@ -4,7 +4,7 @@ This article is about **Creating Packages**. It will show you the basic steps in
 
 We will start this article with a figure to get an overview of the RealmJoin package distribution ecosystem:
 
-[![RJ ecosystem](.gitbook/assets/rj-ecosystem.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ecosystem.png)
+[![RJ ecosystem](../.gitbook/assets/rj-ecosystem.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ecosystem.png)
 
 All packaging processes will be demonstrated with a VLC player package.
 

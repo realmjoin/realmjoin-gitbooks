@@ -1,6 +1,6 @@
 # AnyDesk
 
-RealmJoin contains the remote desktop tool **AnyDesk**. It allows the access to other computers. AnyDesk can be installed on Windows, macOS, Linux, mobile devices and Raspberry Pi as well.
+The RealmJoin Enterprise License contains an single session licens of the remote desktop tool **AnyDesk**. It allows the access to client devices including the option to elevate rights by using the RealmJoin LAPS feature. AnyDesk can be installed on Windows, macOS, Linux, mobile devices and Raspberry Pi as well.
 
 AnyDesk uses ID numbers to establish connections between two computers. Share your ID number with an other user \(this user needs AnyDesk as well\). This user has to enter the ID number in the AnyDesk menu. When you accept the request, the other user will have access to your desktop.
 
@@ -97,4 +97,3 @@ For special support scenarios administrative rights will be needed. A normal rem
 | 5. On the remote client, a new window **User Account Control** will appear |  |
 | 6. Confirm it |  |
 | 7. The support staff is now able to perform administrative tasks. |  |
-

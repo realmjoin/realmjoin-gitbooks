@@ -48,7 +48,7 @@ When a client device downloads software packages for the first time, the files a
 
 The RealmJoin Publishing Server has to provide the chunk identifiers, and therefore is hosted as a single Azure VM Windows 2016 IIS server with a Azure Blob Storage. For more information about BranchCache see the [Microsoft BranchCache documentation](https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache)
 
-### Back-end
+### Back-End
 
 #### Hosting
 

@@ -1,7 +1,10 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Installation](installation.md)
+* [Installation](installation/README.md)
+  * [Install Using Microsoft Intune](installation/install-using-microsoft-intune.md)
+  * [Interactive Installation](installation/interactive-installation.md)
+  * [Connecting a Tenant](installation/connecting-a-tenant.md)
 * [Infrastructure](infrastructure.md)
 * [Managing RealmJoin](managing-realmjoin.md)
 * [RealmJoin Portal](rj-portal.md)

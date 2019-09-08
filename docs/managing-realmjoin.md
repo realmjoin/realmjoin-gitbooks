@@ -10,7 +10,9 @@ The RealmJoin client is enrolled on every Windows 10 device. RealmJoin seamlessl
 
 Since the release of version 4.15, RealmJoin skips the email-based discovery process that user goes through on the sign in page, leading to a slightly more streamlined user experience \(RealmJoin still based on the AAD workflow - AAD sign-in and OAuth-protocol\).
 
-> \[!NOTE\] In rare cases it can happen that the user has to enter username and password manually, as a result of failures or incompatible settings.
+{% hint style="info" %}
+In rare cases it can happen that the user has to enter username and password manually, as a result of failures or incompatible settings.
+{% endhint %}
 
 To see information about the Initial Start before version 4.15, navigate to the [Appendix](appendix.md#Initial-Start-before-RJ-v4.15)
 

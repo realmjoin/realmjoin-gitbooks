@@ -123,7 +123,9 @@ APP - Mozilla-Firefox-withFlash
 The standard synchronization time is 20 minutes \(hh:00, hh:20, hh:40 and all groups that start with **APP -** or **CFG -** are taking into consideration.  
 The synchronization time schedule and the prefixes that are taken into account can be adjusted, currently only on request. Groups will not be deleted from the RealmJoin back-end, if they are removed in Azure/Intune.
 
-> \[!NOTE\] The **RealmJoin - All Users** group is automatically created, which contains all users with a RealmJoin installation on at least one of their clients.
+{% hint style="info" %}
+The **RealmJoin - All Users group** is automatically created, which contains all users with a RealmJoin installation on at least one of their clients.
+{% endhint %}
 
 ### Group settings
 
@@ -205,9 +207,9 @@ While adding a package the following configuration entries are available:
 
     It has to be noted, that it is also possible to provide arguments in the package assignment stage \(see section below\). Globally relevant parameters \(e.g. volume license number\) should be provided at the package addition step, while more individualized arguments \(e.g. language packs\) are better specified during the assignment step.  
 
-> \[!NOTE\] Do not use the **dependency** and **order** option on **mandatory** packages parallel. This might prevent the back-end from correctly resolve the order installation: During the initial rollout, or any rollout of mandatory packages after a login for this purpose, RealmJoin in the first step resolves all dependencies of the packages. If there are any, all packages which are listed as a dependency for a different package are installed.  
-> In the second step, the original packages are installed. This may cancel out any order numbers.  
-> E.g.: Package A, order 1. Package B, order 101 and depending on Package C, order 100. If all packages are assigned as mandatory, the installation sequence will be C - A - B.
+{% hint style="info" %}
+Do not use the dependency and order option on mandatory packages parallel. This might prevent the back-end from correctly resolve the order installation: During the initial rollout, or any rollout of mandatory packages after a login for this purpose, RealmJoin in the first step resolves all dependencies of the packages. If there are any, all packages which are listed as a dependency for a different package are installed. In the second step, the original packages are installed. This may cancel out any order numbers. E.g.: Package A, order 1. Package B, order 101 and depending on Package C, order 100. If all packages are assigned as mandatory, the installation sequence will be C - A - B.
+{% endhint %}
 
 * Version
   * Version of the package to be installed \(for conventions of the version numbering see chapter **Packages**\).
@@ -233,7 +235,9 @@ Options:
 
     Those features are usually used for the testing of new packages or updates of existing one: The test-groups or test-users get the pre-release version of a package assigned during the testing.
 
-> \[!Note\] Under normal circumstance it is highly advised to prevent a normal user having the same package assigned more than once.
+{% hint style="info" %}
+Under normal circumstance it is highly advised to prevent a normal user having the same package assigned more than once.
+{% endhint %}
 
 * The pre-release flagged package is visually highlighted in the portal's package list with an lightning symbol behind the name.
 * **Require Intune Compliance \(BETA\)**: The package is installed, as soon as RealmJoin is able to verify via the GraphAPI that the machine is considered compliant. This might stop the rollout for some time. The installation of the package, and therefore all other mandatory packages with higher order numbers that are queued to be installed afterwards, is resumed when the client is compliant.
@@ -244,7 +248,11 @@ Options:
 
     [![RJ autoupdate\_sim](.gitbook/assets/rj-autoupdate_sim.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-autoupdate_sim.png)
 
-> \[!NOTE\] To change package name or ID is not a proper way to edit assigned packages. Add a new package instead. Delete the obsolete one.
+{% hint style="info" %}
+To change package name or ID is not a proper way to edit assigned packages. Add a new package instead. Delete the obsolete one.
+{% endhint %}
+
+>
 
 #### Advanced Options
 
@@ -324,7 +332,9 @@ The request option can be found via the last menu item:
 
 Please provide the necessary binaries as well as all installation requirements and additional information. It is essential for in-time processing, that the request only contains the necessary binaries and a detailed installation guide. After submitting the request information \(please do not forget a contact persons email address if the requesting admin account do not has a monitored inbox\), you will be able to upload your zip file containing the binaries. After the upload, a ticket will automatically be created and the packaging request will be handled by the Glück & Kanja staff.
 
-> \[!NOTE\] Without attaching a file, no request will be created. If the request does not contain binaries, a **dummy.txt** file has to be attached.
+{% hint style="info" %}
+Without attaching a file, no request will be created. If the request does not contain binaries, a **dummy.txt** file has to be attached.
+{% endhint %}
 
 ![RJ rj-ac-uploader](.gitbook/assets/rj-ac-upload%20%281%29.png)
 
@@ -692,13 +702,9 @@ After submitting the information \(**do not forget a contact person!**\), you wi
 
 [![RJ rj-ac-uploader](.gitbook/assets/rj-ac-upload.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ac-upload.png)
 
-> \[!NOTE\] To prevent spam and unsolicited requests, if no file is attached, the request is not processed. In case of a file-less request, a dummy.txt file has to be attached. &lt;!--
->
-> ## TBD
->
-> Roles and self service in the admin console. Roles werden noch eingeführt, aktuell nur Admin oder kein Admin
->
-> #### Increased self service
->
-> SelfService im Backend/Admin Console geplant, niedrige Prio --&gt;
+{% hint style="info" %}
+To prevent spam and unsolicited requests, if no file is attached, the request is not processed. In case of a file-less request, a dummy.txt file has to be attached.
+{% endhint %}
+
+
 

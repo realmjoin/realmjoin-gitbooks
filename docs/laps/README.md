@@ -94,7 +94,9 @@ The support staff visits the RealmJoin WebUI again \(depends on the **Configurat
 
 [![Request password for support admin](../.gitbook/assets/rj-laps2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps2.png)
 
-> \[!NOTE\] After a certain time, the credentials will appear. Click the dotted password field to request the password.
+{% hint style="info" %}
+After a certain time, the credentials will appear. Click the dotted password field to request the password.
+{% endhint %}
 
 1. RealmJoin pulls the password from Azure Key Vault and displays it.
 

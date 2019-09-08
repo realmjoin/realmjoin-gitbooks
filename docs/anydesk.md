@@ -8,7 +8,9 @@ RealmJoin skips the whole ID number sharing process, because every AnyDesk ID nu
 
 As a user you can select different permissions which you give to other \(remote\) users. For example, you can allow or block access to your monitor, to your sound or the control of your keyboard and/or your computer mouse.
 
-> \[!IMPORTANT\] When you use the AnyDesk feature \(via RealmJoin\), it is not possible to start a remote session with external AnyDesk users.
+{% hint style="info" %}
+When you use the AnyDesk feature \(via RealmJoin\), it is not possible to start a remote session with external AnyDesk users.
+{% endhint %}
 
 ## AnyDesk deployment
 
@@ -38,7 +40,9 @@ The following JSON contains all configurations:
 **Key** = Integration  
 **Value** = {"AnyDesk: { "Enabled": true, "BootstrapperUrl": "[https://.../.../AnyDesk.exe](https://.../.../AnyDesk.exe)", "Ui": {TrayMenuTextEnglish": "Start remote session} } }
 
-> \[!IMPORTANT\] The BootstrapperUrl is your **Public Download** Url from AnyDesk Custom Client Details.
+{% hint style="info" %}
+The BootstrapperUrl is your **Public Download Url** from AnyDesk Custom Client Details.
+{% endhint %}
 
 It is also possible to split this single JSON from above, in three different JSON policies:
 

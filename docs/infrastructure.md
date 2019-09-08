@@ -17,7 +17,9 @@ Download the new xml file and perform the necessary changes on your site before 
 
 This article links a file that contains the compute IP address ranges that you should include in your outbound allow lists to ensure your computers can successfully use Office 365.
 
-> \[!IMPORTANT\] IP addresses filtering alone is not a complete solution due to dependencies on internet based services such as Domain Name Services \(DNS\), Content Delivery Networks \(CDNs\), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services are dynamically assigned and can change at any time.
+{% hint style="info" %}
+IP addresses filtering alone is not a complete solution due to dependencies on internet based services such as Domain Name Services \(DNS\), Content Delivery Networks \(CDNs\), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services are dynamically assigned and can change at any time.
+{% endhint %}
 
 ### No \(VLans/WLAN-/Port\)-Isolation
 

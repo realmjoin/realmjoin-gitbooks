@@ -53,7 +53,9 @@ Packages that should be installable by secondary users \(in addition to packages
 
 If this setting is not set, such packages cannot be installed by secondary users \(because of the default value: **Only primary**\)
 
-> \[!NOTE\] Software Packages of secondary users will also get updates, even when these packages were installed by a primary user.
+{% hint style="info" %}
+Software Packages of secondary users will also get updates, even when these packages were installed by a primary user.
+{% endhint %}
 
 ## Device Setup
 

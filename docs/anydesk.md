@@ -1,6 +1,6 @@
 # AnyDesk
 
-The RealmJoin Enterprise License contains an single session licens of the remote desktop tool **AnyDesk**. It allows the access to client devices including the option to elevate rights by using the RealmJoin LAPS feature. AnyDesk can be installed on Windows, macOS, Linux, and mobile devices as well.
+The RealmJoin Enterprise License contains an single session licens of the remote desktop tool **AnyDesk**. It allows the access to client devices including the option to elevate rights by using the RealmJoin LAPS feature. AnyDesk can be installed on Windows, macOS, Linux, mobile devices and Raspberry Pi as well.
 
 AnyDesk uses ID numbers to establish connections between two computers. Share your ID number with an other user \(this user needs AnyDesk as well\). This user has to enter the ID number in the AnyDesk menu. When you accept the request, the other user will have access to your desktop.
 
@@ -22,7 +22,7 @@ Before you can start with a AnyDesk session, you have to do few settings.
 | 2. Customize your AnyDesk client | [![Customize AnyDesk client](.gitbook/assets/anydesk7.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk7.png) |
 | 3. Select **Make download link publicly available** |  |
 | 3. Click **Save** to confirm your settings |  |
-| 4. The **Custom Client Details** page will appear | [![Custom Client Details](.gitbook/assets/anydesk8.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk8.png) |
+| 4. The **Custom Client Details** page will appear | [![Custom Client Details](.gitbook/assets/anydesk8%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk8.png) |
 | 5. Select the following **Options**: | [![Options](.gitbook/assets/anydesk8_2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk8_2.png) |
 | - Disable Settings |  |
 | - Disable address book |  |
@@ -75,7 +75,7 @@ After you customize your Client, AnyDesk will send you an email. This mail conta
 | Task | Image |
 | :--- | :--- |
 | 1. Open the RealmJoin tray menu |  |
-| 2. Click **Start remote session** | [![RJtraymenu](.gitbook/assets/anydesk1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk1.png) |
+| 2. Click **Start remote session** | [![RJtraymenu](.gitbook/assets/anydesk1%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk1.png) |
 | 3. The AnyDesk client starts and its current address will be pushed to RealmJoin backend in background. In addition, its visible in the UI. | [![RJanydesksession](.gitbook/assets/anydesk2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk2.png) |
 | 4. This client address will be displayed in RealmJoin portal at the corresponding client and the support staff can initiate the session via clicking **Connect** | [![AnyDeskConnect](.gitbook/assets/anydesk3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk3.png) |
 | 5. This will automatically start the AnyDesk client |  |
@@ -93,7 +93,8 @@ For special support scenarios administrative rights will be needed. A normal rem
 | 2. Select **Request elevation** | [![Request elevation](.gitbook/assets/anydesk5.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk5.png) |
 | 3. In the new appearing window \(Request elevation\) choose **Transmit authentication data** |  |
 | 4. Insert corresponding credentials |  |
-| 5. Then, click **OK** | [![Credentials](.gitbook/assets/anydesk6.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk6.png) |
+| 5. Then, click **OK** | [![Credentials](.gitbook/assets/anydesk6%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk6.png) |
 | 5. On the remote client, a new window **User Account Control** will appear |  |
 | 6. Confirm it |  |
 | 7. The support staff is now able to perform administrative tasks. |  |
+

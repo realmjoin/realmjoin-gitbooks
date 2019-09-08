@@ -30,14 +30,18 @@ For more on WUDO see the [Microsoft WUDO documentation \(DE\)](https://docs.micr
 
 ### BitLocker enforcement
 
-It is possible to force BitLocker encryption for OS volumes. The configuration file \(see chapter [Policies](http://docs.realmjoin.com/policies.html#policies)\) allows to set the switch **BitlockerEnabled** to **true**. If the device is equipped with a **ready state** TPM chip the encryption is activated. To allow the BitLocker enforcement, the registry key
+It is possible to force BitLocker encryption for OS volumes. The configuration file \(see chapter [Policies](http://docs.realmjoin.com/policies.html#policies)\) allows to set the switch **BitlockerEnabled** to **true**. If the device is equipped with a **ready state** TPM chip the encryption is activated. To allow the BitLocker enforcement, the registry key 
 
 ```text
+HKLM\SYSTEM\CurrentControlSet\Control\BitLocker:PreventDeviceEncryption
+```
+
 is set to **false**.
 
 For virtual machines the encryption is only enforced, if the virtual machine variable
 
-```$env:RjDisableVmDetection=1
+```text
+$env:RjDisableVmDetection=1
 ```
 
 is set.
@@ -48,24 +52,21 @@ If the client device is Azure AD joined, RealmJoin uploads the BitLocker recover
 
 ## Domain password expiry
 
-RealmJoin uses the Azure AD attribute
-
-```text
-to check if the user password is expired.
+RealmJoin uses the Azure AD attribute to check if the user password is expired.
 
 ## Intranet Zone
 
-Site may be added to the **Intranet Zone** (in Internet Options) by specifying a setting with the key `Policies.TrustedSites` and an array of URLs. These URLs are parsed by RealmJoin and written to a registry key called **ZoneMap**.
+Site may be added to the **Intranet Zone** \(in Internet Options\) by specifying a setting with the key `Policies.TrustedSites` and an array of URLs. These URLs are parsed by RealmJoin and written to a registry key called **ZoneMap**.
 
 One might specify the following JSON array:
 
-```json
+```text
 ["file://example.com", "https://foo.example.com"]
 ```
 
 Which will result in the following rules:
 
-\[![Policies.TrustedSites](.gitbook/assets/rj-policies-trustedsites.png)}\(./media/rj-policies-trustedSites.png\)
+![Policies.TrustedSites](.gitbook/assets/rj-policies-trustedsites.png)
 
 ### Caveats
 

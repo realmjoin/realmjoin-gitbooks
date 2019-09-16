@@ -45,18 +45,6 @@ The following steps must be done in **RealmJoin**
 * Add Software packages \(that should be installed when device is set up by DEM account\)
 * Let Glück & Kanja mark this group as **Primary Users** \(obtain Azure AD Object ID\)
 
-### Software Packages
-
-Packages that should be installable by secondary users \(in addition to packages installed by DEM account\) must have the following setting \(assigned to a group with secondary users\):
-
-[![Software Packages](.gitbook/assets/dem4.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem4.png)
-
-If this setting is not set, such packages cannot be installed by secondary users \(because of the default value: **Only primary**\)
-
-{% hint style="info" %}
-Software Packages of secondary users will also get updates, even when these packages were installed by a primary user.
-{% endhint %}
-
 ## Device Setup
 
 A new and clean device will be set up with the DEM user account created before:

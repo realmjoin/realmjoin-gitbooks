@@ -13,7 +13,7 @@ Example:
 * Enterprise Mobility + Security \(user license\) or
 * A simple device license
 
-[![dem license](.gitbook/assets/dem1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem1.png)
+[![dem license](.gitbook/assets/dem1%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem1.png)
 
 ## Preparations
 
@@ -23,13 +23,13 @@ Before you can start with a device enrollment you have to do some preparations.
 
 Create a generic user account that is not assigned to a real person. Please make sure that this account never gets deleted. In that case, enrolled devices will not stay under management any more. Assign a suitable Intune license as described before.
 
-[![dem user](.gitbook/assets/dem2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem2.png)
+[![dem user](.gitbook/assets/dem2%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem2.png)
 
 ### Create User Group for DEM Accounts
 
 A new user group is necessary that contains all DEM users. Ad one \(e.g. **CFG - All multi-user device accounts DEM**\) and assign the previously created user.
 
-[![dem user group](.gitbook/assets/dem3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem3.png)
+[![dem user group](.gitbook/assets/dem3%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem3.png)
 
 ### Prepare Group
 
@@ -49,15 +49,15 @@ The following steps must be done in **RealmJoin**
 
 A new and clean device will be set up with the DEM user account created before:
 
-\[![Device Setup\(./media/dem5.png\)](.gitbook/assets/dem5.png)
+\[![Device Setup\(./media/dem5.png\)](.gitbook/assets/dem5%20%281%29.png)
 
 Depending on configuration second factor authentication will be enforced:
 
-[![Device Setup Configuration](.gitbook/assets/dem6.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem6.png)
+[![Device Setup Configuration](.gitbook/assets/dem6%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem6.png)
 
 Device enrollment and provisioning will start:
 
-[![Device enrollment](.gitbook/assets/dem7.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem7.png)
+[![Device enrollment](.gitbook/assets/dem7%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem7.png)
 
 Prompt for Windows Hello setup appears \(depending on configuration\):
 
@@ -65,17 +65,17 @@ Prompt for Windows Hello setup appears \(depending on configuration\):
 
 After that, RealmJoin will start and install the defined set of software for the DEM account:
 
-[![RealmJoin Start](.gitbook/assets/dem9.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem9.png)
+[![RealmJoin Start](.gitbook/assets/dem9%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem9.png)
 
 When logging in via DEM account \(primary user\) the software should be installed:
 
-[![Login Testuser](.gitbook/assets/dem10.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem10.png)
+[![Login Testuser](.gitbook/assets/dem10%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem10.png)
 
 ## Secondary User Experience
 
 Secondary users are now able to log in::
 
-[![Login Testuser](.gitbook/assets/dem11.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem11.png)
+[![Login Testuser](.gitbook/assets/dem11%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem11.png)
 
 Software assigned and installed by DEM account should be available
 

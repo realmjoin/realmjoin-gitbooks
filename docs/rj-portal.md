@@ -203,9 +203,7 @@ While adding a package the following configuration entries are available:
 
     It has to be noted that a 0 is translated to **no sequence given** and the order number is only taken into account at the first roll out.
 * Args
-  * If the packaged software has to be installed with arguments. If the package to be deployed is a Chocolatey package, make sure to use the prefix **-params** and correct escaping, since Chocolatey might mistake the arguments to be directed to it, for **craft** packages, the arguments can just be added.  
-
-    It has to be noted, that it is also possible to provide arguments in the package assignment stage \(see section below\). Globally relevant parameters \(e.g. volume license number\) should be provided at the package addition step, while more individualized arguments \(e.g. language packs\) are better specified during the assignment step.  
+  * If the packaged software has to be installed with arguments. Make sure to use correct escaping. Usually arguments are in the form of `/Parameter1:value1 /Parameter2:"value 2"` It has to be noted, that it is also possible to provide arguments in the package assignment stage \(see section below\). Globally relevant parameters \(e.g. volume license number\) should be provided at the package addition step, while more individualized arguments \(e.g. language packs\) are better specified during the assignment step.  
 
 {% hint style="info" %}
 Do not use the dependency and order option on mandatory packages parallel. This might prevent the back-end from correctly resolve the order installation: During the initial rollout, or any rollout of mandatory packages after a login for this purpose, RealmJoin in the first step resolves all dependencies of the packages. If there are any, all packages which are listed as a dependency for a different package are installed. In the second step, the original packages are installed. This may cancel out any order numbers. E.g.: Package A, order 1. Package B, order 101 and depending on Package C, order 100. If all packages are assigned as mandatory, the installation sequence will be C - A - B.

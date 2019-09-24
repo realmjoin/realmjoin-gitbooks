@@ -2,7 +2,7 @@
 
 Device provisioning and RealmJoin configuration is done with the RealmJoin portal. Designed to mirror the style of the new Microsoft administration services,it is the main tool for the management of the RealmJoin clients and users. The web application can be reached under [https://realmjoin-web.azurewebsites.net/](https://realmjoin-web.azurewebsites.net/) or the beta version under [https://realmjoin-web-staging.azurewebsites.net/](https://realmjoin-web-staging.azurewebsites.net/).
 
-[![RJ Dashboard](.gitbook/assets/rj-ac-dashboard.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ac-dashboard.png)
+![](.gitbook/assets/rj-ac-dashboard.png)
 
 The dashboard provides a quick and beneficial overview. All sections can be accessed by either clicking on the corresponding number or selecting the section in the toolbar on the left.
 
@@ -36,6 +36,7 @@ A supporter can not manage RealmJoin software. A supporter has access to users, 
 ![RJ clientsicon](.gitbook/assets/rj-ac-clientsicon.png)
 
 The clients tab gives you a transparent overview over all enrolled devices as well as the respective primary user. To enter the devices' states \(see section [States](http://docs.realmjoin.com/managing-realmjoin.html#states)\) or associate users, just click on the green numbers on the right.  
+  
 In this details you find two JSON files with basic information about the client and the primary user. It is possible change the primary device user if there is an inconsistency between the Azure and the RealmJoin portal. This might happen if a device is not correctly reset and issued to a new user afterwards.  
 Client:
 
@@ -94,6 +95,7 @@ Users can not be added or assigned to groups using RealmJoin, the management of 
 ![RJ rj-ac-groupsicon](.gitbook/assets/rj-ac-groupsicon.png)
 
 **All in this tenant registered user groups**. RealmJoin synchronizes groups from Azure Active Directory into the RealmJoin back-end. The details on the right contain users within the individual group, packages that are assigned to a group as well as group settings.  
+  
 Since not all users in Azure AD might be equipped with RealmJoin, only a specified range of groups are transferred into RealmJoin \(depending on the group name\). The groups can not be added or altered within RealmJoin, therefore the group naming conventions have to be established in advance.
 
 While there are not strict naming pattern requirements in RealmJoin, we recommend the following convention:
@@ -121,6 +123,7 @@ APP - Mozilla-Firefox-withFlash
 ```
 
 The standard synchronization time is 20 minutes \(hh:00, hh:20, hh:40 and all groups that start with **APP -** or **CFG -** are taking into consideration.  
+  
 The synchronization time schedule and the prefixes that are taken into account can be adjusted, currently only on request. Groups will not be deleted from the RealmJoin back-end, if they are removed in Azure/Intune.
 
 {% hint style="info" %}
@@ -133,6 +136,7 @@ The **RealmJoin - All Users group** is automatically created, which contains all
 
 **Configurable group settings and policies.** See chapter [policies](http://docs.realmjoin.com/policies.html#other-configuration-settings) for a list of implemented features.  
 To change a policy, you have to first select the group, and then select the group settings number on the right.  
+  
 This will open the group settings web page with a filter on the selected group, allowing to create policies for this group. To configure a policy, add the tree path in the **key** field and the setting in the **value** section, e.g.:
 
 ```text
@@ -168,14 +172,14 @@ This creates new links available in the RealmJoin client tray. The created setti
 
 The administrator is able to add created craft and Chocolatey packages to RealmJoin using the **Add Choco** / **Add Craft** buttons. This open the package setup window.
 
-[![RJ rj-ac-packages](.gitbook/assets/rj-ac-packages.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ac-packages.png)\)
+![](.gitbook/assets/rj-ac-packages.png)
 
 There are two ways to add the necessary information:
 
 * Entering the required fields **Name**, **Version**, **Chocolatey Package ID** \(Chocolatey packages only\), **ID** \(Chocolatey Package ID and ID are usually similar\), **Location**, **Hash** and **Scope** \(all three craft packages only\) manually.
 * Pasting the JSON code, which can be found in the corresponding package repository \(pipeline\).
 
-[![RJ package-json-pipeline](.gitbook/assets/rj-package-json.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rf-package-json.png)
+![](.gitbook/assets/rj-package-json.png)
 
 While adding a package the following configuration entries are available:
 
@@ -256,7 +260,7 @@ To change package name or ID is not a proper way to edit assigned packages. Add 
 
 With RealmJoin version 4.13 a new feature was published: Support of multi user devices. To represent these scenarios within the RealmJoin, advanced options are available when configuring a package.
 
-[![RJ advanced options](.gitbook/assets/rj-assign-advanced.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-assign-advanced.png)
+![](.gitbook/assets/rj-assign-advanced.png)
 
 To access this plane, press the **Show Advanced Options** button on the right. All new options will be available:
 
@@ -274,9 +278,10 @@ Whenever a package with identical content is needed multiple times for the same 
 A possible scenario: One user group needs the same package with different arguments \(for example to map several network drives\) and the RJ-Client requires unique package IDs.
 
 * Notation
+
   * To make the ID unique, a hash is written behind the ID and provided with a meaningful word/index, for example **package-id\#Value**.  
 
-[![RJ rj-duplicate-packages](.gitbook/assets/rj-duplicate-packages.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-duplicate-packages.png)
+![](.gitbook/assets/rj-duplicate-packages.png)
 
 #### Assign Packages
 
@@ -294,7 +299,7 @@ Similar to the profile management with Microsoft Azure AD, packages can be assig
 * Advanced Options  
   * See section [advanced options in the "Add Packages" section](http://docs.realmjoin.com/managing-realmjoin.html#advanced-options).
 
-[![RJ rj-ac-packageoverrides](.gitbook/assets/rj-ac-packageoverrides.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ac-packageoverrides.png)
+![](.gitbook/assets/rj-ac-packageoverrides.png)
 
 ### Application Resources
 
@@ -306,25 +311,24 @@ With the RealmJoin infrastructure and the light-touch approach to packaging, it 
 
 #### Subscribe from the AppStore
 
-Glück & Kanja offer an ever-expanding library of already packaged up-to-date applications for uncomplicated rollout.  
-The enabled RealmJoin administrator can subscribe to the desired applications, which will be instantly available for distribution.  
-The shopping cart icon will open the AppStore. A complete list of all applications and currently available versions is shown, that might be filtered by name.
+Glück & Kanja offer an ever-expanding library of already packaged up-to-date applications for uncomplicated rollout. The enabled RealmJoin administrator can subscribe to the desired applications, which will be instantly available for distribution. The shopping cart icon will open the AppStore. A complete list of all applications and currently available versions is shown, that might be filtered by name.
 
 ![RJ AppStore](.gitbook/assets/rj_app_store_menu.PNG)
 
 Selecting a application will show some basic information and offer the possibility to subscribe, therefore adding it in your own software library and assign it to groups and users.
 
-[![RJScreen4.15](.gitbook/assets/rj-ui1%20%282%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui1.png)\)
+![](.gitbook/assets/rj-ui1.png)
 
 After subscribing, the application will immediately added to list of available packages, and the entry might be edited if necessary. Applications from the AppStore will show technical details like optional parameters and suggestions for the assignment.
 
-[![RJScreen4.15](.gitbook/assets/rj-ui1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui1.png)
+![](.gitbook/assets/rj-ui1%20%282%29.png)
 
 To use the AppStore, please get in touch with Glück & Kanja for enablement.
 
 #### Request packaging
 
 If an application is not listed in the AppStore, or is in need of customization, a packaging request can be sent to Glück & Kanja.  
+  
 The request option can be found via the last menu item:  
 ![RJ rj-ac-uploadericon](.gitbook/assets/rj-ac-uploadicon.png)
 
@@ -341,6 +345,7 @@ Without attaching a file, no request will be created. If the request does not co
 ![RJ rj-ac-statesicon](.gitbook/assets/rj-ac-storeicon.png)
 
 Glück & Kanja maintains an ever-expanding library of ready-to-go applications that might instantly be added to the list of available packages and assigned to groups or users.  
+  
 For details, please check the [AppStore section](http://docs.realmjoin.com/requestsoftware.html#appstore) in the [application sources chapter](http://docs.realmjoin.com/requestsoftware.html).
 
 ### States
@@ -349,7 +354,7 @@ For details, please check the [AppStore section](http://docs.realmjoin.com/reque
 
 The **states** detail of the client or user control panel provides a list of the devices of the user and how frequently data was upstreamed. The **Branch Cache** column indicates how much this client has contributed to the package distribution over the **Branch Cache** feature \(see [Infrastructure](infrastructure.md)\). Selecting the white arrow in the green circle returns the complete upstream file. It contains all the information about the device, OS, Defender Pattern States and installed packages that are transferred to the back-end, where some of it is evaluated.
 
-[![RJ rj-ac-states](.gitbook/assets/rj-ac-states.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ac-states.png)
+![](.gitbook/assets/rj-ac-states.png)
 
 It is possible to extend the states by custom states. See section [Custom States](http://docs.realmjoin.com/appendix.html#a-name-customstates-a-custom-states) in the Appendix chapter for details.
 
@@ -696,9 +701,10 @@ It is possible to extend the states by custom states. See section [Custom States
 ![RJ rj-ac-uploadericon](.gitbook/assets/rj-ac-uploadicon%20%281%29.png)
 
 To request new packages to be provided by G&K, use the uploader in the RealmJoin admin console. Please provide the necessary binaries as well as all installation requirements and additional information as a **Readme.txt** file.  
+  
 After submitting the information \(**do not forget a contact person!**\), you will be able to upload your zip file containing the binaries and the additional information. This will trigger a packaging request in the G&K ticketing system.
 
-[![RJ rj-ac-uploader](.gitbook/assets/rj-ac-upload.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ac-upload.png)
+![](.gitbook/assets/rj-ac-upload%20%281%29.png)
 
 {% hint style="info" %}
 To prevent spam and unsolicited requests, if no file is attached, the request is not processed. In case of a file-less request, a dummy.txt file has to be attached.

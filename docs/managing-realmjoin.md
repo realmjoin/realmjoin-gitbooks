@@ -26,7 +26,7 @@ RealmJoin uses the **user identity** and checks with it at a Cloud-Service for a
 
 The following screen shows the RealmJoin toast notification. It appears in the Windows notification center:
 
-[![RJnotification](.gitbook/assets/rj-ui2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui2.png)
+![](.gitbook/assets/rj-ui2.png)
 
 This screen shows a customizable **hero image** \(for more information about hero images, click [here](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts#hero-image)\)
 
@@ -38,7 +38,7 @@ You can also see a progress bar and a **Auto Install...** countdown. You have th
 
 After being successfully installed, RealmJoin is automatically started on the user login and is permanent active in the background. It is represented with an ID card icon. Clicking on the icon opens up the RealmJoin client menu. It contains basic information in the lower and a number of links in the upper part. These links are ordered in two different sections - **Web Links** and **Software Packages**.
 
-[![RJclientmenu](.gitbook/assets/rj-ui3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui3.png)
+![](.gitbook/assets/rj-ui3.png)
 
 Web Links contains customizable web links. For example, Google. When a user click the web link **Google**, RealmJoin will automatically open a Google search in your browser.
 
@@ -48,7 +48,7 @@ Furthermore RealmJoin offers a remote function \(**Start remote session**\). For
 
 A further useful feature is **Sync this device**.
 
-[![Sync this device](.gitbook/assets/rj-ui3.2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui3.2.png)
+![](.gitbook/assets/rj-ui3.2.png)
 
 When you click **Sync this device** RealmJoin will install or update mandatory packages. Furthermore **Sync this device** helps to speed up background processes \(e. g. waiting for new weblinks or waiting for an admin account\).
 

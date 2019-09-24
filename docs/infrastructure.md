@@ -76,7 +76,7 @@ After identifying the client, the back-ends response to the client is RSA signed
 
 The RealmJoin.MSI is SHA2 \(256 bit\) signed by GK and therefore recognized by Windows as safe to install.
 
-[![RJ Signed MSI](.gitbook/assets/rj-msi-sig.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-msi-sig.png)
+![](.gitbook/assets/rj-msi-sig.png)
 
 ### Package Hashes
 

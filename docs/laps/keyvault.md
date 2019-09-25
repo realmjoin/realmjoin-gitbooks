@@ -9,7 +9,7 @@ The following table shows you the steps for Azure KeyVault Creation:
 | Task | Image |
 | :--- | :--- |
 | 1. Open [Azure Portal](https://portal.azure.com) |  |
-| 2. Start with **Create a resource** | [![CreateNewResource](../.gitbook/assets/keyvault1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault1.png) |
+| 2. Start with **Create a resource** | ![CreateNewResource](../.gitbook/assets/keyvault1.png) |
 | 3. In the search field type in **Key Vault** and conform with enter |  |
 | 4. On the detail page click **Create** | [![CreateKeyVault](../.gitbook/assets/keyvault2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault2.png) |
 | 5. **Name**, **Subscription**, **Resource Group** and **Location** are required fields | [![RequiredFields](../.gitbook/assets/keyvault3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault3.png) |

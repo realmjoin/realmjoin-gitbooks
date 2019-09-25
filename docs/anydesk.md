@@ -6,8 +6,6 @@ AnyDesk uses ID numbers to establish connections between two computers. Share yo
 
 RealmJoin skips the whole ID number sharing process, because every AnyDesk ID numbers in an organization are linked to single users. An Administrator just needs to know the user and can request for access to the computer. Still the user has to accept this request.
 
-As a user you can select different permissions which you give to other \(remote\) users. For example, you can allow or block access to your monitor, to your sound or the control of your keyboard and/or your computer mouse.
-
 {% hint style="info" %}
 When you use the AnyDesk feature \(via RealmJoin\), it is not possible to start a remote session with external AnyDesk users.
 {% endhint %}

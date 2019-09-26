@@ -1,100 +1,105 @@
 # Local Admin Password Solution
 
-Local Administrator Password Solution \(short **LAPS**\) is a Microsoft tool which will solve the issue of using an identical account on every Windows computer in a domain environment. Currently there is no such solution available for Azure AD environments.
+Local Administrator Password Solution \(short LAPS\) will solve the issue of using an identical account on every Windows computer in a domain environment. On its own, LAPS creates a randomly generated password for a local admin account.
 
-With RealmJoin it is possible to manage secure and individualized administrative accounts, either for local support or remote support, on a large scale.RealmJoin saves encrypted passwords in **Azure Key Vault** within the customers tenant and the Azure Audit records all accesses to these passwords.
+With RealmJoin it is possible to manage secure and individualized administrative accounts, either for local support or remote support, on a large scale. RealmJoin saves encrypted passwords in [**Azure Key Vault**](keyvault.md) ****within the customers tenant and the Azure Audit records all accesses to these passwords.
 
 ## Prerequirements
 
+Before you can start with LAPS you have to make the following prerequirements:
+
+* You must use **Application Insights**
+* You must have configured certain **policies**
+
+We'll look at both of them below:
+
 ### Application Insights
 
-Application Insights is an important part of LAPS. Click [here](keyvault.md) to see details about Application Insights:
+Application Insights has a very important role when using LAPS. The password requests triggered by LAPS are logged by Application Insights. Thus it can be tracked at any time who has made a password request and when and where this request was made.
 
-### Group Configuration
+More details can be found in our [Application Insight article](appinsights.md).
+
+### Configuration Policies
+
+RealmJoin offers multiple policies to configure local administrator account management. These policies  are described in the following table: 
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">
-        <p><b>LocalAdminManagement.EmergencyAccount</b>
-        </p>
-        <p>Default Value / Sample Value / Description</p>
-      </th>
-      <th style="text-align:left"></th>
+      <th style="text-align:left">Policy (Key)</th>
+      <th style="text-align:left">Value (Sample)</th>
+      <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>.NamePattern</b>
+      <td style="text-align:left">LocalAdminManagement.Inactive</td>
+      <td style="text-align:left">true/false</td>
+      <td style="text-align:left">
+        <p>Deactivates or activates local</p>
+        <p>administrator management</p>
       </td>
-      <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">&quot;ADM-{HEX:8}&quot;</td>
-      <td style="text-align:left">&quot;Admin-{HEX:4}&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Pattern to create randomized accounts.</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>.DisplayName</b>
+      <td style="text-align:left">LocalAdminManagement.CheckInterval</td>
+      <td style="text-align:left">&quot;00:30&quot;</td>
+      <td style="text-align:left">
+        <p>Interval for configuration checks</p>
+        <p>(hh:ss)</p>
       </td>
-      <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">&quot;RealmJoin Local Administrator&quot;</td>
-      <td style="text-align:left">&quot;Local Emergency Admin&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Display name of administrator account.</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>.PasswordCharSet</b>
+      <td style="text-align:left">
+        <p>LocalAdminManagement.</p>
+        <p>[EmergencyAccount/SupportAccount].NamePattern</p>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">&quot;ADM-(HEX:8)&quot;</td>
+      <td style="text-align:left">Admin name. HEX:8 stands for 8-digit random hex-code</td>
     </tr>
     <tr>
-      <td style="text-align:left">(See note below)</td>
-      <td style="text-align:left">&quot;0123456789ABCDEFabcdef&quot;</td>
+      <td style="text-align:left">LocalAdminManagement.[EmergencyAccount/SupportAccount].DisplayName</td>
+      <td
+      style="text-align:left">&quot;RealmJoin Local Administrator&quot;</td>
+        <td style="text-align:left">Display name of administrator account (appears on Windows)</td>
     </tr>
     <tr>
-      <td style="text-align:left">Charset of the random generated password.</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">LocalAdminManagement.[EmergencyAccount/SupportAccount].PasswordCharSet</td>
+      <td
+      style="text-align:left">&quot;!#%+23456789:=?@ABCDEFGHJK LMNPRSTUVWXYZabcdefghijkmn opqrstuvwxyz&quot;</td>
+        <td
+        style="text-align:left">Charset of the password</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>.PasswordLength</b>
-      </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">LocalAdminManagement.[EmergencyAccount/SupportAccount].PasswordLength</td>
+      <td
+      style="text-align:left">20</td>
+        <td style="text-align:left">Password length</td>
     </tr>
     <tr>
-      <td style="text-align:left">20</td>
-      <td style="text-align:left">30</td>
+      <td style="text-align:left">LocalAdminManagement.[EmergencyAccount/SupportAccount].PasswordPreset</td>
+      <td
+      style="text-align:left">1</td>
+        <td style="text-align:left">Predefined password templates (PasswordCharSet and PasswordLength not
+          necessary)</td>
     </tr>
     <tr>
-      <td style="text-align:left">Length of password in characters.</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">LocalAdminManagement.[EmergencyAccount/SupportAccount].MaxStaleness</td>
+      <td
+      style="text-align:left">12:00</td>
+        <td style="text-align:left">Time after account will be removed/refreshed (when logged out after use)</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>.MaxStaleness</b>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">&quot;00:45&quot;</td>
-      <td style="text-align:left">&quot;00:45&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Delete and recreate profile after last use.</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">LocalAdminManagement.SupportAccount.OnDemand</td>
+      <td style="text-align:left">true/false</td>
+      <td style="text-align:left">Create support account on demand (account will expire after 12 hours)</td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
-Default Password Char Set excludes similar looking characters:  
-  
-`!#%+23456789:=?@ABCDEFGHJKLMNPRSTUVWXYZabcdefghijkmnopqrstuvwxyz`
-{% endhint %}
+</table>It is possible to assign these policies based on user groups. For example, deactivate local administrator management for all users except a specific group:
+
+| Key | Value | Groupname |
+| :--- | :--- | :--- |
+| Local.AdminManagement.Inactive | true | RealmJoin - All Users |
+| Local.AdminManagement.Inactive | false | CFG - RealmJoin-EnableSupportAdmin |
 
 ## Access
 
@@ -122,13 +127,13 @@ A requirement for this process is a successful deployment of corresponding polic
 A support staff needs local administrative rights in field support \(e. g. for troubleshooting connectivity issues\). Therefore, he/she must go through the following steps:
 
 1. The staff visits the RealmJoin WebUI. On the device details he/she will see the name of the administrator account and can request the password when clicking on the dotted text.
+2. The staff visits the RealmJoin WebUI. On the device details he/she will see the name of the administrator account and can request the password when clicking on the dotted text.
+3. RealmJoin pulls the password from Azure Key Vault and displays it.
+4. The staff is now able to get elevated rights with entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
+5. When the staff has finished all tasks, he/she logs out of the account.
+6. The previously used account will be deleted after a defined period and a new one will be generated \(following to steps already described\).
 
-[![Request password for emergency admin](../.gitbook/assets/rj-laps1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps1.png)
-
-1. RealmJoin pulls the password from Azure Key Vault and displays it.
-2. The staff is now able to get elevated rights with entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
-3. When the staff has finished all tasks, he/she logs out of the account.
-4. The previously used account will be deleted after a defined period and a new one will be generated \(following to steps already described\).
+![](../.gitbook/assets/rj-laps1.png)
 
 ### Support Administrator Account
 
@@ -154,17 +159,16 @@ The support staff visits the RealmJoin WebUI again \(depends on the **Configurat
 
 1. On the device details he/she will see the name of the temporal administrator account. The account creation will be started when clicking on **Request**.
 
-[![Request password for support admin](../.gitbook/assets/rj-laps2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps2.png)
+![](../.gitbook/assets/rj-laps2.png)
 
 {% hint style="info" %}
 After a certain time, the credentials will appear. Click the dotted password field to request the password.
 {% endhint %}
 
 1. RealmJoin pulls the password from Azure Key Vault and displays it.
+2. The staff is now able to get elevated rights with entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
+3. When the staff has finished his tasks, he/she logs out of the account.
+4. The previously used account will be deleted after a defined period
 
-[![Request password for emergency admin](../.gitbook/assets/rj-laps3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-laps3.png)
-
-1. The staff is now able to get elevated rights with entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
-2. When the staff has finished his tasks, he/she logs out of the account.
-3. The previously used account will be deleted after a defined period
+![](../.gitbook/assets/rj-laps3.png)
 

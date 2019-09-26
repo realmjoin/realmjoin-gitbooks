@@ -6,7 +6,7 @@
   * [Interactive Installation](installation/interactive-installation.md)
   * [Connecting a Tenant](installation/connecting-a-tenant.md)
 * [Infrastructure](infrastructure.md)
-* [Managing RealmJoin](managing-realmjoin.md)
+* [RealmJoin Windows Client](managing-realmjoin.md)
 * [RealmJoin Portal](rj-portal.md)
 * [Settings and Policies](policies.md)
 * [Multi-User Devices](dem-account.md)

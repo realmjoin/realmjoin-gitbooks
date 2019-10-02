@@ -61,8 +61,9 @@ Chocolatey uses NuGet.Core to retrieve packages from the source. Before installi
 In the next step, installers or executables are run. After the installation, Chocolatey prepares uninstall information based on the pre-installation snapshots of registry and file/folder structure. In case of Windows installer based software, it will be installed into the default path, mostly **Program Files**. Other packages are installed into **ChocolateyInstall\Lib**.  
 The Chocolatey install command can be run with various parameters to e.g. suppress prompts, specify an installation directory. The full list of options can be found in the [Chocolatey wiki](https://github.com/chocolatey/choco/wiki/CommandsInstall#options-and-switches).
 
-> \[!Note\] If you want to provide command line parameters for the software that should be installed, they have to be correctly escaped to prevent Chocolatey from trying to interpret them as install options.  
-> For a more detailed documentation of Chocolatey see the [official Chocolatey wiki on Github](https://github.com/chocolatey/choco/wiki).
+{% hint style="info" %}
+If you want to provide command line parameters for the software that should bei installed, they have to be correctly escaped to prevent Chocolatey from trying to interpret them as install options. For more detailed documentation of Chocolatey see the [official Chocolatey wiki on GitHub](https://github.com/chocolatey/choco/wiki).
+{% endhint %}
 
 ## Microsoft Application Virtualization
 
@@ -72,6 +73,7 @@ App-V packages, are the most exotic packages supported by RealmJoin. They are cr
 App-V sandboxes the execution environment, hosting a virtual file system, registry keys, services and so on, based on the App-V package. All the data specific to the software version is enclosed in the sandbox, resulting in no changes on the clients operation system. This also allows to use different version of the same software parallel, even if they contain contradicting settings and key values. App-V might be considered as an intermediate step towards a virtual machine.
 
 Generally spoken, App-V is the most sophisticated package type in RealmJoin, while highly customized, allowing most applications to be run.  
+  
 For a more detailed view on App-V see the [Microsoft documentation on Application Virtualization](https://technet.microsoft.com/en-us/library/hh826068.aspx).
 
 ## Organic

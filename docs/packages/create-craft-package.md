@@ -23,7 +23,7 @@ You can either use a cmd script or a PowerShell script for the main installation
 
 Customize either `rj_install.cmd` or `rj_install.ps1` in the root folder and delete the other one. This file is the main installation script. The first two lines contain the RealmJoin craft package ID and version.
 
-[![Craft Package Header](../.gitbook/assets/rj-craftpackage-header.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-craftpackage-header.png)
+![](../.gitbook/assets/rj-craftpackage-header.png)
 
 This script may contain various modifications and adjustments, for example editing or creating registry keys. It is also possible to call other scripts or executable files from inside this script.
 
@@ -48,7 +48,7 @@ These are the needed files:
 
 The following screenshot shows a Google Chrome package in the RealmJoin app store \(VLC Player has no Technical Help content, therefore we use Google Chrome in this example.\). You can see the Google Chrome icon \(`package-icon.png`\), a short description about Google Chrome \(`package-description.md`\) and you can further technical information \(`package-technicalhelp.md`\). You do not see `package-info.json` because it works in the background.
 
-[![Customize Store Information](../.gitbook/assets/rj-store-info.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-store-info.png)
+![](../.gitbook/assets/rj-store-info.png)
 
 ## Commit and Upload
 
@@ -62,9 +62,9 @@ Commit your changes and push the project to GitLab.
    * The first one, **build**, will start automatically
    * After **build** has finished \(green checkmark\), run the second one, **deploy**. To do that, first click the grey icon next to the green checkmark, then click the play button.
 
-[![RJ Pipelines](../.gitbook/assets/rj-pipeline-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-pipline-choco-deploy.png)
+![](../.gitbook/assets/rj-pipeline-choco-deploy.png)
 
-[![RJ package-deploy](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
+![](../.gitbook/assets/rj-package-choco-deploy.png)
 
 After the successful deployment, the package can be found in the Chocolatey library and can be added to the RealmJoin backend. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
 

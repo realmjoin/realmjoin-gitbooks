@@ -15,7 +15,7 @@ Canary Channel \(Experimental, first testing\):
 
 The front-end component of RealmJoin is a RealmJoin client, which is installed on the Windows 10 device. With the installed RealmJoin client an individual user is able to access and install provided software in self service. Packages assigned as **required** by the administrator are installed automatically on the first Logon after assignment. RealmJoin is responsible for two different processes running on the device:
 
-* The **realmjoin.exe** process is started up automatically on Logon. The process is always running and sends upstream data \(compare to chapter [RealmJoin Portal](../rj-portal.md#States) every 15 minutes.
+* The **realmjoin.exe** process is started up automatically on Logon. The process is always running and sends upstream data \(compare to chapter [RealmJoin Portal](../rj-portal/#States) every 15 minutes.
 * The **realmjoinservice.exe** is called when a package requires the **SYSTEM mode** to be processed. It is not running by default.
 
 ## Pre-Requirements

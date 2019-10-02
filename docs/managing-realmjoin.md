@@ -2,7 +2,7 @@
 
 The RealmJoin Windows client is enrolled on every Windows 10 device. RealmJoin seamlessly fits into the modern workplace with its focus on user self-service and mobility. Using the RealmJoin client module, the user may install provided software, get basic information on the device and membership in the tenant domain without the need of contact an IT administrative.
 
-## Initial Start since RJ v4.15
+## Initial Start since RealmJoin v4.15
 
 Since the release of version 4.15, RealmJoin skips the email-based discovery process that user goes through on the sign in page, leading to a slightly more streamlined user experience \(RealmJoin still based on the AAD workflow - AAD sign-in and OAuth-protocol\).
 

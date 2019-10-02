@@ -200,8 +200,6 @@ There are different input fields on this page. Have a look at the table below fo
             numbers that are queued to be installed afterwards, is resumed when the
             client is compliant.</li>
         </ul>
-        <p>Under normal circumstances it is highly advised to prevent a normal user
-          having the same package assigned more than once.</p>
       </td>
     </tr>
     <tr>
@@ -220,7 +218,17 @@ There are different input fields on this page. Have a look at the table below fo
 Under normal circumstances it is highly advised to prevent a normal user having the same package assigned more than once.
 
 To change package Name or ID is not a proper way to edit assigned packages. Add a new package instead. Delete the obsolete one.
+
+Do not use the dependency and order option on mandatory packages parallel. This might prevent the back-end from correctly resolve the order installation: During the initial rollout, or any rollout of mandatory packages after a login for this purpose, RealmJoin in the first step resolves all dependencies of the packages. If there are any, all packages which are listed as a dependency for a different package are installed. In the second step, the original packages are installed. This may cancel out any order numbers.
+
+**For example:**
+
+* Package A, order 1
+* Package B, order 101and depending on Package C, order 100.
+* If all packages are assigned as mandatory, the installation sequency will be C, A, B
 {% endhint %}
+
+
 
 #### Advanced Options
 
@@ -361,8 +369,6 @@ There are different input fields on this page. Have a look at the table below fo
             numbers that are queued to be installed afterwards, is resumed when the
             client is compliant.</li>
         </ul>
-        <p>Under normal circumstances it is highly advised to prevent a normal user
-          having the same package assigned more than once.</p>
       </td>
     </tr>
     <tr>
@@ -381,6 +387,14 @@ There are different input fields on this page. Have a look at the table below fo
 Under normal circumstances it is highly advised to prevent a normal user having the same package assigned more than once.
 
 To change package Name or ID is not a proper way to edit assigned packages. Add a new package instead. Delete the obsolete one.
+
+Do not use the dependency and order option on mandatory packages parallel. This might prevent the back-end from correctly resolve the order installation: During the initial rollout, or any rollout of mandatory packages after a login for this purpose, RealmJoin in the first step resolves all dependencies of the packages. If there are any, all packages which are listed as a dependency for a different package are installed. In the second step, the original packages are installed. This may cancel out any order numbers.  
+  
+**For example:**
+
+* Package A, order 1
+* Package B, order 101 and depending on Package C, order 100.
+* If all packages are assigned as mandatory, the installation sequency will be C, A, B
 {% endhint %}
 
 #### Advanced Options

@@ -84,7 +84,7 @@ An auditor has read-only rights within the RealmJoin portal and has access to al
 
 #### Software Agent
 
-A software agent can assign software to users and can change it as well and the software agent has can subscribe the RealmJoin app store. Additionally, a software agent has access to users, clients, groups, software and app store. With these role it is not possible to use AnyDesk and LAPS and it is not possible to reassign primary users.
+A software agent can assign software to users and can change it as well and the software agent can subscribe apps in RealmJoin App Store. Additionally, a software agent has access to users, clients, groups, software and app store. With these role it is not possible to use AnyDesk and LAPS and it is not possible to reassign primary users.
 
 #### Supporter
 

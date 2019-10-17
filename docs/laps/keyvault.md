@@ -19,7 +19,7 @@ The following table shows you the steps for Azure KeyVault Creation:
 | 9. Select **Key, Secret & Certificate Management** as template and add **RealmJoin** as principal | [![Key,Secret &amp; Certificate](../.gitbook/assets/keyvault5%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault5.png) |
 | 10. For **Cryptographic Operations** add Decrypt, Encrypt, Unwrap Key, Wrap Key, Verify and Sign | [![Cryptographic Operations](../.gitbook/assets/keyvault6.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault6.png) |
 | 11. Confirm with **Ok** and **Save** |  |
-| 12. Finally, go to **Overview** and share the **DNS Name** with the [Glück & Kanja support](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/product.support@glueckkanja.com) | [![DNS Name](../.gitbook/assets/keyvault7.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault7.png) |
+| 12. Finally, go to **Overview** and share the **DNS Name** with the [Glück & Kanja support](mailto:product.support@glueckkanja.com) | [![DNS Name](../.gitbook/assets/keyvault7.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault7.png) |
 | **Example Value**: [https://contoso-rj-laps.vault.azure.net/](https://contoso-rj-laps.vault.azure.net/) |  |
 
 ## KeyVault Storage of Secrets

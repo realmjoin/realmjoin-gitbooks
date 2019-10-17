@@ -18,5 +18,5 @@ When you have entered everything you need, click on **Send Request**. You can at
 To prevent spam and unsolicited requests, if no file is attached, the request is not processed. In case of a file-less request, a dummy.txt file has to be attached.
 {% endhint %}
 
-
+Once the package is created, it will appear in the App Store. In the App Store you have to subscribe to the package. Click [here](https://app.gitbook.com/@glueckkanja/s/realmjoin/rj-portal/app-store#app-subscribtion) to read how to subscribe to a package.
 

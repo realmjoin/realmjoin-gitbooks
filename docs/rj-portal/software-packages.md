@@ -427,3 +427,13 @@ To add a Choco or Craft package, in the Software Packages overview, click one of
 
 You get an input mask \(like the one from Package Definition, but it is empty\).
 
+### Duplicate a Package
+
+Whenever a package with identical content is needed multiple times for the same user or group, the RealmJoin Portal offers the possibility to use the same package multiple times while preventing conflicting installations.
+
+**A possible scenario:** One user group needs the same package with different arguments \(for example to map several network drives\) and the RealmJoin Client requires unique packages IDs.
+
+To make the ID unique, a hash is written behind the ID and provided with a meaningful word/index, like **package-id\#Value**
+
+![](../.gitbook/assets/rj-duplicate-packages.png)
+

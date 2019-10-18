@@ -80,5 +80,5 @@ The RealmJoin.MSI is SHA2 \(256 bit\) signed by GK and therefore recognized by W
 
 ### Package Hashes
 
-During the package creation process, packages are signed with SHA2 \(256 bit\) hashes \(see chapter [Creating packages](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/create-package.md)\). Older SHA1 signed packages will still be accepted by RealmJoin. For more information on SHA2 encryption, check [the Wikipedia article on SHA2](https://en.wikipedia.org/wiki/SHA-2).
+During the package creation process, packages are signed with SHA2 \(256 bit\) hashes \(see chapter [Chocolatey Package](packages/create-choco-package.md#create-sha256-hash)\). Older SHA1 signed packages will still be accepted by RealmJoin. For more information on SHA2 encryption, check [the Wikipedia article on SHA2](https://en.wikipedia.org/wiki/SHA-2).
 

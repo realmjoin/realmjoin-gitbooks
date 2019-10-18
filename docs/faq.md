@@ -16,7 +16,7 @@
 
 * Documentation:  
 
-    [https://docs.realmjoin.com/](https://docs.realmjoin.com/)
+    [https://glueckkanja.gitbook.io/realmjoin/](https://glueckkanja.gitbook.io/realmjoin/)
 
 ## Am I able to maintain my own packages and updates?
 
@@ -32,12 +32,12 @@ The sync between Azure AD and RealmJoin is scheduled every 15 minutes and based 
 
 ## Does RealmJoin support Multi User Devices?
 
-Yes. Starting with version 4.13 RealmJoin allows applications to be installed not only for the primary device user but also secondary users. See section [advanced options/ multi user devices](http://docs.realmjoin.com/managing-realmjoin.html#advanced-options) in the chapter Managing RealmJoin chapter for details on multi user package assignment.
+Yes. Starting with version 4.13 RealmJoin allows applications to be installed not only for the primary device user but also secondary users. See our [Multi-User Devices article](dem-account.md) for more details.
 
 ## How to enter the Debug Mode in RealmJoin client?
 
 Press and hold **Strg** + **Shift** and click the RealmJoin icon in the taskbar.  
-For a detailed description of **Debug mode** see chapter [Troubleshooting](troubleshooting.md).
+For a detailed description of **Debug mode** see our [Troubleshooting](troubleshooting.md).
 
 ## I accidentally uninstalled RealmJoin-deployed software using the Windows Apps control
 
@@ -73,7 +73,7 @@ It is in principle possible to host the RealmJoin
 
 ## What firewall/proxy settings do I have to configure?
 
-Please check the [infrastructure requirements](http://docs.realmjoin.com/infrastructure.html#network) for detailed information on the RealmJoin connections.
+Please check the [infrastructure requirements](infrastructure.md) for detailed information on the RealmJoin connections.
 
 ## Does G&K have any recommendations on workflows?
 
@@ -81,7 +81,7 @@ Yes. Our suggestions can be found in the **workflow** section of this documentat
 
 ## What is the recommendation for reporting?
 
-See section **States** in the chapter Managing RealmJoin [Managing RealmJoin - States](http://docs.realmjoin.com/managing-realmjoin.html#states). It is possible to get virtually any information from each client in JSON-form. There are several applications available to evaluate the data, for example PowerBI, which allows to sort and process the data in logical and visually pleasing ways.
+See section [**States** ](rj-portal/clients.md#states)in the [RealmJoin Portal - Clients article](rj-portal/#clients). It is possible to get virtually any information from each client in JSON-form. There are several applications available to evaluate the data, for example PowerBI, which allows to sort and process the data in logical and visually pleasing ways.
 
 ## In the future, may RealmJoin packages be used in Intune?
 

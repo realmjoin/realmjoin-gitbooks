@@ -69,11 +69,19 @@ MSI Installations logs.
 
 Alternatively the logs can be automatically collected and save to the current users desktop via the debug window \(see section below\).
 
-## Advanced RealmJoin Options
+## Debug Mode
 
-Hold **control** & **shift** keys and click RealmJoin Tray icon. Select **Show Debug Window**.
+To open the tray debug \(and enter the debug mode\) click **STRG + SHIFT + Click on the RealmJoin Icon**. The Client menu will open but with a further entry at the end of the menu: **Show Debug Window**.
 
-[![Advanced](.gitbook/assets/rjx-debug-menu-one.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjx-debug-menu-one.png)
+Client menu:
+
+[![RJclientmenu2](.gitbook/assets/rj-ui4.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui4.png)
+
+Tray debug:
+
+[![RJtraydebug](.gitbook/assets/rj-ui5.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ui5.png)
+
+Show Debug Window contains seven different diagnostic tools. If a device is not able to be addressed by the server or can not connect to the back-end, this tool will provide the user with the tools for the first steps of diagnosis.
 
 You can ping the RealmJoin back-end to check connectivity.
 

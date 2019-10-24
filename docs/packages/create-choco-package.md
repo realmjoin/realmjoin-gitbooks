@@ -89,7 +89,7 @@ Commit your changes and push the project to GitLab.
 
 ![](../.gitbook/assets/rj-package-choco-deploy.png)
 
-After the successful deployment, the package can be found in the Chocolatey library and can be added to the RealmJoin backend. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
+After the successful deployment, the package can be found in the Chocolatey library and can be added to the RealmJoin backend. See chapter [Managing RealmJoin](../managing-realmjoin/) for information on assigning packages.
 
 ## Advanced Packaging Functions
 

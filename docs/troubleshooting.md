@@ -69,6 +69,24 @@ MSI Installations logs.
 
 Alternatively the logs can be automatically collected and save to the current users desktop via the debug window \(see section below\).
 
+## Verify Group Membership in Office 365 Admin Center
+
+You need to know the software Distribution Group to which the software should be deployed.
+
+### Additional Functions
+
+* It is possible to reinstall packages
+* You see hidden packages
+* Package version numbers are displayed
+
+Open Office 365 Admin Center Group management at: [Office 365 Admin Center](https://portal.office.com/adminportal/home#/groups)
+
+[![O365 Portal](.gitbook/assets/o365-portal-one.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-one.png)
+
+Select appropriate software distribution group and verify if the user is member of this group.
+
+[![O365 Portal](.gitbook/assets/o365-portal-two.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-two.png)
+
 ## Debug Mode
 
 To open the tray debug \(and enter the debug mode\) click **STRG + SHIFT + Click on the RealmJoin Icon**. The Client menu will open but with a further entry at the end of the menu: **Show Debug Window**.
@@ -112,18 +130,6 @@ You can collect the RealmJoin log files automatically.
 * It is possible to reinstall packages
 * You see hidden packages.
 * Package version numbers are displayed
-
-## Verify Group Membership in Office 365 Admin Center
-
-You need to know the software Distribution Group to which the software should be deployed.
-
-Open Office 365 Admin Center Group management at: [Office 365 Admin Center](https://portal.office.com/adminportal/home#/groups)
-
-[![O365 Portal](.gitbook/assets/o365-portal-one.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-one.png)
-
-Select appropriate software distribution group and verify if the user is member of this group.
-
-[![O365 Portal](.gitbook/assets/o365-portal-two.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-two.png)
 
 ## Token Error
 

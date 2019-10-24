@@ -120,5 +120,5 @@ Yes. To do so, the target has to be set to the process and optional args can be 
 }
 ```
 
-See chapter [Settings and Policies](policies.md) for further information.
+See chapter [Settings and Policies]() for further information.
 

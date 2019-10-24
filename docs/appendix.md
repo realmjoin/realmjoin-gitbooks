@@ -107,15 +107,5 @@ If an user wishes to install any of the listed software, he/she is only required
 
 The installation mode depends on the packages selected: If those are only user mode packages, they are installed immediately. In case of a higher permission level, RealmJoin starts a service \(realmjoinservice.exe\) and installs the packages with the **SYSTEM** user account.
 
-### Debug mode
-
-To open a debug window, press and hold **Shift** + **Strg** and click the RealmJoin icon. This reveals **Show Debug Window** as a further entry at the end of the context menu. Show Debug Window contains seven different diagnostic tools.  
-If a device is not able to be addressed by the server or can not connect to the back-end, this tool will provide the user with the tools for the first steps of diagnosis.
-
-Beside Show Debug Window **Retry base installation** is a further entry that reveals. Retry base installation allows an user to reinstall the RealmJoin client.  
-Additionally, when the client tray menu is opened in debug mode, all software packages are shown with a package version number.
-
-[![RJ Debug Menu](.gitbook/assets/rj-debug-menu.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-debug-menu.png)
-
-**Collect Logs** is a quick way to access all log files, which will be saved in a zip-file to the users desktop. See chapter [Troublehooting](troubleshooting.md) for a detailed description of the RealmJoin debug window and its features.
+### 
 

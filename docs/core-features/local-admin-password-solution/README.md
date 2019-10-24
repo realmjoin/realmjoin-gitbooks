@@ -2,7 +2,7 @@
 
 Local Administrator Password Solution \(short LAPS\) will solve the issue of using an identical account on every Windows computer in a domain environment. On its own, LAPS creates a randomly generated password for a local admin account.
 
-With RealmJoin it is possible to manage secure and individualized administrative accounts, either for local support or remote support, on a large scale. RealmJoin saves encrypted passwords in [**Azure Key Vault**](keyvault.md) ****within the customers tenant and the Azure Audit records all accesses to these passwords.
+With RealmJoin it is possible to manage secure and individualized administrative accounts, either for local support or remote support, on a large scale. RealmJoin saves encrypted passwords in [Azure Key Vault](keyvault.md) within the customers tenant and the Azure Audit records all accesses to these passwords.
 
 ## Prerequirements
 
@@ -17,7 +17,7 @@ We'll look at both of them below:
 
 Application Insights has a very important role when using LAPS. The password requests triggered by LAPS are logged by Application Insights. Thus it can be tracked at any time who has made a password request and when and where this request was made.
 
-More details can be found in our [Application Insight article](appinsights.md).
+More details can be found in our [Application Insight article](application-insights.md).
 
 ### Configuration Policies
 
@@ -118,7 +118,7 @@ A corresponding RealmJoin policy can trigger the creation of a persistent admini
 1. Starting point: Existing or new client with RealmJoin a\) Existing client \(Azure AD joined, Intune managed, RealmJoin agenda installed\) b\) New client \(initialization during OOBE, Azure AD join, Intune enrollment, installation of RealmJoin and deployed software\)
 2. RealmJoin policy triggers RealmJoin agent to create a persistent administrator account on the client.
 3. RealmJoin agent transfers the encrypted password to the RealmJoin backend.
-4. RealmJoin backend stores the cyphertext into a customer owned [Azure Key Vault](keyvault.md).
+4. RealmJoin backend stores the cyphertext into a customer owned [Azure Key Vault]().
 
 A requirement for this process is a successful deployment of corresponding policy to the client.
 
@@ -133,7 +133,7 @@ A support staff needs local administrative rights in field support \(e. g. for t
 5. When the staff has finished all tasks, he/she logs out of the account.
 6. The previously used account will be deleted after a defined period and a new one will be generated \(following to steps already described\).
 
-![](../.gitbook/assets/rj-laps1.png)
+![](../../.gitbook/assets/rj-laps1.png)
 
 ### Support Administrator Account
 
@@ -145,7 +145,7 @@ A support staff can trigger the creation of a temporal administrator account. Th
 2. A Support staff requests a support account via RealmJoin WebUI
 3. This triggers RealmJoin agent to create a temporal administrator account on the client.
 4. RealmJoin agent transfers the encrypted password to the RealmJoin backend.
-5. RealmJoin backend stores the cyphertext into customer owned [Azure Key Vault](keyvault.md).
+5. RealmJoin backend stores the cyphertext into customer owned [Azure Key Vault]().
 
 Requirements for this process:
 
@@ -159,7 +159,7 @@ The support staff visits the RealmJoin WebUI again \(depends on the **Configurat
 
 1. On the device details he/she will see the name of the temporal administrator account. The account creation will be started when clicking on **Request**.
 
-![](../.gitbook/assets/rj-laps2.png)
+![](../../.gitbook/assets/rj-laps2.png)
 
 {% hint style="info" %}
 After a certain time, the credentials will appear. Click the dotted password field to request the password.
@@ -170,5 +170,5 @@ After a certain time, the credentials will appear. Click the dotted password fie
 3. When the staff has finished his tasks, he/she logs out of the account.
 4. The previously used account will be deleted after a defined period
 
-![](../.gitbook/assets/rj-laps3.png)
+![](../../.gitbook/assets/rj-laps3.png)
 

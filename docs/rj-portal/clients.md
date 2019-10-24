@@ -22,7 +22,7 @@ In order to view detailed information about a client and to use other functions 
 
 ![](../.gitbook/assets/client_tab_details.png)
 
-This submenu is divided into different tiles. They all show various information. For example, the device IDs for RealmJoin, Azure and Intune. You will get a brief outline of the device hardware, the primary user, local admin management \([LAPS article](../laps/)\), advanced logging, and delivery optimization.
+This submenu is divided into different tiles. They all show various information. For example, the device IDs for RealmJoin, Azure and Intune. You will get a brief outline of the device hardware, the primary user, local admin management \([LAPS article]()\), advanced logging, and delivery optimization.
 
 ### States
 

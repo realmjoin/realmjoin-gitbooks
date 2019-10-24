@@ -149,7 +149,7 @@ After a short while, a new repository is created and the template files are copi
 
 [![RJ package-deploy](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
-After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
+After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin/) for information on assigning packages.
 
 #### Craft Package
 
@@ -192,7 +192,7 @@ After the successful deployment, the package can be found in the Chocolatey libr
 
 [![RJ choco-deploy](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
-After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
+After the successful deployment, the package can be found in the Chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin/) for information on assigning packages.
 
 #### Organic Package
 
@@ -247,7 +247,7 @@ Organic packages are created similar to Chocolatey packages, but instead of a so
 
 [![RJ organic-install](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
-After the successful deployment, the package can be found in the chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin.md) for information on assigning packages.
+After the successful deployment, the package can be found in the chocolatey library and added. See chapter [Managing RealmJoin](../managing-realmjoin/) for information on assigning packages.
 
 #### App-V Package
 

@@ -4,7 +4,7 @@ Application Insights is an extensible Application Performance Management \(APM\)
 
 ## Create App Insight for generic auditing
 
-[![CreateAppInsight](../.gitbook/assets/appinsights1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/appinsights1.png)
+[![CreateAppInsight](../../.gitbook/assets/appinsights1.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/appinsights1.png)
 
 Navigate to **Application Insights**. Click **+ Add** and do the following:
 
@@ -19,9 +19,9 @@ Example value: `a74393bd-2dee-4a10-9df3-66c8c2b2a9ec`
 
 To start a reporting, click **Search**
 
-[![AppInsightReporting](../.gitbook/assets/appinsights2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/appinsights2.png)
+[![AppInsightReporting](../../.gitbook/assets/appinsights2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/appinsights2.png)
 
 An overview appears, which looks like the following example:
 
-[![AppInsightReporting2](../.gitbook/assets/appinsights3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/appinsights3.png)
+[![AppInsightReporting2](../../.gitbook/assets/appinsights3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/appinsights3.png)
 

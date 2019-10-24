@@ -107,6 +107,12 @@ You can collect the RealmJoin log files automatically.
 
 [![Advanced](.gitbook/assets/rjx-debug-menu-seven.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjx-debug-menu-seven.png)
 
+### Additional Functions
+
+* It is possible to reinstall packages
+* You see hidden packages.
+* Package version numbers are displayed
+
 ## Verify Group Membership in Office 365 Admin Center
 
 You need to know the software Distribution Group to which the software should be deployed.

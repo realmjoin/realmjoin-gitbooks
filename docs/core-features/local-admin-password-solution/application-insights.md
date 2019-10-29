@@ -1,6 +1,6 @@
 # Application Insights
 
-Application Insights is an extensible Application Performance Management \(APM\) service for web developers on multiple platforms. Use it to monitor your live web application. It will automatically detect performance anomalies. It includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app.
+Application Insights is an extensible Application Performance Management service for web developers on multiple platforms. Use it to monitor your live web application. It will automatically detect performance anomalies. It includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app.
 
 ## Create App Insight for Generic Auditing
 
@@ -22,11 +22,11 @@ Then, copy the **Instrumentation Key** and send it to [GK Support](https://githu
 
 ## App Insight - Reporting
 
-To start a reporting, click **Searc**h
+To start a reporting, click **Search**
 
 ![](../../.gitbook/assets/appinsights3.png)
 
-An overview appears, which looks like the following example
+An overview appears, which looks like the following example:
 
 ![](../../.gitbook/assets/appinsights4.png)
 

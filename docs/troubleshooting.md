@@ -73,12 +73,6 @@ Alternatively the logs can be automatically collected and save to the current us
 
 You need to know the software Distribution Group to which the software should be deployed.
 
-### Additional Functions
-
-* It is possible to reinstall packages
-* You see hidden packages
-* Package version numbers are displayed
-
 Open Office 365 Admin Center Group management at: [Office 365 Admin Center](https://portal.office.com/adminportal/home#/groups)
 
 [![O365 Portal](.gitbook/assets/o365-portal-one.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-one.png)

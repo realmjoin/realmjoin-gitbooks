@@ -35,14 +35,3 @@ After successful connection the following software packages are provided as defa
 | GlueckKanja RealmJoin Publish State Computer System Information |
 | GlueckKanja RealmJoin Publish State Speculation Control Settings |
 
-In addition, the following policies are part of a tenant for all RJ Users:
-
-| Default Tenant Policies |
-| :--- |
-| Environment.Channel \(beta\) |
-| Integration.AnyDesk |
-| LocalAdminManagement |
-| Policies.ExplorShortcuts |
-| Policies.DisableNetworkLocationWizard |
-| WebLinks |
-

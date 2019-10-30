@@ -1,6 +1,6 @@
 # AnyDesk
 
-The RealmJoin Enterprise License contains an single session licens of the remote desktop tool **AnyDesk**. It allows the access to client devices including the option to elevate rights by using the RealmJoin LAPS feature. AnyDesk can be installed on Windows, macOS, Linux, mobile devices and Raspberry Pi as well.
+The RealmJoin Enterprise License contains an single session licens of the remote desktop tool **AnyDesk**. It allows the access to client devices including the option to elevate rights by using the RealmJoin LAPS feature. AnyDesk can be installed on Windows and macOS.
 
 AnyDesk uses ID numbers to establish connections between two computers. Share your ID number with an other user \(this user needs AnyDesk as well\). This user has to enter the ID number in the AnyDesk menu. When you accept the request, the other user will have access to your desktop.
 
@@ -14,22 +14,70 @@ When you use the AnyDesk feature \(via RealmJoin\), it is not possible to start 
 
 Before you can start with a AnyDesk session, you have to do few settings.
 
-| Task | Image |
-| :--- | :--- |
-| 1. Log in to [AnyDesk](https://my.anydesk.com/login) |  |
-| 2. Customize your AnyDesk client | [![Customize AnyDesk client](../.gitbook/assets/anydesk7.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk7.png) |
-| 3. Select **Make download link publicly available** |  |
-| 3. Click **Save** to confirm your settings |  |
-| 4. The **Custom Client Details** page will appear | [![Custom Client Details](../.gitbook/assets/anydesk8%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk8.png) |
-| 5. Select the following **Options**: | [![Options](../.gitbook/assets/anydesk8_2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk8_2.png) |
-| - Disable Settings |  |
-| - Disable address book |  |
-| - Disable TCP listen port |  |
-| - Automatically register alias |  |
-| - Assign to license |  |
-| 6. Copy or save the **Public Download** URL. You need it for **AnyDesk Group Settings** |  |
-
-## AnyDesk Group Settings
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Task</th>
+      <th style="text-align:left">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1. Log in to <a href="https://my.anydesk.com/login">AnyDesk</a>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2. Customize your AnyDesk client</td>
+      <td style="text-align:left"><a href="https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk7.png"><img src="../.gitbook/assets/anydesk7.png" alt="Customize AnyDesk client"/></a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">3. Select <b>Make download link publicly available</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">3. Click <b>Save</b> to confirm your settings</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">4. The <b>Custom Client Details</b> page will appear</td>
+      <td style="text-align:left"><a href="https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk8.png"><img src="../.gitbook/assets/anydesk8 (1).png" alt="Custom Client Details"/></a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">5. Select the following <b>Options</b>:</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>
+          <img src="../.gitbook/assets/anydesk8_2 (1).png" alt/>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Disable settings</li>
+          <li>Disable address book</li>
+          <li>Disable TCP listen port</li>
+          <li>Automatically register alias</li>
+          <li>Assign to license</li>
+          <li>Access control list</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">6. Copy or save the <b>Public Download</b> URL. You need it for <b>AnyDesk Group Settings</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>## AnyDesk Group Settings
 
 Use a JSON policy to configure AnyDesk in RealmJoin backend \(**Group Settings**\). There are three different policies to configure AnyDesk.
 

@@ -13,7 +13,7 @@ Example:
 * Enterprise Mobility + Security \(user license\) or
 * A simple device license
 
-[![dem license](.gitbook/assets/dem1%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem1.png)
+![](.gitbook/assets/dem1%20%281%29.png)
 
 ## Preparations
 
@@ -23,13 +23,13 @@ Before you can start with a device enrollment you have to do some preparations.
 
 Create a generic user account that is not assigned to a real person. Please make sure that this account never gets deleted. In that case, enrolled devices will not stay under management any more. Assign a suitable Intune license as described before.
 
-[![dem user](.gitbook/assets/dem2%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem2.png)
+![](.gitbook/assets/dem2%20%281%29.png)
 
 ### Create User Group for DEM Accounts
 
 A new user group is necessary that contains all DEM users. Ad one \(e.g. **CFG - All multi-user device accounts DEM**\) and assign the previously created user.
 
-[![dem user group](.gitbook/assets/dem3%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem3.png)
+![](.gitbook/assets/dem3%20%281%29.png)
 
 ### Prepare Group
 
@@ -49,41 +49,41 @@ The following steps must be done in **RealmJoin**
 
 A new and clean device will be set up with the DEM user account created before:
 
-\[![Device Setup\(./media/dem5.png\)](.gitbook/assets/dem5%20%281%29.png)
+![](.gitbook/assets/dem5%20%281%29.png)
 
 Depending on configuration second factor authentication will be enforced:
 
-[![Device Setup Configuration](.gitbook/assets/dem6%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem6.png)
+![](.gitbook/assets/dem6%20%281%29.png)
 
 Device enrollment and provisioning will start:
 
-[![Device enrollment](.gitbook/assets/dem7%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem7.png)
+![](.gitbook/assets/dem7%20%281%29.png)
 
 Prompt for Windows Hello setup appears \(depending on configuration\):
 
-[![Windows Hello Setup](.gitbook/assets/dem8.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem8.png)
+![](.gitbook/assets/dem8%20%281%29.png)
 
 After that, RealmJoin will start and install the defined set of software for the DEM account:
 
-[![RealmJoin Start](.gitbook/assets/dem9%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem9.png)
+![](.gitbook/assets/dem9%20%281%29.png)
 
 When logging in via DEM account \(primary user\) the software should be installed:
 
-[![Login Testuser](.gitbook/assets/dem10%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem10.png)
+![](.gitbook/assets/dem10%20%281%29.png)
 
 ## Secondary User Experience
 
 Secondary users are now able to log in::
 
-[![Login Testuser](.gitbook/assets/dem11%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem11.png)
+![](.gitbook/assets/dem11%20%281%29.png)
 
 Software assigned and installed by DEM account should be available
 
 Additional software can be installed by this secondary user \(see **Software Packages**\):
 
-[![Software Packages](.gitbook/assets/dem13.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem13.png)
+![](.gitbook/assets/dem13%20%281%29.png)
 
-[![Software Packages](.gitbook/assets/dem14.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem14.png)
+![](.gitbook/assets/dem14%20%281%29.png)
 
-[![Software Packages](.gitbook/assets/dem15.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/dem15.png)
+![](.gitbook/assets/dem15%20%281%29.png)
 

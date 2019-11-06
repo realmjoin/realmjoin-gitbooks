@@ -359,7 +359,7 @@ There are different input fields on this page. Have a look at the table below fo
           </li>
           <li><b>Allow Background Install</b>: The software package may be installed
             outside of the black screen installation, thus not blocking the access
-            to the clients desktop and software.
+            to the clients desktop and software. **Do not use this option for regular packages without discussion with your RealmJoin consultant**.
             <br />
           </li>
           <li><b>Require Intune Compliance</b>: The package is installed as soon as

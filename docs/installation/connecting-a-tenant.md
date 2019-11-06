@@ -2,6 +2,10 @@
 
 To a connect a tenant to the Glück & Kanja RealmJoin back-end, a **Hello Token** is needed. This token might be requested from Glück & Kanja. A RealmJoin administrator group has to be created upfront in AAD with the name **cfg-RealmJoin Admin** and all dedicated RealmJoin administrators should be added to it. The **Connect Wizard** is located under the URL [RealmJoin connect](https://realmjoin-web.azurewebsites.net/global/graph). The token and the tenant name are to be entered and the request submitted.
 
+{% hint style="info" %}
+Sometimes if a new tab is used, the RealmJoin portal needs to log the admin user in first. This leads to a reloading of the page. In this case, open the link [RealmJoin connect](https://realmjoin-web.azurewebsites.net/global/graph) in the **same** browser  tab again.
+{% endhint %}
+
 ![](../.gitbook/assets/rj-connect-tenant.png)
 
 A tenant administrator has to give consent to RealmJoin. The Connect Wizard creates the necessary entries in Intune. After the success, it is important to revisit the first tab/browser window and the **Check&Install** option as to be executed.

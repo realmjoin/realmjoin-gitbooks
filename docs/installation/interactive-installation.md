@@ -28,7 +28,7 @@ You may download and install RealmJoin in a single step by using the following c
 
 ### Silent Installation
 
-When installing RealmJoin during unattended OS installation or any other non-interactive deployment method you may favour not to have any UI interaction during installation. To install RealmJoin in such a scenario use the silent installation option:
+When installing RealmJoin during unattended OS installation or any other non-interactive deployment method you may decide not to have any UI interaction during installation. To install RealmJoin in such a scenario, use the silent installation option:
 
 ```text
 reamjoin.exe -install

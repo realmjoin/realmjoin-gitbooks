@@ -4,7 +4,7 @@
 
 ### \(No\) Proxy
 
-Initial deployment needs direct Internet access. No proxy would be ideal, a transparent proxy should be ok \(if really transparent\). If there is a proxy unavoidable as a minimum requirement the following services/addresses need to be directly accessible \(not recommended, list might not be exhaustive\):
+Initial deployment needs direct Internet access. No proxy would be ideal but a transparent proxy should work fine \(if truly transparent\). If there is a proxy unavoidable as a minimum requirement the following services/addresses need to be directly accessible \(not recommended, list might not be exhaustive\):
 
 For a list of the corresponding IP ranges click the following link:
 
@@ -18,16 +18,16 @@ Download the new xml file and perform the necessary changes on your site before 
 This article links a file that contains the compute IP address ranges that you should include in your outbound allow lists to ensure your computers can successfully use Office 365.
 
 {% hint style="info" %}
-IP addresses filtering alone is not a complete solution due to dependencies on internet based services such as Domain Name Services \(DNS\), Content Delivery Networks \(CDNs\), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services are dynamically assigned and can change at any time.
+IP addresses filtering alone is not a complete solution due to dependencies on internet-based services such as Domain Name Services \(DNS\), Content Delivery Networks \(CDNs\), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services, are dynamically assigned and can change at any time.
 {% endhint %}
 
 ### No \(VLans/WLAN-/Port\)-Isolation
 
-For **BranchCache** to be effective the clients need to be able to communicate directly with each other. So they should not be separated by different VLans,WLAN-Isolation or Port-Isolation. For mass roll-outs **BranchCache Servers** with pre-populated caches are recommended. BranchCache is limited to a single subnet, if a site has multiple subnets the BranchCache Servers must be placed in the same subnet as the clients to be effective.
+For **BranchCache** to be effective the clients need to be able to communicate directly with each other. So they should not be separated by different VLans, WLAN-Isolation or Port-Isolation. For mass roll-outs, **BranchCache Servers** with pre-populated caches are recommended. BranchCache is limited to a single subnet, if a site has multiple subnets the BranchCache Servers must be placed in the same subnet as the clients to be effective.
 
 ### RealmJoin connection endpoints
 
-RealmJoin connects to the following URLs, that might be considered in your firewall settings:
+RealmJoin connects to the following URLs that might be considered in your firewall settings:
 
 * [https://cdn.realmjoin.com/](https://cdn.realmjoin.com/)  
 * [https://realmjoin-backend.azurewebsites.net/](https://realmjoin-backend.azurewebsites.net/)  
@@ -44,33 +44,33 @@ RealmJoin connects to the following URLs, that might be considered in your firew
 
 An often encountered problem when providing software packages to a big number of devices in a WAN is creating a bottleneck and huge network loads when downloading software from a server to the devices. A solution for this problem is the **BranchCache** technology. There are two BranchCache modes, **hosted** and **distributed** cache. In hosted cache mode, the content is cached on one or more local **hosted cache servers**, which increases the network load, since a download from big binaries from an internet server is not necessary. RealmJoin uses BranchCache in the distributed cache mode:
 
-An often encountered problem when providing software packages to a big number of devices in a WAN is creating a bottleneck and huge network loads when downloading software from a server to the devices. A solution for this problem is the **BranchCache** technology.
+A frequently encountered problem when providing software packages to a large number of devices in a WAN is creating a bottleneck and huge network loads when downloading software from a server to the devices. A solution for this problem is the **BranchCache** technology.
 
-When a client device downloads software packages for the first time, the files are divided into chunks that are significantly smaller then the original content and cached on the device. If the same package is afterwards requested from a different client device in the same network, it downloads content information instead of the complete content from the server. The content information is used to locate the desired content on other devices in the network. If found, instead of downloading packages from the server, the content in form of the chopped up chunks, is transferred to the client device. If the requested software is available on a number of devices, the load is balanced between them.
+When a client device downloads software packages for the first time, the files are divided into chunks that are significantly smaller than the original content and cached on the device. If the same package is afterwards requested from a different client device in the same network, it downloads content information instead of the complete content from the server. The content information is used to locate the desired content on other devices in the network. If found, instead of downloading packages from the server, the content in form of the chopped up chunks is transferred to the client device. If the requested software is available on several devices, the load is balanced between them.
 
-The RealmJoin Publishing Server has to provide the chunk identifiers, and therefore is hosted as a single Azure VM Windows 2016 IIS server with a Azure Blob Storage. For more information about BranchCache see the [Microsoft BranchCache documentation](https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache)
+The RealmJoin Publishing Server has to provide the chunk identifiers and therefore is hosted as a single Azure VM Windows 2016 IIS server with a Azure Blob Storage. For more information about BranchCache see the [Microsoft BranchCache documentation](https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache)
 
 ### Back-End
 
 #### Hosting
 
-The RealmJoin back-end is an Azure web application using an Azure SQL data base and the available Azure services.  
+The RealmJoin back-end is an Azure web application using an Azure SQL database and the available Azure services.  
 The back-end is hosted on an Azure tenant exclusively used for RealmJoin. All customer realms within this tenant are isolated from each other.
 
 #### RealmJoin App Publishing Endpoint
 
-To provide the **BranchCache** mechanism , the endpoint has to provide the chunk identifiers, a feature only provided by **Microsoft Internet Information Services** \(IIS\) servers. To deliver the maximum scalability the Publishing Endpoint is distributed on multiple Azure nodes hosting Windows 2016 IIS sharing a redundant Azure blob storage.
+To provide the **BranchCache** mechanism, the endpoint has to provide the chunk identifiers, a feature only provided by **Microsoft Internet Information Services** \(IIS\) servers. To deliver the maximum scalability the Publishing Endpoint is distributed on multiple Azure nodes hosting Windows 2016 IIS sharing a redundant Azure blob storage.
 
 #### Web interface
 
-The web interface can be reached via the [realmjoin portal](https://realmjoin-web.azurewebsites.net/) and is in detailed explained in the chapter [RealmJoin Portal](rj-portal/). After a logging with the provided credentials, the administrator can manage the package distribution in his tenant and has access to extensive information.
+The web interface can be reached via the [realmjoin portal](https://realmjoin-web.azurewebsites.net/) and is in detailed explained in the chapter [RealmJoin Portal](rj-portal/). After a logging with the provided credentials, the administrator can manage the package distribution in his tenant and access extensive information.
 
 ## Security Features
 
 ### Client authentication
 
-The RealmJoin client authenticates itself against the Azure AD via a secured HTTPS connection, receiving an identification token. With the token the client now is able to proof its identity to the Microsoft Graph API and the RealmJoin back-end.  
-After identifying the client, the back-ends response to the client is RSA signed. Using the servers public key, the RealmJoin client and service are able to verify the identity of the back-end server response.
+The RealmJoin client authenticates itself against the Azure AD via a secured HTTPS connection, receiving an identification token. With this token the client now can prove its identity to the Microsoft Graph API and the RealmJoin back-end.  
+After identifying the client, the back-ends response to the client is RSA signed. Using the servers public key, the RealmJoin client and service can verify the identity of the back-end server response.
 
 ### Signed MSI
 

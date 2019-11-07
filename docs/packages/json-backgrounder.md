@@ -19,17 +19,7 @@ A pair of a key and a value is an object. An object is surrounded by curly brack
 The following example is about a configuration of AnyDesk:
 
 ```text
-{
-"Integration": {
-    "AnyDesk": {
-        "Enabled": true,
-        "BootstrapperUrl" "https://.../.../AnyDesk.exe",
-        "Ui":{"TrayMenuEnglish": "Start remote session"
-
-            }
-        }
-    }
-}
+{"Integration": {    "AnyDesk": {        "Enabled": true,        "BootstrapperUrl" "https://.../.../AnyDesk.exe",        "Ui":{"TrayMenuEnglish": "Start remote session"            }        }    }}
 ```
 
 ### All-in-one

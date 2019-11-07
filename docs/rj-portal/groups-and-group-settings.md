@@ -34,19 +34,7 @@ While there are no strict naming pattern requirements in RealmJoin, we recommend
 Examples:
 
 ```text
-CFG - Global-Core  
-CFG - DE-Core  
-CFG - DE7499-Core  
-APP - Adobe-Photoshop  
-APP - Microsoft-Visio  
-APP - Mozilla-Firefox  
-APP - Mozilla-Firefox-PreRelease  
-APP - Mozilla-Firefox-Optional  
-APP - Mozilla-Firefox-Optional-PreRelease  
-APP - Mozilla-Firefox-x86  
-APP - Mozilla-Firefox-x64  
-APP - Mozilla-Firefox-DE7499  
-APP - Mozilla-Firefox-withFlash
+CFG - Global-Core  CFG - DE-Core  CFG - DE7499-Core  APP - Adobe-Photoshop  APP - Microsoft-Visio  APP - Mozilla-Firefox  APP - Mozilla-Firefox-PreRelease  APP - Mozilla-Firefox-Optional  APP - Mozilla-Firefox-Optional-PreRelease  APP - Mozilla-Firefox-x86  APP - Mozilla-Firefox-x64  APP - Mozilla-Firefox-DE7499  APP - Mozilla-Firefox-withFlash
 ```
 
 The standard synchronization time is 20 minutes \(hh:00, hh:20, hh:40 and all groups that start with **APP -** or **CFG -** are taking into consideration.

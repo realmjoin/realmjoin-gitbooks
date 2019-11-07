@@ -40,19 +40,7 @@ Import-Module (Get-ItemPropertyValue -Path "Registry::HKLM\SOFTWARE\RealmJoin\Va
   Can be:
 
   ```text
-  Blank
-
-  RunningFirstDeployment
-  RunningFirstDeploymentAuto
-   - Now the installations start
-  CompletedFirstDeployment
-
-  RunningDeployment
-   - Now the installations start
-  CompletedDeployment
-
-  ManualDeployment
-   - Now the installations start
+  BlankRunningFirstDeploymentRunningFirstDeploymentAuto - Now the installations startCompletedFirstDeploymentRunningDeployment - Now the installations startCompletedDeploymentManualDeployment - Now the installations start
   ```
 
 ### AppV Packages
@@ -80,11 +68,7 @@ Install-ChocolateyRealmjoinAppvPackage [[-fileName] <string>] [[-fileChecksum] <
 **Parameters**
 
 ```text
-Name                           Aliases Description Required? Pipeline Input? Default Value
-----                           ------- ----------- --------- --------------- -------------
-DynamicDeploymentConfiguration None                false     false                        
-fileChecksum                   None                false     false                        
-fileName                       None                false     false
+Name                           Aliases Description Required? Pipeline Input? Default Value----                           ------- ----------- --------- --------------- -------------DynamicDeploymentConfiguration None                false     false                        fileChecksum                   None                false     false                        fileName                       None                false     false
 ```
 
 #### Uninstall-ChocolateyRealmjoinAppvPackage
@@ -100,9 +84,7 @@ Uninstall-ChocolateyRealmjoinAppvPackage [[-name] <string>] [<CommonParameters>]
 **Parameters**
 
 ```text
-Name Aliases Description Required? Pipeline Input? Default Value
----- ------- ----------- --------- --------------- -------------
-name None                false     false
+Name Aliases Description Required? Pipeline Input? Default Value---- ------- ----------- --------- --------------- -------------name None                false     false
 ```
 
 #### Get-ChocolateyRealmjoinAppvPackageVfsPath
@@ -116,9 +98,7 @@ Get-ChocolateyRealmjoinAppvPackageVfsPath [[-appvPackage] <Object>] [<CommonPara
 **Parameters**
 
 ```text
-Name        Aliases Description Required? Pipeline Input? Default Value
-----        ------- ----------- --------- --------------- -------------
-appvPackage None                false     false
+Name        Aliases Description Required? Pipeline Input? Default Value----        ------- ----------- --------- --------------- -------------appvPackage None                false     false
 ```
 
 ### Logs and Transforms
@@ -136,10 +116,7 @@ Get-ChocolateyRealmjoinLocaleId [[-localeString] <string>] [[-defaultLocaleId] <
 **Parameters**
 
 ```text
-Name            Aliases Description Required? Pipeline Input? Default Value
-----            ------- ----------- --------- --------------- -------------
-defaultLocaleId None                false     false                        
-localeString    None                false     false
+Name            Aliases Description Required? Pipeline Input? Default Value----            ------- ----------- --------- --------------- -------------defaultLocaleId None                false     false                        localeString    None                false     false
 ```
 
 #### Get-ChocolateyRealmjoinLocaleMsiTransform
@@ -155,11 +132,7 @@ Get-ChocolateyRealmjoinLocaleMsiTransform [[-localeString] <string>] [[-localeTr
 **Parameters**
 
 ```text
-Name                   Aliases Description Required? Pipeline Input? Default Value
-----                   ------- ----------- --------- --------------- -------------
-defaultLocaleId        None                false     false                        
-localeString           None                false     false                        
-localeTransformsFolder None                false     false
+Name                   Aliases Description Required? Pipeline Input? Default Value----                   ------- ----------- --------- --------------- -------------defaultLocaleId        None                false     false                        localeString           None                false     false                        localeTransformsFolder None                false     false
 ```
 
 #### Get-ChocolateyRealmjoinLogFilePath
@@ -175,10 +148,7 @@ Get-ChocolateyRealmjoinLogFilePath [[-operation] <string>] [[-target] <string>] 
 **Parameters**
 
 ```text
-Name      Aliases Description Required? Pipeline Input? Default Value
-----      ------- ----------- --------- --------------- -------------
-operation None                false     false                        
-target    None                false     false
+Name      Aliases Description Required? Pipeline Input? Default Value----      ------- ----------- --------- --------------- -------------operation None                false     false                        target    None                false     false
 ```
 
 ### Chocolatey Packages
@@ -196,21 +166,7 @@ Install-ChocolateyRealmjoinPackage [[-installerFileName] <string>] [[-installerF
 **Parameters**
 
 ```text
-Name                         Aliases Description Required? Pipeline Input? Default Value
-----                         ------- ----------- --------- --------------- -------------
-additionalArgs               None                false     false                        
-installPackage               None                false     false                        
-installerFileChecksum        None                false     false                        
-installerFileName            None                false     false                        
-installerFileNameIsLocalPath None                false     false                        
-installers                   None                false     false                        
-msiTransforms                None                false     false                        
-msiTransformsCabs            None                false     false                        
-noInstallMessage             None                false     false                        
-postActions                  None                false     false                        
-preActions                   None                false     false                        
-silentArgs                   None                false     false                        
-validExitCodes               None                false     false
+Name                         Aliases Description Required? Pipeline Input? Default Value----                         ------- ----------- --------- --------------- -------------additionalArgs               None                false     false                        installPackage               None                false     false                        installerFileChecksum        None                false     false                        installerFileName            None                false     false                        installerFileNameIsLocalPath None                false     false                        installers                   None                false     false                        msiTransforms                None                false     false                        msiTransformsCabs            None                false     false                        noInstallMessage             None                false     false                        postActions                  None                false     false                        preActions                   None                false     false                        silentArgs                   None                false     false                        validExitCodes               None                false     false
 ```
 
 #### Uninstall-ChocolateyRealmjoinPackage
@@ -226,17 +182,7 @@ Uninstall-ChocolateyRealmjoinPackage [[-uninstallerFile] <string>] [[-additional
 **Parameters**
 
 ```text
-Name            Aliases Description Required? Pipeline Input? Default Value
-----            ------- ----------- --------- --------------- -------------
-Confirm         cf                  false     false                        
-WhatIf          wi                  false     false                        
-additionalArgs  None                false     false                        
-silentArgs      None                false     false                        
-subPackageName  None                false     false                        
-uninstallInfo   None                false     true (ByValue)               
-uninstallerFile None                false     false                        
-uninstallers    None                false     false                        
-validExitCodes  None                false     false
+Name            Aliases Description Required? Pipeline Input? Default Value----            ------- ----------- --------- --------------- -------------Confirm         cf                  false     false                        WhatIf          wi                  false     false                        additionalArgs  None                false     false                        silentArgs      None                false     false                        subPackageName  None                false     false                        uninstallInfo   None                false     true (ByValue)               uninstallerFile None                false     false                        uninstallers    None                false     false                        validExitCodes  None                false     false
 ```
 
 #### Import-ChocolateyRealmjoinPackageParameters
@@ -250,13 +196,7 @@ Import-ChocolateyRealmjoinPackageParameters [[-params] <string>] [-setVariables]
 **Parameters**
 
 ```text
-Name                   Aliases Description Required? Pipeline Input? Default Value
-----                   ------- ----------- --------- --------------- -------------
-clearVariables         None                false     false                        
-params                 None                false     false                        
-returnKeyValuePairs    None                false     false                        
-returnParameterHashset None                false     false                        
-setVariables           None                false     false
+Name                   Aliases Description Required? Pipeline Input? Default Value----                   ------- ----------- --------- --------------- -------------clearVariables         None                false     false                        params                 None                false     false                        returnKeyValuePairs    None                false     false                        returnParameterHashset None                false     false                        setVariables           None                false     false
 ```
 
 #### Test-ChocolateyRealmjoinRegistryUninstallExists
@@ -272,16 +212,7 @@ Test-ChocolateyRealmjoinRegistryUninstallExists [[-keyNameFilter] <string>] [[-d
 **Parameters**
 
 ```text
-Name              Aliases Description Required? Pipeline Input? Default Value
-----              ------- ----------- --------- --------------- -------------
-displayNameFilter None                false     false                        
-filterScriptblock None                false     false                        
-keyNameFilter     None                false     false                        
-publisherFilter   None                false     false                        
-versionGe         None                false     false                        
-versionGt         None                false     false                        
-versionLe         None                false     false                        
-versionLt         None                false     false
+Name              Aliases Description Required? Pipeline Input? Default Value----              ------- ----------- --------- --------------- -------------displayNameFilter None                false     false                        filterScriptblock None                false     false                        keyNameFilter     None                false     false                        publisherFilter   None                false     false                        versionGe         None                false     false                        versionGt         None                false     false                        versionLe         None                false     false                        versionLt         None                false     false
 ```
 
 #### Get-ChocolateyRealmjoinRegistryUninstallInfo
@@ -297,16 +228,7 @@ Get-ChocolateyRealmjoinRegistryUninstallInfo [[-keyNameFilter] <string>] [[-disp
 **Parameters**
 
 ```text
-Name              Aliases Description Required? Pipeline Input? Default Value
-----              ------- ----------- --------- --------------- -------------
-displayNameFilter None                false     false                        
-filterScriptblock None                false     false                        
-keyNameFilter     None                false     false                        
-publisherFilter   None                false     false                        
-versionGe         None                false     false                        
-versionGt         None                false     false                        
-versionLe         None                false     false                        
-versionLt         None                false     false
+Name              Aliases Description Required? Pipeline Input? Default Value----              ------- ----------- --------- --------------- -------------displayNameFilter None                false     false                        filterScriptblock None                false     false                        keyNameFilter     None                false     false                        publisherFilter   None                false     false                        versionGe         None                false     false                        versionGt         None                false     false                        versionLe         None                false     false                        versionLt         None                false     false
 ```
 
 #### Get-ChocolateyRealmjoinRegistryUninstallStrings
@@ -322,9 +244,7 @@ Get-ChocolateyRealmjoinRegistryUninstallStrings [-uninstallKeyNameFilter] <strin
 **Parameters**
 
 ```text
-Name                   Aliases Description Required? Pipeline Input? Default Value
-----                   ------- ----------- --------- --------------- -------------
-uninstallKeyNameFilter None                true      false
+Name                   Aliases Description Required? Pipeline Input? Default Value----                   ------- ----------- --------- --------------- -------------uninstallKeyNameFilter None                true      false
 ```
 
 #### Get-ChocolateyRealmjoinWebFile
@@ -340,12 +260,7 @@ Get-ChocolateyRealmjoinWebFile [[-fileName] <string>] [[-fileChecksum] <string>]
 **Parameters**
 
 ```text
-Name           Aliases Description Required? Pipeline Input? Default Value
-----           ------- ----------- --------- --------------- -------------
-extractArchive None                false     false                        
-fileChecksum   None                false     false                        
-fileName       None                false     false                        
-remoteFileName None                false     false
+Name           Aliases Description Required? Pipeline Input? Default Value----           ------- ----------- --------- --------------- -------------extractArchive None                false     false                        fileChecksum   None                false     false                        fileName       None                false     false                        remoteFileName None                false     false
 ```
 
 #### Invoke-RealmjoinChocoPackageInstallation
@@ -359,10 +274,7 @@ Invoke-RealmjoinChocoPackageInstallation [[-packageName] <string>] [[-params] <h
 **Parameters**
 
 ```text
-Name        Aliases Description Required? Pipeline Input? Default Value
-----        ------- ----------- --------- --------------- -------------
-packageName None                false     false                        
-params      None                false     false
+Name        Aliases Description Required? Pipeline Input? Default Value----        ------- ----------- --------- --------------- -------------packageName None                false     false                        params      None                false     false
 ```
 
 ### Command line
@@ -378,10 +290,7 @@ Join-RealmjoinCommandLine [[-CommandOnly] <string>] [[-ArgumentsOnly] <string>] 
 **Parameters**
 
 ```text
-Name          Aliases Description Required? Pipeline Input? Default Value
-----          ------- ----------- --------- --------------- -------------
-ArgumentsOnly None                false     false                        
-CommandOnly   None                false     false
+Name          Aliases Description Required? Pipeline Input? Default Value----          ------- ----------- --------- --------------- -------------ArgumentsOnly None                false     false                        CommandOnly   None                false     false
 ```
 
 #### Split-RealmjoinCommandLine
@@ -395,9 +304,7 @@ Split-RealmjoinCommandLine [[-CommandLine] <string>] [<CommonParameters>]
 **Parameters**
 
 ```text
-Name        Aliases Description Required? Pipeline Input? Default Value
-----        ------- ----------- --------- --------------- -------------
-CommandLine None                false     false
+Name        Aliases Description Required? Pipeline Input? Default Value----        ------- ----------- --------- --------------- -------------CommandLine None                false     false
 ```
 
 #### Get-RealmjoinCommandLineWithLauncher
@@ -411,12 +318,7 @@ Get-RealmjoinCommandLineWithLauncher [[-CommandLine] <string>] [[-CommandOnly] <
 **Parameters**
 
 ```text
-Name          Aliases Description Required? Pipeline Input? Default Value
-----          ------- ----------- --------- --------------- -------------
-ArgumentsOnly None                false     false                        
-CommandLine   None                false     false                        
-CommandOnly   None                false     false                        
-ReturnSplit   None                false     false
+Name          Aliases Description Required? Pipeline Input? Default Value----          ------- ----------- --------- --------------- -------------ArgumentsOnly None                false     false                        CommandLine   None                false     false                        CommandOnly   None                false     false                        ReturnSplit   None                false     false
 ```
 
 #### Restart-RealmjoinComputer
@@ -432,10 +334,7 @@ Restart-RealmjoinComputer [[-Delay] <timespan>] [[-Message] <string>] [<CommonPa
 **Parameters**
 
 ```text
-Name    Aliases Description Required? Pipeline Input? Default Value
-----    ------- ----------- --------- --------------- -------------
-Delay   None                false     false                        
-Message None                false     false
+Name    Aliases Description Required? Pipeline Input? Default Value----    ------- ----------- --------- --------------- -------------Delay   None                false     false                        Message None                false     false
 ```
 
 #### Get-RealmjoinComputerSystemBiosVersion
@@ -457,9 +356,7 @@ Get-RealmjoinComputerSystemModel [-IncludeDebugInfoIfUnsure] [<CommonParameters>
 **Parameters**
 
 ```text
-Name                     Aliases Description Required? Pipeline Input? Default Value
-----                     ------- ----------- --------- --------------- -------------
-IncludeDebugInfoIfUnsure None                false     false
+Name                     Aliases Description Required? Pipeline Input? Default Value----                     ------- ----------- --------- --------------- -------------IncludeDebugInfoIfUnsure None                false     false
 ```
 
 ### Custom States
@@ -477,10 +374,7 @@ Out-RealmjoinCustomState [-Name] <string> [[-InputObject] <Object>] [<CommonPara
 **Parameters**
 
 ```text
-Name        Aliases Description Required? Pipeline Input? Default Value
-----        ------- ----------- --------- --------------- -------------
-InputObject None                false     true (ByValue)               
-Name        None                true      false
+Name        Aliases Description Required? Pipeline Input? Default Value----        ------- ----------- --------- --------------- -------------InputObject None                false     true (ByValue)               Name        None                true      false
 ```
 
 #### Remove-RealmjoinCustomState
@@ -496,9 +390,7 @@ Remove-RealmjoinCustomState [-Name] <string> [<CommonParameters>]
 **Parameters**
 
 ```text
-Name Aliases Description Required? Pipeline Input? Default Value
----- ------- ----------- --------- --------------- -------------
-Name None                true      false
+Name Aliases Description Required? Pipeline Input? Default Value---- ------- ----------- --------- --------------- -------------Name None                true      false
 ```
 
 ### Scheduled Tasks
@@ -518,11 +410,7 @@ Register-RealmjoinCustomStateScheduledTask [[-RepetitionInterval] <timespan>] [[
 **Parameters**
 
 ```text
-Name                   Aliases Description Required? Pipeline Input? Default Value
-----                   ------- ----------- --------- --------------- -------------
-PublishStateScriptFile None                false     false           ".\publishState.ps1"                        
-RepetitionInterval     None                false     false           "1.00:00:00"             
-TaskName               None                false     false           $env:packageTitle
+Name                   Aliases Description Required? Pipeline Input? Default Value----                   ------- ----------- --------- --------------- -------------PublishStateScriptFile None                false     false           ".\publishState.ps1"                        RepetitionInterval     None                false     false           "1.00:00:00"             TaskName               None                false     false           $env:packageTitle
 ```
 
 #### Unregister-RealmjoinCustomStateScheduledTask
@@ -538,10 +426,7 @@ Unregister-RealmjoinCustomStateScheduledTask [[-TaskName] <string>] [[-PublishSt
 **Parameters**
 
 ```text
-Name                   Aliases Description Required? Pipeline Input? Default Value
-----                   ------- ----------- --------- --------------- -------------
-PublishStateScriptFile None                false     false                        
-TaskName               None                false     false
+Name                   Aliases Description Required? Pipeline Input? Default Value----                   ------- ----------- --------- --------------- -------------PublishStateScriptFile None                false     false                        TaskName               None                false     false
 ```
 
 #### Get-RealmjoinInvocationParameters
@@ -555,9 +440,7 @@ Get-RealmjoinInvocationParameters [[-Invocation] <InvocationInfo>] [<CommonParam
 **Parameters**
 
 ```text
-Name       Aliases Description Required? Pipeline Input? Default Value
-----       ------- ----------- --------- --------------- -------------
-Invocation None                false     false
+Name       Aliases Description Required? Pipeline Input? Default Value----       ------- ----------- --------- --------------- -------------Invocation None                false     false
 ```
 
 #### Get-RealmjoinPathRooted
@@ -571,9 +454,7 @@ Get-RealmjoinPathRooted [[-Path] <string>] [<CommonParameters>]
 **Parameters**
 
 ```text
-Name Aliases Description Required? Pipeline Input? Default Value
----- ------- ----------- --------- --------------- -------------
-Path None                false     false
+Name Aliases Description Required? Pipeline Input? Default Value---- ------- ----------- --------- --------------- -------------Path None                false     false
 ```
 
 #### New-RealmjoinScheduledTaskBootTrigger
@@ -589,14 +470,7 @@ New-RealmjoinScheduledTaskBootTrigger [[-Enabled] <bool>] [[-StartBoundary] <dat
 **Parameters**
 
 ```text
-Name               Aliases Description Required? Pipeline Input? Default Value
-----               ------- ----------- --------- --------------- -------------
-Delay              None                false     false                        
-Enabled            None                false     false                        
-EndBoundary        None                false     false                        
-RepetitionDuration None                false     false                        
-RepetitionInterval None                false     false                        
-StartBoundary      None                false     false
+Name               Aliases Description Required? Pipeline Input? Default Value----               ------- ----------- --------- --------------- -------------Delay              None                false     false                        Enabled            None                false     false                        EndBoundary        None                false     false                        RepetitionDuration None                false     false                        RepetitionInterval None                false     false                        StartBoundary      None                false     false
 ```
 
 #### New-RealmjoinScheduledTaskDailyTrigger
@@ -612,15 +486,7 @@ New-RealmjoinScheduledTaskDailyTrigger [[-Enabled] <bool>] [[-StartBoundary] <da
 **Parameters**
 
 ```text
-Name               Aliases Description Required? Pipeline Input? Default Value
-----               ------- ----------- --------- --------------- -------------
-DaysInterval       None                false     false                        
-Enabled            None                false     false                        
-EndBoundary        None                false     false                        
-RandomDelay        None                false     false                        
-RepetitionDuration None                false     false                        
-RepetitionInterval None                false     false                        
-StartBoundary      None                false     false
+Name               Aliases Description Required? Pipeline Input? Default Value----               ------- ----------- --------- --------------- -------------DaysInterval       None                false     false                        Enabled            None                false     false                        EndBoundary        None                false     false                        RandomDelay        None                false     false                        RepetitionDuration None                false     false                        RepetitionInterval None                false     false                        StartBoundary      None                false     false
 ```
 
 #### New-RealmjoinScheduledTaskLogonTrigger
@@ -636,14 +502,7 @@ New-RealmjoinScheduledTaskLogonTrigger [[-Enabled] <bool>] [[-StartBoundary] <da
 **Parameters**
 
 ```text
-Name               Aliases Description Required? Pipeline Input? Default Value
-----               ------- ----------- --------- --------------- -------------
-Delay              None                false     false                        
-Enabled            None                false     false                        
-EndBoundary        None                false     false                        
-RepetitionDuration None                false     false                        
-RepetitionInterval None                false     false                        
-StartBoundary      None                false     false
+Name               Aliases Description Required? Pipeline Input? Default Value----               ------- ----------- --------- --------------- -------------Delay              None                false     false                        Enabled            None                false     false                        EndBoundary        None                false     false                        RepetitionDuration None                false     false                        RepetitionInterval None                false     false                        StartBoundary      None                false     false
 ```
 
 #### New-RealmjoinScheduledTaskTimeTrigger
@@ -659,15 +518,7 @@ New-RealmjoinScheduledTaskTimeTrigger [[-DelayFromNow] <timespan>] [[-Enabled] <
 **Parameters**
 
 ```text
-Name               Aliases Description Required? Pipeline Input? Default Value
-----               ------- ----------- --------- --------------- -------------
-DelayFromNow       None                false     false                        
-Enabled            None                false     false                        
-EndBoundary        None                false     false                        
-RandomDelay        None                false     false                        
-RepetitionDuration None                false     false                        
-RepetitionInterval None                false     false                        
-StartBoundary      None                false     false
+Name               Aliases Description Required? Pipeline Input? Default Value----               ------- ----------- --------- --------------- -------------DelayFromNow       None                false     false                        Enabled            None                false     false                        EndBoundary        None                false     false                        RandomDelay        None                false     false                        RepetitionDuration None                false     false                        RepetitionInterval None                false     false                        StartBoundary      None                false     false
 ```
 
 #### New-RealmjoinScheduledTaskXml
@@ -683,17 +534,7 @@ New-RealmjoinScheduledTaskXml [[-Principal] <ScheduledTaskPrincipal>] [[-Action]
 **Parameters**
 
 ```text
-Name                Aliases Description Required? Pipeline Input? Default Value
-----                ------- ----------- --------- --------------- -------------
-Action              None                false     false                        
-DeleteAfterFirstRun None                false     false                        
-Enabled             None                false     false                        
-ExecutionTimeLimit  None                false     false                        
-Principal           None                false     false                        
-Register            None                false     false                        
-StartOnce           None                false     false                        
-TaskName            None                false     false                        
-Trigger             None                false     false
+Name                Aliases Description Required? Pipeline Input? Default Value----                ------- ----------- --------- --------------- -------------Action              None                false     false                        DeleteAfterFirstRun None                false     false                        Enabled             None                false     false                        ExecutionTimeLimit  None                false     false                        Principal           None                false     false                        Register            None                false     false                        StartOnce           None                false     false                        TaskName            None                false     false                        Trigger             None                false     false
 ```
 
 ### Shortcuts
@@ -713,18 +554,7 @@ New-RealmjoinShortcut [-shortcutPath] <string> [-targetPath] <string> [[-targetA
 **Parameters**
 
 ```text
-Name             Aliases Description Required? Pipeline Input? Default Value
-----             ------- ----------- --------- --------------- -------------
-description      None                false     false                        
-forCurrentUser   None     Shortcuts are enabled for current user           false     false                        
-hotKey           None                false     false                        
-iconLocation     None                false     false                        
-onDesktop        None     Path will create on the desktop           false     false                        
-shortcutPath     None                true      false                        
-targetArguments  None                false     false                        
-targetPath       None                true      false                        
-windowStyle      None                false     false                        
-workingDirectory None                false     false
+Name             Aliases Description Required? Pipeline Input? Default Value----             ------- ----------- --------- --------------- -------------description      None                false     false                        forCurrentUser   None     Shortcuts are enabled for current user           false     false                        hotKey           None                false     false                        iconLocation     None                false     false                        onDesktop        None     Path will create on the desktop           false     false                        shortcutPath     None                true      false                        targetArguments  None                false     false                        targetPath       None                true      false                        windowStyle      None                false     false                        workingDirectory None                false     false
 ```
 
 #### Remove-RealmjoinShortcut
@@ -740,11 +570,7 @@ Remove-RealmjoinShortcut [-shortcutPath] <string> [-forCurrentUser] [-onDesktop]
 **Parameters**
 
 ```text
-Name           Aliases Description Required? Pipeline Input? Default Value
-----           ------- ----------- --------- --------------- -------------
-forCurrentUser None      Remove and disable a shortcut for current user          false     false                        
-onDesktop      None      Remove a shortcut from desktop          false     false                        
-shortcutPath   None                true      false
+Name           Aliases Description Required? Pipeline Input? Default Value----           ------- ----------- --------- --------------- -------------forCurrentUser None      Remove and disable a shortcut for current user          false     false                        onDesktop      None      Remove a shortcut from desktop          false     false                        shortcutPath   None                true      false
 ```
 
 #### Format-RealmjoinShortcutPath
@@ -758,12 +584,7 @@ Format-RealmjoinShortcutPath [-shortcutPath] <string> [-forCurrentUser] [-onDesk
 **Parameters**
 
 ```text
-Name                   Aliases Description Required? Pipeline Input? Default Value
-----                   ------- ----------- --------- --------------- -------------
-doNotCheckCreateFolder None                false     false                        
-forCurrentUser         None                false     false                        
-onDesktop              None                false     false                        
-shortcutPath           None                true      false
+Name                   Aliases Description Required? Pipeline Input? Default Value----                   ------- ----------- --------- --------------- -------------doNotCheckCreateFolder None                false     false                        forCurrentUser         None                false     false                        onDesktop              None                false     false                        shortcutPath           None                true      false
 ```
 
 #### Start-RealmjoinSoftwarePackageInstallation
@@ -777,8 +598,6 @@ Start-RealmjoinSoftwarePackageInstallation [[-packageName] <string>] [<CommonPar
 **Parameters**
 
 ```text
-Name        Aliases Description Required? Pipeline Input? Default Value
-----        ------- ----------- --------- --------------- -------------
-packageName None                false     false
+Name        Aliases Description Required? Pipeline Input? Default Value----        ------- ----------- --------- --------------- -------------packageName None                false     false
 ```
 

@@ -8,15 +8,13 @@ The following registry key is set to define the DOGroupID:
 ### Network-Fingerprint-GUID in Reg-Key
 
 ```text
-HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\DOGroupId
-HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\GroupId
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\DOGroupIdHKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\GroupId
 ```
 
 Remember to set the Download Mode to **Group** via Windows Update settings in Intune:
 
 ```text
-Delivery optimization download mode: 
-HTTP blended with peering across private group
+Delivery optimization download mode: HTTP blended with peering across private group
 ```
 
 This is effectively **DownloadMode=2**. Opting-out of setting the groupID via RealmJoin can be done by setting the [Policies.SetNetworkOptimizationID](http://docs.realmjoin.com/policies.html#policies) to **false**.

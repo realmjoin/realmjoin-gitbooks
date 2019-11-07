@@ -1,6 +1,6 @@
 # RealmJoin Portal
 
-Device provisioning and RealmJoin configuration is done with the RealmJoin Portal. Administrative users have access to the RealmJoin Portal. Designed to mirror the style of the new Microsoft administration services, it is the main tool for the management of the RealmJoin clients and users. RealmJoin incorporates the same group based user and policy management experience and uses the Azure AD defined groups as basis for software deployment. 
+Device provisioning and RealmJoin configuration is done with the RealmJoin Portal. Administrative users have access to the RealmJoin Portal. Designed to mirror the style of the new Microsoft administration services, it is the main tool for the management of RealmJoin clients and users. RealmJoin incorporates the same group based user and policy management experience and uses the Azure AD defined groups as a basis for software deployment. 
 
 The default interval for group synchronization between Azure AD and RealmJoin is 15 minutes, while only groups with a defined prefix are taken into consideration. Only groups with at least one assigned user are synchronized \(synchronization interval can be adjusted\).
 
@@ -27,25 +27,25 @@ A click on the Clients icon gives you a transparent overview over all enrolled d
 
 ![](../.gitbook/assets/rj-ac-usersicon.png)
 
-The Users icon gives you a list of all users assigned to the tenant. Fore more details read our [Users and User Settings article](users-and-user-settings.md).
+The Users icon gives you a list of all users assigned to the tenant. For more details read our [Users and User Settings article](users-and-user-settings.md).
 
 #### User Settings
 
 ![](../.gitbook/assets/rj-ac-usersettingsicon.png)
 
-Via the User Settings icon you have the possibility to configure user settings and policies. For more details read our [Users and User Settings article](users-and-user-settings.md).
+Via the User Settings icon, you have the possibility to configure user settings and policies. For more details read our [Users and User Settings article](users-and-user-settings.md).
 
 #### Groups
 
 ![](../.gitbook/assets/rj-ac-groupsicon.png)
 
-Via the Groups icon you can see all groups registered in this tenant. For more details read our [Groups and Group Settings article](groups-and-group-settings.md).
+Via the Groups icon, you can see all groups registered in this tenant. For more details read our [Groups and Group Settings article](groups-and-group-settings.md).
 
 #### Group Settings
 
 ![](../.gitbook/assets/rj-ac-groupsettingsicon.png)
 
-Via the User Settings icon you have the possibility to configure group settings and policies. For more details read our [Groups and Group Settings article](groups-and-group-settings.md).
+Via the User Settings icon, you have the possibility to configure group settings and policies. For more details read our [Groups and Group Settings article](groups-and-group-settings.md).
 
 #### App Store
 
@@ -63,7 +63,7 @@ A click on this icon gives you a list of all added packages. For more details re
 
 ![](../.gitbook/assets/rj-ac-uploadicon.png)
 
-If an application is not listed in the App Store, or is in need of customization, a packaging request can be sent to Glück & Kanja. For more details read our [Request Package article](request-package.md).
+If an application is not listed in the App Store or is in need of customization, a packaging request can be sent to Glück & Kanja. For more details read our [Request Package article](request-package.md).
 
 
 

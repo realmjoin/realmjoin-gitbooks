@@ -73,7 +73,8 @@ After the successful deployment, the package can be found in the Chocolatey libr
 To utilize parameters in Craft packages, which have been entered in the optional [args](http://docs.realmjoin.com/managing-realmjoin.html#add-packages) text field, you need to the include the following cmdlets in your `rj_install.ps1` script:
 
 ```text
-Import-Module (Get-ItemPropertyValue -Path "Registry::HKLM\SOFTWARE\RealmJoin\Variables" -Name RealmjoinCraftSupportModulePath)Import-RealmjoinPackageParameters
+Import-Module (Get-ItemPropertyValue -Path "Registry::HKLM\SOFTWARE\RealmJoin\Variables" -Name RealmjoinCraftSupportModulePath)
+Import-RealmjoinPackageParameters
 ```
 
 The RealmJoin Craft extension now parses the argument string and automatically creates and fills the variables with the following pattern:

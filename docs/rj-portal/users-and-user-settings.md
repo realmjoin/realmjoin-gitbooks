@@ -18,12 +18,12 @@ The Users menu gives you a list of all users assigned to the tenant. Eight diffe
 ![](../.gitbook/assets/users_tab_overview.png)
 
   
-Above the attributes there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results. At the lower right end of the menu you have the possibility to browse through the pages manually.
+Above the attributes, there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results. At the lower right end of the menu, you have the possibility to browse through the pages manually.
 
 If you click on a number in **Gr, Pa, Cl or Se** fields you will get an overview of which group a user belongs to, which packages are installed, which clients the user is logged on to and which individual settings have been set for a user.
 
 {% hint style="info" %}
-Users can not be added or assigned to groups using RealmJoin, the management of users and groups has to be done in Azure AD. Selecting an user opens up the users detail page, which contains information gathered by RealmJoin using the Microsoft Graph API.
+Users can not be added or assigned to groups using RealmJoin, the management of users and groups has to be done in Azure AD. Selecting a user opens up the users detail page, which contains information gathered by RealmJoin using the Microsoft Graph API.
 {% endhint %}
 
 #### User Details

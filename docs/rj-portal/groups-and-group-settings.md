@@ -4,7 +4,7 @@
 
 ![](../.gitbook/assets/rj-ac-groupsicon.png)
 
-The Group menu gives you an overview about all in a tenant registered user groups. RealmJoin synchronizes groups from Azure Active Directory into the RealmJoin back-end.
+The Group menu gives you an overview on all tenant registered user groups. RealmJoin synchronizes groups from Azure Active Directory into the RealmJoin back-end.
 
 Since not all users in Azure AD might be equipped with RealmJoin, only a specified range of groups are transferred into RealmJoin \(depending on the group name\). The groups can not be added or altered within RealmJoin, therefore the group naming conventions have to be established in advance.
 
@@ -19,9 +19,9 @@ Six different attributes are displayed in the Group menu:
 
 ![](../.gitbook/assets/groups_tab_overview.png)
 
-Above the attributes there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results. At the lower right end of the menu you have the possibility to browse through the pages manually.
+Above the attributes, there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results. At the lower right end of the menu, you have the possibility to browse through the pages manually.
 
-If you click on a number in the **Us, Pa** or **Se** field, you will get an overview of the users of a group, the corresponding software packages and the configured settings.
+If you click on a number in the **Us, Pa** or **Se** field, you will get an overview of the users of a group, the corresponding software packages, and the configured settings.
 
 #### Naming Convention
 
@@ -34,12 +34,24 @@ While there are no strict naming pattern requirements in RealmJoin, we recommend
 Examples:
 
 ```text
-CFG - Global-Core  CFG - DE-Core  CFG - DE7499-Core  APP - Adobe-Photoshop  APP - Microsoft-Visio  APP - Mozilla-Firefox  APP - Mozilla-Firefox-PreRelease  APP - Mozilla-Firefox-Optional  APP - Mozilla-Firefox-Optional-PreRelease  APP - Mozilla-Firefox-x86  APP - Mozilla-Firefox-x64  APP - Mozilla-Firefox-DE7499  APP - Mozilla-Firefox-withFlash
+CFG - Global-Core  
+CFG - DE-Core  
+CFG - DE7499-Core  
+APP - Adobe-Photoshop  
+APP - Microsoft-Visio  
+APP - Mozilla-Firefox  
+APP - Mozilla-Firefox-PreRelease  
+APP - Mozilla-Firefox-Optional  
+APP - Mozilla-Firefox-Optional-PreRelease  
+APP - Mozilla-Firefox-x86  
+APP - Mozilla-Firefox-x64  
+APP - Mozilla-Firefox-DE7499  
+APP - Mozilla-Firefox-withFlash
 ```
 
 The standard synchronization time is 20 minutes \(hh:00, hh:20, hh:40 and all groups that start with **APP -** or **CFG -** are taking into consideration.
 
-The synchronization time is schedule and the prefixes that are taken into account can be adjusted, currentyl only on request. Grups will not be deleted from the RealmJoin back-end, if they are removed in Azure/Intune.
+The synchronization time is scheduled and the prefixes that are taken into account can be adjusted, currently only if requested. Groups will not be deleted from the RealmJoin back-end if they are removed in Azure/Intune.
 
 {% hint style="info" %}
 The RealmJoin - All Users group is automatically created, which contains all users with a RealmJoin installation on at least one of their clients.

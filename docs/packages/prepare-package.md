@@ -21,7 +21,19 @@ Optional parameters are `-DoNotCloneRepository` and `-DoNotCopyTemplate`.
 After the execution the following prompt appears and asks to specify details:
 
 ```text
-Repository path (leave empty for current folder name, Format: {VENDOR}-{PRODUCTNAME}): videolan-vlcRepository name (leave empty for repository path): Videolan VLC PlayerRepository namespace (leave empty for 'generic-packages', Format: {CUSTOMER}-packages): (your namespace)Personal Access Token:(your token)Cloning into....[installation messages][...]Possible Packagetypes:  [0] Copy all samples  [1] Chocolatey  [2] Chocolatey and Usersettings  [3] CraftPlease enter the type of package. (all samples found in: '.realmjoin-gitlab-ci-helpers'): 1Please enter the PackageVersion (Format: 1.0.0.0): w.x.y.z
+Repository path (leave empty for current folder name, Format: {VENDOR}-{PRODUCTNAME}): videolan-vlc
+Repository name (leave empty for repository path): Videolan VLC Player
+Repository namespace (leave empty for 'generic-packages', Format: {CUSTOMER}-packages): (your namespace)
+Personal Access Token:(your token)
+Cloning into....[installation messages]
+[...]
+Possible Packagetypes:
+  [0] Copy all samples
+  [1] Chocolatey
+  [2] Chocolatey and Usersettings
+  [3] Craft
+Please enter the type of package. (all samples found in: '.realmjoin-gitlab-ci-helpers'): 1
+Please enter the PackageVersion (Format: 1.0.0.0): w.x.y.z
 ```
 
 {% hint style="warning" %}

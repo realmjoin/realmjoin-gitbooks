@@ -107,7 +107,17 @@ Yes. To do so, the target has to be set to the process and optional args can be 
 * Key: "WebLinks" \(directing to process\):
 
 ```javascript
-   {"Name": "Citrix-Applikationen","Target": "iexplore","Args": "https://url.net","Platform": "any"},{"Name": "Citrix-Applikationen","Target": "microsoft-edge:https://url.net","Platform": "any"}
+   {
+"Name": "Citrix-Applikationen",
+"Target": "iexplore",
+"Args": "https://url.net",
+"Platform": "any"
+},
+{
+"Name": "Citrix-Applikationen",
+"Target": "microsoft-edge:https://url.net",
+"Platform": "any"
+}
 ```
 
 See chapter [Settings and Policies]() for further information.

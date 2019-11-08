@@ -13,11 +13,11 @@ Four different attributes are displayed in the App Store:
 
 ![](../.gitbook/assets/appstore.png)
 
-Above the attributes there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results. 
+Above the attributes, there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results. 
 
 Next to the search bar is the selection field **Only Private Apps**. If you check this box, you will only see the apps that are individually stored for your company in the App Store. These **Private Apps** are marked with an asterisk. Of course, other companies will not see these apps if they use the store.
 
-Finally, at the lower right end of the menu you have the possibility to browse through the store pages manually.
+Finally, at the lower right end of the menu, you have the possibility to browse through the store pages manually.
 
 ### App Subscribtion
 

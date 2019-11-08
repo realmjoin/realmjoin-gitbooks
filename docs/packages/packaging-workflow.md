@@ -60,7 +60,11 @@ Gk provides a **Jumpstarter** script that can be used to automatically create th
 You confronted by the following prompt and asked to specify details:
 
 ```text
-* Please enter the RealmJoin GitLab repository path: test-vlc* Please enter the RealmJoin GitLab repository name: test-vlc* Please enter the RealmJoin GitLab repository namespace: (your namespace)* Please enter the RealmJoin GitLab Access Token: (your token)Cloning into....[installation messages]
+* Please enter the RealmJoin GitLab repository path: test-vlc
+* Please enter the RealmJoin GitLab repository name: test-vlc
+* Please enter the RealmJoin GitLab repository namespace: (your namespace)
+* Please enter the RealmJoin GitLab Access Token: (your token)
+Cloning into....[installation messages]
 ```
 
 [![RJ package-jump](../.gitbook/assets/rj-package-jump.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-jump.png)
@@ -318,7 +322,12 @@ If you encounter any problems, it might be a good idea to check `choco install` 
 There are some extension helpers, that might be useful. To use them, enter the following commands in your admin powershell:
 
 ```text
-function Write-FunctionCallLogMessage(){}import-module C:\ProgramData\chocolatey\lib\realmjoin-core.extension\extensions\Get-ChocolateyRealmjoinLogFilePath.ps1import-module C:\ProgramData\chocolatey\lib\realmjoin-core.extension\extensions\Get-ChocolateyRealmjoinRegistryUninstallInfo.ps1Import-Module C:\ProgramData\chocolatey\helpers\chocolateyProfile.psm1import-module C:\ProgramData\chocolatey\lib\realmjoin-core.extension\extensions\Uninstall-ChocolateyRealmjoinPackage.ps1import-Module C:\ProgramData\chocolatey\helpers\chocolateyInstaller.psm1
+function Write-FunctionCallLogMessage(){}
+import-module C:\ProgramData\chocolatey\lib\realmjoin-core.extension\extensions\Get-ChocolateyRealmjoinLogFilePath.ps1
+import-module C:\ProgramData\chocolatey\lib\realmjoin-core.extension\extensions\Get-ChocolateyRealmjoinRegistryUninstallInfo.ps1
+Import-Module C:\ProgramData\chocolatey\helpers\chocolateyProfile.psm1
+import-module C:\ProgramData\chocolatey\lib\realmjoin-core.extension\extensions\Uninstall-ChocolateyRealmjoinPackage.ps1
+import-Module C:\ProgramData\chocolatey\helpers\chocolateyInstaller.psm1
 ```
 
 It might be required the repeat the last command if you encounter an error message. Now you are able to use the RealmJoin specific Chocolatey commands individually.

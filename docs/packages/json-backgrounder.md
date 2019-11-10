@@ -58,7 +58,7 @@ and
 **Key** = Integration.AnyDesk.UI.TrayMenuTextEnglish  
 **Value** = "Start remote session"
 
-These three single JSON settings are equal to the JSON from **All in one**. Combined all of them and you will get the same result from **All in one**
+These three single JSON settings are equal to the JSON from **All in one**. Combine all of them and you will get the same result from **All in one**
 
 ### Combination
 

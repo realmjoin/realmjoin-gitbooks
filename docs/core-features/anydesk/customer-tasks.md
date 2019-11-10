@@ -47,7 +47,7 @@ To allow a supporter to connect to a desktop, you have to assign the AnyDesk SM 
 
 ![](../../.gitbook/assets/anydesk_sm.png)
 
-Read our [App Store article](../../rj-portal/app-store.md#app-subscribtion) for details about package subscription and read our [Software Packages article](../../rj-portal/software-packages.md#package-assignment) for details abput package assignment.
+Read our [App Store article](../../rj-portal/app-store.md#app-subscribtion) for details about package subscription and read our [Software Packages article](../../rj-portal/software-packages.md#package-assignment) for details about package assignment.
 
 ## Start a Remote Session via RealmJoin Tray Menu
 
@@ -55,7 +55,7 @@ Read our [App Store article](../../rj-portal/app-store.md#app-subscribtion) for 
 | :--- | :--- |
 | 1. Open the RealmJoin tray menu |  |
 | 2. Click **Start remote session** | [![RJtraymenu](../../.gitbook/assets/anydesk1%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk1.png) |
-| 3. The AnyDesk client starts and its current address will be pushed to RealmJoin backend in background. In addition, its visible in the UI. | [![RJanydesksession](../../.gitbook/assets/anydesk2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk2.png) |
+| 3. The AnyDesk client starts and its current address will be pushed to RealmJoin backend in the background. Also,, it's visible in the UI. | [![RJanydesksession](../../.gitbook/assets/anydesk2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk2.png) |
 | 4. This client address will be displayed in RealmJoin portal at the corresponding client and the support staff can initiate the session via clicking **Connect** | [![AnyDeskConnect](../../.gitbook/assets/anydesk3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk3.png) |
 | 5. This will automatically start the AnyDesk client |  |
 | 6. Subsequently, the end user needs to accept the incoming remote session request | [![RJremoterequest](../../.gitbook/assets/anydesk4.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk4.png) |
@@ -64,13 +64,13 @@ Read our [App Store article](../../rj-portal/app-store.md#app-subscribtion) for 
 
 #### Get Elevated Rights
 
-For special support scenarios administrative rights will be needed. A normal remote session starts with standard rights. That requires to elevate the permissions:
+For special support scenarios, administrative rights will be needed. A normal remote session starts with standard rights. That requires to elevate the permissions:
 
 | Task | Image |
 | :--- | :--- |
 | 1. Click the **lightning icon** |  |
 | 2. Select **Request elevation** | [![Request elevation](../../.gitbook/assets/anydesk5.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk5.png) |
-| 3. In the new appearing window \(Request elevation\) choose **Transmit authentication data** |  |
+| 3. In the new appearing window \(Request elevation\) choose to **Transmit authentication data** |  |
 | 4. Insert corresponding credentials |  |
 | 5. Then, click **OK** | [![Credentials](../../.gitbook/assets/anydesk6%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk6.png) |
 | 5. On the remote client, a new window **User Account Control** will appear |  |

@@ -1,6 +1,6 @@
 # Glück & Kanja Tasks
 
-If a customer is interested in AnyDesk, this customer sends an email to Glück & Kanja \(GK\). GK contacts AnyDesk to request a license. AnyDesk will then send back login credentials. With these credentials GK can start the deployment.
+If a customer is interested in AnyDesk, the customer will need to send an email to Glück & Kanja \(GK\). GK then will contact AnyDesk to request a license and AnyDesk will send back login credentials. With these credentials, GK can start the deployment.
 
 ## AnyDesk Deployment
 

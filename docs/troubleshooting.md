@@ -27,7 +27,7 @@ Find the RealmJoin icon in your taskbar.
 
 [![Tray](.gitbook/assets/rj-tray.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-tray.png)
 
-Click the RealmJoin icon and click **Software Packages**. Check if the software is listed and which status is displayed. Grayed-out indicated software is already installed. 'Black Text' \(ready to install\) indicates software is not installed. In this case the installation failed or the software package is configured for manual installation.
+Click the RealmJoin icon and click **Software Packages**. Check if the software is listed and which status is displayed. Grayed-out indicated software is already installed. 'Black Text' \(ready to install\) indicates software is not installed. In this case, the installation failed or the software package is configured for manual installation.
 
 [![Tray-Menu](.gitbook/assets/rj-tray-menu.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-tray-menu.png)
 
@@ -67,7 +67,7 @@ MSI Installations logs.
 
 [![Log](.gitbook/assets/rj-msi-log.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-msi-log.png)
 
-Alternatively the logs can be automatically collected and save to the current users desktop via the debug window \(see section below\).
+Alternatively, the logs can be automatically collected and save to the current users desktop via the debug window \(see the section below\).
 
 ## Verify Group Membership in Office 365 Admin Center
 
@@ -107,11 +107,11 @@ You can check if the user configuration is up to date. This includes the assigne
 
 [![Advanced](.gitbook/assets/rjx-debug-menu-four.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjx-debug-menu-four.png)
 
-If a new user configuration is available you can update the configuration.
+If a new user configuration is available, you can update the configuration.
 
 [![Advanced](.gitbook/assets/rjx-debug-menu-five.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjx-debug-menu-five.png)
 
-You can reset the user configuration. After this is done it is required to update the user configuration with **Check Config**
+You can reset the user configuration. After this is done, it is required to update the user configuration with **Check Config**
 
 [![Advanced](.gitbook/assets/rjx-debug-menu-six.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjx-debug-menu-six.png)
 
@@ -147,13 +147,13 @@ Go to RealmJoin back-end admin portal at: [RealmJoin back-end Portal](https://re
 
 [![RealmJoin Portal](.gitbook/assets/rjserver-one.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjserver-one.png)
 
-In **Software** select the required software package. At the right users and groups are visible which have been assigned to this software package. In this example it has not been assigned to any individual user but to 2 groups. Assignments for automatic installation are shown in bold letters.
+In **Software** select the required software package. At the right users and groups are visible which have been assigned to this software package. In this example, it has not been assigned to any individual user but to 2 groups. Assignments for automatic installation are shown in bold letters.
 
 [![RealmJoin Portal](.gitbook/assets/rjserver-two.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjserver-two.png)
 
 ## Corrupted Chocolatey installation
 
-If the installation of software packages produce error messages hinting to a corrupt Chocolatey installation, it is possible to reenforce the automatic Chocolatey installation through RealmJoin.  
+If the installation of software packages produce error messages hinting to a corrupt Chocolatey installation, it is possible to reinforce the automatic Chocolatey installation through RealmJoin.  
 To do so, remove the _%chocolatey%_ environment variable and enforce a reboot of the client machine and the RealmJoin agent. This will trigger a reinstallation of Chocolatey.
 
 ## How can I remove the RealmJoin application from a client?

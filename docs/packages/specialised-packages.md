@@ -5,7 +5,7 @@
 Glück & Kanja provides two different approaches to WLAN packages, which allow the configuration of WLAN profiles via RealmJoin.  
 Both packages contain a **wifi.xml** file, that can be configured with the assignment arguments in the RealmJoin portal.  
 The editing is embedded within a PowerShell script and the configured **wifi.cml** is added as **wifiCustom.xml** to the device using netsh:  
-`netsh wlan add profile filename = "wifiCustom.xml"`. Customer-flavoured WLAN packages can be requested from Glück & Kanja.
+`netsh wlan add profile filename = "wifiCustom.xml"`. Customer-flavored WLAN packages can be requested from Glück & Kanja.
 
 ### WPA2-Enterprise package _AddWlanProfileEnt_
 
@@ -41,7 +41,7 @@ Languages, cdn, updates,
 
 It is possible to extend the standard RealmJoin states with arbitrary custom states. **JSON** files located in **%ProgramData%\RealmJoin\CustomStates** are automatically evaluated and added to the telemetry upload in the RealmJoin portal.
 
-A RealmJoin extension allows to create custom **JSON** files using a scheduled task, therefore executing a script on regular basis and recreating the **JSON**.  
+A RealmJoin extension allows to create a custom **JSON** files using a scheduled task, therefore executing a script on a regular basis and recreating the **JSON**.  
 Create a Chocolatey package which uses the task registration extensions:
 
 `Register-RealmjoinCustomStateScheduledTask` For optional parameters check [Register-RealmjoinCustomStateScheduledTask](http://docs.realmjoin.com/core-extension.html#a-name-regcstask-a-register-realmjoincustomstatescheduledtask) in the **core extension** section.  

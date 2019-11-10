@@ -421,7 +421,7 @@ ReturnSplit   None                false     false
 
 #### Restart-RealmjoinComputer
 
-A system restart can be initiated. By default with a delay of 10 seconds, which can be overwritten by the corresponding parameter. Optional you can provide a message by parameter. Behind the scene a scheduled task is created which performs a shutdown with parameter for restart.
+A system restart can be initiated. By default with a delay of 10 seconds, which can be overwritten by the corresponding parameter. Optional you can provide a message by parameter. Behind the scene, a scheduled task is created which performs a shutdown with a parameter for restart.
 
 **Syntax**
 
@@ -503,7 +503,7 @@ Name None                true      false
 
 ### Scheduled Tasks
 
-Using predefined RealmJoin cmdlets, it is possible to register scheduled tasks in system or user scope. The cmdlet provides a XML template, that is modified following the used parameters. Tasks also might be unscheduled.
+Using predefined RealmJoin cmdlets, it is possible to register scheduled tasks in system or user scope. The cmdlet provides an XML template, that is modified following the used parameters. Tasks also might be unscheduled.
 
 #### Register-RealmjoinCustomStateScheduledTask
 

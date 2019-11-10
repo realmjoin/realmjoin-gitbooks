@@ -14,21 +14,21 @@ Before building your package, there are different checks to be performed:
 
 1. Did the customer provide all information that is needed to create the package: EXE / MSI? Readme with installation requirements? ...? 
    * If not, get in touch with the customer to clarify the required information.
-2. Is this package neccessary:
+2. Is this package necessary:
    * Check if the package already exists. If so: Same software version and parameters?
-   * If the requested software exists in a different version: Might an update be more reasonable? Are different version required due to features or similar? 
-   * Get in touch with the customer to discuss and clarify the need for a additional version of this package.
+   * If the requested software exists in a different version: Might an update be more reasonable? Are different versiona required due to features or similar? 
+   * Get in touch with the customer to discuss and clarify the need for an additional version of this package.
 3. Is this package generic:
    * **ALWAYS TRY TO GO GENERIC** This will make maintaining and updating a lot easier, plus you may reuse the package for different users later on.
    * Does the customer request parameter or arguments that prevent the package to be used as a generic package?
    * If so, check if those are really necessary: How is the software installed? Instead of reg keys, is it possible to use installation parameters in the package assigning step to configure the software?
 
-     Why do the customer needs this configuration and not the generic package?
+     Why does the customer need this configuration and not the generic package?
 
    * Get in touch with the customer, if necessary and try to make the package generic.
 4. Check provided setup files
    * If a setup or ini file is added in the upload, check the file for installation command. It is common, that those files contain specific installation instructions or even registry keys or license information.
-   * If an `*.mst` file is provided, use a tool like DDIF to compare it to the `*.msi` and decide, if any of the changes are to be kept. Do not keep uninstall blocker or similar. Create a new `*.mst` file if necessary \(use **Orca**\).
+   * If a `*.mst` file is provided, use a tool like DDIF to compare it to the `*.msi` and decide, if any of the changes are to be kept. Do not keep uninstall blocker or similar. Create a new `*.mst` file if necessary \(use **Orca**\).
 
 > \[!IMPORTANT\] Do not start creating the package before you have a reasonable assumption of what to pack
 
@@ -38,8 +38,8 @@ Before building your package, there are different checks to be performed:
 
 [![RJ ecosystem](../.gitbook/assets/rj-ecosystem.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-ecosystem.png)
 
-The picture above provides a schematic overview over the RealmJoin package distribution ecosystem. The step of creating packages will be illuminated in this chapter.  
-It documents the basic steps in creating craft, Chocolatey, Chocolatey App-V and organic packages. While all types follow the same rough outline, there are some differences when handling the packages.
+The picture above provides a schematic overview of the RealmJoin package distribution ecosystem. The step of creating packages will be illuminated in this chapter.  
+It documents the basic steps in creating a craft, Chocolatey, Chocolatey App-V and organic packages. While all types follow the same rough outline, there are some differences when handling the packages.
 
 #### General Steps
 
@@ -81,7 +81,7 @@ After a short while, a new repository is created and the template files are copi
 
   ![RJ package-sample](../.gitbook/assets/rj-package-sample%20%281%29.png)  
 
-  The `.gitlab-ci.yml`file contain the build and deploy information. In the **build** stage, the `build-deploy.ps1` helper script is called, while the argument `-build` indicates the **build** stage and `-ChocoMachine` the chocolatey type package.
+  The `.gitlab-ci.yml`file contains the build and deploy information. In the **build** stage, the `build-deploy.ps1` helper script is called, while the argument `-build` indicates the **build** stage and `-ChocoMachine` the chocolatey type package.
 
   In the **deploy** stage, the `build-deploy.ps1` helper script is called, while the argument `-deploy` indicates the **deploy** stage, `-ChocoMachine` the chocolatey type package and depending on the deploy mode, the **-flavourCollection**:
 
@@ -91,7 +91,7 @@ After a short while, a new repository is created and the template files are copi
 
     Those options are not available for customized packages, where only one deploy mode exists, therefore making the distinction obsolete.
 
-    See next step for the configuration of **flavours** and section **Conventions and helpers** for more detailed information on the helper scripts.
+    See the next step for the configuration of **flavours** and section **Conventions and helpers** for more detailed information on the helper scripts.
 
 * Check `build-deploy-flavor-definitions.ps1` Check the file `.realmjoin-gitlab-ci-helpers/build-deploy-flavor-definitions.ps1` for your desired flavour.  
   If it is not included in the `$genericFlavors`, `$specialFlavors` or `$customerFlavors` range, a helper script has to be adjusted. Please contact the responsible person.
@@ -133,7 +133,7 @@ After a short while, a new repository is created and the template files are copi
     * Delete`rj_install.cmd` and `rj_install.ps1` in root folder.
 * Rewrite `Readme.md`  
 
-  Provide all information necessary in the `Readme.md` file. Alternatively delete the file completely.
+  Provide all the information necessary in the `Readme.md` file. Alternatively, delete the file completely.
 
 * Upload  
 
@@ -143,9 +143,9 @@ After a short while, a new repository is created and the template files are copi
 
   After uploading the package to Gitlab, navigate with a browser of your choice into the repository and select the **Pipelines** section. Select your release and use the deploy function. Depending on the package type, there are different possibilities.
 
-  * 10 generic: Deploys a new version of the generic flavour package.
-  * 20 customers: Deploys a new version of all customer flavour packages. Do not do this, if you do not want to deploy a new version for all flavours listed here.
-  * 90 special: Deploys a new version of the special flavour package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
+  * 10 generic: Deploys a new version of the generic flavor package.
+  * 20 customers: Deploys a new version of all customer flavor packages. Do not do this, if you do not want to deploy a new version for all flavors listed here.
+  * 90 special: Deploys a new version of the special flavor package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
 
 [![RJ package-deploy](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
@@ -161,7 +161,7 @@ After the successful deployment, the package can be found in the Chocolatey libr
 
 * Create `.gitlab-ci.yml`  
 
-  Select and add the most fitting `sample*.gitlab-ci.yml` file and delete the other ones. In the following example, the **flavour** \[companyname\] was added, to provide the package with the desired corporate meta data.
+  Select and add the most fitting `sample*.gitlab-ci.yml` file and delete the other ones. In the following example, the **flavor** \[companyname\] was added, to provide the package with the desired corporate metadata.
 
 > \[!NOTE\] Make sure to provide the **-build / -deployCraft** parameters for craft packages. Remove the prefix of the filename and save it as `.gitlab-ci.yml`.
 
@@ -169,14 +169,14 @@ After the successful deployment, the package can be found in the Chocolatey libr
 
 * Customize `rj_install.cmd` and `rj_install.ps1`  
 
-  Customize one of `rj_install.cmd` and `rj_install.ps1` in root folder if necessary, delete the other one. This file may contain various modifications and adjustments, e.g. registry keys or \(un-\)pinning of start icons.
+  Customize one of `rj_install.cmd` and `rj_install.ps1` in the root folder if necessary, delete the other one. This file may contain various modifications and adjustments, e.g. registry keys or \(un-\)pinning of start icons.
 
 [![RJ craft-installer](../.gitbook/assets/rj-package-rjinstaller-craft.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-rjinstaller-craft.png)
 
 * Any additional files can also go into the root folder.
 * Rewrite `Readme.md`
 
-  Provide all information necessary in the `Readme.md` file.  
+  Provide all the information necessary in the `Readme.md` file.  
 
 * Upload
 
@@ -186,8 +186,8 @@ After the successful deployment, the package can be found in the Chocolatey libr
 
   After uploading the package to Gitlab, navigate with a browser of your choice into the repository and select the **Pipelines** section. Select your release and use the deploy function. Depending on the package type, there are different possibilities.
 
-  * 10 generic: Deploys a new version of the generic flavour package.
-  * 20 customers: Deploys a new version of all customer flavour packages. Do not do this, if you do not want to deploy a new version for all flavours listed here.
+  * 10 generic: Deploys a new version of the generic flavor package.
+  * 20 customers: Deploys a new version of all customer flavor packages. Do not do this, if you do not want to deploy a new version for all flavors listed here.
   * 90 special: Deploys a new version of the special flavour package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
 
 [![RJ choco-deploy](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
@@ -200,7 +200,7 @@ Organic packages are created similar to Chocolatey packages, but instead of a so
 
 * Create `.gitlab-ci.yml`
 
-  Select and add the most fitting `sample*.gitlab-ci.yml` file and delete the other ones. In the following example, the **flavour** \[companyname\] was added, to provide the package with the desired corporate meta data.
+  Select and add the most fitting `sample*.gitlab-ci.yml` file and delete the other ones. In the following example, the **flavor** \[companyname\] was added, to provide the package with the desired corporate meta data.
 
 > \[!NOTE\] Make sure to provide the **-build / -deployChocoMachine** parameters for organic packages. Remove the prefix of the filename and save it as `.gitlab-ci.yml`.
 
@@ -231,7 +231,7 @@ Organic packages are created similar to Chocolatey packages, but instead of a so
   * Delete `rj_install.cmd` and `rj_install.ps1` in root folder.
 * Rewrite `Readme.md`  
 
-  Provide all information necessary in the `Readme.md` file.
+  Provide all the information necessary in the `Readme.md` file.
 
 * Upload 
 
@@ -241,9 +241,9 @@ Organic packages are created similar to Chocolatey packages, but instead of a so
 
   After uploading the package to Gitlab, navigate with a browser of your choice into the repository and select the **Pipelines** section. Select your release and use the deploy function. Depending on the package type, there are different possibilities.
 
-  * 10 generic: Deploys a new version of the generic flavour package.
-  * 20 customers: Deploys a new version of all customer flavour packages. Do not do this, if you do not want to deploy a new version for all flavours listed here.
-  * 90 special: Deploys a new version of the special flavour package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
+  * 10 generic: Deploys a new version of the generic flavor package.
+  * 20 customers: Deploys a new version of all customer flavor packages. Do not do this, if you do not want to deploy a new version for all flavors listed here.
+  * 90 special: Deploys a new version of the special flavor package. This is used, when a package is already deployed for more than one customer. It prevents unwanted deployment of new package versions.
 
 [![RJ organic-install](../.gitbook/assets/rj-package-choco-deploy.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-package-choco-deploy.png)
 
@@ -255,7 +255,7 @@ APP-V packages are highly sophisticated and unique. Therefore, a general guide c
 
 #### Conventions and RealmJoin helpers
 
-The helper scripts are provided by GK. They can not be altered while Choco/craft packages are created. If a change is necessary, e.g. add a new flavour, the helper scripts have to be recreated. Please contact GK.
+The helper scripts are provided by GK. They can not be altered while Choco/craft packages are created. If a change is necessary, e.g. add a new flavor, the helper scripts have to be recreated. Please contact GK.
 
 **realmjoin-gitlab-ci-helpers.ps1**
 
@@ -287,13 +287,12 @@ The following switches are available:
 
 **build-deploy-flavor-definitions.ps1**
 
-The `build-deploy-flavor-definitions.ps1` script contains the available flavours for all deploy modes. There are currently three different deploy modes:
+The `build-deploy-flavor-definitions.ps1` scriptgeneric: Just the generic flavor, nothing to change here. contains the available flavors for all deploy modes. There are currently three different deploy modes:
 
-* generic: Just the generic flavour, nothing to change here.
-* customers: All customer flavours. The deploy mode **customer** will result in a **customer-package-name** deployment for each listed here. This means, if you redeploy in **customer** mode, it affects all customers at once.  
-* special: Might be used to deploy for a new customer without the need of the **customers** deploy mode. Any flavour that is not included in the other deploy modes might be inserted here to deploy without disturbing existing deployments.
+* * custome deploy mode. Any flavor that is not included in the other deploy modes might be inserted here to deploy without disturbing existing deployments.rs: All customer flavors. The deploy mode **customer** will result in a **customer-package-name** deployment for each listed here. This means, if you redeploy in **customer** mode, it affects all customers at once.  
+* special: Might be used to deploy for a new customer without the need of the **customers**
 
-  The `build-deploy-flavor-definitions.ps1` script is part of the extensions package and linked to your packages. It is not possible to just change the extensions files in your local package folder, to add flavours, it is necessary to update the extensions package separately.
+  The `build-deploy-flavor-definitions.ps1` script is part of the extensions package and linked to your packages. It is not possible to just change the extensions files in your local package folder, to add flavors, it is necessary to update the extensions package separately.
 
 **Capitalization and Naming**
 
@@ -301,20 +300,20 @@ Please use only small letters for all naming purposes and use **vendor-program\(
 
 **Version numbering**
 
-Software packages are assigned a individual version number. It is recommended to divide the version number into four parts W.X.Y.Z and use one of two different conventions:
+Software packages are assigned an individual version number. It is recommended to divide the version number into four parts W.X.Y.Z and use one of two different conventions:
 
 * For non-chocolatey packages GK is suggesting, to use **W** as major release number, **X** as major sub-version, **Y** as minor release number and **Z** as \(re-\)packaging number \(when rebuilding the package without changes in software but in the build itself\).
-* For Chocolatey packages it is recommended to use the softwares version number, and use **Z** as \(re-\)packing number. If the software itself has a four part version number, Chocolatey suggests to multiply the **Z** by 100 and increase the number by 1 every \(re-\)packaging.  
+* For Chocolatey packages, it is recommended to use the software version number, and use **Z** as \(re-\)packing number. If the software itself has a four part version number, Chocolatey suggests multiplying the **Z** by 100 and increase the number by 1 every \(re-\)packaging.  
 
-> \[!NOTE\] When a new version is tested, the package might be crafted as a pre release package, which, if testing is successful and no further changes have to be done, has the same version number as the final build.
+> \[!NOTE\] When a new version is tested, the package might be crafted as a pre-release package, which, if testing is successful and no further changes have to be done, has the same version number as the final build.
 
 ## Testing of the package
 
-The testing of a package is indispensable. Before a package is deployed in the final version and dispatched, check the install and reinstall functionality as well as the program start up.
+The testing of a package is indispensable. Before a package is deployed in the final version and dispatched, check the install and reinstall functionality as well as the program startup.
 
 ### Virtual Machine
 
-After building and deploying the generic flavour of the package \(if possible, for customer packages use the single deploy channel\), enter your own or the contoso test RealmJoin admin console and assign the package to your test account. Start up your testing VM \(your test user should be local admin\) and try install and reinstall of the package. Check the detail message and, if necessary, the log files for any errors. Test dependencies as well, if they are apparent.
+After building and deploying the generic flavor of the package \(if possible, for customer packages use the single deploy channel\), enter your own or the Contoso test RealmJoin admin console and assign the package to your test account. Startup your testing VM \(your test user should be local admin\) and try install and reinstall of the package. Check the detail message and, if necessary, the log files for any errors. Test dependencies as well, if they are apparent.
 
 #### Chocolatey packages
 
@@ -330,7 +329,7 @@ import-module C:\ProgramData\chocolatey\lib\realmjoin-core.extension\extensions\
 import-Module C:\ProgramData\chocolatey\helpers\chocolateyInstaller.psm1
 ```
 
-It might be required the repeat the last command if you encounter an error message. Now you are able to use the RealmJoin specific Chocolatey commands individually.
+It might be required the repeat the last command if you encounter an error message. Now you can use the RealmJoin specific Chocolatey commands individually.
 
 #### Craft packages
 

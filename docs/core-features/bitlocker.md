@@ -12,13 +12,13 @@ HKLM\SYSTEM\CurrentControlSet\Control\BitLocker:PreventDeviceEncryption
 
 is set to **false**.
 
-For virtual machines the encryption is only enforced, if the virtual machine variable
+For virtual machines, the encryption is only enforced, if the virtual machine variable.
 
 ```text
 $env:RjDisableVmDetection=1
 ```
 
-If the client device is Azure AD joined, RealmJoin uploads the BitLocker recovery key to Azure AD. If the upload is not successful on first try, it will be retried. If the upload cannot be performed successfully, the RealmJoin rollout fails. In case of a **non-AAD-joined** device, the BitLocker recovery key is not saved anywhere.
+If the client device is Azure AD joined, RealmJoin uploads the BitLocker recovery key to Azure AD. If the upload is not successful on the first try, it will be retried. If the upload cannot be performed successfully, the RealmJoin rollout fails. In the case of a **non-AAD-joined** device, the BitLocker recovery key is not saved anywhere.
 
 `HKLM\SYSTEM\CurrentControlSet\Control\BitLocker:PreventDeviceEncryption`
 

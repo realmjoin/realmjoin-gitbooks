@@ -15,7 +15,7 @@ There are 6 different sample files \(might be already deleted when using the Jum
 
 ### Delete non-craft items
 
-If you did not use the Jumpstarter delete the following files or folders which are not needed in a craft package: `blobs`, `tools`, `usersettings` and `choco-package.nuspec`.
+If you did not use the Jumpstarter, delete the following files or folders which are not needed in a craft package: `blobs`, `tools`, `usersettings,` and `choco-package.nuspec`.
 
 ### Customize `rj_install.cmd` and `rj_install.ps1`
 
@@ -29,7 +29,7 @@ This script may contain various modifications and adjustments, for example editi
 
 ### Additional Files
 
-Additional files that maybe needed during the installation should also be placed inside the root folder. Examples are .reg, .ini or .exe files.
+Additional files that may be needed during the installation should also be placed inside the root folder. Examples are .reg, .ini or .exe files.
 
 ### Rewrite `Readme.md`
 
@@ -37,7 +37,7 @@ If you have any further information you can write them down in the `Readme.md`, 
 
 ### Customize Store Information
 
-For listing the package in the RealmJoin app store four additional files are needed, which should have already been created by using Jumpstarter. If the packages should not be listed in the app store you can safely delete these fours files:
+For listing the package in the RealmJoin app store four additional files are needed, which should have already been created by using Jumpstarter. If the packages should not be listed in the app store, you can safely delete these fours files:
 
 These are the needed files:
 
@@ -46,7 +46,7 @@ These are the needed files:
 * `package-info.json`: Contains information for the app store, mainly categories and package settings \(e. g. `autoUpgrade`, `scope`\)
 * `package-technicalhelp.md`: Explanation of possible package installation arguments and further noteworthy information, like package scope setting.
 
-The following screenshot shows a Google Chrome package in the RealmJoin app store \(VLC Player has no Technical Help content, therefore we use Google Chrome in this example.\). You can see the Google Chrome icon \(`package-icon.png`\), a short description about Google Chrome \(`package-description.md`\) and you can further technical information \(`package-technicalhelp.md`\). You do not see `package-info.json` because it works in the background.
+The following screenshot shows a Google Chrome package in the RealmJoin app store \(VLC Player has no Technical Help content, therefore we use Google Chrome in this example.\). You can see the Google Chrome icon \(`package-icon.png`\), a short description of Google Chrome \(`package-description.md`\) and you can further technical information \(`package-technicalhelp.md`\). You do not see `package-info.json` because it works in the background.
 
 ![](../.gitbook/assets/rj-store-info.png)
 

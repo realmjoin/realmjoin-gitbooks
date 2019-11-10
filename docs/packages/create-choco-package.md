@@ -1,10 +1,10 @@
 # Chocolatey Package
 
-After the repository creation and preparation of packaging with Jumpstarter this article will show you all necessary steps to edit, customize and deploy a Chocolatey package.
+After the repository creation and preparation of packaging with Jumpstarter, this article will show you all the necessary steps to edit, customize, and deploy a Chocolatey package.
 
 ## Edit Package files
 
-Before you can deploy a package to the RealmJoin app store you have to edit your package. The following section will show you how can edit your package files.
+Before you can deploy a package to the RealmJoin app store you have to edit your package. The following section will show you how you can edit your package files.
 
 ### `.gitlab-ci.yml`
 
@@ -30,7 +30,7 @@ Move the executables, installer or zip files into the subfolder `blobs`. Make su
 
 ### Create SHA256 hash
 
-Inside the `blobs` subfolder run `mk_hash.cmd`. Alternatively open a PowerShell, navigate to `blobs` subfolder and execute the following command:
+Inside the `blobs` subfolder run `mk_hash.cmd`. Alternatively, open a PowerShell, navigate to `blobs` subfolder and execute the following command:
 
 ```text
 Get-ChildItem | % {(Get-FileHash $_.name).hash + " *" + $_.name | out-file ($_.name + ".sha256")}
@@ -52,7 +52,7 @@ This file may contain various modifications and adjustments, e.g. registry keys.
 
 ### Additional Files
 
-Additional files that maybe needed during the installation should be placed inside the `tools` folder. Examples are .reg or .ini files. If those files exceed a file size of approx. 1 MB they should better be placed inside the `blobs` folder.
+Additional files that may be needed during the installation should be placed inside the `tools` folder. Examples are .reg or .ini files. If those files exceed a file size of approx. 1 MB they should better be placed inside the `blobs` folder.
 
 ### Rewrite `Readme.md`
 
@@ -67,9 +67,9 @@ These are the needed files:
 * `package-description.md`: Short description of the packaged application
 * `package-icon.png`: The application icon. Must be .png, preferably high-res and quadratic.
 * `package-info.json`: Contains information for the app store, mainly categories and package settings \(e. g. `autoUpgrade`, `hasUserPart`\)
-* `package-technicalhelp.md`: Explanation of possible package installation arguments and further noteworthy information, like auto update mechanism or autostart.
+* `package-technicalhelp.md`: Explanation of possible package installation arguments and further noteworthy information, like auto-update mechanism or autostart.
 
-The following screenshot shows a Google Chrome package in the RealmJoin app store. You can see the Google Chrome icon \(`package-icon.png`\), a short description about Google Chrome \(`package-description.md`\) and you can further technical information \(`package-technicalhelp.md`\). You do not see `package-info.json` because it works in the background.
+The following screenshot shows a Google Chrome package in the RealmJoin app store. You can see the Google Chrome icon \(`package-icon.png`\), a short description of Google Chrome \(`package-description.md`\) and you can further technical information \(`package-technicalhelp.md`\). You do not see `package-info.json` because it works in the background.
 
 ![](../.gitbook/assets/rj-store-info.png)
 
@@ -123,7 +123,7 @@ Install-ChocolateyRealmjoinPackage "INSTALLER.msi" "HASH" -postActions { Remove-
 
 ### Parameters in Chocolatey packages
 
-To utilize parameters in Chocolatey packages, which have been entered in the optional [args](http://docs.realmjoin.com/managing-realmjoin.html#add-packages) text field, you need to the include the following cmdlet in your `chocolateyInstall.ps1` script:
+To utilize parameters in Chocolatey packages, which have been entered in the optional [args](http://docs.realmjoin.com/managing-realmjoin.html#add-packages) text field, you need to include the following cmdlet in your `chocolateyInstall.ps1` script:
 
 `Import-ChocolateyRealmjoinPackageParameters`
 

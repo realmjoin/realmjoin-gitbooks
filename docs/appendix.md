@@ -42,12 +42,12 @@ The RealmJoin workflow describes the detailed process after RealmJoin is deploye
 
 To understand how RealmJoin detects and authenticates the device and the related user we must investigate the Azure AD/Intune device enrollment process first:
 
-1. After the user successfully authenticates against Azure AD by providing username, password and MFA, the **Azure AD Device Registration Service** generates a key pair for the device certificate.
-2. Generates a **Certificate Signing Request** \(CSR\) using the key pair. Signs CSR data with private key plus public key in request.
+1. After the user successfully authenticates against Azure AD by providing a username, password, and MFA, the **Azure AD Device Registration Service** generates a key pair for the device certificate.
+2. Generates a **Certificate Signing Request** \(CSR\) using the key pair. Signs CSR data with private key plus public key in the request.
 3. Generates a second key pair that will be used to bind SSO tokens physically to the device when authenticating to Azure AD later on. This key is typically called **storage/transport key** \(Kstk\) and is derived from **Storage Root Key** \(SRK\) of the device **Trusted Platform Module** \(TPM\). The way the binding of the SSO token to the device is achieved by storing into the TPM a corresponding symmetric session key \(encrypted to Kstk\) issued along with the SSO token upon authentication to Azure AD.
 4. Send a device registration request to **Azure DRS** passing along the ID token, the generated CSR and the public portion of the Kstk along with its attestation data.
 
-Once the request comes to Azure DRS the service will validate the token, will create a corresponding device object in Azure AD and will generate and send back a certificate to the device. The API in turn will install the certificate into the **LocalMachine\mystore**
+Once the request comes to Azure DRS the service will validate the token, will create a corresponding device object in Azure AD and will generate and send back a certificate to the device. The AP,I in turn, will install the certificate into the **LocalMachine\mystore**
 
 To check the related cert please use the following command:
 
@@ -59,24 +59,24 @@ The related **Azure AD Device ID** can be checked here:
 
 [![RJ - Check related AAD ID](.gitbook/assets/rj-workflow2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow2.png)
 
-Having this information available out of the related certificate, RealmJoin is now able to start the provisioning process without the need of a dedicated user authentication/interaction. RealmJoin knows about the Azure AD Device ID out of the above described device certificate information and can start all processes running within the system context for this device and the corresponding user account.
+Having this information available out of the related certificate, RealmJoin is now able to start the provisioning process without the need for a dedicated user authentication/interaction. RealmJoin knows about the Azure AD Device ID out of the above described device certificate information and can start all processes running within the system context for this device and the corresponding user account.
 
 [![RJ - Certificate Information](.gitbook/assets/rj-workflow3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow3.png)
 
 ### Initial run
 
-As RealmJoin is aware about the Azure AD Device ID and the related user account, it will immediately start \(after the regular OOBE process finished\) to apply the device checks and install the users' software within the system context of the device. After completion of this initial run, RealmJoin will trigger a device restart.
+As RealmJoin is aware of the Azure AD Device ID and the related user account, it will immediately start \(after the regular OOBE process finished\) to apply the device checks and install the users' software within the system context of the device. After completion of this initial run, RealmJoin will trigger a device restart.
 
-After a device restart RealmJoin will prompt the user for an authentication confirmation - no credentials like password needed here! Now RealmJoin can proceed with all user based device and software configuration settings.
+After a device restart, RealmJoin will prompt the user for an authentication confirmation - no credentials like password needed here! Now RealmJoin can proceed with all user-based device and software configuration settings.
 
-1. RealmJoin will ask the user for its **Second Identity** - this feature is only available when a **Legacy Active Directory Authentication Provider** should be involved into the users' network resource scope by providing **NTML tokens** for on-prem file or print services.
-2. The build in RealmJoin "Security Requirements" assessment does some **pre-checks**:
+1. RealmJoin will ask the user for its **Second Identity** - this feature is only available when a **Legacy Active Directory Authentication Provider** should be involved in the users' network resource scope by providing **NTML tokens** for an on-prem file or print services.
+2. The build-in RealmJoin "Security Requirements" assessment does some **pre-checks**:
 3. System Update Status: not enforced
 4. Full-Disk Encryption: enforced
 5. Firewall Configuration: enforced
 6. Anti-Virus Configuration: not enforced  
 
-> \[!NOTE\] These checks are customizable \(enforce/not enforce\) and will be replaced by the **Intune Device Health Check** in future.
+> \[!NOTE\] These checks are customizable \(enforce/not enforce\) and will be replaced by the **Intune Device Health Check** in the future.
 
 During the initial run of RealmJoin, the **BitLocker Drive Encryption** will be enabled and enforced. User interactivity is not necessary. The related BitLocker recovery key is escrowed into Azure AD.
 
@@ -96,16 +96,16 @@ If no error occurs during deployment, RealmJoin is ready to use.
 
 ### Client usage
 
-After being successfully installed, RealmJoin is automatically started on the user login and is permanent active in the background. It is represented with an ID card icon. Clicking on the icon opens up the RealmJoin client menu.  
-It contains basic information in the lower and a number of links in the upper part. The selector **Software Packages** opens a second context menu with all the software packages that are allocated to the user.
+After being successfully installed, RealmJoin is automatically started on the user login and is permanently active in the background. It is represented with an ID card icon. Clicking on the icon opens up the RealmJoin client menu.  
+It contains basic information in the lower and several links in the upper part. The selector **Software Packages** opens a second context menu with all the software packages that are allocated to the user.
 
 [![RJ Tray](.gitbook/assets/rj-tray-menu%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-tray-menu.png)
 
-If an user wishes to install any of the listed software, he/she is only required to select the package to start the installation.
+If user wishes to install any of the listed software, he/she is only required to select the package to start the installation.
 
 [![RJ Add Package](.gitbook/assets/rj-client-addpackage2.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-client-addpackage2.png)
 
-The installation mode depends on the packages selected: If those are only user mode packages, they are installed immediately. In case of a higher permission level, RealmJoin starts a service \(realmjoinservice.exe\) and installs the packages with the **SYSTEM** user account.
+The installation mode depends on the packages selected: If those are only user-mode packages, they are installed immediately. In case of a higher permission level, RealmJoin starts a service \(realmjoinservice.exe\) and installs the packages with the **SYSTEM** user account.
 
 ### 
 

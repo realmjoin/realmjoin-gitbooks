@@ -8,7 +8,7 @@ Using a Git tool of your choice, clone the current repository onto your local cl
 
 ## Content Update
 
-Place the updated binaries inside the `blobs` folder. Make sure to include the new version number in the file names and delete the old binaries. Furthermore update the code in the `rj_install.ps1` or `chocolateyInstall.ps1` scripts.
+Place the updated binaries inside the `blobs` folder. Make sure to include the new version number in the file names and delete the old binaries. Furthermore, update the code in the `rj_install.ps1` or `chocolateyInstall.ps1` scripts.
 
 ## Versioning
 

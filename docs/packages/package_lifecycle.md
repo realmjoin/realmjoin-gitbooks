@@ -8,7 +8,7 @@ This section describes the lifecycle of an application package including the upd
 After subscribing/adding a new package, it is recommended to flag this package as **PreRelease**. This version is then assigned to a test user or test user group \(recommended as non-mandatory\).  
 This test users then install the application via RealmJoin in various scenarios.  
 If the installation and execution of the application work as planned, it is then assigned to the Application Owner \(AO\) and undergoing the user acceptance test \(UAT\).  
-If approved, the PreRelease flag is removed as well as the test group assignment and the application can then be assigned to the users group. This workflow is shown in the pictures below.
+If approved, the PreRelease flag is removed as well as the test group assignment and the application can then be assigned to the user's group. This workflow is shown in the pictures below.
 
 ![](../.gitbook/assets/rj-package-workflow.png)
 
@@ -23,7 +23,7 @@ The new package version will be added as a PreRelease package to the RealmJoin p
 
   After the testing, the original application package will be updated and the test users are removed from the PreRelease flagged version. It is possible to leave the PreRelease flagged version in the back-end for further updating and testing.
 
-  If is recommended to test the update manually as well as automated \(mandatory or auto upgrade package\).
+  It is recommended to test the update manually as well as automated \(mandatory or auto upgrade package\).
 
 ![](../.gitbook/assets/rj-package-workflow-detail.png)
 

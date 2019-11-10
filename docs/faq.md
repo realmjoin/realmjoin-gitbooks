@@ -20,7 +20,7 @@
 
 ## Am I able to maintain my own packages and updates?
 
-Yes. RealmJoin offers packaging-as-a-service but you may also check in ready-to-use packages. In addition it is possible to use additional deployment repositories completely maintained independently.
+Yes. RealmJoin offers packaging-as-a-service but you may also check in ready-to-use packages. Also, it is possible to use additional deployment repositories completely maintained independently.
 
 ## Which platforms are supported?
 
@@ -30,9 +30,9 @@ RealmJoin v4 is only available for Windows 10.
 
 The sync between Azure AD and RealmJoin is scheduled every 15 minutes and based on your custom pattern rule set.
 
-## Does RealmJoin support Multi User Devices?
+## Does RealmJoin support Multi-User Devices?
 
-Yes. Starting with version 4.13 RealmJoin allows applications to be installed not only for the primary device user but also secondary users. See our [Multi-User Devices article](dem-account.md) for more details.
+Yes. Starting with version 4.13 RealmJoin allows applications to be installed not only for the primary device user but also for secondary users. See our [Multi-User Devices article](dem-account.md) for more details.
 
 ## How to enter the Debug Mode in RealmJoin client?
 
@@ -49,26 +49,26 @@ TBD
 
 ## Is RealmJoin providing an uninstall of software?
 
-A general uninstall feature is currently not implemented. Chocolatey packages provide a generic uninstall component which would be usable for RealmJoin.  
+A general uninstall feature is currently not implemented. Chocolatey packages provide a generic uninstall component that would be usable for RealmJoin.  
 But because of the volatile history of unattended and the sometimes unpredictable issues with incomplete uninstalls we have decided against using it.
 
 There are typically three reasons to uninstall software:
 
-* The license should be re-used for a different user. In this case it's easy to just create a package to enable/disable a license for a user.
-* The software needs to be removed because of \[choose your reason\]. In this case a dedicated remove-software-package can be created.
-* There is a newer version of the software. This is not a reason to use an uninstall command but instead it is a common practice for every software package used by RealmJoin to 'clean' any precursory binaries or settings.
+* The license should be re-used for a different user. In this case, it's easy to just create a package to enable/disable a license for a user.
+* The software needs to be removed because of \[choose your reason\]. In this situation, a dedicated remove-software-package can be created.
+* There is a newer version of the software. This is not a reason to use an uninstall command but instead, it is a common practice for every software package used by RealmJoin to 'clean' any precursory binaries or settings.
 
-## Should I use the applications internal auto updater or not?
+## Should I use the applications internal auto-updater or not?
 
 This highly depends on the application itself as well as your internal processes. For some applications, that might be prone to attacking and are very well maintained by the vendor - like Google Chrome - we recommend to use the applications internal update. For other software, it might be more useful to include a regular update via RealmJoin into your processes.
 
 ## Re-Install failed software installations
 
-RealmJoin tries to redo failed installations on the next three logons. If the installations still fails the package is marked as permanent-failed. To reinstall it at a later time use **Retry base installation** in **debug mode**.
+RealmJoin tries to redo failed installations on the next three logons. If the installations still fail the package is marked as permanent-failed. To reinstall it at a later time use **Retry base installation** in **debug mode**.
 
 ## Since the packages are based on open protocols, can others access my packages?
 
-Yes. NuGet and Chocolatey repositories are based on open protocols. Using search commands one is able to find all repositories that are hosted on the GK tenant. Since packages **should not** contain personalized information like licenses or user specific data, there is no potential harm in e.g. installing a Office package with a different companies name in the package description.  
+Yes. NuGet and Chocolatey repositories are based on open protocols. Using search commands one is able to find all repositories that are hosted on the GK tenant. Since packages **should not** contain personalized information like licenses or user-specific data, there is no potential harm in e.g. installing an Office package with a different company name in the package description.  
 It is in principle possible to host the RealmJoin
 
 ## What firewall/proxy settings do I have to configure?
@@ -81,19 +81,19 @@ Yes. Our suggestions can be found in the **workflow** section of this documentat
 
 ## What is the recommendation for reporting?
 
-See section [**States** ](rj-portal/clients.md#states)in the [RealmJoin Portal - Clients article](rj-portal/#clients). It is possible to get virtually any information from each client in JSON-form. There are several applications available to evaluate the data, for example PowerBI, which allows to sort and process the data in logical and visually pleasing ways.
+See section [**States** ](rj-portal/clients.md#states)in the [RealmJoin Portal - Clients article](rj-portal/#clients). It is possible to get virtually any information from each client in JSON-form. There are several applications available to evaluate the data, for example, PowerBI, which allows to sort and process the data in logical and visually pleasing ways.
 
 ## In the future, may RealmJoin packages be used in Intune?
 
-If in the future, Microsoft Intune becomes more capable and the installation of software is as versatile and organized as with RealmJoin, you may use the existing packages in Intune. Since RealmJoin does only need Chocolatey and PowerShell to run the installers, there might be possibilities to use Intune to install software.
+If in the future, Microsoft Intune becomes more capable and the installation of software is as versatile and organized as with RealmJoin, you may use the existing packages in Intune. Since RealmJoin does only need Chocolatey and PowerShell to run the installers, there might be possibilities to use Intune to install the software.
 
 ## Is RealmJoin GDPR compliant?
 
-Glück & Kanja takes data protection very seriously. All contracts with customers and partners take data protection into consideration.
+Glück & Kanja takes data protection very seriously. All contracts with customers and partners consider data protection.
 
 ## Does the RealmJoin BitLocker enforcement work on virtual machines?
 
-For virtual machines the encryption is only enforced, if the virtual machine variable $env:RjDisableVmDetection=1 is set.  
+For virtual machines, the encryption is only enforced if the virtual machine variable $env:RjDisableVmDetection=1 is set.  
 This setting can be bypassed in the OOBE screen with the command `setx /m RjDisableVmDetection 1` in a cmd shell.
 
 ## Is it possible to see the code of store applications?

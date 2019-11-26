@@ -1,6 +1,6 @@
 # Domain Password Expiry
 
-RealmJoin uses the Azure AD attribute   
+RealmJoin uses the OnPrem AD attribute   
   
 `msDS-UserPasswordExpiryTimeComputed`
 

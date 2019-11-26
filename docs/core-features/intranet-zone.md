@@ -10,6 +10,12 @@ One might specify the following JSON array:
 ["file://example.com", "https://foo.example.com"]
 ```
 
+which will result in the following rules:
+
+![Policies.TrustedSites](../.gitbook/assets/rj-policies-trustedsites.png)
+
+### Caveats
+
 * Windows will interpret a naked domain like `file://example.com` as `file://*.example.com`.
 * RealmJoin does not allow for wildcard protocols. You must specify all protocols explicitly.
 * RealmJoin will manage all protocols for a configured domain and remove any user-added protocols.

@@ -236,13 +236,50 @@ Do not use the dependency and order option on mandatory packages parallel. This 
 
 To access these options, press **Show Advanced Options** above Auto Upgrade. These are the available options:
 
-| Setting | Explanation |
-| :--- | :--- |
-| **Includes User Script** | In the latest generation of packages, it is not necessary anymore to create a second package for the deployment of corresponding user settings, but such a script can be part of the main package. If this is the case, it will be run automatically if this option is checked. Parameters can be transferred via arguments as established. User scripts will not run for secondary users if the main application is not installed. |
-| **Main Script Restrictions - Users** | This option allows a RealmJoin administrator to define whether this package should run for just the primary device user \(default\) or also/exclusively for secondary users. |
-| **Main Script Restrictions - Phases** | This option allows a RealmJoin administrator to define whether this package should be run during the initial provisioning of the device or throughout other phases. |
-
-#### Deployed on Active Client
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Setting</th>
+      <th style="text-align:left">Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>Includes User Script</b>
+      </td>
+      <td style="text-align:left">In the latest generation of packages, it is not necessary anymore to create
+        a second package for the deployment of corresponding user settings, but
+        such a script can be part of the main package. If this is the case, it
+        will be run automatically if this option is checked. Parameters can be
+        transferred via arguments as established. User scripts will not run for
+        secondary users if the main application is not installed.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Main Script Restrictions - Users</b>
+      </td>
+      <td style="text-align:left">This option allows a RealmJoin administrator to define whether this package
+        should run for just the primary device user (default) or also/exclusively
+        for secondary users.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Main Script Restrictions - Phases</b>
+      </td>
+      <td style="text-align:left">
+        <p>This option allows a RealmJoin administrator to define whether this package
+          should be run during the initial provisioning of the device or throughout
+          other phases.</p>
+        <p></p>
+        <p>RealmJoin offers the following phases:</p>
+        <p></p>
+        <p><b>Logon</b>: The package runs after the user has logged on.</p>
+        <p><b>Manual</b>: The package will run, when the user starts it via tray
+          menu.</p>
+        <p><b>Initial</b>: The package only runs during the deployment.</p>
+        <p><b>Normal</b>: Neither Logon, nor Manual, nor Initial. A background deployment.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Deployed on Active Client
 
 This tile shows a list of active clients to which the package has already been distributed.
 
@@ -403,13 +440,50 @@ Do not use the dependency and order option on mandatory packages parallel. This 
 
 To access these options, press **Show Advanced Options** above Auto Upgrade. These are the available options:
 
-| Setting | Explanation |
-| :--- | :--- |
-| **Includes User Script** | In the latest generation of packages, it is not necessary anymore to create a second package for the deployment of corresponding user settings, but such a script can be part of the main package. If this is the case, it will be run automatically if this option is checked. Parameters can be transferred via arguments as established. User scripts will not run for secondary users if the main application is not installed. |
-| **Main Script Restrictions - Users** | This option allows a RealmJoin administrator to define whether this package should run for just the primary device user \(default\) or also/exclusively for secondary users. |
-| **Main Script Restrictions - Phases** | This options allows a RealmJoin administrator to define whether this package should be run during the initial provisioning of the device or througou other phases. |
-
-#### Deployed on Active Client
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Setting</th>
+      <th style="text-align:left">Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>Includes User Script</b>
+      </td>
+      <td style="text-align:left">In the latest generation of packages, it is not necessary anymore to create
+        a second package for the deployment of corresponding user settings, but
+        such a script can be part of the main package. If this is the case, it
+        will be run automatically if this option is checked. Parameters can be
+        transferred via arguments as established. User scripts will not run for
+        secondary users if the main application is not installed.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Main Script Restrictions - Users</b>
+      </td>
+      <td style="text-align:left">This option allows a RealmJoin administrator to define whether this package
+        should run for just the primary device user (default) or also/exclusively
+        for secondary users.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Main Script Restrictions - Phases</b>
+      </td>
+      <td style="text-align:left">
+        <p>This options allows a RealmJoin administrator to define whether this package
+          should be run during the initial provisioning of the device or throughout
+          other phases.</p>
+        <p></p>
+        <p>RealmJoin offers the following phases:</p>
+        <p></p>
+        <p><b>Logon</b>: The package runs after the user has logged on.</p>
+        <p><b>Manual</b>: The package will run, when the user starts it via tray
+          menu.</p>
+        <p><b>Initial</b>: The package only runs during the deployment.</p>
+        <p><b>Normal</b>: Neither Logon, nor Manual, nor Initial. A background deployment.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Deployed on Active Client
 
 This tile shows a list of active clients to which the package has already been distributed.
 

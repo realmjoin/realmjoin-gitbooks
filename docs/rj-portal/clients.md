@@ -40,5 +40,9 @@ With the help of this overview, it is possible to get an exact view of the used 
 It is possible to extend these states by custom states.
 {% endhint %}
 
+#### Telemetry
+
+The client transmits its status every 30 minutes. Based on this, various reports can be created. For example, with the help of Power BI.
+
 
 

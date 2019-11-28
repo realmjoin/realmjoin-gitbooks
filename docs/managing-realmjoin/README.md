@@ -9,5 +9,10 @@ The RealmJoin Windows client is enrolled on every Windows 10 device. RealmJoin s
 * [Delivery Optimization for Windows Update](../core-features/delivery-optimization-for-windows-update.md)
 * [BitLocker](../core-features/bitlocker.md)
 * [Intranet Zone](../core-features/intranet-zone.md)
-* [Domain Password Expiry](../core-features/domain-password-expiry.md)
+* [Domain Password Expirey](../core-features/domain-password-expiry.md)
+* [Telemetry](../rj-portal/clients.md#telemetry)
+* [Webbased Administration/Handling](../rj-portal/)
+* Credential Management
+* [Execution of Applications in Determined Sequences](../rj-portal/software-packages.md)
+* [System Scope with User](../rj-portal/software-packages.md)
 

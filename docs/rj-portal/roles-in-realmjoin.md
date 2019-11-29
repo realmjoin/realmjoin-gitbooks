@@ -1,11 +1,18 @@
 # Roles in RealmJoin
 
-There are four different roles available for the RealmJoin Portal:
+During the initial installation of a tenant, RealmJoin automatically searches for roles and stores their IDs. All groups containing the following strings are automatically searched for:
 
-* Administrator
-* Auditor
-* Supporter
-* Software Agent
+* RealmJoin Admin
+* RealmJoin Auditor
+* RealmJoin Supporter
+* RealmJoin Software Agent
+
+{% hint style="warning" %}
+To be considered during sychronization, these groups must start with the prefix **CFG - :  
+  
+For Example:**  
+CFG - RealmJoin Admin
+{% endhint %}
 
 #### Administrator
 

@@ -85,7 +85,7 @@ Click on a group/user of your choice to assign. You can now make the following s
       <td style="text-align:left"><b>Main Script Restrictions - Phases</b>
       </td>
       <td style="text-align:left">This option allows a RealmJoin administrator to define whether this package
-        should be run during the initial provisioning of the device or throughout
+        should be run during the initial deployment of the device or throughout
         other phases.</td>
     </tr>
   </tbody>
@@ -266,7 +266,7 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
       </td>
       <td style="text-align:left">
         <p>This option allows a RealmJoin administrator to define whether this package
-          should be run during the initial provisioning of the device or throughout
+          should be run during the initial deployment of the device or throughout
           other phases.</p>
         <p></p>
         <p>RealmJoin offers the following phases:</p>
@@ -470,7 +470,7 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
       </td>
       <td style="text-align:left">
         <p>This options allows a RealmJoin administrator to define whether this package
-          should be run during the initial provisioning of the device or throughout
+          should be run during the initial deployment of the device or throughout
           other phases.</p>
         <p></p>
         <p>RealmJoin offers the following phases:</p>

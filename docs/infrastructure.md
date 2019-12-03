@@ -2,7 +2,7 @@
 
 ## Network
 
-### \(No\) Proxy
+### Avoid Proxy
 
 Initial deployment needs direct Internet access. No proxy would be ideal but a transparent proxy should work fine \(if truly transparent\). If there is a proxy unavoidable as a minimum requirement the following services/addresses need to be directly accessible \(not recommended, list might not be exhaustive\):
 
@@ -21,11 +21,11 @@ This article links a file that contains the compute IP address ranges that you s
 IP addresses filtering alone is not a complete solution due to dependencies on internet-based services such as Domain Name Services \(DNS\), Content Delivery Networks \(CDNs\), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services, are dynamically assigned and can change at any time.
 {% endhint %}
 
-### No \(VLans/WLAN-/Port\)-Isolation
+### Avoid VLans / WLAN- and Port-Isolation
 
 For **BranchCache** to be effective the clients need to be able to communicate directly with each other. So they should not be separated by different VLans, WLAN-Isolation or Port-Isolation. For mass roll-outs, **BranchCache Servers** with pre-populated caches are recommended. BranchCache is limited to a single subnet, if a site has multiple subnets the BranchCache Servers must be placed in the same subnet as the clients to be effective.
 
-### RealmJoin connection endpoints
+### RealmJoin Connection Endpoints
 
 RealmJoin connects to the following URLs that might be considered in your firewall settings:
 
@@ -61,7 +61,7 @@ The back-end is hosted on an Azure tenant exclusively used for RealmJoin. All cu
 
 To provide the **BranchCache** mechanism, the endpoint has to provide the chunk identifiers, a feature only provided by **Microsoft Internet Information Services** \(IIS\) servers. To deliver the maximum scalability the Publishing Endpoint is distributed on multiple Azure nodes hosting Windows 2016 IIS sharing a redundant Azure blob storage.
 
-#### Web interface
+#### Web Interface
 
 The web interface can be reached via the [realmjoin portal](https://realmjoin-web.azurewebsites.net/) and is in detailed explained in the chapter [RealmJoin Portal](rj-portal/). After a logging with the provided credentials, the administrator can manage the package distribution in his tenant and access extensive information.
 

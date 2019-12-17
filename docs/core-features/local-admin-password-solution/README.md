@@ -118,7 +118,7 @@ A corresponding RealmJoin policy can trigger the creation of a persistent admini
 1. Starting point: Existing or new client with RealmJoin a\) Existing client \(Azure AD joined, Intune managed, RealmJoin agenda installed\) b\) New client \(initialization during OOBE, Azure AD join, Intune enrollment, installation of RealmJoin and deployed software\)
 2. RealmJoin policy triggers RealmJoin agent to create a persistent administrator account on the client.
 3. RealmJoin agent transfers the encrypted password to the RealmJoin backend.
-4. RealmJoin backend stores the cyphertext into a customer-owned [Azure Key Vault]().
+4. RealmJoin backend stores the cyphertext into a customer-owned [Azure KeyVault](keyvault.md).
 
 A requirement for this process is a successful deployment of corresponding policy to the client.
 
@@ -127,11 +127,10 @@ A requirement for this process is a successful deployment of corresponding polic
 Support staff needs local administrative rights in-field support \(e. g. for troubleshooting connectivity issues\). Therefore, he/she must go through the following steps:
 
 1. The staff visits the RealmJoin WebUI. On the device details, he/she will see the name of the administrator account and can request the password when clicking on the dotted text.
-2. The staff visits the RealmJoin WebUI. On the device details, he/she will see the name of the administrator account and can request the password when clicking on the dotted text.
-3. RealmJoin pulls the password from Azure Key Vault and displays it.
-4. The staff is now able to get elevated rights by entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
-5. When the staff has finished all tasks, he/she logs out of the account.
-6. The previously used account will be deleted after a defined period and a new one will be generated \(following to steps already described\).
+2. RealmJoin pulls the password from Azure Key Vault and displays it.
+3. The staff is now able to get elevated rights by entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
+4. When the staff has finished all tasks, he/she logs out of the account.
+5. The previously used account will be deleted after a defined period and a new one will be generated \(following to steps already described\).
 
 ![](../../.gitbook/assets/rj-laps1.png)
 
@@ -145,7 +144,7 @@ A support staff can trigger the creation of a temporal administrator account. Th
 2. A Support staff requests a support account via RealmJoin WebUI
 3. This triggers RealmJoin agent to create a temporal administrator account on the client.
 4. RealmJoin agent transfers the encrypted password to the RealmJoin backend.
-5. RealmJoin backend stores the cyphertext into customer-owned [Azure Key Vault]().
+5. RealmJoin backend stores the cyphertext into customer-owned [Azure KeyVault](keyvault.md). 
 
 Requirements for this process:
 

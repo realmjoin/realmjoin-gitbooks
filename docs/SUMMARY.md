@@ -28,7 +28,7 @@
   * [Delivery Optimization for Windows Update](core-features/delivery-optimization-for-windows-update.md)
   * [BitLocker](core-features/bitlocker.md)
   * [Intranet Zone](core-features/intranet-zone.md)
-  * [Domain Password Expiry](core-features/domain-password-expiry.md)
+  * [Domain Connect](core-features/domain-password-expiry.md)
 * [Settings & Policies](settings-and-policies.md)
 * [FAQ](faq.md)
 * [Troubleshooting](troubleshooting.md)

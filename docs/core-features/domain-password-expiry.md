@@ -22,6 +22,10 @@ You need a CredentialManager to query the above settings.
 }  
 {
 
+{% hint style="info" %}
+Make sure that the **"CredentialName": "RealmJoin \(domain\)"** string is equal to the **DomainConnect.CredentialName = "RealmJoin \(domain\)"** string.
+{% endhint %}
+
 ## Domain Password Expiry
 
 RealmJoin uses the OnPrem AD attribute   

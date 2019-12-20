@@ -29,7 +29,7 @@ Import-Module (Get-ItemPropertyValue -Path "Registry::HKLM\SOFTWARE\RealmJoin\Va
 * $packageTempDir = temp directory which is used for the package. Defined as: Join-Path $env:TEMP \(Join-Path $env:chocolateyPackageName $env:chocolateyPackageVersion\)
 * $PackageID = unique ID of the package
 
-  **Environment variables**
+**Environment variables**
 
 * $env:RJ\_Version
 * $env:RJ\_UserSID = SID of the user who started this package installation. Can be used in system crafts if parameters are initialized
@@ -54,6 +54,17 @@ Import-Module (Get-ItemPropertyValue -Path "Registry::HKLM\SOFTWARE\RealmJoin\Va
   ManualDeployment
    - Now the installations start
   ```
+
+{% hint style="warning" %}
+**Important**  
+  
+In order to keep the following sections easy to read und clear, a lot of extensions are based only on Chocolatey. Of course these extensions are also usable for Craft. Therefore you have to remove '**Chocolatey**' from an extension to make it valid for '**Craft**'.  
+  
+For example:  
+  
+Chocolatey extension =`Get-ChocolateyRealmjoinLocaleId`  
+Craft extension =`Get-RealmjoinLocaleId`
+{% endhint %}
 
 ### AppV Packages
 

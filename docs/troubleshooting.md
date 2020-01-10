@@ -125,6 +125,12 @@ You can collect the RealmJoin log files automatically.
 * You see hidden packages.
 * Package version numbers are displayed
 
+### Mandatory Software
+
+If the Debug Mode is activated, mandatory software is marked with **\***.
+
+![](.gitbook/assets/debugmode-mandatorysoftware.png)
+
 ## Token Error
 
 There are several possible approaches to repair token errors.

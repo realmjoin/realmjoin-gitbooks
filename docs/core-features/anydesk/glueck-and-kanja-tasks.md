@@ -1,8 +1,8 @@
 # Glück & Kanja Tasks
 
-If a customer is interested in AnyDesk, the customer will need to send an email to Glück & Kanja \(GK\). GK then will contact AnyDesk to request a license and AnyDesk will send back login credentials. With these credentials, GK can start the deployment.
+If a customer is interested in AnyDesk, the customer will need to send an email to Glück & Kanja \(GK\). GK then will contact AnyDesk to request a license and AnyDesk will send back login credentials. With these credentials, GK can start the deployment of a user client and the deployment of a supporter client.
 
-## AnyDesk Deployment
+## AnyDesk User Client Deployment
 
 <table>
   <thead>
@@ -13,33 +13,40 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1. Log in to <a href="https://my.anydesk.com/login">AnyDesk</a> (use the
-        credentials sent by AnyDesk)</td>
+      <td style="text-align:left">1. Log in to <a href="https://my.anydesk.com/login">AnyDesk </a>(use the
+        <br
+        />credentials sent by AnyDesk)</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">2. Customize the AnyDesk client</td>
-      <td style="text-align:left"><a href="https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk7.png"><img src="../../.gitbook/assets/anydesk7.png" alt="Customize AnyDesk client"/></a>
+      <td style="text-align:left">2. Navigate to <b>Files</b>
+      </td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/image.png" alt/>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">3. Select <b>Make download link publicly available</b>
+      <td style="text-align:left">3. Then click <b>Create new custom AnyDesk client</b>
       </td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/anydesk_createnewclient.PNG" alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">4. The <b>Customize AnyDesk</b> window appears</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">3. Click <b>Save</b> to confirm your settings</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">4. The <b>Custom Client Details</b> page will appear</td>
-      <td style="text-align:left"><a href="https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk8.png"><img src="../../.gitbook/assets/anydesk8 (1).png" alt="Custom Client Details"/></a>
+      <td style="text-align:left">5. Enter a <b>Filename</b> and
+        <br />select <b>Incoming connections only</b>
       </td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">
-        <p>5. Select the following <b>Options</b>:</p>
-        <p></p>
+        <p>6. Select the following <b>Options</b>:
+          <br />
+        </p>
         <ul>
           <li>Disable settings</li>
           <li>Disable address book</li>
@@ -50,19 +57,138 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
         </ul>
       </td>
       <td style="text-align:left">
-        <p></p>
-        <p></p>
-        <p>
-          <img src="../../.gitbook/assets/anydesk_options.png" alt/>
-        </p>
+        <img src="../../.gitbook/assets/anydesk_options.png" alt/>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">6. Copy or save the <b>Public Download</b> URL. You have to send this URL
-        to your customer. The customer needs the URL for the <b>Group Settings</b>.</td>
+      <td style="text-align:left">
+        <p>7. Click <b>Advanced</b> and set the following settings:</p>
+        <p></p>
+        <ul></ul>
+      </td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/anydesk_advancedoptions.png" alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">8. Next enter a <b>Name of the configuration</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">9. Select <b>Make download link publicly avaiblable</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">10. When you are done click <b>Save</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">11. The <b>Custom Client Details</b> window appears</td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/anydesk_publicdownload.png" alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">12. Copy or save the <b>Public Download</b> URL. You have to send this URL
+        to your customer. The customer needs this URL for the <b>Group Settings</b>.</td>
+      <td
+      style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>## AnyDesk Supporter Client Deployment
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Task</th>
+      <th style="text-align:left">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1. Log in to <a href="https://my.anydesk.com/login">AnyDesk</a>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2. Navigate to <b>Files</b>
+      </td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/image.png" alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">3. Then click <b>Create new custom AnyDesk client</b>
+      </td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/anydesk_createnewclient.PNG" alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">4. The <b>Customize AnyDesk</b> window appears</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">5. Enter a <b>Filename</b> and
+        <br />select <b>Outgoing connections only</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>6. Select the following <b>Options</b>
+        </p>
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>Disable address book</li>
+          <li>Disable TCP listen port</li>
+          <li>Assign to license</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/anydesksupporter_options.png" alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>7. Click <b>Advanced</b> and set the following settings:</p>
+        <p></p>
+        <ul></ul>
+      </td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/anydesksupporter_advancedoptions.png"
+        alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">8. Next enter a <b>Name of the configuration</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">9. Select <b>Make download link publicly avaiblable</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">10. When you are done click <b>Save</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">11. The <b>Custom Client Details</b> window appears</td>
+      <td style="text-align:left">
+        <img src="../../.gitbook/assets/anydesksupporter_publicdownload.png" alt/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">12. Copy or save the <b>Public Download</b> URL. You have to send this URL
+        to your customer. The customer needs this URL for the <b>Software Package - Package Definition</b>.</td>
       <td
       style="text-align:left"></td>
     </tr>
   </tbody>
 </table>
-

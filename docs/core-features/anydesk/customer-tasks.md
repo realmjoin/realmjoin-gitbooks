@@ -1,8 +1,13 @@
 # Customer Tasks
 
-If you are interested in AnyDesk send a request to [Glück & Kanja \(GK\)](mailto:support@glueckkanja.com). GK sends you a URL. This URL is important for the following configurations and settings.
+If you are interested in AnyDesk send a request to [Glück & Kanja \(GK\)](mailto:support@glueckkanja.com). GK sends you two different URLs:
 
-## AnyDesk Group Settings
+* A user client URL
+* A supporter client URL
+
+These URLs are important for the following configurations and settings.
+
+## AnyDesk Group Settings for User Client
 
 Use a [JSON policy](../../packages/json-backgrounder.md) to configure AnyDesk in the RealmJoin [Group Settings](../../rj-portal/groups-and-group-settings.md#group-settings). There are three different policies to configure AnyDesk.
 
@@ -12,7 +17,7 @@ The following JSON contains all configurations:
 **Value** = {"AnyDesk: { "Enabled": true, "BootstrapperUrl": "[https://.../.../AnyDesk.exe](https://.../.../AnyDesk.exe)", "Ui": {TrayMenuTextEnglish": "Start remote session} } }
 
 {% hint style="info" %}
-The BootstrapperUrl is your **Public Download Url** from AnyDesk Custom Client Details.
+The BootstrapperUrl is your **user client URL**.
 {% endhint %}
 
 It is also possible to split this single JSON from above, in three different JSON policies:
@@ -37,15 +42,17 @@ The following JSON is possible as well:
 
 ## Back-End Integration
 
-After you configure your Client, AnyDesk will send you an email. This email contains your **Contract ID**, your **License ID** and your **API Password**. Send these IDs and the password to the [Glück & Kanja suppor](mailto:support@glueckkanja.com)t. If you do so, GK will integrate a AnyDesk API in your RealmJoin portal.
+After you configure your user client, AnyDesk will send you an email. This email contains your **Contract ID**, your **License ID** and your **API Password**. Send these IDs and the password to the [Glück & Kanja suppor](mailto:support@glueckkanja.com)t. If you do so, GK will integrate a AnyDesk API in your RealmJoin portal.
 
 ![](../../.gitbook/assets/anydesk9%20%281%29.png)
 
-### AnyDesk Service Module
+### AnyDesk Supporter Client Setup Launcher
 
-To allow a supporter to connect to a desktop, you have to assign the AnyDesk SM package to a supporter.
+To allow a supporter to connect to a desktop, you have to assign the **AnyDesk Supporter Client Setup Launcher** to a supporter.
 
-![](../../.gitbook/assets/anydesk_sm.png)
+![](../../.gitbook/assets/anydesk_setuplauncher.png)
+
+For this assignment you need your supporter client URL.
 
 Read our [App Store article](../../rj-portal/app-store.md#app-subscribtion) for details about package subscription and read our [Software Packages article](../../rj-portal/software-packages.md#package-assignment) for details about package assignment.
 
@@ -76,4 +83,10 @@ For special support scenarios, administrative rights will be needed. A normal re
 | 5. On the remote client, a new window **User Account Control** will appear |  |
 | 6. Confirm it |  |
 | 7. The support staff is now able to perform administrative tasks. |  |
+
+## Additional Sessions
+
+When setting up AnyDesk for the first time, you will receive a single license from Glück & Kanja. This single license allows one remote session. Further simultaneous sessions by other supporters are not possible, additional licenses are necessary.
+
+If you need more licenses, [contact Glück & Kanja ](mailto:support@glueckkanja.com)for more details.
 

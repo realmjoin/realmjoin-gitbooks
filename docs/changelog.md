@@ -1,0 +1,353 @@
+# Changelog
+
+## RealmJoin v4.15.14
+
+**Release -** September 4th 2019
+
+* Hotfix: Some package types install correctly but RealmJoin reports it as failed
+* Hotfix: When installing a package, the environment variables for on-premises extension attributes sourced from Graph API were not set correctly
+
+## RealmJoin v4.15.13
+
+**Release -** [J](https://headwayapp.co/realmjoin-platform-changelog/realmjoin-v4-15-13-104423)une 17th 2019
+
+### v4.15.13
+
+* Adds additional software deployment modes
+
+### v4.15.12
+
+* Changes how DomainConnect credentials are persisted to survive Windows 10 upgrades
+* Fixes a bug when disabling DomainConnect
+
+### v4.15.11
+
+* Added **optional software installations after logon**
+* Collects more detailed choco log files
+
+### v4.15.10
+
+* Fixed an issue with AppLocker when prefetching packages
+* Fixed some minor UI issues
+
+### v4.15.9
+
+* Improved prefetching of packages
+
+### v4.15.7
+
+* Added **AnyDesk** integration
+* Added new **password templates for LAPS**
+* Support **prefetching packages**
+* Fixed a bug when evaluating msDS-UserPasswordExpiryTimeComputed
+
+### v4.15.6
+
+* Collect **workplace join infos**
+* Collect logs from Raynet installations
+* Added a policy to disable VM detection
+* Added **customizable toast UI**
+
+### v4.15.5
+
+* **"Sync this device" button**
+* Improved **tracking of installations**
+* Added layer for **compatibility with software deployments through Intune**
+* Bugfixes
+
+### v4.15.1
+
+* Auth dialog will not prompt anymore because of **seamless auth**
+* **Deployment toast Snoozing, Stagged deployment and UX updates**
+
+### v4.15.0
+
+* **New deployment screen**
+* **New deployment toast notifications**
+* Prepare for new Windows 10 features \(requires Fall Creators Update\)
+
+## RealmJoin v4.15.12
+
+**Beta -** [J](https://headwayapp.co/realmjoin-platform-changelog/realmjoin-v4-15-13-104423)une 7th 2019
+
+### v4.15.12
+
+* Changes how DomainConnect credentials are persisted to survive Windows 10 upgrades
+* Fixes a bug when disabling DomainConnect
+
+### v4.15.11
+
+* Added optional software installations after logon
+* Collects more detailed chocolatey log files
+
+### v4.15.10
+
+* Fixed an issue with AppLocker when prefetching packages
+* Fixed some minor UI issues
+
+### v4.15.9
+
+* Improved prefetching of packages
+
+## RealmJoin v4.15.7
+
+**Beta -** April 30th 2019
+
+### v4.15.7
+
+* Added **AnyDesk** integration
+* Added new **password templates for LAPS**
+* Support **prefetching packages**
+* Fixed a bug when evaluating msDS-UserPasswordExpiryTimeComputed
+
+### v4.15.6
+
+* Collect **workplace join infos**
+* Collect logs from Raynet installations
+* Added a policy to disable VM detection
+* Added **customizable toast UI**
+
+### v4.15.5
+
+* **"Sync this device" button**
+* Improved **tracking of installations**
+* Added layer for **compatibility with software deployments through Intune**
+* Bugfixes
+
+### v4.15.1
+
+* Auth dialog will not prompt anymore because of **seamless auth**
+* **Deployment toast Snoozing, Stagged deployment and UX updates**
+
+### v4.15.0
+
+* **New deployment screen**
+* **New deployment toast notifications**
+* Prepare for new Windows 10 features \(requires Fall Creators Update\)
+
+## RealmJoin v4.14.10
+
+**Release -** March 1st 2019
+
+### v4.14.10
+
+* Added Location Shortcut URIs to **Trusted Sites**
+* **Improve initial setup experience** to wait for ESP and Windows Hello to finish
+
+### v4.14.8
+
+* **Updated MSAL** library
+* Add **network and proxy status** to states
+
+### v4.14.7
+
+* **Extending LAPS** functionality with account expiration/staleness
+
+### v4.14.5
+
+* Enumerate all **local admin accounts into states**
+
+### v4.14.4
+
+* Introducing **"Local Administrator Password Solution" \(LAPS\)**
+* Initial Bitlocker State reported
+
+### v4.14.3
+
+* Switch to new **code siging** certificate.
+
+### v4.14.2
+
+* Tweak initial conditions for **Auto-Setup**.
+* Wait for Intune to finish deploying when using **Auto-Setup**.
+
+### v4.14.1
+
+* Group **software list** by Category.
+* Resolve **cdn.realmjoin.com** and include in telemetry.
+
+### v4.14.0
+
+* Include **UWP Apps** in telemetry.
+* Provide the **user's fax number** to packages.
+* Add the **computer name** to security dialog.
+* Keep **user parts** of packages with user part hidden.
+
+## RealmJoin v4.14.10
+
+**Beta -** February 14th 2019
+
+### v4.14.10
+
+* Added Location Shortcut URIs to **Trusted Sites**
+* **Improve initial setup experience** to wait for ESP and Windows Hello to finish
+
+### v4.14.8
+
+* **Updated MSAL** library
+* Add **network and proxy status** to states
+
+### v4.14.7
+
+* **Extending LAPS** functionality with account expiration/staleness
+
+### v4.14.5
+
+* Enumerate all **local admin accounts into states**
+
+### v4.14.4
+
+* Introducing **"Local Administrator Password Solution" \(LAPS\)**
+* Initial Bitlocker State reported
+
+## RealmJoin v4.14.3
+
+**Beta -** December 10th 2018
+
+### v4.14.3
+
+* Switch to new **code siging** certificate.
+
+### v4.14.2
+
+* Tweak initial conditions for **Auto-Setup**.
+* Wait for Intune to finish deploying when using **Auto-Setup**.
+
+### v4.14.1
+
+* Group **software list** by Category.
+* Resolve **cdn.realmjoin.com** and include in telemetry.
+
+### v4.14.0
+
+* Include **UWP Apps** in telemetry.
+* Provide the **user's fax number** to packages.
+* Add the **computer name** to security dialog.
+* Keep **user parts** of packages with user part hidden.
+
+## RealmJoin v4.13.12
+
+**Release -** August 21st 2018
+
+* Add support for **shared computers** and **secondary-identity deployments**.
+* Add **user-part scripts** to choco packages.
+* Tag software that is available on **"this device only"**.
+* Collect **BranchCache information**.
+* **Show Primary User** instead of the user's name in the tray menu.
+* Provide software packages with `RJ_PrimaryUserID` and `RJ_PrimaryUserName`.
+* Collect **.NET framework information**.
+* Provide software packages with `onPremisesExtensionAttributes`.
+* **Auto-wrap choco args** command line. No need for `-params` anymore.
+* Record more choco package infos on client.
+* Add `RJ_CallerIsPrimaryUser` to craft package setup.
+* Tweak web link list.
+* Fix a minor issue when forcing an update channel.
+* WebLinks now recieve more environment variables.
+
+## RealmJoin v.4.13.11
+
+**Beta -** August 10th 2018
+
+* WebLinks now recieve more environment variables.
+* Fix a crash when not signed in.
+
+## RealmJoin v4.13.10
+
+**Beta -** July 31st 2018
+
+* Tag software that is available on **"this device only"**.
+* Collect **BranchCache information**.
+* **Show Primary User** instead of the user's name in the tray menu.
+* Provide software packages with `RJ_PrimaryUserID` and `RJ_PrimaryUserName`.
+* Collect **.NET framework information**.
+* Provide software packages with `onPremisesExtensionAttributes`.
+* Add support for **shared computers** and **secondary-identity deployments**.
+* Add **user-part scripts** to choco packages.
+* **Auto-wrap choco args** command line. No need for `-params` anymore.
+* Record more choco package infos on client.
+* Add `RJ_CallerIsPrimaryUser` to craft package setup.
+* Tweak web link list.
+* Fix a minor issue when forcing an update channel.
+
+## RealmJoin v4.12.4
+
+**Release -** June 20th 2018
+
+* Add support for migrating old software packages to new IDs.
+* Software packages can now be marked as safe for background installation.
+* The backend can now request a log file archive from the client.
+* Telemetry now includes the AzureAD and Intune DeviceIDs.
+* Prepared for App Store Packages.
+* All Users Group.
+* Log files are now UTF-8 encoded.
+* Lots of Internal optimizations.
+
+## RealmJoin v4.12.4
+
+**Beta -** June 11th 2018
+
+* Add support for migrating old software packages to new IDs.
+* Software packages can now be marked as safe for background installation.
+* The backend can now request a log file archive from the client.
+* Telemetry now includes the AzureAD and Intune DeviceIDs.
+* Prepared for App Store Packages.
+* All Users Group.
+* Log files are now UTF-8 encoded.
+* Lots of Internal optimizations.
+
+## RealmJoin v4.11.6
+
+**Release -** March 2018
+
+* Log collection now includes the **chocolatey summary log**.
+* Provide user info to user craft packages when running in Auto-Setup.
+* Improves read/write of the Delivery Optimization GroupID.
+
+## RealmJoin v4.11.4
+
+**Release -** February 2018
+
+* The "**connect to domain**" dialog had its user experience improved.
+* Fixes an issue where some craft package were always marked as "new configuration available".
+* On some machines the proxy detection failed when using BranchCache.
+* Security enhancements
+
+## RealmJoin v4.11.1
+
+**Release -** January 2018
+
+* Fixes an issue where the TenantID/Name environment variables weren't immediately available to system-scoped packages.
+* Security enhancements
+
+## RealmJoin v4.11.0
+
+* Software packages can now be configured to wait for **Intune's compliance**check.
+
+## RealmJoin v4.10.14
+
+* Hotfix: On some machines the proxy detection failed when using BranchCache.
+
+## RealmJoin v4.11.1
+
+* Fixes an issue where the TenantID/Name environment variables weren't immediately available to system-scoped packages.
+* Security enhancements
+
+## RealmJoin v4.11.0
+
+* Software packages can now be configured to wait for **Intune's compliance check**.
+
+## RealmJoin v4.10.13
+
+* Provide software installs with **user extensions** from GraphAPI
+* Add **extension support** for client telemetry
+* Stability improvements
+
+## RealmJoin v4.10.10
+
+* The **ATP state** is now collected for reporting
+* Improve display of **IPv6 addresses** in tray menu
+* Starting without contacting the **Graph-API** is possible, if required
+* A custom **protocol handler** is now registered for RealmJoin
+* A set of **new environment variable**s is available to software packages
+* **Auto-Setup:** RealmJoin can now auto-setup a new AzureAD-Client! No user interaction is required.
+

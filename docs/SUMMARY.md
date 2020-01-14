@@ -33,6 +33,7 @@
 * [FAQ](faq.md)
 * [Troubleshooting](troubleshooting.md)
 * [Appendix](appendix.md)
+* [Changelog](changelog.md)
 
 ## Packages
 

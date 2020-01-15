@@ -37,14 +37,19 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">5. Enter a <b>Filename</b> and
+      <td style="text-align:left">5. Select <b>Windows</b> as <b>Platform</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">6. Next enter a <b>Filename</b> and
         <br />select <b>Incoming connections only</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">
-        <p>6. Select the following <b>Options</b>:
+        <p>7. Then select the following <b>Options</b>:
           <br />
         </p>
         <ul>
@@ -62,7 +67,7 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
     </tr>
     <tr>
       <td style="text-align:left">
-        <p>7. Click <b>Advanced</b> and set the following settings:</p>
+        <p>8. Click <b>Advanced</b> and set the following settings:</p>
         <p></p>
         <ul></ul>
       </td>
@@ -71,28 +76,28 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">8. Next enter a <b>Name of the configuration</b>
+      <td style="text-align:left">9. Next enter a <b>Name of the configuration</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">9. Select <b>Make download link publicly avaiblable</b>
+      <td style="text-align:left">10. Select <b>Make download link publicly avaiblable</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">10. When you are done click <b>Save</b>
+      <td style="text-align:left">11. When you are done click <b>Save</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">11. The <b>Custom Client Details</b> window appears</td>
+      <td style="text-align:left">12. The <b>Custom Client Details</b> window appears</td>
       <td style="text-align:left">
         <img src="../../.gitbook/assets/anydesk_publicdownload.png" alt/>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">12. Copy or save the <b>Public Download</b> URL. You have to send this URL
+      <td style="text-align:left">13. Copy or save the <b>Public Download</b> URL. You have to send this URL
         to your customer. The customer needs this URL for the <b>Group Settings</b>.</td>
       <td
       style="text-align:left"></td>
@@ -132,14 +137,21 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">5. Enter a <b>Filename</b> and
-        <br />select <b>Outgoing connections only</b>
+      <td style="text-align:left">5. Select <b>Windows MSI</b> as <b>Platform</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">
-        <p>6. Select the following <b>Options</b>
+        <p>6. Next enter a <b>Filename</b> and</p>
+        <p>select <b>Outgoing connections only</b>
+        </p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>7. Select the following <b>Options</b>
         </p>
         <p>&lt;b&gt;&lt;/b&gt;</p>
         <ul>
@@ -154,7 +166,7 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
     </tr>
     <tr>
       <td style="text-align:left">
-        <p>7. Click <b>Advanced</b> and set the following settings:</p>
+        <p>8. Click <b>Advanced</b> and set the following settings:</p>
         <p></p>
         <ul></ul>
       </td>
@@ -164,29 +176,29 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">8. Next enter a <b>Name of the configuration</b>
+      <td style="text-align:left">9. Next enter a <b>Name of the configuration</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">9. Select <b>Make download link publicly avaiblable</b>
+      <td style="text-align:left">10. Select <b>Make download link publicly avaiblable</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">10. When you are done click <b>Save</b>
+      <td style="text-align:left">11. When you are done click <b>Save</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">11. The <b>Custom Client Details</b> window appears</td>
+      <td style="text-align:left">12. The <b>Custom Client Details</b> window appears</td>
       <td style="text-align:left">
         <img src="../../.gitbook/assets/anydesksupporter_publicdownload.png" alt/>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">12. Copy or save the <b>Public Download</b> URL. You have to send this URL
-        to your customer. The customer needs this URL for the <b>Software Package - Package Definition</b>.</td>
+      <td style="text-align:left">13. Copy or save the <b>Public Download</b> URL. You have to send this URL
+        to your customer. The customer needs this URL for the <b>AnyDesk Support Client Setup Launcher - Package Definition</b>.</td>
       <td
       style="text-align:left"></td>
     </tr>

@@ -135,11 +135,11 @@ There are different input fields on this page. Have a look at the table below fo
           packages, that require an office installation upfront.</p>
         <p></p>
         <p>For a working correlation, the correct package name has to be provided.
-          Enter the package name into the following form: [&quot;PACKAGE NAME&quot;].
+          Enter the package name into the following form: [&quot;PACKAGE ID&quot;].
           <br
           />
           <br />If two or more packets need to be entered, separate the names with a comma.
-          For example: [&quot;PACKAGE NAME1&quot;,&quot;PACKACKAGE NAME2&quot;]</p>
+          For example: [&quot;PACKAGE ID1&quot;,&quot;PACKAGE ID2&quot;]</p>
       </td>
     </tr>
     <tr>
@@ -335,11 +335,11 @@ There are different input fields on this page. Have a look at the table below fo
           packages, which requires an office installation upfront.</p>
         <p></p>
         <p>For a working correlation, the correct package name has to be provided.
-          Enter the package name into the following form: [&quot;PACKAGE NAME&quot;].
+          Enter the package name into the following form: [&quot;PACKAGE ID&quot;].
           <br
           />
           <br />If two or more packets need to be entered, separate the names with a comma.
-          For example: [&quot;PACKAGE NAME1&quot;,&quot;PACKACKAGE NAME2&quot;]</p>
+          For example: [&quot;PACKAGE ID1&quot;,&quot;PACKAGE ID2&quot;]</p>
       </td>
     </tr>
     <tr>

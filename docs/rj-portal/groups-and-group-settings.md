@@ -28,7 +28,7 @@ If you click on a number in the **Us, Pa** or **Se** field, you will get an over
 While there are no strict naming pattern requirements in RealmJoin, we recommend the following convention:
 
 ```text
-*APP|CFG - Location-[Vendor-Product-Language-Type-Flavor]*
+*APP|CFG - Location-Core|Vendor-Product-[Language-][Type-][Flavor]*
 ```
 
 Examples:

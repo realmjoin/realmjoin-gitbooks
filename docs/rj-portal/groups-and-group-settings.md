@@ -73,5 +73,5 @@ Just click on a Key to edit it. An input mask opens:
 
 To make changes, simply click one of the two fields. Once you have finished editing, click **Save** to apply the changes. If you want to delete this setting, click **Delete**.
 
-To see a detailed Group Settings list, read our [Settings & Policies article](../settings-and-policies.md).
+To see a detailed Group Settings list, read our [Settings & Policies article](../outlook-signatures.md).
 

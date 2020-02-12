@@ -34,40 +34,6 @@
 * Improves notification UI
 * Improves evaluation of CredentialManager configuration
 
-### v4.16.6
-
-* Collects computer language settings in telemetry
-* Reduces log output
-
-### v4.16.5
-
-* Fixes an inconsistent user experience when NetBIOS Domain Name contains underscores
-* **Adds the notification feature**
-
-### v4.16.4
-
-* Improves handling of HTTP timeouts when backing up the BitLocker recovery key
-
-### v4.16.3
-
-* Fixes a deployment restriction issue
-
-### v4.16.2
-
-* Fixes a deployment phase issue
-* Improves Hi-DPI handling
-
-### v4.16.1
-
-* Fixes an issue with LAPS account expirations
-* **Improves Hi-DPI handling**
-
-### v4.16.0
-
-* Adds an improved BitLocker implementation
-* Fixes some special exit codes by adding --ignore-package-exit-codes to choco calls
-* Fixes onPremisesExtensionAttributes Graph data
-
 ## RealmJoin v4.16.7
 
 **Beta -** January 15th 2020

@@ -195,23 +195,6 @@ There are different input fields on this page. Have a look at the table below fo
             <br
             />
           </li>
-          <li>
-            <p><b>Pre-Release:</b> The pre-release flag has two distinctive features within
-              RealmJoin. It allows:</p>
-            <p>1. To add a package with ID and version similar to another existing package
-              in the portal and</p>
-            <p>2. If assigned to a group or user, it overwrites all other packages with
-              the same ID assigned to the group user.
-              <br />
-              <br />Those features are usually used for the testing of new packages or updates
-              of an existing one: The test-groups or test-users get the pre-release version
-              of a package assigned during the testing.
-              <br />
-              <br />The pre-release flagged package is visually highlighted in the portal&apos;s
-              package list with a lightning symbol behind the name.
-              <br />
-            </p>
-          </li>
           <li><b>Require Intune Compliance</b>: The package is installed as soon as
             RealmJoin is able to verify via the GraphAPI that the machine is considered
             compliant. This might stop the rollout for some time. The installation
@@ -417,25 +400,6 @@ There are different input fields on this page. Have a look at the table below fo
             outside of the black screen installation, thus not blocking the access
             to the client&apos;s desktop and software.
             <br />
-          </li>
-          <li>
-            <p><b>Pre-Release:</b> The pre-release flag has two distinctive features within
-              RealmJoin. It allows:</p>
-            <ol>
-              <li>To add a package with ID and version similar to another existing package
-                in the portal and</li>
-            </ol>
-            <p>2. If assigned to a group or user, overwrites all other packages with
-              the same ID assigned to the group user.
-              <br />
-              <br />Those features are usually used for the testing of new packages or updates
-              of an existing one: The test-groups or test-users get the pre-release version
-              of a package assigned during the testing.
-              <br />
-              <br />The pre-release flagged package is visually highlighted in the portal&apos;s
-              package list with a lightning symbol behind the name.
-              <br />
-            </p>
           </li>
           <li><b>Require Intune Compliance</b>: The package is installed as soon as
             RealmJoin is able to verify via the GraphAPI that the machine is considered

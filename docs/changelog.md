@@ -1,5 +1,11 @@
 # Changelog
 
+## RealmJoin v4.16.16
+
+**Release -** March 10th 2020
+
+* Hotfix: Fixes Notification Issues
+
 ## RealmJoin v4.16.15
 
 **Release -** February 28th 2020

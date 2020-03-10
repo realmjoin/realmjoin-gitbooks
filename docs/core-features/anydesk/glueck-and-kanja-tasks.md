@@ -69,7 +69,24 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
       <td style="text-align:left">
         <p>8. Click <b>Advanced</b> and set the following settings:</p>
         <p></p>
-        <ul></ul>
+        <ul>
+          <li>
+            <p>Overwrite settings:</p>
+            <p>ad.features.register_alias=true
+              <br />ad.ui.lang=de
+              <br />ad.security.tcp_tunnel=false
+              <br />
+            </p>
+          </li>
+          <li>
+            <p>Change default settings:</p>
+            <p>ad.ui.cfg_enable_recording=false
+              <br />ad.security.sync_clipbrd=false
+              <br />ad.security.hear_audio=false
+              <br />ad.ui.cfg_enable_audio=false
+              <br />ad.security.record_session=false</p>
+          </li>
+        </ul>
       </td>
       <td style="text-align:left">
         <img src="../../.gitbook/assets/anydesk_advancedoptions.png" alt/>
@@ -168,7 +185,12 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
       <td style="text-align:left">
         <p>8. Click <b>Advanced</b> and set the following settings:</p>
         <p></p>
-        <ul></ul>
+        <ul>
+          <li>
+            <p>Overwrite settings:</p>
+            <p>ad.anynet.register.add_to_namespace=true ad.security.interactive_access=2</p>
+          </li>
+        </ul>
       </td>
       <td style="text-align:left">
         <img src="../../.gitbook/assets/anydesksupporter_advancedoptions.png"

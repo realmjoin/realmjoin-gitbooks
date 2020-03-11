@@ -58,7 +58,12 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
           <li>Disable TCP listen port</li>
           <li>Automatically register alias</li>
           <li>Assign to license</li>
-          <li>Access control list</li>
+          <li>Access control list
+            <ul>
+              <li>Enter the namespace of your customer, start with an @.</li>
+              <li>For example: @companyname</li>
+            </ul>
+          </li>
         </ul>
       </td>
       <td style="text-align:left">
@@ -191,6 +196,11 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
             <p>ad.anynet.register.add_to_namespace=true ad.security.interactive_access=2</p>
           </li>
         </ul>
+        <p><b>Note:</b>
+        </p>
+        <p>&apos;ad.anynet.register.add_to_namespace=true&apos; ensures that AnyDesk
+          creates an alias for the Supporter Client from the customer&apos;s namespace.
+          So the User Client recognizes that the Supporter Client access is allowed.U</p>
       </td>
       <td style="text-align:left">
         <img src="../../.gitbook/assets/anydesksupporter_advancedoptions.png"

@@ -27,6 +27,7 @@
     * [Glück & Kanja Tasks](core-features/anydesk/glueck-and-kanja-tasks.md)
     * [Customer Tasks](core-features/anydesk/customer-tasks.md)
     * [AnyDesk Cloud Connections](core-features/anydesk/anydesk-cloud-connections.md)
+  * [Notifications](core-features/notifications.md)
   * [Delivery Optimization for Windows Update](core-features/delivery-optimization-for-windows-update.md)
   * [BitLocker](core-features/bitlocker.md)
   * [Intranet Zone](core-features/intranet-zone.md)

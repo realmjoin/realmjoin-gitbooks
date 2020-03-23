@@ -11,7 +11,7 @@ Click one of these links to get to the RealmJoin Portal:
 
 The dashboard provides a quick and beneficial overview. All sections can be accessed by either clicking on the corresponding number or selecting the section in the toolbar on the left.
 
-![](../.gitbook/assets/rj-portal-dashboard.png)
+![](../.gitbook/assets/realmjoin-portal-overview.PNG)
 
 ### RealmJoin Toolbar
 
@@ -58,6 +58,14 @@ This icon takes you to the RealmJoin application store. For more details read ou
 ![](../.gitbook/assets/rj-ac-packagesicon.png)
 
 A click on this icon gives you a list of all added packages. For more details read our [Software Packages article](software-packages.md). 
+
+#### Notifications
+
+![](../.gitbook/assets/rj-notification-icon.png)
+
+Click on this icon to create new notifications and edit existing notifications. For more details read [our corresponding article](../core-features/notifications.md).
+
+#### 
 
 #### Request Packages
 

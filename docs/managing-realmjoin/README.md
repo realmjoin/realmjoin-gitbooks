@@ -7,6 +7,7 @@ The RealmJoin Windows client is enrolled on every Windows 10 device. RealmJoin s
 * [AnyDesk](../core-features/anydesk/)
 * [Local Administrator Password Solution](../core-features/local-admin-password-solution/)
 * [Delivery Optimization for Windows Update](../core-features/delivery-optimization-for-windows-update.md)
+* [Notifications](../core-features/notifications.md)
 * [BitLocker](../core-features/bitlocker.md)
 * [Intranet Zone](../core-features/intranet-zone.md)
 * [Domain Password Expirey](../core-features/domain-password-expiry.md)

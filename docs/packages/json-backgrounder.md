@@ -80,7 +80,7 @@ The following example shows the RealmJoin tray menu, specially the **WebLinks** 
 "Name": "Google",  
 "Target": "[https://www.google.com/](https://www.google.com/)",  
 "Platform": "any"  
-}  
+},  
 {  
 "Name": "Azure",  
 "Target": "[https://portal.azure.com](https://portal.azure.com)",  

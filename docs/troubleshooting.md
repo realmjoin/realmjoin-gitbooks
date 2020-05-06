@@ -6,7 +6,7 @@
 
 * In Azure AD: Is there a software distribution group for this software and is the user member of this group?  
 * In RealmJoin Admin Portal: Is there a package for this software and is this package assigned to the correct Azure AD group?  
-* Is the software package assigned for automatic or manual install?  
+* Is the software package assigned for automatic \(mandatory\) or manual install?
 
 **2. The software is assigned but the assignment is not received by the client**
 
@@ -119,11 +119,10 @@ You can collect the RealmJoin log files automatically.
 
 [![Advanced](.gitbook/assets/rjx-debug-menu-seven.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rjx-debug-menu-seven.png)
 
-### Additional Functions
+### Additional Functions of the Debug Mode
 
-* It is possible to reinstall packages
-* You see hidden packages.
-* Package version numbers are displayed
+* It is possible to reinstall packages: during the **Debug Mode** all packages assigned to the user are visible and can be restarted.
+* Package version numbers are displayed: for all assigned packages the available versions can be seen and checked against the desired state.
 
 ### Mandatory Software
 

@@ -20,7 +20,7 @@
 
 ## Am I able to maintain my own packages and updates?
 
-Yes. RealmJoin offers packaging-as-a-service but you may also check in ready-to-use packages. Also, it is possible to use additional deployment repositories completely maintained independently.
+RealmJoin contains an internal application store compatible with Intunewin, with over 500 existing applications. Glück&Kanja Consulting offers packaging-as-a-service to provide any missing applications. Also, it is possible to use additional deployment repositories completely maintained independently.
 
 ## Which platforms are supported?
 
@@ -28,7 +28,7 @@ RealmJoin v4 is only available for Windows 10.
 
 ## I do not see my groups in the Admin Console
 
-The sync between Azure AD and RealmJoin is scheduled every 15 minutes and based on your custom pattern rule set.
+The sync between Azure AD and RealmJoin is scheduled every 15 minutes and based on your custom pattern ruleset.
 
 ## Does RealmJoin support Multi-User Devices?
 
@@ -41,7 +41,7 @@ For a detailed description of **Debug mode** see our [Troubleshooting](troublesh
 
 ## I accidentally uninstalled RealmJoin-deployed software using the Windows Apps control
 
-Force reinstall by using the **debug mode**.
+Force reinstall by using the **debug mode**. After opening the tray in debug mode, you can find all available software, even if assigned hidden or already installed and rerun the package.
 
 ## Can I get rid of Bloatware using RealmJoin?
 
@@ -49,7 +49,8 @@ TBD
 
 ## Is RealmJoin providing an uninstall of software?
 
-A general uninstall feature is currently not implemented. Chocolatey packages provide a generic uninstall component that would be usable for RealmJoin.  
+A general uninstall feature is currently not implemented. In a 100% modern workplace environment with evergreen applications, regular removable of installed software does not exist anymore.  
+Chocolatey packages provide a generic uninstall component that would be usable for RealmJoin.  
 But because of the volatile history of unattended and the sometimes unpredictable issues with incomplete uninstalls we have decided against using it.
 
 There are typically three reasons to uninstall software:
@@ -58,13 +59,13 @@ There are typically three reasons to uninstall software:
 * The software needs to be removed because of \[choose your reason\]. In this situation, a dedicated remove-software-package can be created.
 * There is a newer version of the software. This is not a reason to use an uninstall command but instead, it is a common practice for every software package used by RealmJoin to 'clean' any precursory binaries or settings.
 
-## Should I use the applications internal auto-updater or not?
+All items above describe special usecases and should be solved in cooperation with Glück & Kanja Consulting AG.Should I use the applications internal auto-updater or not?
 
 This highly depends on the application itself as well as your internal processes. For some applications, that might be prone to attacking and are very well maintained by the vendor - like Google Chrome - we recommend to use the applications internal update. For other software, it might be more useful to include a regular update via RealmJoin into your processes.
 
 ## Re-Install failed software installations
 
-RealmJoin tries to redo failed installations on the next three logons. If the installations still fail the package is marked as permanent-failed. To reinstall it at a later time use **Retry base installation** in **debug mode**.
+RealmJoin tries to restart failed installations according to your selected installation phases. To reinstall the package manually please use the **Debug Mode** of the RealmJoin agent.
 
 ## Since the packages are based on open protocols, can others access my packages?
 
@@ -86,6 +87,8 @@ See section [**States** ](rj-portal/clients.md#states)in the [RealmJoin Portal -
 ## In the future, may RealmJoin packages be used in Intune?
 
 If in the future, Microsoft Intune becomes more capable and the installation of software is as versatile and organized as with RealmJoin, you may use the existing packages in Intune. Since RealmJoin does only need Chocolatey and PowerShell to run the installers, there might be possibilities to use Intune to install the software.
+
+All packages created by the Glück & Kanja Consulting AG Package Factory can be prepared as .intunewin packages.
 
 ## Is RealmJoin GDPR compliant?
 

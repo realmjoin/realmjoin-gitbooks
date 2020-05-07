@@ -37,7 +37,7 @@ The first parameter you can choose is **Category**. Here you have the choice bet
 Next, you need to specify when the notification should be published and when it should no longer be displayed. There are three values available for this configuration:
 
 * Date
-* Time
+* Time **UTC**
 * Time offset
 
 #### Target and Ignore

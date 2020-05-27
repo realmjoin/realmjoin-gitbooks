@@ -23,19 +23,14 @@ After successful connection the following software packages are provided as defa
 | Default Tenant Packages |
 | :--- |
 | Choco Extension RealmJoin Core |
-| Google Chrome |
-| Microsoft Office 365 ProPlus |
-| MS Office with user settings and proofing tools |
-| Microsoft Teams |
 | RealmJoin Core Extension |
-| RealmJoin Win10 Core Settings System |
-| RealmJoin Win10 Remove Suggested Apps |
-| RealmJoin Win10 Update Start Layout |
-| RealmJoin Win10 Pin Unpin |
-| RealmJoin Win10 Remove Provisioned Apps |
-| Generic RealmJoin Configure OneDrive |
-| Genereic Windows Activation |
-| 7-Zip |
-| GlueckKanja RealmJoin Publish State Computer System Information |
-| GlueckKanja RealmJoin Publish State Speculation Control Settings |
+| Generic RealmJoin Win10 Core Settings System |
+| Generic RealmJoin Win10 Remove Suggested Apps |
+| Generic RealmJoin Win10 Remove Provisioned Apps |
+| Generic RealmJoin Win10 Update Start Layout |
+| Generic Google Chrome |
+| Generic Mozilla Firefox ESR |
+| Generic Microsoft Office ProPlus |
+| Generic Microsoft Teams |
+| Generic RealmJoin Publish State Computer System Information |
 

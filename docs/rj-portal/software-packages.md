@@ -89,7 +89,9 @@ Click on a group/user of your choice to assign. You can now make the following s
         other phases.</td>
     </tr>
   </tbody>
-</table>### Package Definition - Chocolatey Package
+</table>
+
+### Package Definition - Chocolatey Package
 
 To view details of a package and edit it, simply click on the name of a package. The following overview \(Package Definition\) will open:
 
@@ -233,7 +235,9 @@ There are different input fields on this page. Have a look at the table below fo
       <td style="text-align:left">With a tick at <b>Enable</b> you activate the automatic upgrade function</td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 Under normal circumstances, it is highly advised to prevent a normal user from having the same package assigned more than once.
 
 To change the package Name or ID is not a proper way to edit assigned packages. Add a new package instead. Delete the obsolete one.
@@ -296,7 +300,9 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
       </td>
     </tr>
   </tbody>
-</table>#### Deployed on Active Client
+</table>
+
+#### Deployed on Active Client
 
 This tile shows a list of active clients to which the package has already been distributed.
 
@@ -458,7 +464,9 @@ There are different input fields on this page. Have a look at the table below fo
       <td style="text-align:left">With a click at <b>Enable</b> you activate the automatic upgrade function</td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 Under normal circumstances, it is highly advised to prevent a normal user for having the same package assigned more than once.
 
 To change package Name or ID is not a proper way to edit assigned packages. Add a new package instead. Delete the obsolete one.
@@ -519,7 +527,9 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
       </td>
     </tr>
   </tbody>
-</table>#### Deployed on Active Client
+</table>
+
+#### Deployed on Active Client
 
 This tile shows a list of active clients to which the package has already been distributed.
 

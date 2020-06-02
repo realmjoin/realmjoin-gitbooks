@@ -125,7 +125,9 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
       style="text-align:left"></td>
     </tr>
   </tbody>
-</table>## AnyDesk Supporter Client Deployment
+</table>
+
+## AnyDesk Supporter Client Deployment
 
 <table>
   <thead>
@@ -236,3 +238,4 @@ If a customer is interested in AnyDesk, the customer will need to send an email 
     </tr>
   </tbody>
 </table>
+

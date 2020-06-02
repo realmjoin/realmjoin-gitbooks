@@ -141,7 +141,9 @@ The following table shows you the steps for Azure KeyVault Creation:
       style="text-align:left"></td>
     </tr>
   </tbody>
-</table>## KeyVault Storage of Secrets
+</table>
+
+## KeyVault Storage of Secrets
 
 RealmJoin will not store the secret in any proprietary storage but instead create an **Azure KeyVault Secret** to store it in a secure and auditable way. The KeyVault API is documented here:
 

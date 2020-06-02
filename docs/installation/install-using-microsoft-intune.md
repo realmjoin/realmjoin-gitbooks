@@ -109,7 +109,9 @@ Use the following instructions to deploy RealmJoin:
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>{% hint style="warning" %}
+</table>
+
+{% hint style="warning" %}
 Like any other application in Intune, ReamJoin can be assigned to the desired user groups as \(required\) software. It is not necessary to install additional software on the client devices to run RealmJoin. RealmJoin will be deployed on the client devices on the next Azure sync.
 {% endhint %}
 

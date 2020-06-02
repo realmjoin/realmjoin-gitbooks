@@ -94,7 +94,23 @@ RealmJoin offers multiple policies to configure local administrator account mana
       <td style="text-align:left">Create support account on demand (account will expire after 12 hours)</td>
     </tr>
   </tbody>
-</table>It is possible to assign these policies based on user groups. For example, deactivate local administrator management for all users except a specific group:
+</table>
+
+For example:
+
+**Key:**   
+`LocalAdminManagement.SupportAccount`  
+**Value:**  
+`{  
+"CheckInterval": "00:30",  
+"NamePattern": "ADM-(HEX:8)",  
+"DisplayName": "RealmJoin Local Administrator",  
+"OnDemand": true  
+}`
+
+#### Configuration Policies based on User Groups
+
+It is possible to assign these policies based on user groups. For example, deactivate local administrator management for all users except a specific group:
 
 | Key | Value | Groupname |
 | :--- | :--- | :--- |

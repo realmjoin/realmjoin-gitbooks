@@ -52,9 +52,11 @@ The mentioned settings, which are assigned to users, can be checked and edited i
 
 The listed settings are based on the JSON file format. JSON is described in our [JSON - Short Overview article](../packages/json-backgrounder.md). Username shows you which user has which setting. If a setting is listed several times, this means that it is set for several users.
 
-Just click on a Key to edit it. An input mask opens:
+Just click on a Key to edit it. An input mask appears:
 
 ![](../.gitbook/assets/usersettings_input.png)
 
-To make changes, simply click one of the two fields. Once you have finished editing, click **Save** to apply the changes. If you want to delete this setting, click **Delete**.
+In this mask you can enter a **Key** and a **Value**. Additionally, below the value field, you can enable or disable 'Ignore in VDI'. If you enable it, a user setting cannot be executed during a 'Virtual Desktop Infrastructure' \(VDI\) session.
+
+Once your editing is complete, click **Save** to apply your changes. If you want to delete this setting, click **Delete**.
 

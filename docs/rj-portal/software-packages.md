@@ -28,7 +28,7 @@ If you click on a number in the **Gr** or **Us** fields, you will get a list of 
 
 #### Assign a Group / User
 
-Click on a group/user of your choice to assign. You can now make the following settings:
+Click on a group/user of your choice to assign. You can now configure the following settings:
 
 ![](../.gitbook/assets/package_assignment_1.png)
 
@@ -51,6 +51,9 @@ Click on a group/user of your choice to assign. You can now make the following s
           menu. This might be used for mandatory software or multiple level dependencies
           when the user should only be able to install the highest hierarchy and
           the underlying packages should be installed automatically.</p>
+        <p></p>
+        <p><b>Ignore in VDI</b>: If you select this setting, a package cannot be
+          executed during a &apos;Virtual Desktop Infrastructure&apos; (VDI) session.</p>
       </td>
     </tr>
     <tr>
@@ -84,9 +87,19 @@ Click on a group/user of your choice to assign. You can now make the following s
     <tr>
       <td style="text-align:left"><b>Main Script Restrictions - Phases</b>
       </td>
-      <td style="text-align:left">This option allows a RealmJoin administrator to define whether this package
-        should be run during the initial deployment of the device or throughout
-        other phases.</td>
+      <td style="text-align:left">
+        <p>This option allows a RealmJoin administrator to define whether this package
+          should be run during the initial deployment of the device or throughout
+          other phases.</p>
+        <p></p>
+        <p>RealmJoin offers the following phases:</p>
+        <p></p>
+        <p><b>Logon</b>: The package runs after the user has logged on.</p>
+        <p><b>Manual</b>: The package will run, when the user starts it via tray
+          menu.</p>
+        <p><b>Initial</b>: The package only runs during the deployment.</p>
+        <p><b>Normal</b>: Neither Logon, nor Manual, nor Initial. A background deployment.</p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -219,7 +232,11 @@ There are different input fields on this page. Have a look at the table below fo
             compliant. This might stop the rollout for some time. The installation
             of the package and therefore all other mandatory packages with higher-order
             numbers that are queued to be installed afterwards is resumed when the
-            client is compliant.</li>
+            client is compliant.
+            <br />
+          </li>
+          <li><b>Ignore in VDI</b>: If you select this setting, a package cannot be
+            executed during a &apos;Virtual Desktop Infrastructure&apos; (VDI) session.</li>
         </ul>
       </td>
     </tr>
@@ -448,7 +465,11 @@ There are different input fields on this page. Have a look at the table below fo
             compliant. This might stop the rollout for some time. The installation
             of the package and therefore all other mandatory packages with higher-order
             numbers that are queued to be installed afterwards is resumed when the
-            client is compliant.</li>
+            client is compliant.
+            <br />
+          </li>
+          <li><b>Ignore in VDI</b>: If you select this setting, a package cannot be
+            executed during a &apos;Virtual Desktop Infrastructure&apos; (VDI) session.</li>
         </ul>
       </td>
     </tr>

@@ -71,7 +71,9 @@ Just click on a Key to edit it. An input mask opens:
 
 ![](../.gitbook/assets/groupssettings_input.png)
 
-To make changes, simply click one of the two fields. Once you have finished editing, click **Save** to apply the changes. If you want to delete this setting, click **Delete**.
+In this mask you can enter a **Key** and a **Value**. Additionally, below the value field, you can enable or disable 'Ignore in VDI'. If you enable it, a group setting cannot be executed during a 'Virtual Desktop Infrastructure' \(VDI\) session.
+
+Once your editing is complete, click **Save** to apply your changes. If you want to delete this setting, click **Delete**.
 
 To see a detailed Group Settings list, read our [Settings & Policies article](../outlook-signatures.md).
 

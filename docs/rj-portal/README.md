@@ -65,7 +65,11 @@ A click on this icon gives you a list of all added packages. For more details re
 
 Click on this icon to create new notifications and edit existing notifications. For more details read [our corresponding article](../core-features/notifications.md).
 
-#### 
+#### Software Report
+
+![](../.gitbook/assets/rj-software-report-icon.png)
+
+Click on this symbol to open the 'Software Report' menu. In this menu you can see which software is in use and which users, groups or clients are using it. For more details read [our corresponding article](../core-features/software-report.md).
 
 #### Request Packages
 

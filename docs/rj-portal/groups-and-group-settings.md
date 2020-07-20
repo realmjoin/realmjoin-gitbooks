@@ -75,5 +75,3 @@ In this mask you can enter a **Key** and a **Value**. Additionally, below the va
 
 Once your editing is complete, click **Save** to apply your changes. If you want to delete this setting, click **Delete**.
 
-To see a detailed Group Settings list, read our [Settings & Policies article](../outlook-signatures.md).
-

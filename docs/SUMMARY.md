@@ -33,7 +33,7 @@
   * [BitLocker](core-features/bitlocker.md)
   * [Intranet Zone](core-features/intranet-zone.md)
   * [Domain Connect](core-features/domain-password-expiry.md)
-* [Settings](settings.md)
+  * [Settings](core-features/settings.md)
 * [Outlook Signatures](outlook-signatures.md)
 * [FAQ](faq.md)
 * [Troubleshooting](troubleshooting.md)

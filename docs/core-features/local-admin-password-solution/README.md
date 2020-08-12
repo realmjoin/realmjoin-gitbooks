@@ -53,7 +53,7 @@ RealmJoin offers multiple policies to configure local administrator account mana
         <p>LocalAdminManagement.</p>
         <p>[EmergencyAccount/SupportAccount].NamePattern</p>
       </td>
-      <td style="text-align:left">&quot;ADM-(HEX:8)&quot;</td>
+      <td style="text-align:left">&quot;ADM-{HEX:8}&quot;</td>
       <td style="text-align:left">Admin name. HEX:8 stands for 8-digit random hex-code</td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@ For example:
 **Value:**  
 `{  
 "CheckInterval": "00:30",  
-"NamePattern": "ADM-(HEX:8)",  
+"NamePattern": "ADM-{HEX:8}",  
 "DisplayName": "RealmJoin Local Administrator",  
 "OnDemand": true  
 }`

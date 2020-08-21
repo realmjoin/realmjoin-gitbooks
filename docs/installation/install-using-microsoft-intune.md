@@ -125,8 +125,16 @@ While this behavior is not certain, it is recommended to implement additional Wi
 | :--- |
 | **Files and Folders** |
 | `%ProgramFiles%\RealmJoin` |
+| `%ProgramFiles%\RealmJoin\RealmJoin.exe` |
+| `%ProgramFiles%\RealmJoin\RealmJoinService.exe` |
+| `%ProgramFiles%\RealmJoin\RealmJoinUpdate.exe` |
 | **Processes** |
+| `%ProgramFiles%\RealmJoin` |
 | `%ProgramFiles%\RealmJoin\RealmJoin.exe`  |
 | `%ProgramFiles%\RealmJoin\RealmJoinService.exe`  |
 | `%ProgramFiles%\RealmJoin\RealmJoinUpdate.exe` |
+
+{% hint style="info" %}
+It\`s important to configure the same path in **Files and Folders** and **Processes**. In some cases, Microsoft only checks one of this Defender Exceptions.
+{% endhint %}
 

@@ -14,6 +14,10 @@ In order to use this feature Glück & Kanja has to enable this feature in Group 
 
 ## Create a new Notification
 
+{% hint style="info" %}
+Only a RealmJoin Administrator can create a notification.
+{% endhint %}
+
 To create a new notification click **+ Add Notification** in the upper right corner of the notification menu.
 
 ![](../.gitbook/assets/rj-notification-add-notification%20%281%29.png)

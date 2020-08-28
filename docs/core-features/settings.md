@@ -263,6 +263,20 @@ With this setting the current time is available via NTP. For more information ab
 Attach Restrict. \*keys to target user group
 {% endhint %}
 
+## SoftwarePackaging.Toast.Countdown.Hero.Source
+
+**Value**
+
+{% hint style="warning" %}
+The following value is an URL example for the hero image source.
+{% endhint %}
+
+```text
+"http://images.example.com/hero.png"
+```
+
+The correct size for a Hero Image is 364x180 px or 728x360 px. More details can be found in the [Microsoft documentation](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts#hero-image).
+
 ## WebLinks
 
 **Value**

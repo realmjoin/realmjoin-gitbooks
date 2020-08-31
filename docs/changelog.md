@@ -1,5 +1,12 @@
 # Changelog
 
+## RealmJoin v4.16.18
+
+**Release** - August 28th 2020
+
+* Adds retries on LAPS account creation if the genereted password does not meet complexity requirements
+* RealmJoin ESP setting for secondary users
+
 ## RealmJoin v4.16.17
 
 **Beta -** August 17th 2020

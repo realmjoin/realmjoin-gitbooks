@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Introduction](introduction.md)
 * [Installation](installation/README.md)
   * [Install Using Microsoft Intune](installation/install-using-microsoft-intune.md)
   * [Interactive Installation](installation/interactive-installation.md)

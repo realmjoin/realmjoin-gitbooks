@@ -308,7 +308,7 @@ validExitCodes  None                false     false
 
 #### Import-ChocolateyRealmjoinPackageParameters
 
-Retrieves the package parameter given provided by the RealmJoin Portal \(package or user assignment\). Those parameters will become available inside the  scripting as prefixed variable \(**packParam**\). A parameter like **/Language=de-de** will be provided as the variable **$packParamLanguage** with the string value of **de-de**.
+Retrieves the package parameter given provided by the RealmJoin Portal \(package or user assignment\). Those parameters will become available inside the  scripting as prefixed variable \(**packParam**\). A parameter like **/Language:de-de** will be provided as the variable **$packParamLanguage** with the string value of **de-de**.
 
 **Syntax**
 

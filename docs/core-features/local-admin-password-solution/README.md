@@ -86,7 +86,7 @@ RealmJoin offers multiple policies to configure local administrator account mana
       <td style="text-align:left">LocalAdminManagement.[EmergencyAccount/SupportAccount].MaxStaleness</td>
       <td
       style="text-align:left">12:00</td>
-        <td style="text-align:left">Time after account will be removed/refreshed (when logged out after use)</td>
+        <td style="text-align:left">Time after account will be removed/refreshed (when logged out after use). Format: DD.hh:MM. Not compatible with OnDemand.</td>
     </tr>
     <tr>
       <td style="text-align:left">LocalAdminManagement.SupportAccount.OnDemand</td>

@@ -97,7 +97,7 @@ Show deployment screen on restricted and secure desktop \(default is _true_\).
 }
 ```
 
-**Descritpion**
+**Description**
 
 This setting enables or disables the AnyDesk feature**.**
 
@@ -275,7 +275,7 @@ The following value is an URL example for the hero image source.
 "http://images.example.com/hero.png"
 ```
 
-The correct size for a Hero Image is 364x180 px or 728x360 px. More details can be found in the [Microsoft documentation](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts#hero-image).
+The correct size for a Hero Image is 364x180 px or 728x360 px. More details can be found in the [Microsoft documentation](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts#hero-image). The image needs to be in the PNG format and the name has to be the SHA1 value of the file.
 
 ## WebLinks
 

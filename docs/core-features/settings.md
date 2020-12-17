@@ -212,12 +212,16 @@ With this setting you can activate or deactivate the network location wizard.
 **Value**
 
 ```text
-true | false
+true | null
 ```
 
 **Description**
 
 With this setting you can enable or disable Bitlocker.
+
+{% hint style="warning" %}
+You have to use null instead of false to disable BitLocker!
+{% endhint %}
 
 ## Policies.SetCurrentUserAdministrator
 

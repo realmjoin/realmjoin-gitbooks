@@ -1,5 +1,25 @@
 # Changelog
 
+## RealmJoin v4.17.2
+
+**Beta** - January 15th 2021
+
+* Bitlocker: does not require Bitlocker if machine is ServerRdsh
+* Deployment screen: optimizes display of Bitlocker UI
+* Auth: handles special refresh\_token condition AADSTS70043
+* LAPS: supports EFF wordlist for password generation \(preset 3\)
+
+### v4.17.1
+
+* Notifications: supports for hyperlinks, disable click through, disable transparency and timestamp
+* Local admin reporting: reports all user SIDs and resolve group members recursively
+* Main menu: adds a small UI hint to IP addresses when the internet connection is metered
+
+### v4.17.0
+
+* Deployment screen: Adds network statistics to Deployment Screen
+* Logging: Dumps ClientID to log on startup
+
 ## RealmJoin v4.16.18
 
 **Release** - August 28th 2020

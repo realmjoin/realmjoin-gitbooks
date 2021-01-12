@@ -160,7 +160,7 @@ With this setting you confiure the interval for configuration checks \(hh:ss\).
 
 **Description**
 
-With this setting you can configure an emergency account. For more details about local admin management read our corresponding ['Local Admin Password Solution' article](local-admin-password-solution/). 
+With this setting you can configure an emergency account. For more details about local admin management read our corresponding ['Local Admin Password Solution' article](local-admin-password-solution/).
 
 ## LocalAdminManagement.SupportAccount
 
@@ -251,7 +251,7 @@ With this setting the current time is available via NTP. For more information ab
 {
 "Admin": [
     "5c9e9c23-7b14-4d97-90d0-4841f2d4b520",
-    "4508f67c-d85e-4c15-82f1-ec5e4adb7c6c"
+    "4508f67c-d85e-4c15-82f1-ec5e4adb7c6c"
     ],
 "Deny":[
     "a5baa9d5-5545-41d7-aea8-19058b29b182"
@@ -299,8 +299,4 @@ The correct size for a Hero Image is 364x180 px or 728x360 px. More details can 
 **Description**
 
 With this setting you can add weblinks to the tray menu of RealmJoin.
-
-
-
-### 
 

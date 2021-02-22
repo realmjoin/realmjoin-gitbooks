@@ -29,7 +29,7 @@ Create a generic user account that is not assigned to a real person. Please make
 
 A new user group is necessary that contains all DEM users. Ad one \(e.g. **CFG - All multi-user device accounts DEM**\) and assign the previously created user.
 
-![](.gitbook/assets/dem3%20%281%29.png)
+![](.gitbook/assets/dem3%20%281%29%20%281%29.png)
 
 ### Prepare Group
 
@@ -57,11 +57,11 @@ Depending on configuration second factor authentication will be enforced:
 
 Device enrollment and provisioning will start:
 
-![](.gitbook/assets/dem7%20%281%29.png)
+![](.gitbook/assets/dem7%20%281%29%20%281%29.png)
 
 Prompt for Windows Hello setup appears \(depending on configuration\):
 
-![](.gitbook/assets/dem8%20%281%29.png)
+![](.gitbook/assets/dem8%20%281%29%20%281%29.png)
 
 After that, RealmJoin will start and install the defined set of software for the DEM account:
 

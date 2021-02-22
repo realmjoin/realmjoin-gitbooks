@@ -37,7 +37,7 @@ RealmJoin connects to the following URLs that might be considered in your firewa
 * [https://gkrealmjoin.s3.amazonaws.com/](https://gkrealmjoin.s3.amazonaws.com/)  
 * [https://login.microsoftonline.com/](https://login.microsoftonline.com/)  
 * [https://graph.microsoft.com/](https://graph.microsoft.com/)  
-* [https://realmjoinstaticcdn.azureedge.net](https://realmjoinstaticcdn.azureedge.net) (Notifier)  
+* [https://realmjoinstaticcdn.azureedge.net](https://realmjoinstaticcdn.azureedge.net) \(Notifier\)  
 
 ## Components
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## RealmJoin v4.17.5
+
+**Beta** - February 24th 2021
+
+* Deployment screen: fixes display of long names
+* App deployment: fixes rare dependency issue with certain dependency graphs 
+* Logging: cleans up some log messages
+
 ## RealmJoin v4.17.3
 
 **Release** - February 5th 2021

@@ -149,7 +149,7 @@ Support staff needs local administrative rights in-field support \(e. g. for tro
 4. When the staff has finished all tasks, he/she logs out of the account.
 5. The previously used account will be deleted after a defined period and a new one will be generated \(following to steps already described\).
 
-![](../../.gitbook/assets/rj-laps1%20%281%29%20%281%29.png)
+![](../../.gitbook/assets/rj-laps1%20%281%29.png)
 
 ### Support Administrator Account
 
@@ -175,7 +175,7 @@ The support staff visits the RealmJoin WebUI again \(depends on the **Configurat
 
 1. On the device details, he/she will see the name of the temporal administrator account. The account creation will be started when clicking on **Request**.
 
-![](../../.gitbook/assets/rj-laps2%20%281%29%20%281%29.png)
+![](../../.gitbook/assets/rj-laps2.png)
 
 {% hint style="info" %}
 After a certain time, the credentials will appear. Click the dotted password field to request the password.
@@ -186,5 +186,5 @@ After a certain time, the credentials will appear. Click the dotted password fie
 3. When the staff has finished his tasks, he/she logs out of the account.
 4. The previously used account will be deleted after a defined period
 
-![](../../.gitbook/assets/rj-laps3%20%281%29%20%281%29.png)
+![](../../.gitbook/assets/rj-laps3%20%281%29.png)
 

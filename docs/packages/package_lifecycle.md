@@ -10,7 +10,7 @@ This test users then install the application via RealmJoin in various scenarios.
 If the installation and execution of the application work as planned, it is then assigned to the Application Owner \(AO\) and undergoing the user acceptance test \(UAT\).  
 If approved, the PreRelease flag is removed as well as the test group assignment and the application can then be assigned to the user's group. This workflow is shown in the pictures below.
 
-![](../.gitbook/assets/rj-package-workflow.png)
+![](../.gitbook/assets/test_flow_1.png)
 
 ## Updating an existing application
 

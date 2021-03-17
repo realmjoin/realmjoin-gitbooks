@@ -15,7 +15,7 @@ In order to use this feature Glück & Kanja has to enable this feature in Group 
 ## Create a new Notification
 
 {% hint style="info" %}
-Only a RealmJoin Administrator can create a notification.
+Only a RealmJoin Administrator can create a notification. Additionally, a known user group may be defined as *Notification Agents* to gain notification privileges.
 {% endhint %}
 
 To create a new notification click **+ Add Notification** in the upper right corner of the notification menu.

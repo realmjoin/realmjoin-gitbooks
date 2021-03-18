@@ -6,6 +6,7 @@ During the initial installation of a tenant, RealmJoin automatically searches fo
 * RealmJoin Auditor
 * RealmJoin Supporter
 * RealmJoin Software Agent
+* RealmJoin Notification Agent
 
 {% hint style="warning" %}
 To be considered during sychronization, these groups must start with the prefix **CFG - :  
@@ -30,3 +31,6 @@ A software agent can assign software to users and can change it as well and the 
 
 A supporter can not manage RealmJoin software. A supporter has access to users, clients, and groups \(reassign primary users as well\). Furthermore, a supporter has the possibility to use AnyDesk and LAPS.
 
+#### Notification Agent   
+
+A notification agent may create, manage and assign RealmJoin notifications to all user groups. 

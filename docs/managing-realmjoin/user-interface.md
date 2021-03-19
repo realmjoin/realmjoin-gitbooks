@@ -1,6 +1,6 @@
 # User Interface
 
-![](../.gitbook/assets/rj-ui1%20%282%29.png)
+![](../.gitbook/assets/rj-ui1%20%282%29%20%281%29.png)
 
 RealmJoin uses the **user identity** and checks with it at a Cloud-Service for an **Extended Policy** and optionally for a **Secondary Identity**, then the RealmJoin Security Assessment **checks if the system is qualified** \(Encryption, Patch Level, Firewall, Anti-Virus, etc. - optionally, an Intune-Health-Check may be sufficient\). If the user's device is eligible **software- and configuration-Policy** will be applied \(Mandatory Applications, etc.\).
 

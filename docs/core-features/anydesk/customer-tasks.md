@@ -44,7 +44,7 @@ The following JSON is possible as well:
 
 After you configure your user client, AnyDesk will send you an email. This email contains your **Contract ID**, your **License ID** and your **API Password**. Send these IDs and the password to the [Glück & Kanja suppor](mailto:support@glueckkanja.com)t. If you do so, GK will integrate a AnyDesk API in your RealmJoin portal.
 
-![](../../.gitbook/assets/anydesk9%20%281%29%20%281%29.png)
+![](../../.gitbook/assets/anydesk9%20%281%29%20%281%29%20%281%29.png)
 
 ### AnyDesk Supporter Client Setup Launcher
 
@@ -61,7 +61,7 @@ Read our [App Store article](../../rj-portal/app-store.md#app-subscribtion) for 
 | Task | Image |
 | :--- | :--- |
 | 1. Open the RealmJoin tray menu |  |
-| 2. Click **Start remote session** | [![RJtraymenu](../../.gitbook/assets/anydesk1%20%281%29%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk1.png) |
+| 2. Click **Start remote session** | [![RJtraymenu](../../.gitbook/assets/anydesk1%20%281%29%20%281%29%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk1.png) |
 | 3. The AnyDesk client starts and its current address will be pushed to RealmJoin backend in the background. Also,, it's visible in the UI. | [![RJanydesksession](../../.gitbook/assets/anydesk2%20%281%29.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk2.png) |
 | 4. This client address will be displayed in RealmJoin portal at the corresponding client and the support staff can initiate the session via clicking **Connect** | [![AnyDeskConnect](../../.gitbook/assets/anydesk3.png)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/anydesk3.png) |
 | 5. This will automatically start the AnyDesk client |  |

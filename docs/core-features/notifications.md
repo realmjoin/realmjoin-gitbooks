@@ -4,7 +4,7 @@ With the help of the notification feature it is possible to notify users and cli
 
 ## Overview
 
-![](../.gitbook/assets/rj-notification-list%20%281%29.png)
+![](../.gitbook/assets/rj-notification-list%20%281%29%20%281%29%20%281%29.png)
 
 The notification menu shows all notifications that have been created. What the individual values and parameters in this overview mean is described in this article.
 
@@ -15,7 +15,7 @@ In order to use this feature Glück & Kanja has to enable this feature in Group 
 ## Create a new Notification
 
 {% hint style="info" %}
-Only a RealmJoin Administrator can create a notification. Additionally, a known user group may be defined as *Notification Agents* to gain notification privileges.
+Only a RealmJoin Administrator can create a notification. Additionally, a known user group may be defined as _Notification Agents_ to gain notification privileges.
 {% endhint %}
 
 To create a new notification click **+ Add Notification** in the upper right corner of the notification menu.
@@ -28,7 +28,7 @@ The following window appears:
 
 ### Category
 
-![](../.gitbook/assets/rj-notification-category%20%281%29.png)
+![](../.gitbook/assets/rj-notification-category%20%281%29%20%281%29%20%281%29.png)
 
 The first parameter you can choose is **Category**. Here you have the choice between **Default, Info** and **Alert**. Depending on what you choose, the color of the notification will change.
 
@@ -76,5 +76,5 @@ In the field **Title** enter the German title of your notification and in the fi
 
 Once you have created your notification, the target groups will receive a notification at the scheduled time. This notification appears on the desktop of a client.
 
-![](../.gitbook/assets/rj-notification-prompt%20%281%29.png)
+![](../.gitbook/assets/rj-notification-prompt.png)
 

@@ -268,6 +268,7 @@ Do not use the dependency and order option on mandatory packages parallel. This 
 * If all packages are assigned as mandatory, the installation sequency will be C, A, B
 {% endhint %}
 
+**NOTE**: Per defintion, packages that are entered as dependency for other packages always have to be set to *Autoupgrade:true*. 
 
 
 #### Advanced Options

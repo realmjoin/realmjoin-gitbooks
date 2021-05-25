@@ -10,23 +10,23 @@ This menu contains a list of all added software packages. Nine different attribu
 * **Upgradeability** of a package
 * Package **Version**
 * Package **Order**
-* Dependencies ****\(**Dep**\) for a package
+* Dependencies **\*\*\(**Dep\*\*\) for a package
 * Group \(**Gr**\) assignment
 * User \(**Us**\) assignment
 
 ![](../.gitbook/assets/softwarepackages_overview.png)
 
-Above the attributes, there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results. 
+Above the attributes, there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results.
 
 Next to the search box is the **Only Updates** checkbox. If you check this box, only the packages for which an update is available will be displayed. Next to it is another selection field: **Hide Organics**. If you check this box, all packages of type "Organic" will not be listed in the overview.
 
 At the lower right end of the menu, you can browse through the pages manually.
 
-### Package Assignment
+## Package Assignment
 
 If you click on a number in the **Gr** or **Us** fields, you will get a list of all RealmJoin groups and all RealmJoin users. In these lists, you can choose which groups or users should receive the software package.
 
-#### Assign a Group / User
+### Assign a Group / User
 
 Click on a group/user of your choice to assign. You can now configure the following settings:
 
@@ -47,11 +47,10 @@ Click on a group/user of your choice to assign. You can now configure the follow
         <p><b>Mandatory:</b> The Packages are non-optional
           <br />
         </p>
-        <p><b>Hidden: </b>The Packages are invisible in the RealmJoin client context
+        <p><b>Hidden:</b> The Packages are invisible in the RealmJoin client context
           menu. This might be used for mandatory software or multiple level dependencies
           when the user should only be able to install the highest hierarchy and
           the underlying packages should be installed automatically.</p>
-        <p></p>
         <p><b>Ignore in VDI</b>: If you select this setting, a package cannot be
           executed during a &apos;Virtual Desktop Infrastructure&apos; (VDI) session.</p>
       </td>
@@ -91,9 +90,7 @@ Click on a group/user of your choice to assign. You can now configure the follow
         <p>This option allows a RealmJoin administrator to define whether this package
           should be run during the initial deployment of the device or throughout
           other phases.</p>
-        <p></p>
         <p>RealmJoin offers the following phases:</p>
-        <p></p>
         <p><b>Logon</b>: The package runs after the user has logged on.</p>
         <p><b>Manual</b>: The package will run, when the user starts it via tray
           menu.</p>
@@ -104,7 +101,7 @@ Click on a group/user of your choice to assign. You can now configure the follow
   </tbody>
 </table>
 
-### Package Definition - Chocolatey Package
+## Package Definition - Chocolatey Package
 
 To view details of a package and edit it, simply click on the name of a package. The following overview \(Package Definition\) will open:
 
@@ -129,12 +126,9 @@ There are different input fields on this page. Have a look at the table below fo
     <tr>
       <td style="text-align:left"><b>GroupName</b>
       </td>
-      <td style="text-align:left">
-        <p></p>
-        <p>An optional group name may be entered. This name has no connection to
-          the user groups, instead it will be shown in the RealmJoin client context
-          menu to group the depicted applications</p>
-      </td>
+      <td style="text-align:left">An optional group name may be entered. This name has no connection to
+        the user groups, instead it will be shown in the RealmJoin client context
+        menu to group the depicted applications</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>ID</b>
@@ -148,7 +142,6 @@ There are different input fields on this page. Have a look at the table below fo
         <p>This option is used to indicate if a package needs another package to
           be installed to work properly. This may be the case for Office user setting
           packages, that require an office installation upfront.</p>
-        <p></p>
         <p>For a working correlation, the correct package name has to be provided.
           Enter the package name into the following form: [&quot;PACKAGE ID&quot;].
           <br
@@ -176,7 +169,6 @@ There are different input fields on this page. Have a look at the table below fo
           to use correct escaping. Usually arguments are in the form of:</p>
         <p><b>/Parameter1:value1 /Paramater2:&quot;value 2&quot;</b>
         </p>
-        <p></p>
         <p>Globally relevant parameters (e. g. volume license number) should be provided
           at the package addition step, while more individualized arguments (like
           language packs) are better specified during the assignment.</p>
@@ -268,10 +260,9 @@ Do not use the dependency and order option on mandatory packages parallel. This 
 * If all packages are assigned as mandatory, the installation sequency will be C, A, B
 {% endhint %}
 
-**NOTE**: Per defintion, packages that are entered as dependency for other packages always have to be set to *Autoupgrade:true*. 
+**NOTE**: Per defintion, packages that are entered as dependency for other packages always have to be set to _Autoupgrade:true_.
 
-
-#### Advanced Options
+### Advanced Options
 
 To access these options, press **Show Advanced Options** above Auto Upgrade. These are the available options:
 
@@ -307,9 +298,7 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
         <p>This option allows a RealmJoin administrator to define whether this package
           should be run during the initial deployment of the device or throughout
           other phases.</p>
-        <p></p>
         <p>RealmJoin offers the following phases:</p>
-        <p></p>
         <p><b>Logon</b>: The package runs after the user has logged on.</p>
         <p><b>Manual</b>: The package will run, when the user starts it via tray
           menu.</p>
@@ -320,21 +309,19 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
   </tbody>
 </table>
 
-#### Deployed on Active Client
+### Deployed on Active Client
 
 This tile shows a list of active clients to which the package has already been distributed.
 
-#### Paste JSON here
+### Paste JSON here
 
 Instead of entering the name, version, order, args etc. manually, you can insert the JSON code of the package. You can find this code in the corresponding package repository.
 
-### Package Definition - Craft Package
+## Package Definition - Craft Package
 
 To view details of a package and edit it, simply click on the name of a package. The following overview \(Package Definition\) will open:
 
 ![](../.gitbook/assets/softwarepackages_details2.png)
-
-
 
 There are different input fields on this page. Have a look at the table below for more details
 
@@ -355,12 +342,9 @@ There are different input fields on this page. Have a look at the table below fo
     <tr>
       <td style="text-align:left"><b>GroupName</b>
       </td>
-      <td style="text-align:left">
-        <p></p>
-        <p>An optional group name may be entered. This name has no connection to
-          the user groups, instead, it will be shown in the RealmJoin client context
-          menu to group the depicted applications</p>
-      </td>
+      <td style="text-align:left">An optional group name may be entered. This name has no connection to
+        the user groups, instead, it will be shown in the RealmJoin client context
+        menu to group the depicted applications</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>ID</b>
@@ -374,7 +358,6 @@ There are different input fields on this page. Have a look at the table below fo
         <p>This option is used to indicate if a package needs another package to
           be installed to work properly. This may be the case for Office user setting
           packages, which requires an office installation upfront.</p>
-        <p></p>
         <p>For a working correlation, the correct package name has to be provided.
           Enter the package name into the following form: [&quot;PACKAGE ID&quot;].
           <br
@@ -402,7 +385,6 @@ There are different input fields on this page. Have a look at the table below fo
           to use correct escaping. Normally, arguments are in the form of:</p>
         <p><b>/Parameter1:value1 /Paramater2:&quot;value 2&quot;</b>
         </p>
-        <p></p>
         <p>Globally relevant parameters (e. g. volume license number) should be provided
           at the package addition step, while more individualized arguments (like
           language packs) are better specified during the assignment.</p>
@@ -426,7 +408,7 @@ There are different input fields on this page. Have a look at the table below fo
     <tr>
       <td style="text-align:left"><b>Scope</b>
       </td>
-      <td style="text-align:left">Craft packages might be installed in the <b>user</b> or <b>system </b>scope</td>
+      <td style="text-align:left">Craft packages might be installed in the <b>user</b> or <b>system</b> scope</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>Availability</b>
@@ -493,8 +475,8 @@ Under normal circumstances, it is highly advised to prevent a normal user for ha
 
 To change package Name or ID is not a proper way to edit assigned packages. Add a new package instead. Delete the obsolete one.
 
-Do not use the dependency and order option on mandatory packages parallel. This might prevent the back-end from correctly resolve the order installation: During the initial rollout, or any rollout of mandatory packages after a login for this purpose, RealmJoin in the first step resolves all dependencies of the packages. If there are any, all packages which are listed as a dependency for a different package are installed. In the second step, the original packages are installed. This may cancel out any order numbers.  
-  
+Do not use the dependency and order option on mandatory packages parallel. This might prevent the back-end from correctly resolve the order installation: During the initial rollout, or any rollout of mandatory packages after a login for this purpose, RealmJoin in the first step resolves all dependencies of the packages. If there are any, all packages which are listed as a dependency for a different package are installed. In the second step, the original packages are installed. This may cancel out any order numbers.
+
 **For example:**
 
 * Package A, order 1
@@ -502,7 +484,7 @@ Do not use the dependency and order option on mandatory packages parallel. This 
 * If all packages are assigned as mandatory, the installation sequence will be C, A, B
 {% endhint %}
 
-#### Advanced Options
+### Advanced Options
 
 To access these options, press **Show Advanced Options** above Auto Upgrade. These are the available options:
 
@@ -538,9 +520,7 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
         <p>This options allows a RealmJoin administrator to define whether this package
           should be run during the initial deployment of the device or throughout
           other phases.</p>
-        <p></p>
         <p>RealmJoin offers the following phases:</p>
-        <p></p>
         <p><b>Logon</b>: The package runs after the user has logged on.</p>
         <p><b>Manual</b>: The package will run, when the user starts it via tray
           menu.</p>
@@ -551,27 +531,27 @@ To access these options, press **Show Advanced Options** above Auto Upgrade. The
   </tbody>
 </table>
 
-#### Deployed on Active Client
+### Deployed on Active Client
 
 This tile shows a list of active clients to which the package has already been distributed.
 
-#### Paste JSON here
+### Paste JSON here
 
 Instead of entering the name, version, order, args etc. manually, you can insert the JSON code of the package. You can find this code in the corresponding package repository.
 
-#### Technical Help
+### Technical Help
 
 In this tile, you will find technical help and information if you need further support.
 
-#### Settings
+### Settings
 
-### Add a Software Package
+## Add a Software Package
 
 To add a Choco or Craft package, in the Software Packages overview, click one of the two green buttons in the upper right corner: +Add Choco or +Add Craft
 
 You get an input mask \(like the one from Package Definition, but it is empty\).
 
-### Duplicate a Package
+## Duplicate a Package
 
 Whenever a package with identical content is needed multiple times for the same user or group, the RealmJoin Portal offers the possibility to use the same package multiple times while preventing conflicting installations.
 
@@ -580,6 +560,4 @@ Whenever a package with identical content is needed multiple times for the same 
 To make the ID unique, a hash is written behind the ID and provided with a meaningful word/index, like **package-id\#Value**
 
 ![](../.gitbook/assets/rj-duplicate-packages.png)
-
-### 
 

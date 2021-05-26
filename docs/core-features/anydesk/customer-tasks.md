@@ -42,7 +42,7 @@ The following JSON is possible as well:
 
 ## Back-End Integration
 
-After you configure your user client, AnyDesk will send you an email. This email contains your **Contract ID**, your **License ID** and your **API Password**. Send these IDs and the password to the [Glück & Kanja suppor](mailto:support@glueckkanja.com)t. If you do so, GK will integrate a AnyDesk API in your RealmJoin portal.
+After you configure your user client, you will need to contact AnyDesk. Request an email containing your **Contract ID**, your **License ID** and your **API Password**. Send these IDs and the password to the [Glück & Kanja suppor](mailto:support@glueckkanja.com)t. If you do so, GK will integrate a AnyDesk API in your RealmJoin portal.
 
 ![](../../.gitbook/assets/anydesk9%20%281%29%20%281%29%20%281%29%20%281%29.png)
 

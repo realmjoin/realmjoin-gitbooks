@@ -559,5 +559,5 @@ Whenever a package with identical content is needed multiple times for the same 
 
 To make the ID unique, a hash is written behind the ID and provided with a meaningful word/index, like **package-id\#Value**
 
-![](../.gitbook/assets/rj-duplicate-packages.png)
+![](../.gitbook/assets/rj-duplicate-packages%20%281%29.png)
 

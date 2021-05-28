@@ -4,7 +4,7 @@ With the help of the notification feature it is possible to notify users and cli
 
 ## Overview
 
-![](../.gitbook/assets/rj-notification-list%20%281%29%20%281%29%20%282%29%20%281%29.png)
+![](../.gitbook/assets/rj-notification-list%20%281%29%20%281%29%20%282%29%20%282%29%20%281%29.png)
 
 The notification menu shows all notifications that have been created. What the individual values and parameters in this overview mean is described in this article.
 
@@ -24,11 +24,11 @@ To create a new notification click **+ Add Notification** in the upper right cor
 
 The following window appears:
 
-![](../.gitbook/assets/rj-notification-add-notification2%20%282%29%20%281%29.png)
+![](../.gitbook/assets/rj-notification-add-notification2%20%282%29%20%282%29%20%281%29.png)
 
 ### Category
 
-![](../.gitbook/assets/rj-notification-category%20%281%29%20%281%29%20%282%29%20%281%29.png)
+![](../.gitbook/assets/rj-notification-category%20%281%29%20%281%29%20%282%29%20%282%29%20%281%29.png)
 
 The first parameter you can choose is **Category**. Here you have the choice between **Default, Info** and **Alert**. Depending on what you choose, the color of the notification will change.
 
@@ -52,7 +52,7 @@ To choose a target, click **Select groups** under **Target**. A search box appea
 
 To choose groups to be excluded from notifications, click **Select groups** under **Ignore**. A search box appears where you can search for groups.
 
-![](../.gitbook/assets/rj-notification-ignore%20%282%29%20%281%29.png)
+![](../.gitbook/assets/rj-notification-ignore%20%282%29%20%282%29%20%281%29.png)
 
 In the following example, one group was selected as **Target** and one as **Ignore**:
 
@@ -76,5 +76,5 @@ In the field **Title** enter the German title of your notification and in the fi
 
 Once you have created your notification, the target groups will receive a notification at the scheduled time. This notification appears on the desktop of a client.
 
-![](../.gitbook/assets/rj-notification-prompt%20%282%29.png)
+![](../.gitbook/assets/rj-notification-prompt%20%282%29%20%282%29.png)
 

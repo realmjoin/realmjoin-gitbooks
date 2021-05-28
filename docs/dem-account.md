@@ -57,7 +57,7 @@ Depending on configuration second factor authentication will be enforced:
 
 Device enrollment and provisioning will start:
 
-![](.gitbook/assets/dem7%20%281%29%20%281%29%20%281%29%20%281%29.png)
+![](.gitbook/assets/dem7%20%281%29%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
 Prompt for Windows Hello setup appears \(depending on configuration\):
 

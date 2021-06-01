@@ -59,7 +59,9 @@ There are typically three reasons to uninstall software:
 * The software needs to be removed because of \[choose your reason\]. In this situation, a dedicated remove-software-package can be created.
 * There is a newer version of the software. This is not a reason to use an uninstall command but instead, it is a common practice for every software package used by RealmJoin to 'clean' any precursory binaries or settings.
 
-All items above describe special usecases and should be solved in cooperation with Glück & Kanja Consulting AG.Should I use the applications internal auto-updater or not?
+All items above describe special usecases and should be solved in cooperation with Glück & Kanja Consulting AG.
+
+## Should I use the applications internal auto-updater or not?
 
 This highly depends on the application itself as well as your internal processes. For some applications, that might be prone to attacking and are very well maintained by the vendor - like Google Chrome - we recommend to use the applications internal update. For other software, it might be more useful to include a regular update via RealmJoin into your processes.
 

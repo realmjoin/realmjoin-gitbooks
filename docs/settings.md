@@ -196,18 +196,19 @@ Value
 
 ```text
 {
-"Admin": [
-    "5c9e9c23-7b14-4d97-90d0-4841f2d4b520",
-    "4508f67c-d85e-4c15-82f1-ec5e4adb7c6c"
-    ],
-"Deny":[
-    "a5baa9d5-5545-41d7-aea8-19058b29b182"
-    ]
+  "Admin": [
+    "11-cf35-49dd-a862-123123",
+    "11-2ec2-47ee-8cb8-123123"
+  ],
+  "Supporter": [
+    "23-cf35-49dd-a862-231"
+  ],
+  "Deny": []
 }
 ```
 
 {% hint style="warning" %}
-Attach Restrict. \*keys to target user group
+Attach Restrict. \*keys to target user group. This list is inclusive: Only those Admin and Support groups listed are allowed to use LAPS. Additionally usergroups can be excluded.
 {% endhint %}
 
 ### Various Toggles

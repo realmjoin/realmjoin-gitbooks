@@ -127,3 +127,9 @@ Yes. To do so, the target has to be set to the process and optional args can be 
 
 See chapter [Settings and Policies]() for further information.
 
+## How do you secure the communication between service and agent?
+
+The communication between the RealmJoin Service \(Backend\) and the RealmJoin Agent \(Client\) is secured with Transport Layer Security \(TLS\) 1.2 or higher.
+
+Additionally some content \(e.g. software packages\) is signed by the RealmJoin Service, so that the RealmJoin Agent can ensure, that data was not changed during transport.
+

@@ -30,6 +30,7 @@ For **BranchCache** to be effective the clients need to be able to communicate d
 RealmJoin connects to the following URLs that might be considered in your firewall settings:
 
 * [https://cdn.realmjoin.com/](https://cdn.realmjoin.com/)  
+* [https://x1.c.lencr.org/](https://x1.c.lencr.org/)  
 * [https://realmjoin-backend.azurewebsites.net/](https://realmjoin-backend.azurewebsites.net/)  
 * [https://realmjoin-backend-staging.azurewebsites.net/](https://realmjoin-backend-staging.azurewebsites.net/)  
 * [https://packages.gkdatacenter.net/](https://packages.gkdatacenter.net/)  

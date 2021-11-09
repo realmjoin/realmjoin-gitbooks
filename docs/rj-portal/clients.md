@@ -23,6 +23,7 @@ In order to view detailed information about a client and to use other functions 
 ![](../.gitbook/assets/client_tab_details.png)
 
 This submenu is divided into different tiles. They all show various information. For example, the device IDs for RealmJoin, Azure, and Intune. You will get a brief outline of the device hardware, the primary user, local admin management \([LAPS article]()\), advanced logging, and delivery optimization.
+Additionally, this pane does allow users with supporter permissions or higher to remotely collect full RJ log files of the client. After the upload, the files are available for all supporters. 
 
 ### States
 

@@ -8,10 +8,10 @@ Before you can deploy a package to the RealmJoin app store you have to edit your
 
 ### `.gitlab-ci.yml`
 
-The `.gitlab-ci.yml`file contains the build and deploy information. In the **build** stage, the `build-deploy.ps1` helper script is called, while the argument `-build` indicates the **build** stage and `-craft` indicates the package type Craft.  
+The `.gitlab-ci.yml`file contains the build and deploy information. In the **build** stage, the `build-deploy.ps1` helper script is called, while the argument `-build` indicates the **build** stage and `-craft` indicates the package type Craft.\
 In the **deploy** stage, the `build-deploy.ps1` helper script is called, while the argument `-deploy` indicates the **deploy** stage and `-craft` indicates the package type Craft.
 
-There are 6 different sample files \(might be already deleted when using the Jumpstarter script and selecting a specific package type\), while those starting with `Sample1*` are considered outdated. Therefore, select and edit the most fitting `Sample0*.gitlab-ci.yml` file and delete the other ones. You might need to adjust the content. Remove the prefix of the filename and save it as `.gitlab-ci.yml`.
+There are 6 different sample files (might be already deleted when using the Jumpstarter script and selecting a specific package type), while those starting with `Sample1*` are considered outdated. Therefore, select and edit the most fitting `Sample0*.gitlab-ci.yml` file and delete the other ones. You might need to adjust the content. Remove the prefix of the filename and save it as `.gitlab-ci.yml`.
 
 ### Delete non-craft items
 
@@ -23,7 +23,7 @@ You can either use a cmd script or a PowerShell script for the main installation
 
 Customize either `rj_install.cmd` or `rj_install.ps1` in the root folder and delete the other one. This file is the main installation script. The first two lines contain the RealmJoin craft package ID and version.
 
-![](../.gitbook/assets/rj-craftpackage-header.png)
+![](<../.gitbook/assets/rj-craftpackage-header (1).png>)
 
 This script may contain various modifications and adjustments, for example editing or creating registry keys. It is also possible to call other scripts or executable files from inside this script.
 
@@ -43,12 +43,12 @@ These are the needed files:
 
 * `package-description.md`: Short description of the package.
 * `package-icon.png`: The package icon. Must be .png, preferably high-res and quadratic.
-* `package-info.json`: Contains information for the app store, mainly categories and package settings \(e. g. `autoUpgrade`, `scope`\)
+* `package-info.json`: Contains information for the app store, mainly categories and package settings (e. g. `autoUpgrade`, `scope`)
 * `package-technicalhelp.md`: Explanation of possible package installation arguments and further noteworthy information, like package scope setting.
 
-The following screenshot shows a Google Chrome package in the RealmJoin app store \(VLC Player has no Technical Help content, therefore we use Google Chrome in this example.\). You can see the Google Chrome icon \(`package-icon.png`\), a short description of Google Chrome \(`package-description.md`\) and you can further technical information \(`package-technicalhelp.md`\). You do not see `package-info.json` because it works in the background.
+The following screenshot shows a Google Chrome package in the RealmJoin app store (VLC Player has no Technical Help content, therefore we use Google Chrome in this example.). You can see the Google Chrome icon (`package-icon.png`), a short description of Google Chrome (`package-description.md`) and you can further technical information (`package-technicalhelp.md`). You do not see `package-info.json` because it works in the background.
 
-![](../.gitbook/assets/rj-store-info.png)
+![](<../.gitbook/assets/rj-store-info (1).png>)
 
 ## Commit and Upload
 
@@ -60,11 +60,11 @@ Commit your changes and push the project to GitLab.
 2. Navigate to **Pipelines**, which can be found under the **CI / CD** section on the left side.
 3. For each commit you will see two stages:
    * The first one, **build**, will start automatically
-   * After **build** has finished \(green checkmark\), run the second one, **deploy**. To do that, first click the grey icon next to the green checkmark, then click the play button.
+   * After **build** has finished (green checkmark), run the second one, **deploy**. To do that, first click the grey icon next to the green checkmark, then click the play button.
 
-![](../.gitbook/assets/rj-pipeline-choco-deploy.png)
+![](<../.gitbook/assets/rj-pipeline-choco-deploy (1).png>)
 
-![](../.gitbook/assets/rj-package-choco-deploy.png)
+![](<../.gitbook/assets/rj-package-choco-deploy (1).png>)
 
 After the successful deployment, the package can be found in the Chocolatey library and can be added to the RealmJoin backend. See chapter [Managing RealmJoin](../managing-realmjoin/) for information on assigning packages.
 
@@ -72,17 +72,16 @@ After the successful deployment, the package can be found in the Chocolatey libr
 
 To utilize parameters in Craft packages, which have been entered in the optional [args](http://docs.realmjoin.com/managing-realmjoin.html#add-packages) text field, you need to the include the following cmdlets in your `rj_install.ps1` script:
 
-```text
+```
 Import-Module (Get-ItemPropertyValue -Path "Registry::HKLM\SOFTWARE\RealmJoin\Variables" -Name RealmjoinCraftSupportModulePath)
 Import-RealmjoinPackageParameters
 ```
 
 The RealmJoin Craft extension now parses the argument string and automatically creates and fills the variables with the following pattern:
 
-| Arg name | Variable name |
-| :--- | :--- |
-| `/Key:xx-yy-zz` | `$packParamKey` \(with value `xx-yy-zz`\) |
-| `/Language:EN` | `$packParamLanguage` \(with value `EN`\) |
+| Arg name        | Variable name                           |
+| --------------- | --------------------------------------- |
+| `/Key:xx-yy-zz` | `$packParamKey` (with value `xx-yy-zz`) |
+| `/Language:EN`  | `$packParamLanguage` (with value `EN`)  |
 
 Those variables may now be used for any purposes within the `rj_install.ps1` script.
-

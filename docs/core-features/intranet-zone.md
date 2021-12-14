@@ -2,17 +2,17 @@
 
 ## Intranet Zone
 
-The Site may be added to the **Intranet Zone** \(in Internet Options\) by specifying a setting with the key `Policies.TrustedSites` and an array of URLs. These URLs are parsed by RealmJoin and written to a registry key called **ZoneMap**.
+The Site may be added to the **Intranet Zone** (in Internet Options) by specifying a setting with the key `Policies.TrustedSites` and an array of URLs. These URLs are parsed by RealmJoin and written to a registry key called **ZoneMap**.
 
 One might specify the following JSON array:
 
-```text
+```
 ["file://example.com", "https://foo.example.com"]
 ```
 
 which will result in the following rules:
 
-![Policies.TrustedSites](../.gitbook/assets/rj-policies-trustedsites.png)
+![Policies.TrustedSites](<../.gitbook/assets/rj-policies-trustedsites (1).png>)
 
 ### Caveats
 
@@ -27,4 +27,3 @@ Many customers have extensive Intranet Zone list. Clean it up! Investigate wheth
 
 * Add a site using `https` protocol if it uses Integrated Windows Authentication or other legacy features like ActiveX.
 * Add a server using `file` protocol if it is accessed using SMB.
-

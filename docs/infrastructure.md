@@ -4,13 +4,13 @@
 
 ### Avoid Proxy
 
-Initial deployment needs direct Internet access. No proxy would be ideal but a transparent proxy should work fine \(if truly transparent\). If there is a proxy unavoidable as a minimum requirement the following services/addresses need to be directly accessible \(not recommended, list might not be exhaustive\):
+Initial deployment needs direct Internet access. No proxy would be ideal but a transparent proxy should work fine (if truly transparent). If there is a proxy unavoidable as a minimum requirement the following services/addresses need to be directly accessible (not recommended, list might not be exhaustive):
 
 For a list of the corresponding IP ranges click the following link:
 
 [Microsoft Azure Datacenter IP Ranges](https://www.microsoft.com/en-us/download/details.aspx?id=41653)
 
-This file contains the compute IP address ranges \(including SQL ranges\) used by the Microsoft Azure Datacenters. A new xml file will be uploaded every Wednesday \(Pacific Time\) with the new planned IP address ranges. New IP address ranges will be effective on the following Monday \(Pacific Time\).  
+This file contains the compute IP address ranges (including SQL ranges) used by the Microsoft Azure Datacenters. A new xml file will be uploaded every Wednesday (Pacific Time) with the new planned IP address ranges. New IP address ranges will be effective on the following Monday (Pacific Time).\
 Download the new xml file and perform the necessary changes on your site before Monday.
 
 [Office 365 URLs and IP address ranges](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
@@ -18,7 +18,7 @@ Download the new xml file and perform the necessary changes on your site before 
 This article links a file that contains the compute IP address ranges that you should include in your outbound allow lists to ensure your computers can successfully use Office 365.
 
 {% hint style="info" %}
-IP addresses filtering alone is not a complete solution due to dependencies on internet-based services such as Domain Name Services \(DNS\), Content Delivery Networks \(CDNs\), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services, are dynamically assigned and can change at any time.
+IP addresses filtering alone is not a complete solution due to dependencies on internet-based services such as Domain Name Services (DNS), Content Delivery Networks (CDNs), Certificate Revocation Lists and other third party or dynamic services. These dependencies include dependencies on other Microsoft services such as the Azure Content Delivery Network and will result in network traces or firewall logs indicating connections to IP addresses owned by third parties or Microsoft but not listed on this page. These unlisted IP addresses, whether from third party or Microsoft owned CDN and DNS services, are dynamically assigned and can change at any time.
 {% endhint %}
 
 ### Avoid VLans / WLAN- and Port-Isolation
@@ -29,16 +29,16 @@ For **BranchCache** to be effective the clients need to be able to communicate d
 
 RealmJoin connects to the following URLs that might be considered in your firewall settings:
 
-* [https://cdn.realmjoin.com/](https://cdn.realmjoin.com/)  
-* [https://x1.c.lencr.org/](https://x1.c.lencr.org/)  
-* [https://realmjoin-backend.azurewebsites.net/](https://realmjoin-backend.azurewebsites.net/)  
-* [https://realmjoin-backend-staging.azurewebsites.net/](https://realmjoin-backend-staging.azurewebsites.net/)  
-* [https://packages.gkdatacenter.net/](https://packages.gkdatacenter.net/)  
-* [https://enterpriseregistration.windows.net/](https://enterpriseregistration.windows.net/)  
-* [https://gkrealmjoin.s3.amazonaws.com/](https://gkrealmjoin.s3.amazonaws.com/)  
-* [https://login.microsoftonline.com/](https://login.microsoftonline.com/)  
-* [https://graph.microsoft.com/](https://graph.microsoft.com/)  
-* [https://realmjoinstaticcdn.azureedge.net](https://realmjoinstaticcdn.azureedge.net) \(Notifier\)  
+* [https://cdn.realmjoin.com/](https://cdn.realmjoin.com)
+* [https://x1.c.lencr.org/](https://x1.c.lencr.org)
+* [https://realmjoin-backend.azurewebsites.net/](https://realmjoin-backend.azurewebsites.net)
+* [https://realmjoin-backend-staging.azurewebsites.net/](https://realmjoin-backend-staging.azurewebsites.net)
+* [https://packages.gkdatacenter.net/](https://packages.gkdatacenter.net)
+* [https://enterpriseregistration.windows.net/](https://enterpriseregistration.windows.net)
+* [https://gkrealmjoin.s3.amazonaws.com/](https://gkrealmjoin.s3.amazonaws.com)
+* [https://login.microsoftonline.com/](https://login.microsoftonline.com)
+* [https://graph.microsoft.com/](https://graph.microsoft.com)
+* [https://realmjoinstaticcdn.azureedge.net](https://realmjoinstaticcdn.azureedge.net) (Notifier)
 
 ## Components
 
@@ -56,31 +56,30 @@ The RealmJoin Publishing Server has to provide the chunk identifiers and therefo
 
 #### Hosting
 
-The RealmJoin back-end is an Azure web application using an Azure SQL database and the available Azure services.  
+The RealmJoin back-end is an Azure web application using an Azure SQL database and the available Azure services.\
 The back-end is hosted on an Azure tenant exclusively used for RealmJoin. All customer realms within this tenant are isolated from each other.
 
 #### RealmJoin App Publishing Endpoint
 
-To provide the **BranchCache** mechanism, the endpoint has to provide the chunk identifiers, a feature only provided by **Microsoft Internet Information Services** \(IIS\) servers. To deliver the maximum scalability the Publishing Endpoint is distributed on multiple Azure nodes hosting Windows 2016 IIS sharing a redundant Azure blob storage.
+To provide the **BranchCache** mechanism, the endpoint has to provide the chunk identifiers, a feature only provided by **Microsoft Internet Information Services** (IIS) servers. To deliver the maximum scalability the Publishing Endpoint is distributed on multiple Azure nodes hosting Windows 2016 IIS sharing a redundant Azure blob storage.
 
 #### Web Interface
 
-The web interface can be reached via the [realmjoin portal](https://realmjoin-web.azurewebsites.net/) and is in detailed explained in the chapter [RealmJoin Portal](rj-portal/). After a logging with the provided credentials, the administrator can manage the package distribution in his tenant and access extensive information.
+The web interface can be reached via the [realmjoin portal](https://realmjoin-web.azurewebsites.net) and is in detailed explained in the chapter [RealmJoin Portal](rj-portal/). After a logging with the provided credentials, the administrator can manage the package distribution in his tenant and access extensive information.
 
 ## Security Features
 
 ### Client authentication
 
-The RealmJoin client authenticates itself against the Azure AD via a secured HTTPS connection, receiving an identification token. With this token the client now can prove its identity to the Microsoft Graph API and the RealmJoin back-end.  
+The RealmJoin client authenticates itself against the Azure AD via a secured HTTPS connection, receiving an identification token. With this token the client now can prove its identity to the Microsoft Graph API and the RealmJoin back-end.\
 After identifying the client, the back-ends response to the client is RSA signed. Using the servers public key, the RealmJoin client and service can verify the identity of the back-end server response.
 
 ### Signed MSI
 
-The RealmJoin.MSI is SHA2 \(256 bit\) signed by GK and therefore recognized by Windows as safe to install.
+The RealmJoin.MSI is SHA2 (256 bit) signed by GK and therefore recognized by Windows as safe to install.
 
-![](.gitbook/assets/rj-msi-sig.png)
+![](<.gitbook/assets/rj-msi-sig (1).png>)
 
 ### Package Hashes
 
-During the package creation process, packages are signed with SHA2 \(256 bit\) hashes \(see chapter [Chocolatey Package](packages/create-choco-package.md#create-sha256-hash)\). Older SHA1 signed packages will still be accepted by RealmJoin. For more information on SHA2 encryption, check [the Wikipedia article on SHA2](https://en.wikipedia.org/wiki/SHA-2).
-
+During the package creation process, packages are signed with SHA2 (256 bit) hashes (see chapter [Chocolatey Package](packages/create-choco-package.md#create-sha256-hash)). Older SHA1 signed packages will still be accepted by RealmJoin. For more information on SHA2 encryption, check [the Wikipedia article on SHA2](https://en.wikipedia.org/wiki/SHA-2).

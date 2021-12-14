@@ -1,6 +1,6 @@
 # Software Packages
 
-![](../.gitbook/assets/rj-ac-packagesicon.png)
+![](<../.gitbook/assets/rj-ac-packagesicon (1).png>)
 
 This menu contains a list of all added software packages. Nine different attributes are displayed in this menu:
 
@@ -10,13 +10,13 @@ This menu contains a list of all added software packages. Nine different attribu
 * **Upgradeability** of a package
 * Package **Version**
 * Package **Order**
-* Dependencies **\*\*\(**Dep\*\*\) for a package
-* Group \(**Gr**\) assignment
-* User \(**Us**\) assignment
+* Dependencies \*\*\*\*(\*\*Dep\*\*) for a package
+* Group (**Gr**) assignment
+* User (**Us**) assignment
 
-![](../.gitbook/assets/softwarepackages_overview.png)
+![](<../.gitbook/assets/softwarepackages\_overview (1).png>)
 
-Above the attributes, there is a search bar \(**Search for ...**\). This search compares the input made with each of the attributes and returns suitable results.
+Above the attributes, there is a search bar (**Search for ...**). This search compares the input made with each of the attributes and returns suitable results.
 
 Next to the search box is the **Only Updates** checkbox. If you check this box, only the packages for which an update is available will be displayed. Next to it is another selection field: **Hide Organics**. If you check this box, all packages of type "Organic" will not be listed in the overview.
 
@@ -30,221 +30,38 @@ If you click on a number in the **Gr** or **Us** fields, you will get a list of 
 
 Click on a group/user of your choice to assign. You can now configure the following settings:
 
-![](../.gitbook/assets/package_assignment_1.png)
+![](<../.gitbook/assets/package\_assignment\_1 (1).png>)
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Setting</th>
-      <th style="text-align:left">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>Availability</b>
-      </td>
-      <td style="text-align:left">
-        <p><b>Mandatory:</b> The Packages are non-optional
-          <br />
-        </p>
-        <p><b>Hidden:</b> The Packages are invisible in the RealmJoin client context
-          menu. This might be used for mandatory software or multiple level dependencies
-          when the user should only be able to install the highest hierarchy and
-          the underlying packages should be installed automatically.</p>
-        <p><b>Ignore in VDI</b>: If you select this setting, a package cannot be
-          executed during a &apos;Virtual Desktop Infrastructure&apos; (VDI) session.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Deployment Rate</b>
-      </td>
-      <td style="text-align:left">Select the deployment rate. You have the choice between Slow, Fast and
-        Tomorrow.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Auto Upgrade</b>
-      </td>
-      <td style="text-align:left">With a tick at <b>Enable</b> you activate the automatic upgrade function</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Args</b>
-      </td>
-      <td style="text-align:left">
-        <p>If the packaged software has to be installed with arguments. Make sure
-          to use correct escaping. Usually arguments are in the form of:</p>
-        <p><b>/Parameter1:value1 /Paramater2:&quot;value 2&quot;</b>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Main Script Restrictions - Users</b>
-      </td>
-      <td style="text-align:left">This option allows a RealmJoin administrator to define whether this package
-        should run for just the primary device user/group (default) or also/exclusively
-        for secondary users.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Main Script Restrictions - Phases</b>
-      </td>
-      <td style="text-align:left">
-        <p>This option allows a RealmJoin administrator to define whether this package
-          should be run during the initial deployment of the device or throughout
-          other phases.</p>
-        <p>RealmJoin offers the following phases:</p>
-        <p><b>Logon</b>: The package runs after the user has logged on.</p>
-        <p><b>Manual</b>: The package will run, when the user starts it via tray
-          menu.</p>
-        <p><b>Initial</b>: The package only runs during the deployment.</p>
-        <p><b>Normal</b>: Neither Logon, nor Manual, nor Initial. A background deployment.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Setting                               | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Availability**                      | <p><strong>Mandatory:</strong> The Packages are non-optional<br></p><p><strong>Hidden:</strong> The Packages are invisible in the RealmJoin client context menu. This might be used for mandatory software or multiple level dependencies when the user should only be able to install the highest hierarchy and the underlying packages should be installed automatically.</p><p><strong>Ignore in VDI</strong>: If you select this setting, a package cannot be executed during a 'Virtual Desktop Infrastructure' (VDI) session.</p>                                     |
+| **Deployment Rate**                   | Select the deployment rate. You have the choice between Slow, Fast and Tomorrow.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Auto Upgrade**                      | With a tick at **Enable** you activate the automatic upgrade function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Args**                              | <p>If the packaged software has to be installed with arguments. Make sure to use correct escaping. Usually arguments are in the form of:</p><p><strong>/Parameter1:value1 /Paramater2:"value 2"</strong></p>                                                                                                                                                                                                                                                                                                                                                                |
+| **Main Script Restrictions - Users**  | This option allows a RealmJoin administrator to define whether this package should run for just the primary device user/group (default) or also/exclusively for secondary users.                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Main Script Restrictions - Phases** | <p>This option allows a RealmJoin administrator to define whether this package should be run during the initial deployment of the device or throughout other phases.</p><p>RealmJoin offers the following phases:</p><p><strong>Logon</strong>: The package runs after the user has logged on.</p><p><strong>Manual</strong>: The package will run, when the user starts it via tray menu.</p><p><strong>Initial</strong>: The package only runs during the deployment.</p><p><strong>Normal</strong>: Neither Logon, nor Manual, nor Initial. A background deployment.</p> |
 
 ## Package Definition - Chocolatey Package
 
-To view details of a package and edit it, simply click on the name of a package. The following overview \(Package Definition\) will open:
+To view details of a package and edit it, simply click on the name of a package. The following overview (Package Definition) will open:
 
-![](../.gitbook/assets/softwarepackages_details.png)
+![](<../.gitbook/assets/softwarepackages\_details (1).png>)
 
 There are different input fields on this page. Have a look at the table below for more details
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Input field</th>
-      <th style="text-align:left">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>Name</b>
-      </td>
-      <td style="text-align:left">The package is listed under this name of the client and the RealmJoin
-        Admin Console.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>GroupName</b>
-      </td>
-      <td style="text-align:left">An optional group name may be entered. This name has no connection to
-        the user groups, instead it will be shown in the RealmJoin client context
-        menu to group the depicted applications</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>ID</b>
-      </td>
-      <td style="text-align:left">The RealmJoin internal name of the package, for example: realmjoin-core.extension</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Depends on</b>
-      </td>
-      <td style="text-align:left">
-        <p>This option is used to indicate if a package needs another package to
-          be installed to work properly. This may be the case for Office user setting
-          packages, that require an office installation upfront.</p>
-        <p>For a working correlation, the correct package name has to be provided.
-          Enter the package name into the following form: [&quot;PACKAGE ID&quot;].
-          <br
-          />
-          <br />If two or more packets need to be entered, separate the names with a comma.
-          For example: [&quot;PACKAGE ID1&quot;,&quot;PACKAGE ID2&quot;]</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Order</b>
-      </td>
-      <td style="text-align:left">The order number is an Int32 type figure and provides RealmJoin with a
-        basic structure to determine the package installation sequence. The lower
-        the number the higher the importance, therefore a 10 will be installed
-        before 100.
-        <br />
-        <br />It has to be noted that a 0 is translated to no sequence given and the
-        order number is only taken into account at the first rollout.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Args</b>
-      </td>
-      <td style="text-align:left">
-        <p>If the packaged software has to be installed with arguments. Make sure
-          to use correct escaping. Usually arguments are in the form of:</p>
-        <p><b>/Parameter1:value1 /Paramater2:&quot;value 2&quot;</b>
-        </p>
-        <p>Globally relevant parameters (e. g. volume license number) should be provided
-          at the package addition step, while more individualized arguments (like
-          language packs) are better specified during the assignment.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Version</b>
-      </td>
-      <td style="text-align:left">The version of the package to be installed</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Chocolatey Package ID</b>
-      </td>
-      <td style="text-align:left">Exact Chocolatey repository name of the package to be installed. The combination
-        of name and version is used to ensure that the correct package is installed.
-        Usually, similar to the internal RealmJoin ID.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Availability</b>
-      </td>
-      <td style="text-align:left">
-        <ul>
-          <li><b>Allow Reinstall</b>: This option allows the client user to reinstall
-            and therefore override their current installation of the package.
-            <br />
-          </li>
-          <li><b>Allow Background Install</b>: The software package may be installed
-            outside of the black screen installation, thus not blocking the access
-            to the client&apos;s desktop and software.
-            <br /><b>Do not use this option for regular packages without discussion with your RealmJoin consultant!</b>
-            <br
-            />
-          </li>
-          <li>
-            <p><b>Pre-Release:</b> The pre-release flag has two distinctive features within
-              RealmJoin. It allows:</p>
-            <p>1. To add a package with ID and version similar to another existing package
-              in the portal and</p>
-            <p>2. If assigned to a group or user, it overwrites all other packages with
-              the same ID assigned to the group user.
-              <br />
-              <br />Those features are usually used for the testing of new packages or updates
-              of an existing one: The test-groups or test-users get the pre-release version
-              of a package assigned during the testing.
-              <br />
-              <br />The pre-release flagged package is visually highlighted in the portal&apos;s
-              package list with a lightning symbol behind the name.
-              <br />
-            </p>
-          </li>
-          <li><b>Require Intune Compliance</b>: The package is installed as soon as
-            RealmJoin is able to verify via the GraphAPI that the machine is considered
-            compliant. This might stop the rollout for some time. The installation
-            of the package and therefore all other mandatory packages with higher-order
-            numbers that are queued to be installed afterwards is resumed when the
-            client is compliant.
-            <br />
-          </li>
-          <li><b>Ignore in VDI</b>: If you select this setting, a package cannot be
-            executed during a &apos;Virtual Desktop Infrastructure&apos; (VDI) session.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Deployment Rate</b>
-      </td>
-      <td style="text-align:left">Select the deployment rate. You have the choice between Slow, Fast and
-        Tomorrow</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Auto Upgrade</b>
-      </td>
-      <td style="text-align:left">With a tick at <b>Enable</b> you activate the automatic upgrade function</td>
-    </tr>
-  </tbody>
-</table>
+| Input field               | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**                  | The package is listed under this name of the client and the RealmJoin Admin Console.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **GroupName**             | An optional group name may be entered. This name has no connection to the user groups, instead it will be shown in the RealmJoin client context menu to group the depicted applications                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **ID**                    | The RealmJoin internal name of the package, for example: realmjoin-core.extension                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Depends on**            | <p>This option is used to indicate if a package needs another package to be installed to work properly. This may be the case for Office user setting packages, that require an office installation upfront.</p><p>For a working correlation, the correct package name has to be provided. Enter the package name into the following form: ["PACKAGE ID"].<br><br>If two or more packets need to be entered, separate the names with a comma. For example: ["PACKAGE ID1","PACKAGE ID2"]</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Order**                 | <p>The order number is an Int32 type figure and provides RealmJoin with a basic structure to determine the package installation sequence. The lower the number the higher the importance, therefore a 10 will be installed before 100.<br><br>It has to be noted that a 0 is translated to no sequence given and the order number is only taken into account at the first rollout.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Args**                  | <p>If the packaged software has to be installed with arguments. Make sure to use correct escaping. Usually arguments are in the form of:</p><p><strong>/Parameter1:value1 /Paramater2:"value 2"</strong></p><p>Globally relevant parameters (e. g. volume license number) should be provided at the package addition step, while more individualized arguments (like language packs) are better specified during the assignment.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Version**               | The version of the package to be installed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Chocolatey Package ID** | Exact Chocolatey repository name of the package to be installed. The combination of name and version is used to ensure that the correct package is installed. Usually, similar to the internal RealmJoin ID.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Availability**          | <ul><li><strong>Allow Reinstall</strong>: This option allows the client user to reinstall and therefore override their current installation of the package.<br></li><li><strong>Allow Background Install</strong>: The software package may be installed outside of the black screen installation, thus not blocking the access to the client's desktop and software.<br><strong>Do not use this option for regular packages without discussion with your RealmJoin consultant!</strong><br></li><li><p><strong>Pre-Release:</strong> The pre-release flag has two distinctive features within RealmJoin. It allows:</p><p>1. To add a package with ID and version similar to another existing package in the portal and</p><p>2. If assigned to a group or user, it overwrites all other packages with the same ID assigned to the group user.<br><br>Those features are usually used for the testing of new packages or updates of an existing one: The test-groups or test-users get the pre-release version of a package assigned during the testing.<br><br>The pre-release flagged package is visually highlighted in the portal's package list with a lightning symbol behind the name.<br></p></li><li><strong>Require Intune Compliance</strong>: The package is installed as soon as RealmJoin is able to verify via the GraphAPI that the machine is considered compliant. This might stop the rollout for some time. The installation of the package and therefore all other mandatory packages with higher-order numbers that are queued to be installed afterwards is resumed when the client is compliant.<br></li><li><strong>Ignore in VDI</strong>: If you select this setting, a package cannot be executed during a 'Virtual Desktop Infrastructure' (VDI) session.</li></ul> |
+| **Deployment Rate**       | Select the deployment rate. You have the choice between Slow, Fast and Tomorrow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Auto Upgrade**          | With a tick at **Enable** you activate the automatic upgrade function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 {% hint style="info" %}
 Under normal circumstances, it is highly advised to prevent a normal user from having the same package assigned more than once.
@@ -266,48 +83,11 @@ Do not use the dependency and order option on mandatory packages parallel. This 
 
 To access these options, press **Show Advanced Options** above Auto Upgrade. These are the available options:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Setting</th>
-      <th style="text-align:left">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>Includes User Script</b>
-      </td>
-      <td style="text-align:left">In the latest generation of packages, it is not necessary anymore to create
-        a second package for the deployment of corresponding user settings, but
-        such a script can be part of the main package. If this is the case, it
-        will be run automatically if this option is checked. Parameters can be
-        transferred via arguments as established. User scripts will not run for
-        secondary users if the main application is not installed.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Main Script Restrictions - Users</b>
-      </td>
-      <td style="text-align:left">This option allows a RealmJoin administrator to define whether this package
-        should run for just the primary device user (default) or also/exclusively
-        for secondary users.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Main Script Restrictions - Phases</b>
-      </td>
-      <td style="text-align:left">
-        <p>This option allows a RealmJoin administrator to define whether this package
-          should be run during the initial deployment of the device or throughout
-          other phases.</p>
-        <p>RealmJoin offers the following phases:</p>
-        <p><b>Logon</b>: The package runs after the user has logged on.</p>
-        <p><b>Manual</b>: The package will run, when the user starts it via tray
-          menu.</p>
-        <p><b>Initial</b>: The package only runs during the deployment.</p>
-        <p><b>Normal</b>: Neither Logon, nor Manual, nor Initial. A background deployment.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Setting                               | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Includes User Script**              | In the latest generation of packages, it is not necessary anymore to create a second package for the deployment of corresponding user settings, but such a script can be part of the main package. If this is the case, it will be run automatically if this option is checked. Parameters can be transferred via arguments as established. User scripts will not run for secondary users if the main application is not installed.                                                                                                                                         |
+| **Main Script Restrictions - Users**  | This option allows a RealmJoin administrator to define whether this package should run for just the primary device user (default) or also/exclusively for secondary users.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Main Script Restrictions - Phases** | <p>This option allows a RealmJoin administrator to define whether this package should be run during the initial deployment of the device or throughout other phases.</p><p>RealmJoin offers the following phases:</p><p><strong>Logon</strong>: The package runs after the user has logged on.</p><p><strong>Manual</strong>: The package will run, when the user starts it via tray menu.</p><p><strong>Initial</strong>: The package only runs during the deployment.</p><p><strong>Normal</strong>: Neither Logon, nor Manual, nor Initial. A background deployment.</p> |
 
 ### Deployed on Active Client
 
@@ -319,156 +99,27 @@ Instead of entering the name, version, order, args etc. manually, you can insert
 
 ## Package Definition - Craft Package
 
-To view details of a package and edit it, simply click on the name of a package. The following overview \(Package Definition\) will open:
+To view details of a package and edit it, simply click on the name of a package. The following overview (Package Definition) will open:
 
-![](../.gitbook/assets/softwarepackages_details2.png)
+![](<../.gitbook/assets/softwarepackages\_details2 (1).png>)
 
 There are different input fields on this page. Have a look at the table below for more details
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Input field</th>
-      <th style="text-align:left">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>Name</b>
-      </td>
-      <td style="text-align:left">The package is listed under the name of the client and the RealmJoin Admin
-        Console.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>GroupName</b>
-      </td>
-      <td style="text-align:left">An optional group name may be entered. This name has no connection to
-        the user groups, instead, it will be shown in the RealmJoin client context
-        menu to group the depicted applications</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>ID</b>
-      </td>
-      <td style="text-align:left">The RealmJoin internal name of the package; for example, realmjoin-core.extension</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Depends on</b>
-      </td>
-      <td style="text-align:left">
-        <p>This option is used to indicate if a package needs another package to
-          be installed to work properly. This may be the case for Office user setting
-          packages, which requires an office installation upfront.</p>
-        <p>For a working correlation, the correct package name has to be provided.
-          Enter the package name into the following form: [&quot;PACKAGE ID&quot;].
-          <br
-          />
-          <br />If two or more packets need to be entered, separate the names with a comma.
-          For example: [&quot;PACKAGE ID1&quot;,&quot;PACKAGE ID2&quot;]</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Order</b>
-      </td>
-      <td style="text-align:left">The order number is an Int32 type figure and provides RealmJoin with a
-        basic structure to determine the package installation sequence. The lower
-        the number the higher the importance, therefore, a 10 will be installed
-        before 100.
-        <br />
-        <br />It has to be noted that a 0 is translated to no sequence given and the
-        order number is only taken into account at the first rollout.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Args</b>
-      </td>
-      <td style="text-align:left">
-        <p>If the packaged software has to be installed with arguments. Make sure
-          to use correct escaping. Normally, arguments are in the form of:</p>
-        <p><b>/Parameter1:value1 /Paramater2:&quot;value 2&quot;</b>
-        </p>
-        <p>Globally relevant parameters (e. g. volume license number) should be provided
-          at the package addition step, while more individualized arguments (like
-          language packs) are better specified during the assignment.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Version</b>
-      </td>
-      <td style="text-align:left">The version of the package to be installed</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Location</b>
-      </td>
-      <td style="text-align:left">Location of the package on the back-end</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Hash</b>
-      </td>
-      <td style="text-align:left">Hash of the package</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Scope</b>
-      </td>
-      <td style="text-align:left">Craft packages might be installed in the <b>user</b> or <b>system</b> scope</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Availability</b>
-      </td>
-      <td style="text-align:left">
-        <ul>
-          <li><b>Allow Reinstall</b>: This option allows the client user to reinstall
-            and therefore override their current installation of the package.
-            <br />
-          </li>
-          <li><b>Allow Background Install</b>: The software package may be installed
-            outside of the black screen installation, thus not blocking the access
-            to the client&apos;s desktop and software.
-            <br />
-          </li>
-          <li>
-            <p><b>Pre-Release:</b> The pre-release flag has two distinctive features within
-              RealmJoin. It allows:</p>
-            <ol>
-              <li>To add a package with ID and version similar to another existing package
-                in the portal and</li>
-            </ol>
-            <p>2. If assigned to a group or user, overwrites all other packages with
-              the same ID assigned to the group user.
-              <br />
-              <br />Those features are usually used for the testing of new packages or updates
-              of an existing one: The test-groups or test-users get the pre-release version
-              of a package assigned during the testing.
-              <br />
-              <br />The pre-release flagged package is visually highlighted in the portal&apos;s
-              package list with a lightning symbol behind the name.
-              <br />
-            </p>
-          </li>
-          <li><b>Require Intune Compliance</b>: The package is installed as soon as
-            RealmJoin is able to verify via the GraphAPI that the machine is considered
-            compliant. This might stop the rollout for some time. The installation
-            of the package and therefore all other mandatory packages with higher-order
-            numbers that are queued to be installed afterwards is resumed when the
-            client is compliant.
-            <br />
-          </li>
-          <li><b>Ignore in VDI</b>: If you select this setting, a package cannot be
-            executed during a &apos;Virtual Desktop Infrastructure&apos; (VDI) session.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Deployment Rate</b>
-      </td>
-      <td style="text-align:left">Select the deployment rate. You have the choice between Slow, Fast and
-        Tomorrow</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Auto Upgrade</b>
-      </td>
-      <td style="text-align:left">With a click at <b>Enable</b> you activate the automatic upgrade function</td>
-    </tr>
-  </tbody>
-</table>
+| Input field         | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**            | The package is listed under the name of the client and the RealmJoin Admin Console.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **GroupName**       | An optional group name may be entered. This name has no connection to the user groups, instead, it will be shown in the RealmJoin client context menu to group the depicted applications                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **ID**              | The RealmJoin internal name of the package; for example, realmjoin-core.extension                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Depends on**      | <p>This option is used to indicate if a package needs another package to be installed to work properly. This may be the case for Office user setting packages, which requires an office installation upfront.</p><p>For a working correlation, the correct package name has to be provided. Enter the package name into the following form: ["PACKAGE ID"].<br><br>If two or more packets need to be entered, separate the names with a comma. For example: ["PACKAGE ID1","PACKAGE ID2"]</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Order**           | <p>The order number is an Int32 type figure and provides RealmJoin with a basic structure to determine the package installation sequence. The lower the number the higher the importance, therefore, a 10 will be installed before 100.<br><br>It has to be noted that a 0 is translated to no sequence given and the order number is only taken into account at the first rollout.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Args**            | <p>If the packaged software has to be installed with arguments. Make sure to use correct escaping. Normally, arguments are in the form of:</p><p><strong>/Parameter1:value1 /Paramater2:"value 2"</strong></p><p>Globally relevant parameters (e. g. volume license number) should be provided at the package addition step, while more individualized arguments (like language packs) are better specified during the assignment.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Version**         | The version of the package to be installed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Location**        | Location of the package on the back-end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Hash**            | Hash of the package                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Scope**           | Craft packages might be installed in the **user** or **system** scope                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Availability**    | <ul><li><strong>Allow Reinstall</strong>: This option allows the client user to reinstall and therefore override their current installation of the package.<br></li><li><strong>Allow Background Install</strong>: The software package may be installed outside of the black screen installation, thus not blocking the access to the client's desktop and software.<br></li><li><p><strong>Pre-Release:</strong> The pre-release flag has two distinctive features within RealmJoin. It allows:</p><ol><li>To add a package with ID and version similar to another existing package in the portal and</li></ol><p>2. If assigned to a group or user, overwrites all other packages with the same ID assigned to the group user.<br><br>Those features are usually used for the testing of new packages or updates of an existing one: The test-groups or test-users get the pre-release version of a package assigned during the testing.<br><br>The pre-release flagged package is visually highlighted in the portal's package list with a lightning symbol behind the name.<br></p></li><li><strong>Require Intune Compliance</strong>: The package is installed as soon as RealmJoin is able to verify via the GraphAPI that the machine is considered compliant. This might stop the rollout for some time. The installation of the package and therefore all other mandatory packages with higher-order numbers that are queued to be installed afterwards is resumed when the client is compliant.<br></li><li><strong>Ignore in VDI</strong>: If you select this setting, a package cannot be executed during a 'Virtual Desktop Infrastructure' (VDI) session.</li></ul> |
+| **Deployment Rate** | Select the deployment rate. You have the choice between Slow, Fast and Tomorrow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Auto Upgrade**    | With a click at **Enable** you activate the automatic upgrade function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 {% hint style="info" %}
 Under normal circumstances, it is highly advised to prevent a normal user for having the same package assigned more than once.
@@ -488,48 +139,11 @@ Do not use the dependency and order option on mandatory packages parallel. This 
 
 To access these options, press **Show Advanced Options** above Auto Upgrade. These are the available options:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Setting</th>
-      <th style="text-align:left">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>Includes User Script</b>
-      </td>
-      <td style="text-align:left">In the latest generation of packages, it is not necessary anymore to create
-        a second package for the deployment of corresponding user settings, but
-        such a script can be part of the main package. If this is the case, it
-        will be run automatically if this option is checked. Parameters can be
-        transferred via arguments as established. User scripts will not run for
-        secondary users if the main application is not installed.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Main Script Restrictions - Users</b>
-      </td>
-      <td style="text-align:left">This option allows a RealmJoin administrator to define whether this package
-        should run for just the primary device user (default) or also/exclusively
-        for secondary users.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Main Script Restrictions - Phases</b>
-      </td>
-      <td style="text-align:left">
-        <p>This options allows a RealmJoin administrator to define whether this package
-          should be run during the initial deployment of the device or throughout
-          other phases.</p>
-        <p>RealmJoin offers the following phases:</p>
-        <p><b>Logon</b>: The package runs after the user has logged on.</p>
-        <p><b>Manual</b>: The package will run, when the user starts it via tray
-          menu.</p>
-        <p><b>Initial</b>: The package only runs during the deployment.</p>
-        <p><b>Normal</b>: Neither Logon, nor Manual, nor Initial. A background deployment.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Setting                               | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Includes User Script**              | In the latest generation of packages, it is not necessary anymore to create a second package for the deployment of corresponding user settings, but such a script can be part of the main package. If this is the case, it will be run automatically if this option is checked. Parameters can be transferred via arguments as established. User scripts will not run for secondary users if the main application is not installed.                                                                                                                                          |
+| **Main Script Restrictions - Users**  | This option allows a RealmJoin administrator to define whether this package should run for just the primary device user (default) or also/exclusively for secondary users.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Main Script Restrictions - Phases** | <p>This options allows a RealmJoin administrator to define whether this package should be run during the initial deployment of the device or throughout other phases.</p><p>RealmJoin offers the following phases:</p><p><strong>Logon</strong>: The package runs after the user has logged on.</p><p><strong>Manual</strong>: The package will run, when the user starts it via tray menu.</p><p><strong>Initial</strong>: The package only runs during the deployment.</p><p><strong>Normal</strong>: Neither Logon, nor Manual, nor Initial. A background deployment.</p> |
 
 ### Deployed on Active Client
 
@@ -549,15 +163,14 @@ In this tile, you will find technical help and information if you need further s
 
 To add a Choco or Craft package, in the Software Packages overview, click one of the two green buttons in the upper right corner: +Add Choco or +Add Craft
 
-You get an input mask \(like the one from Package Definition, but it is empty\).
+You get an input mask (like the one from Package Definition, but it is empty).
 
 ## Duplicate a Package
 
 Whenever a package with identical content is needed multiple times for the same user or group, the RealmJoin Portal offers the possibility to use the same package multiple times while preventing conflicting installations.
 
-**A possible scenario:** One user group needs the same package with different arguments \(for example to map several network drives\) and the RealmJoin Client requires unique packages IDs.
+**A possible scenario:** One user group needs the same package with different arguments (for example to map several network drives) and the RealmJoin Client requires unique packages IDs.
 
-To make the ID unique, a hash is written behind the ID and provided with a meaningful word/index, like **package-id\#Value**
+To make the ID unique, a hash is written behind the ID and provided with a meaningful word/index, like **package-id#Value**
 
-![](../.gitbook/assets/rj-duplicate-packages%20%281%29.png)
-
+![](<../.gitbook/assets/rj-duplicate-packages (1) (1).png>)

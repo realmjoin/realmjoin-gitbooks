@@ -1,11 +1,38 @@
 # Changelog
 
+## RealmJoin v4.18.4
+
+**Beta** - December 21st 2021
+
+* Deployment: Adds version info to OOBE deployment screen
+
+## RealmJoin v4.18.3
+
+* Deployment: Fixes missing BranchCache data in OOBE deployment screen
+
+## RealmJoin v4.18.2
+
+* Deployment: Improves handling of failing software updates
+* Deployment: Does not update Choco unless _EnableAutoUpdate_ is set
+* Deployment: Allows the deployment screen to be disabled by setting [_DisableDeploymentScreen_](core-features/settings.md#policies.disablenetworklocationwizard)__
+
+## RealmJoin v4.18.0
+
+* Official Version for RJ vNext Backend
+* LAPS: supports new persisted _Privileged_ account type
+* LAPS: fixes issue with the timezone part of _LastPasswordSet_
+* Remote Support: Supports link handler for starting remote support
+* Telemetry: includes Windows display version (e.g. 21H2)
+* Telemetry: fixes bad _ExecutionCount_ value for Choco packages
+* Telemetry: workaround an issue when reading Windows Defender value _TroubleShootingStartTime_
+* Internal: updates branding texts
+
 ## RealmJoin v4.17.5
 
 **Release** - March 26th 2021
 
 * Deployment screen: fixes display of long names
-* App deployment: fixes rare dependency issue with certain dependency graphs 
+* App deployment: fixes rare dependency issue with certain dependency graphs
 * Logging: cleans up some log messages
 
 ## RealmJoin v4.17.5
@@ -13,7 +40,7 @@
 **Beta** - February 24th 2021
 
 * Deployment screen: fixes display of long names
-* App deployment: fixes rare dependency issue with certain dependency graphs 
+* App deployment: fixes rare dependency issue with certain dependency graphs
 * Logging: cleans up some log messages
 
 ## RealmJoin v4.17.3
@@ -23,7 +50,7 @@
 * Bitlocker: does not require Bitlocker if machine is ServerRdsh
 * Deployment screen: optimizes display of Bitlocker UI
 * Auth: handles special refresh\_token condition AADSTS70043
-* LAPS: supports EFF wordlist for password generation \(preset 3\)
+* LAPS: supports EFF wordlist for password generation (preset 3)
 
 ### v4.17.1
 
@@ -43,7 +70,7 @@
 * Bitlocker: does not require Bitlocker if machine is ServerRdsh
 * Deployment screen: optimizes display of Bitlocker UI
 * Auth: handles special refresh\_token condition AADSTS70043
-* LAPS: supports EFF wordlist for password generation \(preset 3\)
+* LAPS: supports EFF wordlist for password generation (preset 3)
 
 ### v4.17.1
 
@@ -97,7 +124,7 @@
 
 ### v4.16.9
 
-* Shows "Reconnect to Domain" first on "Change Password" when credentials are missing for whatever reason 
+* Shows "Reconnect to Domain" first on "Change Password" when credentials are missing for whatever reason
 * Improves Hi-DPI handling
 
 ### v4.16.8
@@ -216,7 +243,7 @@
 
 * **New deployment screen**
 * **New deployment toast notifications**
-* Prepare for new Windows 10 features \(requires Fall Creators Update\)
+* Prepare for new Windows 10 features (requires Fall Creators Update)
 
 ## RealmJoin v4.15.12
 
@@ -275,7 +302,7 @@
 
 * **New deployment screen**
 * **New deployment toast notifications**
-* Prepare for new Windows 10 features \(requires Fall Creators Update\)
+* Prepare for new Windows 10 features (requires Fall Creators Update)
 
 ## RealmJoin v4.14.10
 
@@ -301,7 +328,7 @@
 
 ### v4.14.4
 
-* Introducing **"Local Administrator Password Solution" \(LAPS\)**
+* Introducing **"Local Administrator Password Solution" (LAPS)**
 * Initial Bitlocker State reported
 
 ### v4.14.3
@@ -349,7 +376,7 @@
 
 ### v4.14.4
 
-* Introducing **"Local Administrator Password Solution" \(LAPS\)**
+* Introducing **"Local Administrator Password Solution" (LAPS)**
 * Initial Bitlocker State reported
 
 ## RealmJoin v4.14.3
@@ -502,4 +529,3 @@
 * A custom **protocol handler** is now registered for RealmJoin
 * A set of **new environment variable**s is available to software packages
 * **Auto-Setup:** RealmJoin can now auto-setup a new AzureAD-Client! No user interaction is required.
-

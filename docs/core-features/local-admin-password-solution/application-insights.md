@@ -4,7 +4,7 @@ Application Insights is an extensible Application Performance Management service
 
 ## Create App Insight for Generic Auditing
 
-![](../../.gitbook/assets/appinsights1.png)
+![](<../../.gitbook/assets/appinsights1 (1).png>)
 
 1. Navigate to **Application Insights** and click **+Add**
 2. Select a **Subscription**
@@ -13,10 +13,9 @@ Application Insights is an extensible Application Performance Management service
 5. Then, click **Review + Create**
 6. Review your settings and click **Create**
 
-Then, copy the **Instrumentation Key** and send it to [GK Support](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/product.support@glueckkanja.com).  
+Then, copy the **Instrumentation Key** and send it to [GK Support](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/product.support@glueckkanja.com).
 
-
-![](../../.gitbook/assets/appinsights2.png)
+![](<../../.gitbook/assets/appinsights2 (1).png>)
 
 **Example value:** `a74393bd-2dee-4a10-9df3-66c8c2b2a9ec`
 
@@ -24,9 +23,8 @@ Then, copy the **Instrumentation Key** and send it to [GK Support](https://githu
 
 To start a reporting, click **Search**
 
-![](../../.gitbook/assets/appinsights3.png)
+![](<../../.gitbook/assets/appinsights3 (1).png>)
 
 An overview appears, which looks like the following example:
 
-![](../../.gitbook/assets/appinsights4.png)
-
+![](<../../.gitbook/assets/appinsights4 (1).png>)

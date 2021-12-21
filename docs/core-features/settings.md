@@ -74,7 +74,7 @@ With this setting the user group switch channel on next auto-update.
 
 Action to perform after initial deployment screen \(default is _restart_\).
 
-## FirstRun.EnableSecure Desktop
+## FirstRun.EnableSecureDesktop
 
 **Value**
 

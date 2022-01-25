@@ -74,6 +74,17 @@ With this setting the user group switch channel on next auto-update.
 
 Action to perform after initial deployment screen \(default is _restart_\).
 
+## FirstRun.DisableDeploymentScreen
+
+**Value**
+
+```text
+true | false
+```
+**Description**
+
+Show deployment screen \(default is _true_\). If the deployment screen needs to be disabled for secondary users, the system variable *$env:RjDisableSecondaryInitialDeployment = 1* has to be set before the first SU login. 
+
 ## FirstRun.EnableSecureDesktop
 
 **Value**

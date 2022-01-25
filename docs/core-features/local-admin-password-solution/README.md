@@ -31,7 +31,7 @@ RealmJoin offers multiple policies to configure local administrator account mana
 | LocalAdminManagement.\[EmergencyAccount/SupportAccount].DisplayName              | "RealmJoin Local Administrator"                                      | Display name of administrator account (appears on Windows)                                                                |
 | LocalAdminManagement.\[EmergencyAccount/SupportAccount].PasswordCharSet          | "!#%+23456789:=?@ABCDEFGHJK LMNPRSTUVWXYZabcdefghijkmn opqrstuvwxyz" | Charset of the password                                                                                                   |
 | LocalAdminManagement.\[EmergencyAccount/SupportAccount].PasswordLength           | 20                                                                   | Password length                                                                                                           |
-| LocalAdminManagement.\[EmergencyAccount/SupportAccount].PasswordPreset           | 1                                                                    | Predefined password templates (PasswordCharSet and PasswordLength not necessary)                                          |
+| LocalAdminManagement.\[EmergencyAccount/SupportAccount].PasswordPreset           | 1/2/3                                                                    | Predefined password templates (PasswordCharSet and PasswordLength not necessary). See below. **not compatible with .PasswordLength**                             |
 | LocalAdminManagement.\[EmergencyAccount/SupportAccount].MaxStaleness             | 12:00                                                                | Time after account will be removed/refreshed (when logged out after use). Format: DD.hh:MM. Not compatible with OnDemand. |
 | LocalAdminManagement.SupportAccount.OnDemand                                     | true/false                                                           | Create support account on demand (account will expire after 12 hours)                                                     |
 
@@ -41,6 +41,11 @@ For example:
 `LocalAdminManagement.SupportAccount`\
 **Value:**\
 `{ "CheckInterval": "00:30", "NamePattern": "ADM-{HEX:8}", "DisplayName": "RealmJoin Local Administrator", "OnDemand": true }`
+
+**Password Presets:**  
+* **Preset 1:** [1 upper][3 lower][4 digits]
+* **Preset 2:** [4 digits]-[4 digits]-[4 digits]-[4 digits]-[4 digits] 
+* **Preset 3:** [word]-[word]-[word]-[word]-[word]-[word] made out of [Eff Long List](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
 
 #### Configuration Policies based on User Groups
 

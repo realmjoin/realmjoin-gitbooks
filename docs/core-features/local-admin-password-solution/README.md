@@ -45,7 +45,10 @@ For example:
 **Password Presets:**  
 * **Preset 1:** [1 upper][3 lower][4 digits]
 * **Preset 2:** [4 digits]-[4 digits]-[4 digits]-[4 digits]-[4 digits] 
-* **Preset 3:** [word]-[word]-[word]-[word]-[word]-[word] made out of [Eff Long List](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
+* **Preset 3:** [word]-[word]-[word]-[word]-[word]-[word] generated from [Eff Long List](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
+
+#### Be aware of Password Complexity rules
+While RealmJoin will always do multiple rounds of password generation should a password fail the complexity rule, Presets 2 and 3 may always fail your rule. Please make sure this does not happen.
 
 #### Configuration Policies based on User Groups
 

@@ -60,7 +60,7 @@ For more details about domain connect read the '[Domain Connect website](https:/
 
 **Description**
 
-With this setting the user group switch channel on next auto-update.
+With this setting the user group switch channel on next auto-update. **This setting enforces the channel and might lead to a downgrade!**
 
 ## FirstRun.AfterSuccessAction
 

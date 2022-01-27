@@ -43,12 +43,20 @@ For example:
 `{ "CheckInterval": "00:30", "NamePattern": "ADM-{HEX:8}", "DisplayName": "RealmJoin Local Administrator", "OnDemand": true }`
 
 **Password Presets:**  
-* **Preset 1:** [1 upper][3 lower][4 digits]
-* **Preset 2:** [4 digits]-[4 digits]-[4 digits]-[4 digits]-[4 digits] 
-* **Preset 3:** [word]-[word]-[word]-[word]-[word]-[word] generated from [Eff Long List](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
-
-#### Be aware of Password Complexity rules
-While RealmJoin will always do multiple rounds of password generation should a password fail the complexity rule, Presets 2 and 3 may always fail your rule. Please make sure this does not happen.
+* **Preset 1:** `[1 upper][3 lower][4 digits]`
+  * `Tuci9324`
+  * `Lnso5050`
+  * `Khwn2174`
+* **Preset 2:** `Key-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]`
+  * PasswordLength setting is supported! The setting determines the number of digit blocks.
+  * `Key-012993-230956-976475` (PasswordLength = 3)
+  * `Key-497254-679158-631224-278319` (PasswordLength = 4)
+  * `Key-506179-861369-706482-613244-730371-097689-404350-340073` (default)
+* **Preset 3:** `[word]-[word]-[word]-[word]-[word]-[word]` generated from [Eff Long List](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
+  * PasswordLength setting is supported! The setting determines the number of words.
+  * `Exciting-Unearth-Cried-87` (PasswordLength = 3)
+  * `Neurology-Astute-Debate-Marshy-15` (PasswordLength = 4)
+  * `Marshy-Darkened-Undertake-Reset-Shrouded-Wise-26` (default)
 
 #### Configuration Policies based on User Groups
 

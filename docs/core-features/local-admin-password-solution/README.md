@@ -94,7 +94,7 @@ Even though RealmJoin tries its best to avoid naming conflicts when managing the
 This account type is supposed to be your backup access to the device should it fail catastrophically. It will be created proactively. This way you will always have access for recovery. We recommend configuring it for [account recreation](#account-recreation).
 
 _Example_  
-Key `LocalAdminManagement.EmergencyAccount`
+Key `LocalAdminManagement.EmergencyAccount` (for common settings see [group settings](#group-settings))
 ```json
 {
   "NamePattern": "ADM-Emergency-{HEX:4}",
@@ -131,7 +131,7 @@ It might take up to 30 minutes for the RealmJoin agent to notice the request. Th
 When not in on-demand mode it will be created proactively.
 
 _Example_  
-Key `LocalAdminManagement.SupportAccount`
+Key `LocalAdminManagement.SupportAccount` (for common settings see [group settings](#group-settings))
 ```json
 {
   "NamePattern": "ADM-Support-User-{HEX:2}",
@@ -155,7 +155,7 @@ Forced password rotations are supported:
 1. `Monthly` or `Weekly`: Weekly takes preference over Monthly. If no more conditions are specified, defaults are "1st day of month" for Monthly or "Monday" for Weekly. All seven weekday can be specified. So if `Wednesday` and `Weekly` are specified, the password will be changed every Wednesday. If `Wednesday` and `Monthly` are specified, the password will be changed on the first Wednesday each month.
 
 _Example_  
-Key `LocalAdminManagement.PrivilegedAccount`
+Key `LocalAdminManagement.PrivilegedAccount` (for common settings see [group settings](#group-settings))
 ```json
 {
   "NamePattern": "ADM-Privileged-User-{COUNT:1}",
@@ -169,4 +169,4 @@ Key `LocalAdminManagement.PrivilegedAccount`
 
 ## Accessing passwords
 Use the RealmJoin Portal to access the passwords. It will appears similar to this.
-<img src="../../media/rj-laps-table-complete.png" width="720" />
+<img src="../../media/rj-laps-table-complete.png" />

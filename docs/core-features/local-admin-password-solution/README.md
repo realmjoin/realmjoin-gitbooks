@@ -1,138 +1,172 @@
 # Local Admin Password Solution
+Our Local Administrator Password Solution (LAPS) was built to solve the issue of using identical accounts in your environment for user support or privilege escalation. LAPS creates strong passwords for local accounts which are stored securely in *your own* [Azure Key Vault](keyvault.md). For auditing, you also have to provide an [Application Insights](application-insights.md) instance, though we are transitioning to using Log Analytics workspaces directly.
 
-Local Administrator Password Solution (short LAPS) will solve the issue of using an identical account on every Windows computer in a domain environment. On its own, LAPS creates a randomly generated password for a local admin account.
 
-With RealmJoin it is possible to manage secure and individualized administrative accounts, either for local support or remote support, on a large scale. RealmJoin saves encrypted passwords in [Azure Key Vault](keyvault.md) within the customer's tenant and the Azure Audit records all accesses to these passwords.
+## Pre-requirements
+Before you can start with LAPS you have to meet the following pre-requirements:
 
-## Prerequirements
+* You have to have set up Application Insights
+* You have to explicitly enable LAPS account types using group (or user) settings
 
-Before you can start with LAPS you have to meet the following prerequirements:
+We'll look at both of them below.
 
-* You must use **Application Insights**
-* You must have configured certain **policies**
 
-We'll look at both of them below:
-
-### Application Insights
-
-Application Insights has a very important role when using LAPS. The password requests triggered by LAPS are logged by Application Insights. Thus it can be tracked at any time who has made a password request and when and where this request was made.
+## Application Insights
+Application Insights play an important role when using LAPS. The password requests triggered by LAPS are logged by RealmJoin and piped to Application Insights. This way you have complete insight into who is retrieving passwords.
 
 More details can be found in our [Application Insight article](application-insights.md).
 
-### Configuration Policies
 
-RealmJoin offers multiple policies to configure local administrator account management. These policies are described in the following table:
+## Group settings
+LAPS supports the follow global settings.
+| Settings Key | Default Value | Description |
+| ------------ | ------------- | ----------- |
+| LocalAdminManagement.Inactive | `false` | Set to `true` to force this feature off |
+| LocalAdminManagement.CheckInterval | `"01:00"` | Interval for internal config checks ([HH:mm](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings)) |
 
-| Policy (Key)                                                                     | Value (Sample)                                                       | Description                                                                                                               |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| LocalAdminManagement.Inactive                                                    | true/false                                                           | <p>Deactivates or activates local</p><p>administrator management</p>                                                      |
-| LocalAdminManagement.CheckInterval                                               | "00:30"                                                              | <p>Interval for configuration checks</p><p>(hh:ss)</p>                                                                    |
-| <p>LocalAdminManagement.</p><p>[EmergencyAccount/SupportAccount].NamePattern</p> | "ADM-{HEX:8}"                                                        | Admin name. HEX:8 stands for 8-digit random hex-code                                                                      |
-| LocalAdminManagement.\[EmergencyAccount/SupportAccount].DisplayName              | "RealmJoin Local Administrator"                                      | Display name of administrator account (appears on Windows)                                                                |
-| LocalAdminManagement.\[EmergencyAccount/SupportAccount].PasswordCharSet          | "!#%+23456789:=?@ABCDEFGHJK LMNPRSTUVWXYZabcdefghijkmn opqrstuvwxyz" | Charset of the password                                                                                                   |
-| LocalAdminManagement.\[EmergencyAccount/SupportAccount].PasswordLength           | 20                                                                   | Password length                                                                                                           |
-| LocalAdminManagement.\[EmergencyAccount/SupportAccount].PasswordPreset           | 1/2/3                                                                    | Predefined password templates (PasswordCharSet and PasswordLength not necessary). See below. **not compatible with .PasswordLength**                             |
-| LocalAdminManagement.\[EmergencyAccount/SupportAccount].MaxStaleness             | 12:00                                                                | Time after account will be removed/refreshed (when logged out after use). Format: DD.hh:MM. Not compatible with OnDemand. |
-| LocalAdminManagement.SupportAccount.OnDemand                                     | true/false                                                           | Create support account on demand (account will expire after 12 hours)                                                     |
+The following account types are supported.
+| Settings Key | Default Value |
+| ------------ | ------------- |
+| LocalAdminManagement.EmergencyAccount | `undefined` (*inactive*) |
+| LocalAdminManagement.SupportAccount | `undefined` (*inactive*) |
+| LocalAdminManagement.PrivilegedAccount | `undefined` (*inactive*) |
 
-For example:
 
-**Key:**\
-`LocalAdminManagement.SupportAccount`\
-**Value:**\
-`{ "CheckInterval": "00:30", "NamePattern": "ADM-{HEX:8}", "DisplayName": "RealmJoin Local Administrator", "OnDemand": true }`
+Each account type may be configured independently using the following common settings. Some types have special settings described in their respective section.
 
-**Password Presets:**  
-* **Preset 1:** `[1 upper][3 lower][4 digits]`
+{% hint style="info" %}
+In the following table `$` represents any of the three `Account` JSON object from above.
+{% endhint %}
+
+| Settings Key | Default Value | Description |
+| ------------ | ------------- | ----------- |
+| $.NamePattern | `"ADM-{HEX:8}"` | Account name. Dynamic tokens supported, see [Conflict avoidance](#conflict-avoidance). |
+| $.DisplayName | `"RealmJoin Local Administrator"` | Display name |
+| $.PasswordCharSet | `"!#%+23456789:=?@ABCDEFGHJKLMNPRSTUVWXYZabcdefghijkmnopqrstuvwxyz"` | Charset for the password generator (excludes lookalikes) |
+| $.PasswordLength | `20` | Password length |
+| $.PasswordPreset | `0` | Preset password templates, see [Password generation](#password-generation). |
+| $.MaxStaleness | Special. See [Account recreation](#account-recreation). | Time after an account will be refreshed after use ([d.HH:mm](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings)) |
+| $.OnDemand | Special. See [Support account](#support-account). | Enable on-demand mode for SupportAccount |
+| $.Expiration | Special. See [Privileged account](#privileged-account). | Fixed account expiration date (ISO-8601 format) |
+| $.PasswordRenewals | Special. See [Privileged account](#privileged-account). | List (JSON array) of parameters |
+
+
+## Password generation
+By default truly random passwords will be generated based on the settings `PasswordCharSet` and `PasswordLength`. The default charset was chosen to exclude similar looking characters like `I1l` and `O0`. Windows' cryptographic random number generator is used to provide high quality randomness for generation.
+
+{% hint style="info" %}
+RealmJoin will automatically handle issues with Windows' complexity requirements on account creation. As with all truly random passwords sometimes generated passwords might not satisfy the complexity requirements. If this happens RealmJoin will do up to three rounds of passwords generation until a viable passwords is generated. There is a remaining statistically small probability that all retries will be exceeded. In this case you will see a message in the service log file similar to `All retries exceeded`. The complete process will restart in the next run of the internal config checks (see setting `CheckInterval`).
+{% endhint %}
+
+Truly random passwords can be painful to work with, which is why special preset templates are also supported.
+* Preset 1 ⇒ `[1 upper][3 lower][4 digit]`
   * `Tuci9324`
   * `Lnso5050`
   * `Khwn2174`
-* **Preset 2:** `Key-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]-[6 digits]`
+* Preset 2 ⇒ `Key-[6 digit]-[6 digit]-[6 digit]-[6 digit]-[6 digit]-[6 digit]-[6 digit]-[6 digit]`
   * PasswordLength setting is supported! The setting determines the number of digit blocks.
   * `Key-012993-230956-976475` (PasswordLength = 3)
   * `Key-497254-679158-631224-278319` (PasswordLength = 4)
   * `Key-506179-861369-706482-613244-730371-097689-404350-340073` (default)
-* **Preset 3:** `[word]-[word]-[word]-[word]-[word]-[word]` generated from [Eff Long List](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
+* Preset 3 ⇒ `[word]-[word]-[word]-[word]-[word]-[word]` generated from [Eff Long List](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
   * PasswordLength setting is supported! The setting determines the number of words.
   * `Exciting-Unearth-Cried-87` (PasswordLength = 3)
   * `Neurology-Astute-Debate-Marshy-15` (PasswordLength = 4)
   * `Marshy-Darkened-Undertake-Reset-Shrouded-Wise-26` (default)
 
-#### Configuration Policies based on User Groups
 
-It is possible to assign these policies based on user groups. For example, deactivate local administrator management for all users except a specific group:
+## Account recreation
+After an account was used, that is after sign out of the local user, RealmJoin can be configured to delete and recreate the account using the `MaxStaleness` setting. This way accounts will always be pristine. If not configured accounts will never be recreated and will stay around indefinitely.
 
-| Key                            | Value | Groupname                          |
-| ------------------------------ | ----- | ---------------------------------- |
-| Local.AdminManagement.Inactive | true  | RealmJoin - All Users              |
-| Local.AdminManagement.Inactive | false | CFG - RealmJoin-EnableSupportAdmin |
-
-## Access
-
-When a support member needs to access a secret, RealmJoin will provide an interface to get account and password credentials. When this happens, an update-secret command will be sent to the client and the admin account will be recreated.
-
-## Administrator Account Types
-
-Two different account types are available. An **Emergency Administrator Account** and a **Support Administrator Account**
-
-### Emergency Administrator Account
-
-This account type will be created by default and is **available persistently** on the device. Thus, it is possible to get administrative access even when there is no internet connection available or when facing other connection problems.
-
-A corresponding RealmJoin policy can trigger the creation of a persistent administrator account. The following process will be passed:
-
-1. Starting point: Existing or new client with RealmJoin a) Existing client (Azure AD joined, Intune managed, RealmJoin agenda installed) b) New client (initialization during OOBE, Azure AD join, Intune enrollment, installation of RealmJoin and deployed software)
-2. RealmJoin policy triggers RealmJoin agent to create a persistent administrator account on the client.
-3. RealmJoin agent transfers the encrypted password to the RealmJoin backend.
-4. RealmJoin backend stores the cyphertext into a customer-owned [Azure KeyVault](keyvault.md).
-
-A requirement for this process is a successful deployment of corresponding policy to the client.
-
-#### Use in case of support
-
-Support staff needs local administrative rights in-field support (e. g. for troubleshooting connectivity issues). Therefore, he/she must go through the following steps:
-
-1. The staff visits the RealmJoin WebUI. On the device details, he/she will see the name of the administrator account and can request the password when clicking on the dotted text.
-2. RealmJoin pulls the password from Azure Key Vault and displays it.
-3. The staff is now able to get elevated rights by entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
-4. When the staff has finished all tasks, he/she logs out of the account.
-5. The previously used account will be deleted after a defined period and a new one will be generated (following to steps already described).
-
-![](<../../.gitbook/assets/rj-laps1 (1) (2) (2) (2) (2) (3).png>)
-
-### Support Administrator Account
-
-A support account will be generated **on demand** and is designed for **one-time use**.
-
-A support staff can trigger the creation of a temporal administrator account. The following process will be passed:
-
-1. Starting point: Existing or new client with RealmJoin a) Existing client (Azure AD joined, Intune managed, RealmJoin agent installed) b) New client (initialization during OOBE, Azure AD join, Intune enrollment, installation of RealmJoin and deployed software)
-2. A Support staff requests a support account via RealmJoin WebUI
-3. This triggers RealmJoin agent to create a temporal administrator account on the client.
-4. RealmJoin agent transfers the encrypted password to the RealmJoin backend.
-5. RealmJoin backend stores the cyphertext into customer-owned [Azure KeyVault](keyvault.md).
-
-Requirements for this process:
-
-* Successful deployment of corresponding of the client.
-* The user is logged in and RealmJoin agent is running.
-* Internet connectivity.
-
-#### Use in case of support
-
-The support staff visits the RealmJoin WebUI again (depends on the **Configuration check interval**) and follows these steps:
-
-1. On the device details, he/she will see the name of the temporal administrator account. The account creation will be started when clicking on **Request**.
-
-![](<../../.gitbook/assets/rj-laps2 (2) (2) (2) (2) (3).png>)
-
-{% hint style="info" %}
-After a certain time, the credentials will appear. Click the dotted password field to request the password.
+{% hint style="danger" %}
+RealmJoin will delete the account and its profile. ALL FILES WILL BE PERMANENTLY DELETED.
 {% endhint %}
 
-1. RealmJoin pulls the password from Azure Key Vault and displays it.
-2. The staff is now able to get elevated rights by entering this username and password in the UAC credential prompt or performing a re-login as an administrator.
-3. When the staff has finished his tasks, he/she logs out of the account.
-4. The previously used account will be deleted after a defined period
 
-![](<../../.gitbook/assets/rj-laps3 (2) (2) (2) (2) (1) (1).png>)
+## Conflict avoidance
+Even though RealmJoin tries its best to avoid naming conflicts when managing the accounts on a device, there is always the possibility that accounts might already exist on a device causing conflicts. This is why the `NamePattern` setting supports these tokens with special meaning to RealmJoin. The tokens will be transformed by the specified function and its length parameter following the colon.
+* `{HEX:8}` ⇒ `F4D027EF`, `B3C4F74E`, ... (random hexadecimal characters)
+* `{DEC:6}` ⇒ `506453`, `066946`, ... (random decimal characters)
+* `{COUNT:2}` ⇒ `01`, `02`, ... (counter, will stay `01` if no conflicts exist)
+
+
+## Emergency account
+This account type is supposed to be your backup access to the device should it fail catastrophically. It will be created proactively. This way you will always have access for recovery. We recommend configuring it for [account recreation](#account-recreation).
+
+_Example_  
+Key `LocalAdminManagement.EmergencyAccount`
+```json
+{
+  "NamePattern": "ADM-Emergency-{HEX:4}",
+  "DisplayName": "Emergency Access",
+  "MaxStaleness": "04:00",
+  "PasswordPreset": 2
+}
+```
+
+
+## Support account
+This account type can be configured for on-demand creation. It is designed for use in a limited time window of 12 hours in on-demand mode.
+
+{% hint style="danger" %}
+Support accounts and their profiles will be deleted 12 hours after requesting the account regardless of usage (after the support user has signed out). ALL FILES WILL BE PERMANENTLY DELETED.
+{% endhint %}
+
+{% hint style="danger" %}
+When using on-demand mode account recreation (`MaxStaleness`) *should not be used*. It might interfere with your support workflow.
+{% endhint %}
+
+Requirements for the on-demand workflow:
+
+1. The mode is enabled by setting `"OnDemand": true`.
+1. A user is signed in
+1. The RealmJoin agent is running
+1. The device is connected to the internet
+1. The device can reach the RealmJoin backend
+
+{% hint style="tip" %}
+It might take up to 30 minutes for the RealmJoin agent to notice the request. The signed-in user may speed up this progress by choosing "Sync this device" from the RealmJoin tray menu.
+{% endhint %}
+
+When not in on-demand mode it will be created proactively.
+
+_Example_  
+Key `LocalAdminManagement.SupportAccount`
+```json
+{
+  "NamePattern": "ADM-Support-User-{HEX:2}",
+  "DisplayName": "Support User",
+  "OnDemand": true,
+  "PasswordPreset": 1
+}
+```
+
+
+## Privileged account
+This account type is designed to be used by power users that need regular but controlled admin privileges on their own devices. A fixed account expiration date can be specified (`Expiration`).
+
+{% hint style="danger" %}
+For this type account recreation (`MaxStaleness`) *should not be used*. The whole point is to have a persistent account for your users.
+{% endhint %}
+
+Forced password rotations are supported:
+1. `2021-11-20T12:34:56+01:00`: any explicit timestamp in ISO8601. Multiple timestamps can be specified.
+1. `DayAfterCreate`: after the account has been created the account's password will be changed. This is useful when users are supposed to set up Windows Hello for additional sign-in options.
+1. `Monthly` or `Weekly`: Weekly takes preference over Monthly. If no more conditions are specified, defaults are "1st day of month" for Monthly or "Monday" for Weekly. All seven weekday can be specified. So if `Wednesday` and `Weekly` are specified, the password will be changed every Wednesday. If `Wednesday` and `Monthly` are specified, the password will be changed on the first Wednesday each month.
+
+_Example_  
+Key `LocalAdminManagement.PrivilegedAccount`
+```json
+{
+  "NamePattern": "ADM-Privileged-User-{COUNT:1}",
+  "DisplayName": "Privileged User",
+  "PasswordRenewals": ["DayAfterCreate", "Monthly", "Thursday"],
+  "PasswordPreset": 3,
+  "PasswordLength": 3
+}
+```
+
+
+## Accessing passwords
+Use the RealmJoin Portal to access the passwords. It will appears similar to this.
+<img src="../../media/rj-laps-table-complete.png" width="720" />

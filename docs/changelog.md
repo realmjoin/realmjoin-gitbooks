@@ -1,5 +1,12 @@
 # Changelog
 
+## RealmJoin v4.18.6
+
+**Release** - February 7th 2022
+
+* Fixes complexity issues with password presets 2 and 3
+* Fixes a bug which broke the Notifier feature
+
 ## RealmJoin v4.18.4
 
 **Beta** - December 21st 2021

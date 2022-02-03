@@ -2,12 +2,12 @@
 
 The following article describes important settings for RealmJoin.
 
-## BrancheCache.Mode
+## BranchCache.Mode
 
 **Value**
 
 ```text
-"Distributed"|"Undefinied"
+"Distributed"|"Undefined"
 ```
 
 **Description**

@@ -2,17 +2,17 @@
 
 The following article shows you the important RealmJoin Settings.
 
-### BrancheCache.Mode
+### BranchCache.Mode
 
 This setting changes BranchCache mode for **new** clients.
 
 **Key**  
-BrancheCache.Mode
+BranchCache.Mode
 
 **Value**
 
 ```text
-"Distributed"|"Undefinied"
+"Distributed"|"Undefined"
 ```
 
 ### Configure DomainConnect for Legacy Domains

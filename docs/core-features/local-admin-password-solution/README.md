@@ -170,3 +170,28 @@ Key `LocalAdminManagement.PrivilegedAccount` (for common settings see [group set
 ## Accessing passwords
 Use the RealmJoin Portal to access the passwords. It will appears similar to this.
 <img src="../../media/rj-laps-table-complete.png" />
+
+
+## Enable self-service
+Users may access accounts created on their _own_ devices (they are "PrimaryUser") when enabled using the _RealmJoin Portal_ starting with version `2022.5.1`. To enable, define a setting using the key `Allow.SelfLAPS`. This setting may be defined on groups and users. As with all settings prefixed with `Allow.*` they are AND-joined across the user and all of their groups.
+
+```json
+{
+  "EmergencyAccount": true,
+  "SupportAccount": true,
+  "PrivilegedAccount": true
+}
+```
+
+The value can also be pure boolean `true`/`false`. This may be used as a wildcard and encompasses every current and future account type. Please note that this is only recommended for disabling access (`false`).
+
+{% hint style="info" %}
+In the past it was recommended to set this setting to `true`. However, as we continue to expand RealmJoin, new account types will be added. It is therefore strongly recommended to migrate all `true` values to the more explicit object notation.
+{% endhint %}
+
+A sample configuration may look like this:
+| Group | Value | Comment |
+| ----- | ----- | ------- |
+| All remote workers | `{ "EmergencyAccount": true }` | Remote workers may access their own devices emergency account. |
+| All developers | `{ "EmergencyAccount": true, "PrivilegedAccount": true }` | Developers may access their emergency account and their privileged account—no matter whether they are remote workers or not. |
+| All trainees | `false` | Trainees must never have access to any of the three account types **and** all future types, even if they are remote workers or developers. |

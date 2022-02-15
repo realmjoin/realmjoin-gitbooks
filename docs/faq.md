@@ -132,7 +132,7 @@ Additionally some content (e.g. software packages) is signed by the RealmJoin Se
 
 ## Why is RealmJoin safe?
 
-### We are committed to high security standards:
+### We are committed to high security standards
 
 * Our development and our operations team is ISO 27001 certified.
 * We work with latest cloud development tools (e.g. Github) and code is stored in secured repositories.
@@ -141,7 +141,7 @@ Additionally some content (e.g. software packages) is signed by the RealmJoin Se
 * Endpoints, identities and services are protected by the latest technologies (e.g. Microsoft Sentinel and M365 Defender Suite incl. EDR) and monitored by a Security Operations Center.
 * All systems are updated continuously.
 
-### The design of RealmJoin ensures protection against threats:
+### The design of RealmJoin ensures protection against threats
 
 * Our services run on well protected Azure platforms.
 * We run signed binaries.

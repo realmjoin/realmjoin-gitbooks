@@ -274,6 +274,18 @@ With this setting the current time is available via NTP. For more information ab
 Attach Restrict. \*keys to target user group
 {% endhint %}
 
+## SoftwarePackaging.AutoUpgradeCanDowngrade
+
+**Value**
+
+```text
+true
+```
+
+**Description**
+
+Allows downgrade of already installed applications via auto upgrade, if the version number is changed.
+
 ## SoftwarePackaging.Toast.Countdown.Hero.Source
 
 **Value**

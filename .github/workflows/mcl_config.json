@@ -1,0 +1,13 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": ".*example-rj-localadmin.*"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "\\\\_",
+      "replacement": "_"
+    }
+  ]
+}

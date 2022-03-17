@@ -21,6 +21,18 @@
 * Is it possible to start the installation manually and are there any errors shown?
 * Check RealmJoin logs and software installation logs if available?
 
+## Verify Group Membership in Office 365 Admin Center
+
+You need to know the software Distribution Group to which the software should be deployed.
+
+Open Office 365 Admin Center Group management at: [Office 365 Admin Center](https://portal.office.com/adminportal/home#/groups)
+
+[![O365 Portal](<.gitbook/assets/o365-portal-one (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-one.png)
+
+Select appropriate software distribution group and verify if the user is member of this group.
+
+[![O365 Portal](<.gitbook/assets/o365-portal-two (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-two.png)
+
 ## Review installed & available software
 
 Find the RealmJoin icon in your taskbar.
@@ -35,15 +47,16 @@ Click the software if it is shown as ready to install. This should start the sof
 
 [![Install-Citrix](<.gitbook/assets/rj-install-citrix (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-install-citrix.png)
 
-Select and copy everything in the details if the software installation fails. Attach this information to the incident ticket.
-
-[![Install-Citrix-Details](<.gitbook/assets/rj-install-citrix-details (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-install-citrix-details.png)
+If the installation fails, collect **complete** RealmJoin logfiles (see below) and attach to the incident ticket. Incident tickets to glueckkanja-gab without full logging will be closed. 
 
 ## RealmJoin Log Files
 
 ### Logging
 
+#### Windows Event Logs
 RealmJoin records all event data into log files. Those can easily be accessed on the client device using the Windows Event Viewer (eventvwr.msc). RealmJoin logs can be found under **Event Viewer (Local) / Windows Logs / Application**.
+
+#### RealmJoin Logfiles
 
 To troubleshoot package execution problems or RealmJoin Problems there are several Log Files available:
 
@@ -67,19 +80,9 @@ MSI Installations logs.
 
 [![Log](<.gitbook/assets/rj-msi-log (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-msi-log.png)
 
-Alternatively, the logs can be automatically collected and save to the current users desktop via the debug window (see the section below).
-
-## Verify Group Membership in Office 365 Admin Center
-
-You need to know the software Distribution Group to which the software should be deployed.
-
-Open Office 365 Admin Center Group management at: [Office 365 Admin Center](https://portal.office.com/adminportal/home#/groups)
-
-[![O365 Portal](<.gitbook/assets/o365-portal-one (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-one.png)
-
-Select appropriate software distribution group and verify if the user is member of this group.
-
-[![O365 Portal](<.gitbook/assets/o365-portal-two (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/o365-portal-two.png)
+**NOTE:**  
+For all support related incidents, please **exclusively** add the complete zip containing all relevant logfiles only. Do **NOT** attach just a part of the logfiles as mentioned above. The logs can be automatically collected and save to the current users desktop via the debug window (see the section below) or collected via the RealmJoin portal.  
+Windows event logs may be added additionally be when opening a ticket.
 
 ## Debug Mode
 

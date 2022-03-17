@@ -22,7 +22,7 @@ LAPS supports the follow global settings.
 | Settings Key | Default Value | Description |
 | ------------ | ------------- | ----------- |
 | LocalAdminManagement.Inactive | `false` | Set to `true` to force this feature off |
-| LocalAdminManagement.CheckInterval | `"01:00"` | Interval for internal config checks ([HH:mm](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings)) |
+| LocalAdminManagement.CheckInterval | `"01:00"` | Interval for internal config checks, does not influence the creation time of support accounts.  ([HH:mm](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings)) |
 
 The following account types are supported.
 | Settings Key | Default Value |
@@ -106,7 +106,7 @@ Key `LocalAdminManagement.EmergencyAccount` (for common settings see [group sett
 
 
 ## Support account
-This account type can be configured for on-demand creation. It is designed for use in a limited time window of 12 hours in on-demand mode.
+This account type can be configured for on-demand creation. It is designed for use in a limited time window of 12 hours in on-demand mode. After triggered via the RJ portal, the account will be created with the next sync to the backend. 
 
 {% hint style="danger" %}
 Support accounts and their profiles will be deleted 12 hours after requesting the account regardless of usage (after the support user has signed out). ALL FILES WILL BE PERMANENTLY DELETED.

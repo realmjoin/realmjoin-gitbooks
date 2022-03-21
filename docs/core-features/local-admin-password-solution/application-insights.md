@@ -27,4 +27,4 @@ To start a reporting, click **Search**
 
 An overview appears, which looks like the following example:
 
-![](<../../.gitbook/assets/appinsights4 (1).png>)
+![](<../../.gitbook/assets/appinsights4 (1) (1).png>)

@@ -1,6 +1,6 @@
 # Clients
 
-![](<../.gitbook/assets/rj-ac-clientsicon (1).png>)
+![](<../.gitbook/assets/rj-ac-clientsicon (1) (1).png>)
 
 This menu gives you a transparent overview of all enrolled devices. Seven different attributes are displayed:
 

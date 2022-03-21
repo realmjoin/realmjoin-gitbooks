@@ -11,3 +11,5 @@ RealmJoin is the perfect companion to [Microsoft Intune](https://www.microsoft.c
 To connect and configure your system, please install the client application available below and sign-in using your [Azure AD](https://azure.microsoft.com/en-us/services/active-directory/) credentials.
 
 Additional Information at [www.realmjoin.com](http://realmjoin.com).
+
+Searching the **RealmJoin vNext Documentation**? [Click here.](https://docs.realmjoin.com)

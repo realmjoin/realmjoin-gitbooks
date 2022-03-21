@@ -19,19 +19,19 @@ As you can see, there are several icons listed in the toolbar. Here is a brief e
 
 #### Clients
 
-![](<../.gitbook/assets/rj-ac-clientsicon (1).png>)
+![](<../.gitbook/assets/rj-ac-clientsicon (1) (1).png>)
 
 A click on the Clients icon gives you a transparent overview over all enrolled devices as well as the respective primary user. For more details read our [Clients article](clients.md).
 
 #### Users
 
-![](<../.gitbook/assets/rj-ac-usersicon (1).png>)
+![](<../media/rj-ac-usersicon (1).png>)
 
 The Users icon gives you a list of all users assigned to the tenant. For more details read our [Users and User Settings article](users-and-user-settings.md).
 
 #### User Settings
 
-![](<../.gitbook/assets/rj-ac-usersettingsicon (1).png>)
+![](<../.gitbook/assets/rj-ac-usersettingsicon (1) (1).png>)
 
 Via the User Settings icon, you have the possibility to configure user settings and policies. For more details read our [Users and User Settings article](users-and-user-settings.md).
 
@@ -43,7 +43,7 @@ Via the Groups icon, you can see all groups registered in this tenant. For more 
 
 #### Group Settings
 
-![](<../.gitbook/assets/rj-ac-groupsettingsicon (1).png>)
+![](<../.gitbook/assets/rj-ac-groupsettingsicon (1) (1).png>)
 
 Via the User Settings icon, you have the possibility to configure group settings and policies. For more details read our [Groups and Group Settings article](groups-and-group-settings.md).
 
@@ -55,7 +55,7 @@ This icon takes you to the RealmJoin application store. For more details read ou
 
 #### Software Packages
 
-![](<../.gitbook/assets/rj-ac-packagesicon (1).png>)
+![](<../.gitbook/assets/rj-ac-packagesicon (1) (1).png>)
 
 A click on this icon gives you a list of all added packages. For more details read our [Software Packages article](software-packages.md).
 

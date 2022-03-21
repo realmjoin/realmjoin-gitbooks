@@ -53,15 +53,15 @@ To check the related cert please use the following command:
 
 dir Cert:\LocalMachine\My | where { $\_.Issuer -match "CN=MS-Organization-Access" } | fl
 
-[![RJ - Related Cert](<.gitbook/assets/rj-workflow1 (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow1.png)
+[![RJ - Related Cert](<.gitbook/assets/rj-workflow1 (1) (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow1.png)
 
 The related **Azure AD Device ID** can be checked here:
 
-[![RJ - Check related AAD ID](<.gitbook/assets/rj-workflow2 (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow2.png)
+[![RJ - Check related AAD ID](<.gitbook/assets/rj-workflow2 (1) (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow2.png)
 
 Having this information available out of the related certificate, RealmJoin is now able to start the provisioning process without the need for a dedicated user authentication/interaction. RealmJoin knows about the Azure AD Device ID out of the above described device certificate information and can start all processes running within the system context for this device and the corresponding user account.
 
-[![RJ - Certificate Information](<.gitbook/assets/rj-workflow3 (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow3.png)
+[![RJ - Certificate Information](<.gitbook/assets/rj-workflow3 (1) (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-workflow3.png)
 
 ### Initial run
 
@@ -86,11 +86,11 @@ During the initial run of RealmJoin, the **BitLocker Drive Encryption** will be 
 
 When RealmJoin is enrolled and started for the first time, it asks for the user identity and then calls to the cloud service for a policy.
 
-[![RJ AAD Auth](<.gitbook/assets/rj-aad-auth (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-aad-auth.png)
+[![RJ AAD Auth](<.gitbook/assets/rj-aad-auth (1) (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-aad-auth.png)
 
 RealmJoin **Security Requirement** assessment does some pre-checks (Encryption, Patch Level, Firewall, Anti-Virus, etc. – this is optional and can be replaced in parts by Intune-Health-Check). In the last step, all mandatory software will be installed (**black screen installation**). During this installation, any interaction with the client is suppressed.
 
-[![RJ Sec Check](<.gitbook/assets/rj-sec-check (1).gif>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-sec-check.gif)
+[![RJ Sec Check](<.gitbook/assets/rj-sec-check (1) (1).gif>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-sec-check.gif)
 
 If no error occurs during deployment, RealmJoin is ready to use.
 
@@ -99,11 +99,11 @@ If no error occurs during deployment, RealmJoin is ready to use.
 After being successfully installed, RealmJoin is automatically started on the user login and is permanently active in the background. It is represented with an ID card icon. Clicking on the icon opens up the RealmJoin client menu.\
 It contains basic information in the lower and several links in the upper part. The selector **Software Packages** opens a second context menu with all the software packages that are allocated to the user.
 
-[![RJ Tray](<.gitbook/assets/rj-tray-menu (1) (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-tray-menu.png)
+[![RJ Tray](<.gitbook/assets/rj-tray-menu (1) (1) (2).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-tray-menu.png)
 
 If user wishes to install any of the listed software, he/she is only required to select the package to start the installation.
 
-[![RJ Add Package](<.gitbook/assets/rj-client-addpackage2 (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-client-addpackage2.png)
+[![RJ Add Package](<.gitbook/assets/rj-client-addpackage2 (1) (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/rj-client-addpackage2.png)
 
 The installation mode depends on the packages selected: If those are only user-mode packages, they are installed immediately. In case of a higher permission level, RealmJoin starts a service (realmjoinservice.exe) and installs the packages with the **SYSTEM** user account.
 

@@ -2,7 +2,7 @@
 
 ### Users Menu
 
-![](<../.gitbook/assets/rj-ac-usersicon (1).png>)
+![](<../media/rj-ac-usersicon (1).png>)
 
 The Users menu gives you a list of all users assigned to the tenant. Eight different attributes are displayed:
 
@@ -41,7 +41,7 @@ The right tile shows which software (name and version) is available to the clien
 
 ### User **S**ettings
 
-![](<../.gitbook/assets/rj-ac-usersettingsicon (1).png>)
+![](<../.gitbook/assets/rj-ac-usersettingsicon (1) (1).png>)
 
 The mentioned settings, which are assigned to users, can be checked and edited in the menu User Settings.
 

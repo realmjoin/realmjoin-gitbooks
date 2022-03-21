@@ -59,7 +59,7 @@ The RealmJoin - All Users group is automatically created, which contains all use
 
 ### Group Settings
 
-![](<../.gitbook/assets/rj-ac-groupsettingsicon (1).png>)
+![](<../.gitbook/assets/rj-ac-groupsettingsicon (1) (1).png>)
 
 The mentioned settings, which are configured for the groups, can be checked and edited in the Group Settings menu.
 

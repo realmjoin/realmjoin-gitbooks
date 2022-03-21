@@ -34,6 +34,6 @@ RealmJoin will not store the secret in any proprietary storage but instead creat
 
 The entry in KeyVault will be added with the device name as a key and the plain GUID as the secret value. See the following example screenshot:
 
-[![CreateKeyVault](<../../.gitbook/assets/keyvault8 (2).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault8.png)
+[![CreateKeyVault](<../../.gitbook/assets/keyvault8 (1) (2).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault8.png)
 
-[![KeyVaultStorageofSecrets](<../../.gitbook/assets/keyvault9 (1) (1).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault9.png)
+[![KeyVaultStorageofSecrets](<../../.gitbook/assets/keyvault9 (1) (1) (2).png>)](https://github.com/realmjoin/realmjoin-gitbooks/tree/3c2250fcc0d712e1b40ac535a1766b57ce01910c/docs/media/keyvault9.png)

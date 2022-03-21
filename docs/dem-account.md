@@ -13,7 +13,7 @@ Example:
 * Enterprise Mobility + Security (user license) or
 * A simple device license
 
-![](<.gitbook/assets/dem1 (1) (1).png>)
+![](<.gitbook/assets/dem1 (1) (1) (2).png>)
 
 ## Preparations
 
@@ -23,13 +23,13 @@ Before you can start with a device enrollment you have to do some preparations.
 
 Create a generic user account that is not assigned to a real person. Please make sure that this account never gets deleted. In that case, enrolled devices will not stay under management anymore. Assign a suitable Intune license as described before.
 
-![](<.gitbook/assets/dem2 (1) (1).png>)
+![](<.gitbook/assets/dem2 (1) (1) (2).png>)
 
 ### Create User Group for DEM Accounts
 
 A new user group is necessary that contains all DEM users. Ad one (e.g. **CFG - All multi-user device accounts DEM**) and assign the previously created user.
 
-![](<.gitbook/assets/dem3 (1) (1) (1).png>)
+![](<.gitbook/assets/dem3 (1) (1) (1) (2).png>)
 
 ### Prepare Group
 
@@ -49,40 +49,40 @@ The following steps must be done in **RealmJoin**
 
 A new and clean device will be set up with the DEM user account created before:
 
-![](<.gitbook/assets/dem5 (1) (1).png>)
+![](<.gitbook/assets/dem5 (1) (1) (2).png>)
 
 Depending on configuration second factor authentication will be enforced:
 
-![](<.gitbook/assets/dem6 (1) (1).png>)
+![](<.gitbook/assets/dem6 (1) (1) (2).png>)
 
 Device enrollment and provisioning will start:
 
-![](<.gitbook/assets/dem7 (1) (1) (1) (1) (1) (1).png>)
+![](<.gitbook/assets/dem7 (1) (1) (1) (1) (1) (1) (2).png>)
 
 Prompt for Windows Hello setup appears (depending on configuration):
 
-![](<.gitbook/assets/dem8 (1) (1) (1).png>)
+![](<.gitbook/assets/dem8 (1) (1) (1) (2).png>)
 
 After that, RealmJoin will start and install the defined set of software for the DEM account:
 
-![](<.gitbook/assets/dem9 (1) (1).png>)
+![](<.gitbook/assets/dem9 (1) (1) (2).png>)
 
 When logging in via DEM account (primary user) the software should be installed:
 
-![](<.gitbook/assets/dem10 (1) (1).png>)
+![](<.gitbook/assets/dem10 (1) (1) (2).png>)
 
 ## Secondary User Experience
 
 Secondary users are now able to log in::
 
-![](<.gitbook/assets/dem11 (1) (1).png>)
+![](<.gitbook/assets/dem11 (1) (1) (2).png>)
 
 Software assigned and installed by DEM account should be available
 
 Additional software can be installed by this secondary user (see **Software Packages**):
 
-![](<.gitbook/assets/dem13 (1) (1).png>)
+![](<.gitbook/assets/dem13 (1) (1) (2).png>)
 
-![](<.gitbook/assets/dem14 (1) (1).png>)
+![](<.gitbook/assets/dem14 (1) (1) (2).png>)
 
-![](<.gitbook/assets/dem15 (1) (1).png>)
+![](<.gitbook/assets/dem15 (1) (1) (2).png>)

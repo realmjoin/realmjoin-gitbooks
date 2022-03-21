@@ -12,7 +12,7 @@ One might specify the following JSON array:
 
 which will result in the following rules:
 
-![Policies.TrustedSites](<../.gitbook/assets/rj-policies-trustedsites (1).png>)
+![Policies.TrustedSites](<../.gitbook/assets/rj-policies-trustedsites (1) (1).png>)
 
 ### Caveats
 

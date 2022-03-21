@@ -23,7 +23,7 @@ You can either use a cmd script or a PowerShell script for the main installation
 
 Customize either `rj_install.cmd` or `rj_install.ps1` in the root folder and delete the other one. This file is the main installation script. The first two lines contain the RealmJoin craft package ID and version.
 
-![](<../.gitbook/assets/rj-craftpackage-header (1).png>)
+![](<../.gitbook/assets/rj-craftpackage-header (1) (1).png>)
 
 This script may contain various modifications and adjustments, for example editing or creating registry keys. It is also possible to call other scripts or executable files from inside this script.
 
@@ -48,7 +48,7 @@ These are the needed files:
 
 The following screenshot shows a Google Chrome package in the RealmJoin app store (VLC Player has no Technical Help content, therefore we use Google Chrome in this example.). You can see the Google Chrome icon (`package-icon.png`), a short description of Google Chrome (`package-description.md`) and you can further technical information (`package-technicalhelp.md`). You do not see `package-info.json` because it works in the background.
 
-![](<../.gitbook/assets/rj-store-info (1).png>)
+![](<../.gitbook/assets/rj-store-info (1) (1).png>)
 
 ## Commit and Upload
 
@@ -62,9 +62,9 @@ Commit your changes and push the project to GitLab.
    * The first one, **build**, will start automatically
    * After **build** has finished (green checkmark), run the second one, **deploy**. To do that, first click the grey icon next to the green checkmark, then click the play button.
 
-![](<../.gitbook/assets/rj-pipeline-choco-deploy (1).png>)
+![](<../.gitbook/assets/rj-pipeline-choco-deploy (1) (1).png>)
 
-![](<../.gitbook/assets/rj-package-choco-deploy (1).png>)
+![](<../.gitbook/assets/rj-package-choco-deploy (1) (1).png>)
 
 After the successful deployment, the package can be found in the Chocolatey library and can be added to the RealmJoin backend. See chapter [Managing RealmJoin](../managing-realmjoin/) for information on assigning packages.
 

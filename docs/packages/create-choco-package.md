@@ -22,7 +22,7 @@ The `choco-package.nuspec` file contains the metadata according to the desired s
 * title: Displayed name of the package.
 * description: Description of the package.
 
-![](<../.gitbook/assets/rj-package-nuspec1 (1).png>)
+![](<../.gitbook/assets/rj-package-nuspec1 (1) (1).png>)
 
 ### Move binaries
 
@@ -42,7 +42,7 @@ A `*.sha256` file is created for every item in the folder.
 
 Based on the samples in the file, choose the most fitting one and adapt accordingly. To add silent installation parameters, use the `-silentArgs` parameter. If the setup file is a MSI file, silent installation arguments are automatically added. For additional arguments (like components) use additional `-additionalArgs`.
 
-![](<../.gitbook/assets/rj-package-install (1).png>)
+![](<../.gitbook/assets/rj-package-install (1) (1).png>)
 
 ### Customize `tools\userInstall.ps1`
 
@@ -71,7 +71,7 @@ These are the needed files:
 
 The following screenshot shows a Google Chrome package in the RealmJoin app store. You can see the Google Chrome icon (`package-icon.png`), a short description of Google Chrome (`package-description.md`) and you can further technical information (`package-technicalhelp.md`). You do not see `package-info.json` because it works in the background.
 
-![](<../.gitbook/assets/rj-store-info (1).png>)
+![](<../.gitbook/assets/rj-store-info (1) (1).png>)
 
 ## Commit and Upload
 
@@ -85,9 +85,9 @@ Commit your changes and push the project to GitLab.
    * The first one, **build**, will start automatically
    * After **build** has finished (green checkmark), run the second one, **deploy**. To do that, first click the grey icon next to the green checkmark, then click the play button.
 
-![](<../.gitbook/assets/rj-pipeline-choco-deploy (1).png>)
+![](<../.gitbook/assets/rj-pipeline-choco-deploy (1) (1).png>)
 
-![](<../.gitbook/assets/rj-package-choco-deploy (1).png>)
+![](<../.gitbook/assets/rj-package-choco-deploy (1) (1).png>)
 
 After the successful deployment, the package can be found in the Chocolatey library and can be added to the RealmJoin backend. See chapter [Managing RealmJoin](../managing-realmjoin/) for information on assigning packages.
 

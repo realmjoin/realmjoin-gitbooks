@@ -19,7 +19,7 @@ Delivery optimization download mode:
 HTTP blended with peering across private group
 ```
 
-This is effectively **DownloadMode=2**. Opting-out of setting the groupID via RealmJoin can be done by setting the [Policies.SetNetworkOptimizationID](http://docs.realmjoin.com/policies.html#policies) to **false**.
+This is effectively **DownloadMode=2**. Opting-out of setting the groupID via RealmJoin can be done by setting the **Policies.SetNetworkOptimizationID** to **false**.
 
 For more on WUDO see the [Microsoft WUDO documentation \(DE\)](https://docs.microsoft.com/de-de/windows/deployment/update/waas-delivery-optimization).
 

@@ -23,8 +23,6 @@ It is also possible to set this key during the installation of RealmJoin as a ar
 
 ## 3rd Party NuGet Packages
 
-[https://packages.gkdatacenter.net/](https://packages.gkdatacenter.net)
-
 ### PowerShell Modules
 
 #### PSIni

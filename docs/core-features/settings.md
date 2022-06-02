@@ -24,8 +24,6 @@ This setting changes BranchCache mode for **new** clients.
 
 **Description**
 
-For more details about domain connect read the '[Domain Connect website](https://www.domainconnect.org/)'.
-
 ## DomainConnect.Domain
 
 **Value**
@@ -36,8 +34,6 @@ For more details about domain connect read the '[Domain Connect website](https:/
 
 **Description**
 
-For more details about domain connect read the '[Domain Connect website](https://www.domainconnect.org/)'.
-
 ## DomainConnect.NetBIOS
 
 **Value**
@@ -47,8 +43,6 @@ For more details about domain connect read the '[Domain Connect website](https:/
 ```
 
 **Description**
-
-For more details about domain connect read the '[Domain Connect website](https://www.domainconnect.org/)'.
 
 ## Environment.Channel
 

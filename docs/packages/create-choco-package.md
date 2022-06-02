@@ -123,7 +123,7 @@ Install-ChocolateyRealmjoinPackage "INSTALLER.msi" "HASH" -postActions { Remove-
 
 ### Parameters in Chocolatey packages
 
-To utilize parameters in Chocolatey packages, which have been entered in the optional [args](http://docs.realmjoin.com/managing-realmjoin.html#add-packages) text field, you need to include the following cmdlet in your `chocolateyInstall.ps1` script:
+To utilize parameters in Chocolatey packages, which have been entered in the optional Args text field, you need to include the following cmdlet in your `chocolateyInstall.ps1` script:
 
 `Import-ChocolateyRealmjoinPackageParameters`
 

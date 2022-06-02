@@ -6,7 +6,7 @@
     [https://realmjoin-web.azurewebsites.net/](https://realmjoin-web.azurewebsites.net)
 
 *   Gitlab Packages:
-    [https://https://gitlab.realmjoin.com//](https://https://gitlab.realmjoin.com/)
+    [https://gitlab.realmjoin.com//](https://gitlab.realmjoin.com/)
 
 *   General RealmJoin website:
     [https://realmjoin.com/](https://realmjoin.com)

@@ -3,17 +3,16 @@
 ## Which links should I bookmark?
 
 *   RealmJoin Admin Portal:
-
     [https://realmjoin-web.azurewebsites.net/](https://realmjoin-web.azurewebsites.net)
+
 *   Gitlab Packages:
+    [https://https://gitlab.realmjoin.com//](https://https://gitlab.realmjoin.com/)
 
-    [https://gitlab.glueckkanja.net/](https://gitlab.glueckkanja.net)
 *   General RealmJoin website:
-
     [https://realmjoin.com/](https://realmjoin.com)
-*   Documentation:
 
-    [https://glueckkanja.gitbook.io/realmjoin/](https://glueckkanja.gitbook.io/realmjoin/)
+*   This documentation:
+    [https://docs.realmjoin.com/](https://docs.realmjoin.com/)
 
 ## Am I able to maintain my own packages and updates?
 

@@ -31,9 +31,12 @@ RealmJoin connects to the following URLs that might be considered in your firewa
 
 * [https://cdn.realmjoin.com/](https://cdn.realmjoin.com)
 * [https://x1.c.lencr.org/](https://x1.c.lencr.org)
+* **NEW!** [https://client-api.realmjoin.com/](https://client-api.realmjoin.com)
+* **NEW!** [https://client-api-staging.realmjoin.com/](https://client-api-staging.realmjoin.com)
 * [https://realmjoin-backend.azurewebsites.net/](https://realmjoin-backend.azurewebsites.net)
 * [https://realmjoin-backend-staging.azurewebsites.net/](https://realmjoin-backend-staging.azurewebsites.net)
 * [https://packages.gkdatacenter.net/](https://packages.gkdatacenter.net)
+* **NEW!** [https://nuget.realmjoin.com/](https://nuget.realmjoin.com)
 * [https://enterpriseregistration.windows.net/](https://enterpriseregistration.windows.net)
 * [https://gkrealmjoin.s3.amazonaws.com/](https://gkrealmjoin.s3.amazonaws.com)
 * [https://login.microsoftonline.com/](https://login.microsoftonline.com)

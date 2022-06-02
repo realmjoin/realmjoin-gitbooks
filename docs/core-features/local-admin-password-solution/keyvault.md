@@ -28,9 +28,7 @@ The following table shows you the steps for Azure KeyVault Creation:
 
 ## KeyVault Storage of Secrets
 
-RealmJoin will not store the secret in any proprietary storage but instead create an **Azure KeyVault Secret** to store it in a secure and auditable way. The KeyVault API is documented here:
-
-[https://docs.microsoft.com/en-us/rest/api/keyvault/setsecret/setsecret](https://docs.microsoft.com/en-us/rest/api/keyvault/setsecret/setsecret)
+RealmJoin will not store the secret in any proprietary storage but instead create an **Azure KeyVault Secret** to store it in a secure and auditable way. 
 
 The entry in KeyVault will be added with the device name as a key and the plain GUID as the secret value. See the following example screenshot:
 
